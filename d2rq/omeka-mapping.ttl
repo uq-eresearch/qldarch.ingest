@@ -109,6 +109,14 @@ map:pseudoEntityLabels a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
     d2rq:condition "o_elements.id = o_simple_vocab_terms.element_id"
     .
+map:pseudoEntityTypes a d2rq:PropertyBridge;
+	d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:pseudoEntities;
+    d2rq:property qaat:pseudoEntityType;
+    d2rq:column "o_elements.text";
+    d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
+    d2rq:condition "o_simple_vocab_terms.terms != ''"
+    .
 
 # Individual classes of pseudoentity; one per controlled vocabularly
 map:creators a d2rq:ClassMap;
