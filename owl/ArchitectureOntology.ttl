@@ -135,18 +135,486 @@ foaf:Person a owl:Class ;
     rdfs:subClassOf :DigitalThing .
 
 #
-# Places
+# Controlled Vocabulary Export Classes
 #
 
+qaat:PseudoEntity a qldarch:Entity ;
+    rdfs:comment "Used as a temporary placeholder for export of controlled vocabularies from omeka." ;
+    :label "Pseudo Entity" .
+
+qaat:label a owl:DatatypeProperty ;
+    :label "Concept label" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:PseudoEntity ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A label for a concept from a controlled vocab" .
+
+qaat:Person a qaat:PseudoEntity ;
+    rdfs:comment "A person identified within Omeka" ;
+    :label "Person" .
+
+qaat:Format a qaat:PseudoEntity ;
+    rdfs:comment "A format identified within Omeka" ;
+    :label "Format" .
+    
+qaat:Subject a qaat:PseudoEntity ;
+    rdfs:comment "A subject identified within Omeka" ;
+    :label "Subject" .
+    
+qaat:DrawingType a qaat:PseudoEntity ;
+    rdfs:comment "A drawing-type identified within Omeka" ;
+    :label "Drawing Type" .
+    
+qaat:ProjectName a qaat:PseudoEntity ;
+    rdfs:comment "A project name identified within Omeka" ;
+    :label "Project Name" .
+    
+qaat:Firm a qaat:PseudoEntity ;
+    rdfs:comment "A firm identified within Omeka" ;
+    :label "Firm" .
+    
+qaat:BuildingTypology a qaat:PseudoEntity ;
+    rdfs:comment "A building typology identified within Omeka" ;
+    :label "Building Typology" .
+    
 #
-# Properties
+# Digital Object properties
 #
+
+:datePhotographed a owl:DatatypeProperty ;
+    :label "Date Photographed" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :DigitalObject ;
+    rdfs:range xsd:date .
+
+:sourceFilename a owl:DatatypeProperty ;
+    :label "Source Filename" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+:systemLocation a owl:DatatypeProperty ;
+    :label "System Location" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+#
+# Integration of adopted Dublin Core properties
+#
+
+dcterms:created a owl:ObjectProperty ;
+    :label "Created" ;
+    :display false ;
+    :editable false ;
+    rdfs:isDefinedBy dcterms:created .
+
+dcterms:creator a owl:ObjectProperty ;
+    :label "Creator" ;
+    :display true ;
+    :editable false ;
+    rdfs:isDefinedBy dcterms:creator .
+
+dcterms:title a owl:DatatypeProperty ;
+    :label "Title" ;
+    :display true ;
+    :editable false ;
+    rdfs:isDefinedBy dcterms:title .
+
+dcterms:description a owl:DatatypeProperty ;
+    :label "Description" ;
+    :display true ;
+    :editable false ;
+    rdfs:isDefinedBy dcterms:description .
+
+dcterms:rights a owl:DatatypeProperty ;
+    :label "Rights" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :DigitalObject ;
+    rdfs:isDefinedBy dcterms:rights ;
+    rdfs:comment "Currently a plain text statement of IP status of the work. If required can model this further" .
+
+dcterms:identifier a owl:DatatypeProperty ;
+    :label "External Identifier" ;
+    :display true ;
+    :editable false ;
+    rdfs:isDefinedBy dcterms:identifier .
 
 :identifier a owl:DatatypeProperty ;
     :label "System Identifier" ;
+    rdfs:subPropertyOf dcterms:identifier ;
     :display false ;
     :editable false ;
     :shortName "uri" .
+
+#
+# Properties relating to Controlled Vocabularies
+#
+
+qaat:interviewer a owl:ObjectProperty ;
+    :label "Interviewer" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Interview ;
+    rdfs:range qaat:Person .
+
+qaat:interviewee a owl:ObjectProperty ;
+    :label "Interviewee" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Interview ;
+    rdfs:range qaat:Person .
+
+qaat:format a owl:ObjectProperty ;
+    :label "Format" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject ;
+    rdfs:range qaat:Format .
+
+qaat:transcriber a owl:ObjectProperty ;
+    :label "Transcriber" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Transcript ;
+    rdfs:range qaat:Person .
+
+qaat:hasSubject a owl:ObjectProperty ;
+    :label "Has Subject" ;
+    :display false ;
+    :editable false ;
+    rdfs:subClassOf dcterms:subject ;
+    rdfs:domain :DigitalObject ;
+    rdfs:range qaat:Subject .
+
+qaat:contemporaryFirm a owl:ObjectProperty ;
+    :label "Contemporary Firm" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject ;
+    rdfs:range qaat:Firm .
+
+qaat:drawingType a owl:ObjectProperty ;
+    :label "Drawing Type" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject ;
+    rdfs:range qaat:DrawingType .
+
+qaat:buildingTypology a owl:ObjectProperty ;
+    :label "Building Typology" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject ;
+    rdfs:range qaat:BuildingTypology .
+
+qaat:photographer a owl:ObjectProperty ;
+    :label "Photographer" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Photograph ;
+    rdfs:range qaat:Person .
+
+qaat:projectName a owl:ObjectProperty ;
+    :label "Project Name" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject ;
+    rdfs:range qaat:ProjectName .
+
+#
+# Datatype properties of Digital Objects as exported from Omeka
+# 
+
+:hasSubject a owl:ObjectProperty ;
+    :label "Has Subject" ;
+    :display true ;
+    :editable false ;
+    rdfs:subClassOf dcterms:subject ;
+    rdfs:domain :DigitalObject ;
+    rdfs:range :TopicConcept .
+
+:externalLocation a owl:DatatypeProperty ;
+    :label "External Location" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+:transcriptLocation a owl:DatatypeProperty ;
+    :label "Transcript Location" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Interview .
+
+:interviewer a owl:ObjectProperty ;
+    :label "Interviewer" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Interview ;
+    rdfs:range foaf:Person .
+
+:interviewee a owl:ObjectProperty ;
+    :label "Interviewee" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Interview ;
+    rdfs:range foaf:Person .
+
+:transcriber a owl:ObjectProperty ;
+    :label "Transcriber" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Transcript ;
+    rdfs:range foaf:Person .
+
+qaat:location a owl:DatatypeProperty ;
+    :label "Location of Subject" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+:datePhotographed a owl:DatatypeProperty ;
+    :label "Date Photographed" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+:systemLocation a owl:DatatypeProperty ;
+    :label "System Location" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+qaat:projectNumber a owl:DatatypeProperty ;
+    :label "Project Number" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+qaat:dateOriginalCreation a owl:DatatypeProperty ;
+    :label "Original Creation Date" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+qaat:photographer a owl:DatatypeProperty ;
+    :label "Photographer" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Photograph .
+
+:succeededBy a owl:ObjectProperty ;
+    :label "Succeded By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :FirmManifestation ;
+    rdfs:range :FirmManifestation .
+
+:preceededBy a owl:ObjectProperty ;
+    :label "Preceeded By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :FirmManifestation ;
+    rdfs:range :FirmManifestation .
+
+:manifestationOf a owl:ObjectProperty ;
+    :label "Firm Manifestation Of" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :FirmManifestation ;
+    rdfs:range :Firm .
+
+#
+# Properties proper
+#
+:label a owl:DatatypeProperty ;
+    :label "Preferred label" ;
+    rdfs:comment "The preferred label for a thing" ;
+    :display false ;
+    :editable true ;
+    :shortName "label" .
+
+qaat:label a owl:DatatypeProperty ;
+    :label "Concept label" ;
+    :display false ;
+    :editable false ;
+    rdfs:comment "A label for a concept from a controlled vocab" .
+#    rdfs:comment "Temporary placeholder for property that should become a SKOS concept." .
+
+rdfs:label a owl:DatatypeProperty ;
+    :label "Label" ;
+    :display true ;
+    :editable true ;
+    rdfs:comment "A label for a thing" ;
+    :shortName "altlabel" .
+
+rdf:type a owl:DatatypeProperty ;
+    :label "Type" ;
+    rdfs:comment "The type of a thing" ;
+    :display false ;
+    :editable false .
+
+foaf:firstName a owl:DatatypeProperty ;
+    :label "First Name" ;
+    :display true ;
+    :editable true .
+
+foaf:lastName a owl:DatatypeProperty ;
+    :label "Last Name" ;
+    :display true ;
+    :editable true .
+
+foaf:lastName a owl:DatatypeProperty ;
+    :label "Last Name" ;
+    :display true ;
+    :editable true .
+
+:firmName a owl:DatatypeProperty ;
+    :label "Firm Name" ;
+    :display true ;
+    :editable true .
+
+:preferredImage a owl:ObjectProperty ;
+    :label "Preferred Image" ;
+    :display false ;
+    :editable true ;
+    :shortName "preferredImage" .
+
+:employedBy a owl:ObjectProperty ;
+    :label "Employed By" ;
+    :display true ;
+    :editable false ;
+    :reifiedAs :EmploymentRelation .
+
+:taughtBy a owl:ObjectProperty ;
+    :label "Taught By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person .
+
+:mentoredBy a owl:ObjectProperty ;
+    :label "Mentored By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person .
+
+:employedBy a owl:ObjectProperty ;
+    :label "Employed By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain foaf:Person ;
+    rdfs:range :Firm .
+
+:hasPartner a owl:ObjectProperty ;
+    :label "Has Partner" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Firm ;
+    rdfs:range foaf:Person .
+
+:hasSubject a owl:ObjectProperty ;
+    :label "Has Subject" ;
+    :display true ;
+    :editable false ;
+    rdfs:subClassOf dcterms:subject ;
+    rdfs:domain :DigitalObject ;
+    rdfs:range :TopicConcept .
+
+:externalLocation a owl:DatatypeProperty ;
+    :label "External Location" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+:transcriptLocation a owl:DatatypeProperty ;
+    :label "Transcript Location" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Interview .
+
+:interviewer a owl:ObjectProperty ;
+    :label "Interviewer" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Interview ;
+    rdfs:range foaf:Person .
+
+:interviewee a owl:ObjectProperty ;
+    :label "Interviewee" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Interview ;
+    rdfs:range foaf:Person .
+
+:transcriber a owl:ObjectProperty ;
+    :label "Transcriber" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Transcript ;
+    rdfs:range foaf:Person .
+
+qaat:location a owl:DatatypeProperty ;
+    :label "Location of Subject" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+:datePhotographed a owl:DatatypeProperty ;
+    :label "Date Photographed" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+:systemLocation a owl:DatatypeProperty ;
+    :label "System Location" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+qaat:projectNumber a owl:DatatypeProperty ;
+    :label "Project Number" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+qaat:dateOriginalCreation a owl:DatatypeProperty ;
+    :label "Original Creation Date" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+qaat:photographer a owl:DatatypeProperty ;
+    :label "Photographer" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Photograph .
+
+:succeededBy a owl:ObjectProperty ;
+    :label "Succeded By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :FirmManifestation ;
+    rdfs:range :FirmManifestation .
+
+:preceededBy a owl:ObjectProperty ;
+    :label "Preceeded By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :FirmManifestation ;
+    rdfs:range :FirmManifestation .
+
+:manifestationOf a owl:ObjectProperty ;
+    :label "Firm Manifestation Of" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :FirmManifestation ;
+    rdfs:range :Firm .
+
 
 :label a owl:DatatypeProperty ;
     :label "Preferred label" ;
@@ -235,30 +703,6 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:domain :Firm ;
     rdfs:range foaf:Person .
 
-dcterms:created a owl:ObjectProperty ;
-    :label "Created" ;
-    :display false ;
-    :editable false ;
-    rdfs:isDefinedBy dcterms:created .
-
-dcterms:creator a owl:ObjectProperty ;
-    :label "Creator" ;
-    :display true ;
-    :editable false ;
-    rdfs:isDefinedBy dcterms:creator .
-
-dcterms:title a owl:DatatypeProperty ;
-    rdfs:isDefinedBy dcterms:title ;
-    :display true ;
-    :editable false ;
-    :label "Title" .
-
-dcterms:description a owl:DatatypeProperty ;
-    :label "Description" ;
-    :display true ;
-    :editable false ;
-    rdfs:isDefinedBy dcterms:description .
-
 :hasSubject a owl:ObjectProperty ;
     :label "Has Subject" ;
     :display true ;
@@ -266,20 +710,6 @@ dcterms:description a owl:DatatypeProperty ;
     rdfs:subClassOf dcterms:subject ;
     rdfs:domain :DigitalObject ;
     rdfs:range :TopicConcept .
-
-dcterms:rights a owl:DatatypeProperty ;
-    :label "Rights" ;
-    :display true ;
-    :editable false ;
-    rdfs:domain :DigitalObject ;
-    rdfs:comment "Currently a plain text statement of IP status of the work. If required can model this further" .
-
-:systemLocation a owl:DatatypeProperty ;
-    :label "System Location" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :DigitalObject ;
-    rdfs:range xsd:anyURI .
 
 :externalLocation a owl:DatatypeProperty ;
     :label "External Location" ;
@@ -323,12 +753,6 @@ qaat:location a owl:DatatypeProperty ;
 :datePhotographed a owl:DatatypeProperty ;
     :label "Date Photographed" ;
     :display true ;
-    :editable false ;
-    rdfs:domain :DigitalObject .
-
-:sourceFilename a owl:DatatypeProperty ;
-    :label "Source Filename" ;
-    :display false ;
     :editable false ;
     rdfs:domain :DigitalObject .
 

@@ -101,6 +101,7 @@ map:pseudoEntities a d2rq:ClassMap;
     d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
     d2rq:condition "o_simple_vocab_terms.terms != ''"
     .
+# Special property qaat:label used to capture the string used within Omeka to describe the pseudoentity.
 map:pseudoEntityLabels a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
     d2rq:belongsToClassMap map:pseudoEntities;
@@ -110,20 +111,57 @@ map:pseudoEntityLabels a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
     d2rq:condition "o_elements.id = o_simple_vocab_terms.element_id"
     .
+
+# Individual classes of pseudoentity; one per controlled vocabularly
 map:creators a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
     d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
-	d2rq:class foaf:Person;
+	d2rq:class qaat:Person;
     d2rq:containsDuplicates "true";
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
     d2rq:condition "o_elements.name='Creator'";
     d2rq:condition "o_simple_vocab_terms.terms != ''"
     .
+map:interviewers a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+    d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
+	d2rq:class qaat:Person;
+    d2rq:containsDuplicates "true";
+    d2rq:join "o_elements.id <= o_element_texts.element_id";
+    d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
+    d2rq:condition "o_elements.name='Interviewer'";
+    d2rq:condition "o_simple_vocab_terms.terms != ''"
+    .
+map:interviewees a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+    d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
+	d2rq:class qaat:Person;
+    d2rq:containsDuplicates "true";
+    d2rq:join "o_elements.id <= o_element_texts.element_id";
+    d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
+    d2rq:condition "o_elements.name='Interviewee'";
+    d2rq:condition "o_simple_vocab_terms.terms != ''"
+    .
+map:transcribers a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+    d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
+	d2rq:class qaat:Person;
+    d2rq:containsDuplicates "true";
+    d2rq:join "o_elements.id <= o_element_texts.element_id";
+    d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
+    d2rq:condition "o_elements.name='Transcriber'";
+    d2rq:condition "o_simple_vocab_terms.terms != ''"
+    .
+map:submitters a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+    d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_entities.email|urlencode@@";
+    d2rq:class qaat:Person;
+    .
 map:formats a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
     d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
-	d2rq:class qldarch:Format;
+	d2rq:class qaat:Format;
     d2rq:containsDuplicates "true";
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
@@ -133,7 +171,7 @@ map:formats a d2rq:ClassMap;
 map:subjects a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
     d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
-	d2rq:class qldarch:Subject;
+	d2rq:class qaat:Subject;
     d2rq:containsDuplicates "true";
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
@@ -143,7 +181,7 @@ map:subjects a d2rq:ClassMap;
 map:drawingTypes a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
     d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
-	d2rq:class qldarch:DrawingType;
+	d2rq:class qaat:DrawingType;
     d2rq:containsDuplicates "true";
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
@@ -163,7 +201,7 @@ map:projectNames a d2rq:ClassMap;
 map:contemporaryFirms a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
     d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
-	d2rq:class qldarch:Firm;
+	d2rq:class qaat:Firm;
     d2rq:containsDuplicates "true";
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
@@ -180,47 +218,8 @@ map:buildingTypologies a d2rq:ClassMap;
     d2rq:condition "o_elements.name='Building Typology'";
     d2rq:condition "o_simple_vocab_terms.terms != ''"
     .
-map:interviewers a d2rq:ClassMap;
-	d2rq:dataStorage map:database;
-    d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
-	d2rq:class qldarch:Interviewer;
-	d2rq:class qldarch:Person;
-    d2rq:containsDuplicates "true";
-    d2rq:join "o_elements.id <= o_element_texts.element_id";
-    d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
-    d2rq:condition "o_elements.name='Interviewer'";
-    d2rq:condition "o_simple_vocab_terms.terms != ''"
-    .
-map:interviewees a d2rq:ClassMap;
-	d2rq:dataStorage map:database;
-    d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
-	d2rq:class qldarch:Interviewee;
-	d2rq:class qldarch:Person;
-    d2rq:containsDuplicates "true";
-    d2rq:join "o_elements.id <= o_element_texts.element_id";
-    d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
-    d2rq:condition "o_elements.name='Interviewee'";
-    d2rq:condition "o_simple_vocab_terms.terms != ''"
-    .
-map:transcribers a d2rq:ClassMap;
-	d2rq:dataStorage map:database;
-    d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
-	d2rq:class qldarch:Transcriber;
-	d2rq:class qldarch:Person;
-    d2rq:containsDuplicates "true";
-    d2rq:join "o_elements.id <= o_element_texts.element_id";
-    d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
-    d2rq:condition "o_elements.name='Transcriber'";
-    d2rq:condition "o_simple_vocab_terms.terms != ''"
-    .
 
 # Item meta-metadata
-map:submitters a d2rq:ClassMap;
-	d2rq:dataStorage map:database;
-    d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_entities.email|urlencode@@";
-    d2rq:class foaf:Person;
-    d2rq:class qaat:PseudoEntity
-    .
 map:dateSubmitted a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
     d2rq:belongsToClassMap map:digitalObjects;
@@ -236,15 +235,7 @@ map:originalFilename a d2rq:PropertyBridge;
     d2rq:column "o_files.original_filename";
     d2rq:join "o_items.id <= o_files.item_id"
     .
-map:systemFilename a d2rq:PropertyBridge;
-	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qldarch:systemLocation;
-    d2rq:datatype xsd:string;
-    d2rq:column "o_files.archive_filename";
-    d2rq:join "o_items.id <= o_files.item_id"
-    .
-map:systemFilename a d2rq:PropertyBridge;
+map:systemLocation a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
     d2rq:belongsToClassMap map:digitalObjects;
     d2rq:property qldarch:systemLocation;
@@ -310,7 +301,8 @@ map:rights a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Rights'"
+    d2rq:condition "o_element_sets.name='Dublin Core'";
+    d2rq:condition "o_elements.name='Rights'"
     .
 map:externalIdentifier a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
@@ -321,7 +313,8 @@ map:externalIdentifier a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='External Identifier'"
+    d2rq:condition "o_element_sets.name='Dublin Core'";
+    d2rq:condition "o_elements.name='External Identifier'"
     .
 
 # Controlled Vocabs Metadata
@@ -333,7 +326,8 @@ map:interviewer a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Interviewer'"
+    d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
+    d2rq:condition "o_elements.name='Interviewer'"
     .
 map:interviewee a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
@@ -343,7 +337,8 @@ map:interviewee a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Interviewee'"
+    d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
+    d2rq:condition "o_elements.name='Interviewee'"
     .
 map:format a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
@@ -353,7 +348,8 @@ map:format a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Format'"
+    d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
+    d2rq:condition "o_elements.name='Format'"
     .
 map:transcriber a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
@@ -363,7 +359,8 @@ map:transcriber a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Transcriber'"
+    d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
+    d2rq:condition "o_elements.name='Transcriber'"
     .
 map:hasSubject a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
@@ -373,7 +370,8 @@ map:hasSubject a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Subject'"
+    d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
+    d2rq:condition "o_elements.name='Subject'"
     .
 map:contemporaryFirm a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
@@ -383,7 +381,8 @@ map:contemporaryFirm a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Contemporary Firm'"
+    d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
+    d2rq:condition "o_elements.name='Contemporary Firm'"
     .
 map:drawingType a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
@@ -393,7 +392,8 @@ map:drawingType a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Drawing Type'"
+    d2rq:condition "o_element_sets.name='Item Type Metadata'"
+    d2rq:condition "o_elements.name='Drawing Type'"
     .
 map:buildingTypology a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
@@ -403,10 +403,9 @@ map:buildingTypology a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Drawing Type'"
+    d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
+    d2rq:condition "o_elements.name='Drawing Type'"
     .
-
-# Item Metadata Types
 map:photographer a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
     d2rq:belongsToClassMap map:digitalObjects;
@@ -419,6 +418,7 @@ map:photographer a d2rq:PropertyBridge;
     d2rq:condition "o_element_sets.name='Item Type Metadata'";
     d2rq:condition "o_elements.name='Photographer'"
     .
+# Item Metadata Types
 map:datePhotographed a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
     d2rq:belongsToClassMap map:digitalObjects;
