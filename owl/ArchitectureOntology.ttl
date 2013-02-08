@@ -251,7 +251,7 @@ foaf:lastName a owl:DatatypeProperty ;
 # Controlled Vocabulary Export Classes
 #
 
-qaat:PseudoEntity a qldarch:Entity ;
+qaat:PseudoEntity a :Entity ;
     rdfs:comment "Used as a temporary placeholder for export of controlled vocabularies from omeka." ;
     :label "Pseudo Entity" .
 

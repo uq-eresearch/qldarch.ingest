@@ -1,6 +1,4 @@
-@prefix map: <#> .
-@prefix db: <> .
-@prefix vocab: <vocab/> .
+@prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -392,7 +390,7 @@ map:drawingType a d2rq:PropertyBridge;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Item Type Metadata'"
+    d2rq:condition "o_element_sets.name='Item Type Metadata'";
     d2rq:condition "o_elements.name='Drawing Type'"
     .
 map:buildingTypology a d2rq:PropertyBridge;
