@@ -106,6 +106,10 @@ foaf:Person a owl:Class ;
     :label "Firms" ;
     :toplevel true .
 
+:FirmManifestation a owl:Class ;
+    rdfs:subClassOf foaf:Agent ;
+    :label "Firm Manifestation" .
+
 :Photograph a owl:Class ;
     rdfs:subClassOf :DigitalObject ;
     :displayPrecedence 1 ;
@@ -351,5 +355,26 @@ qaat:photographer a owl:DatatypeProperty ;
     :display true ;
     :editable false ;
     rdfs:domain :Photograph .
+
+:succeededBy a owl:ObjectProperty ;
+    :label "Succeded By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :FirmManifestation ;
+    rdfs:range :FirmManifestation .
+
+:preceededBy a owl:ObjectProperty ;
+    :label "Preceeded By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :FirmManifestation ;
+    rdfs:range :FirmManifestation .
+
+:manifestationOf a owl:ObjectProperty ;
+    :label "Firm Manifestation Of" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :FirmManifestation ;
+    rdfs:range :Firm .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:
