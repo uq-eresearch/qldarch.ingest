@@ -1,2 +1,4 @@
 d2rq/mysql.password
 *.swp
+latest-export.ttl
+omeka-mapping-with-password.ttl
