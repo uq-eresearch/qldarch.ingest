@@ -67,7 +67,7 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:subClassOf :Entity .
 
 :DigitalThing a owl:Class ;
-    rdfs:subClassof :Entity .
+    rdfs:subClassOf :Entity .
 
 :DigitalObject a owl:Class ;
     rdfs:subClassOf :DigitalThing ;
