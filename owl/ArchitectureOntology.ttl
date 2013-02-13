@@ -255,6 +255,13 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:domain :FirmManifestation ;
     rdfs:range :Firm .
 
+:buildingTypology a owl:ObjectProperty ;
+    :label "Building Typology" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Structure ;
+    rdfs:range :BuildingTypology .
+
 #
 # Controlled Vocabulary Export Classes
 #

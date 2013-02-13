@@ -1,0 +1,190 @@
+#Processed by Id: euler.yap 5820 2012-11-27 15:29:04Z josd
+
+#eye --yap --nope latest.ttl --query buildings.n3
+
+
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+@prefix qaomeka: <http://qldarch.net/omeka/items/show/>.
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#>.
+
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
+
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+@prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#>.
+
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+@prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#>.
+
+@prefix dcterms: <http://purl.org/dc/terms/>.
+
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+
+@prefix str: <http://www.w3.org/2000/10/swap/string#>.
+
+@prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
+
+@prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
+
+@prefix var: <http://localhost/var#>.
+
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+
+@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+
+@prefix n3: <http://www.w3.org/2004/06/rei#>.
+
+
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/1> qldarch:label "New Courts of Law, Magistrates Court".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/2> qldarch:label "Civic Centre, Gladstone".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/3> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/3> qldarch:label "Brisbane Milk Board".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/4> qldarch:label "Childcare Centre, Mitchelton".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/5> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/5> qldarch:label "Retirement Village, Hervey Bay".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/6> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/6> qldarch:label "Watkins Place".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/7> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/7> qldarch:label "Mutual Life and Citizens Assurance Company (M.L.C.) Building".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/8> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/8> qldarch:label "Residence, for Mr & Mrs A. Campbell, Mt Isa".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/9> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/9> qldarch:label "Christ Church, St Lucia".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/10> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/10> qldarch:label "Residence at Beecroft for Mr.&Mrs. R.J. Bligh".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/11> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/11> qldarch:label "Agricultural College, Dalby".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/12> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/12> qldarch:label "New Courts of Law, Brisbane Phase 2, Supreme Court Building".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/13> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/13> qldarch:label "Gladstone Town Council, Memorial Park".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/14> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/14> qldarch:label "Amoco Service Station, Stafford".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/15> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/15> qldarch:label "Trickett Gardens Holiday Inn, Surfers Paradise".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/16> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/16> qldarch:label "Cooper House".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/17> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/17> qldarch:label "Inala Sports Centre".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/18> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/18> qldarch:label "Milton Residence, for W. Power".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/19> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/19> qldarch:label "Kahn House".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/20> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/20> qldarch:label "Hayes House, St Lucia".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/21> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/21> qldarch:label "House for V.L. & C.S. Matchett, Indooroopilly".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/22> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/22> qldarch:label "Split Level Cottage, for Ross McCowan, Bribie Island".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/23> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/23> qldarch:label "445 Upper Edward St, Brisbane CBD".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/24> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/24> qldarch:label "Queensland Agricultural College".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/25> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/25> qldarch:label "J. Gould Residence, Aspley".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/26> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/26> qldarch:label "Amoco Service Station, Moorooka".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/27> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/27> qldarch:label "Illowra St House, for A. Harkin, The Gap".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/28> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/28> qldarch:label "Police Citizens Youth Club Building, Inala".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/29> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/29> qldarch:label "Carramar Flats".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/30> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/30> qldarch:label "Caravan Park and Facilities, for T.M. Burke Estates, Peregian".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/31> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/31> qldarch:label "Shopping Centre, Runaway Bay".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/32> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/32> qldarch:label "Library and Science Block, Brisbane Boys College, Toowong".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/33> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/33> qldarch:label "Amoco Service Station, for James M. Samios, Beaudesert Rd, Acacia Ridge".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/34> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/34> qldarch:label "Amoco Service Station, Salisbury".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/35> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/35> qldarch:label "Shopping Centre, for Poulos Holdings Pty Ltd, Tarragindi".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/36> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/36> qldarch:label "James Hardie Office, Newstead".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/37> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/37> qldarch:label "Greenslopes Bowling Centre".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/38> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/38> qldarch:label "Jacobsen House".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/39> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/39> qldarch:label "Roma St Redevelopment".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/40> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/40> qldarch:label "Pharmacy at Albert St City for R.G. Malouf".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/41> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/41> qldarch:label "Bligh House, Kenmore".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/42> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/42> qldarch:label "Extensions to Premises Queensland Conference of Seventh-day Adventists".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/43> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/43> qldarch:label "Kenmore Residence, for David Hawkes".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/44> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/44> qldarch:label "Amoco, Standard Service Station Signs".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/45> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/45> qldarch:label "Queensland Agricultural College (University of Queensland), Gatton".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/46> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/46> qldarch:label "Proposed Development Catholic Church Property, The Gap".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/47> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/47> qldarch:label "Amoco Service Station, Carina".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/48> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/48> qldarch:label "Commerce Building (Chamberlain), University of Queensland, St Lucia".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/49> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/49> qldarch:label "Retail Development, for Westfield, Everton Park".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/50> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/50> qldarch:label "House P.&J. Doherty, Everton park".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/51> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/51> qldarch:label "Mt Gravatt Teachers College".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/52> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/52> qldarch:label "Amoco Service Station, Kenmore".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/53> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/53> qldarch:label "Roma St Redevelopment\r ".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/54> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/54> qldarch:label "Chermside Olympic Swimming Pool".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/55> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/55> qldarch:label "Yeronga Park Swimming Pool, Brisbane City Council, Yeronga".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/56> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/56> qldarch:label "O'Neill House, Ironside St, St Lucia".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/57> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/57> qldarch:label "Development Study Central Railway Station, Brisbane".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/58> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/58> qldarch:label "General Post Office, Forecourt Development, Brisbane CBD".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/59> qldarch:label "Hill Residence, Clayfield".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/60> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/60> qldarch:label "First Year Science Building, University of Queensland, St Lucia".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/61> qldarch:label "B.C.H Southport Bowl".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/62> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/62> qldarch:label "Proposed block of shops at Ascot for J.&K. Giorgas".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/63> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/63> qldarch:label "Childcare Centre, Inala".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/64> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/64> qldarch:label "Amoco Service Station, Unknown Location".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/65> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/65> qldarch:label "Arcade at Gympie for A.H. Leitch & son".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/66> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/66> qldarch:label "New Courts of Law".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/67> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/67> qldarch:label "Topley House".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/68> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/68> qldarch:label "Exhibition Bowl, Brisbane".
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/69> a qldarch:Structure. <http://qldarch.net/rdf/2012-12/resources/buildings/69> qldarch:label "Department Store, Arawa, Papua New Guinea".
+
+
+
+#ENDS 6 [msec] TC=69 TP=138 BC=0 BP=70 PM=0 CM=0 FM=0 AM=0
+
+
+
