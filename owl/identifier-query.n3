@@ -1,5 +1,7 @@
-@prefix log: <http://www.w3.org/2000/10/swap/log#> .
-@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@base <http://qldarch.net/ns/rdf/2012/06/terms#> .
 
-{ ?R a qldarch:Entity . ?R ?P ?O . } => { ?R ?P ?O . ?R qldarch:identifier ?R . } .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .
+
+{ ?R rdfs:subClassOf :Entity . ?R ?P ?O } => { ?R ?P ?O } .

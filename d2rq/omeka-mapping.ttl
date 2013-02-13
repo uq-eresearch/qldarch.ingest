@@ -8,6 +8,8 @@
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#> .
+@prefix qaomeka: <http://qldarch.net/omeka/items/show/> .
 
 map:database a d2rq:Database;
 	d2rq:jdbcDriver "com.mysql.jdbc.Driver";

@@ -4,7 +4,7 @@
 # Licensed Apache 2.0
 #
 
-@base <http://qldarch.net/ns/rdf/2012/06/terms#> .
+@base <http://qldarch.net/ns/rdf/2012-06/terms#> .
 
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
@@ -64,16 +64,20 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:comment "Top for concepts related by this vocabularly" .
     
 :NonDigitalThing a owl:Class ;
+    :label "Non-Digital Thing" ;
     rdfs:subClassOf :Entity .
 
 :DigitalThing a owl:Class ;
+    :label "Digital Thing" ;
     rdfs:subClassOf :Entity .
 
 :DigitalObject a owl:Class ;
+    :label "Digital Object" ;
     rdfs:subClassOf :DigitalThing ;
     rdfs:comment "This will be replaced by a reconciliation with FRBR Work/Expression distinction".
 
 :StructureOrAgent a owl:Class ;
+    :label "Structure or Agent" ;
     rdfs:subClassOf :NonDigitalThing .
 
 :Structure a owl:Class ;
@@ -89,10 +93,12 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     :toplevel true .
 
 foaf:Agent a owl:Class ;
+    :label "Agent" ;
     rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Agent> ;
     rdfs:subClassOf :StructureOrAgent .
 
 foaf:Person a owl:Class ;
+    :label "Person" ;
     rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Person> ;
     rdfs:subClassOf foaf:Agent .
 
@@ -131,9 +137,11 @@ foaf:Person a owl:Class ;
     :toplevel true .
 
 :Format a owl:Class ;
+    :label "Format" ;
     rdfs:subClassOf :DigitalThing .
 
 :DrawingType a owl:Class ; 
+    :label "Drawing Type" ;
     rdfs:subClassOf :DigitalThing .
 
 :TopicConcept a owl:Class ;
