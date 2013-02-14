@@ -12,7 +12,7 @@
 
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 
-{ ?A a qldarch:Architect .
+{ ?A a foaf:Person .
   ?A foaf:firstName ?FN .
   ?A foaf:lastName ?LN .
   ?DO a qldarch:DigitalObject .

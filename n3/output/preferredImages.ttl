@@ -1,0 +1,36 @@
+#Processed by Id: euler.yap 5820 2012-11-27 15:29:04Z josd
+#eye --yap --nope rules/rdfs-subClassOf.n3 ../owl/ArchitectureOntology.ttl omekaexport/latest.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl pseudoentities/buildings.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/preferredImage.n3
+
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcam: <http://purl.org/dc/dcam/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix qaomeka: <http://qldarch.net/omeka/items/show/>.
+@prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#>.
+@prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#>.
+@prefix str: <http://www.w3.org/2000/10/swap/string#>.
+@prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
+@prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
+@prefix var: <http://localhost/var#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+@prefix n3: <http://www.w3.org/2004/06/rei#>.
+
+<http://qldarch.net/rdf/2012-12/resources/people/2> :preferredImage <http://qldarch.net/omeka/items/show/1787>.
+<http://qldarch.net/rdf/2012-12/resources/people/6> :preferredImage <http://qldarch.net/omeka/items/show/1793>.
+<http://qldarch.net/rdf/2012-12/resources/people/7> :preferredImage <http://qldarch.net/omeka/items/show/1794>.
+<http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1795>.
+<http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1890>.
+<http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1891>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :preferredImage <http://qldarch.net/omeka/items/show/1800>.
+
+#ENDS 886 [msec] TC=3650 TP=17394 BC=0 BP=7068 PM=0 CM=0 FM=0 AM=0
+
