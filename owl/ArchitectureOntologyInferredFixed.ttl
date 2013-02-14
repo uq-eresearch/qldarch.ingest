@@ -289,6 +289,14 @@ qaat:transcriber
     a rdfs:Class, owl:Class ;
     rdfs:subClassOf :Entity, skos:Concept .
 
+:buildingTypology
+    :display true ;
+    :editable false ;
+    :label "Building Typology" ;
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain :Entity, :NonDigitalThing, :Structure, :StructureOrAgent ;
+    rdfs:range :BuildingTypology, :Entity, :NonDigitalThing .
+
 :dateOriginalCreation
     :display false ;
     :editable false ;
