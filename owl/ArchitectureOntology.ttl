@@ -44,6 +44,7 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 #
 
 :label a owl:AnnotationProperty ;
+    a owl:DatatypeProperty ;
     :label "Preferred label" ;
     rdfs:subPropertyOf rdfs:label ;
     rdfs:comment "The preferred label for a thing" .

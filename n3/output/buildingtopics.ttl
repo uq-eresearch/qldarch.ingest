@@ -549,5 +549,5 @@
 <http://qldarch.net/omeka/items/show/1682> :hasTopic <http://qldarch.net/rdf/2012-12/resources/buildings/25>.
 <http://qldarch.net/omeka/items/show/1680> :hasTopic <http://qldarch.net/rdf/2012-12/resources/buildings/25>.
 
-#ENDS 562 [msec] TC=4167 TP=18945 BC=0 BP=7585 PM=0 CM=0 FM=0 AM=0
+#ENDS 560 [msec] TC=4167 TP=18945 BC=0 BP=7585 PM=0 CM=0 FM=0 AM=0
 
