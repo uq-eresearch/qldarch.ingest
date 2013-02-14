@@ -1,0 +1,28 @@
+@base <http://qldarch.net/ns/rdf/2012-06/terms> .
+
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix str: <http://www.w3.org/2000/10/swap/string#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
+@prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
+
+@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
+
+# qaat:BuildingTypology->qldarch:buildingTypology
+{ ?e a qaat:BuildingTypology .
+  ?e qaat:label ?label .
+  (?l ?dt) log:dtlit ?label . 
+  ?type a qldarch:BuildingTypology .
+  ?type qldarch:label ?typelabel .
+  ?l str:equalIgnoringCase ?typelabel .
+  # Unify ?e with ?type by finding all digital objects that refer to ?e and use the topics
+  # identified in rule qaat:ProjectName->qldarch:hasTopic
+  ?do a qldarch:DigitalObject .
+  ?do qaat:buildingTypology ?e .
+  ?do qldarch:hasTopic ?building } => { ?building qldarch:buildingTypology ?type } .
+

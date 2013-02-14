@@ -16,7 +16,7 @@
 #
 # Output turtle header.
 #
-{ ("@base <http://qldarch.net/rdf/2012-12/resources/buildings/> .\n"
+{ ("@base <http://qldarch.net/rdf/2012-12/resources/people/> .\n"
    "\n"
    "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.\n"
    "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.\n"
@@ -33,5 +33,5 @@
 { ?pn a qaat:Person .
   ?pn qaat:label ?label .
   (?l ?dt) log:dtlit ?label .
-  ("<REPLACEME> a qldarch:Structure ; foaf:firstName \"" ?l "\" ; foaf:lastName \"" ?l "\" ; qldarch:label \"" ?l "\" .\n" ) str:concatenation ?output .
+  ("<REPLACEME> a foaf:Person ; foaf:firstName \"" ?l "\" ; foaf:lastName \"" ?l "\" ; qldarch:label \"" ?l "\" .\n" ) str:concatenation ?output .
 } => { "b" log:outputString ?output } .
