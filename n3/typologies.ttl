@@ -1,0 +1,16 @@
+@base <http://qldarch.net/rdf/2012-12/resources/typologies/> .
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
+
+<1> a qldarch:BuildingTypology ; qldarch:label "Commercial buildings" .
+<2> a qldarch:BuildingTypology ; qldarch:label "Dwellings" .
+<3> a qldarch:BuildingTypology ; qldarch:label "Educational facilities" .
+<4> a qldarch:BuildingTypology ; qldarch:label "Government buildings" .
+<5> a qldarch:BuildingTypology ; qldarch:label "Health care facilities" .
+<6> a qldarch:BuildingTypology ; qldarch:label "Recreation and sports facilities" .
+<7> a qldarch:BuildingTypology ; qldarch:label "Religious buildings" .
+<8> a qldarch:BuildingTypology ; qldarch:label "Transport infrastructure" .

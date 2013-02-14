@@ -447,6 +447,11 @@ qaat:Subject
     qldarch:transcriptLocation "http://qldarch.net/static/transcripts/birrell/Birrell.json"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Interview .
 
+<../../../ns/omeka/2012-11/pseudoentity#Project+Name,Picadilly+Arcade%2C+Brisbane+CBD>
+    qaat:label "Picadilly Arcade, Brisbane CBD"^^xsd:string ;
+    qaat:pseudoEntityType "Project Name"^^xsd:string ;
+    a qaat:ProjectName, qaat:PseudoEntity .
+
 <1368>
     dcterms:identifier "69-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
     dcterms:title "Men's block War Veterans Home"^^xsd:string ;
@@ -590,6 +595,23 @@ qaat:Subject
     qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
     qldarch:projectNumber "1339"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
+
+<1870>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_BJB+P; Photos landscape office; 445 Upper Edward St"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "445 Upper Edward St, landscape - internal office"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_0001_edited.jpg" ;
+    qldarch:systemLocation "58eef71a1916b8846f6c767009117e75.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
 
 <1459>
     dcterms:identifier "535-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
@@ -1014,6 +1036,11 @@ qaat:issue
     qldarch:systemLocation "eab5409e664ad540e5b5fa09cc9b9761.pdf"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
+<../../../ns/omeka/2012-11/pseudoentity#Project+Name,Skirving+House>
+    qaat:label "Skirving House"^^xsd:string ;
+    qaat:pseudoEntityType "Project Name"^^xsd:string ;
+    a qaat:ProjectName, qaat:PseudoEntity .
+
 <1504>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -1323,6 +1350,24 @@ qldarch:hasSubject
     qldarch:systemLocation "aafd1caee9ddf97d537f25d4c5d75546.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
 
+<1875>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_BJB+P; office interior"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "445 Upper Edward St, Interior Office; Contact sheet 7640_61_AA - MM "^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:photographer "David McCarthy Photography"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_0001_edited.jpg" ;
+    qldarch:systemLocation "d41ceaa6bdd5e8f538348b3f4b205817.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
+
 <../../../ns/omeka/2012-11/pseudoentity#Subject,Birrell+James>
     qaat:label "Birrell James"^^xsd:string ;
     qaat:pseudoEntityType "Subject"^^xsd:string ;
@@ -1471,6 +1516,13 @@ qldarch:hasSubject
     qaat:pseudoEntityType "Project Name"^^xsd:string ;
     a qaat:ProjectName, qaat:PseudoEntity .
 
+<1321>
+    dcterms:identifier "121-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
+    dcterms:title "Plan for retirement comfort"^^xsd:string ;
+    qaat:issue "November"^^xsd:string ;
+    qaat:periodical "The Australian HOME BEAUTIFUL"^^xsd:string ;
+    a qldarch:Article, qldarch:DigitalObject .
+
 <1707>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -1488,13 +1540,6 @@ qldarch:hasSubject
     qldarch:sourceFilename "IMG_0002_edited.jpg" ;
     qldarch:systemLocation "1d640980d0ed521be542b01ff465b7a4.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
-
-<1321>
-    dcterms:identifier "121-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
-    dcterms:title "Plan for retirement comfort"^^xsd:string ;
-    qaat:issue "November"^^xsd:string ;
-    qaat:periodical "The Australian HOME BEAUTIFUL"^^xsd:string ;
-    a qldarch:Article, qldarch:DigitalObject .
 
 <1408>
     dcterms:identifier "137-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
@@ -1583,6 +1628,23 @@ qldarch:hasSubject
     qldarch:sourceFilename "tube903_amoco_stafford_electrical_layout_june1961_1120_WD5_edited.jpg" ;
     qldarch:systemLocation "c0eeebdd306005a6e0445820f2a6a9a8.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
+
+<1874>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_BJB+P; Photos landscape office; 445 Upper Edward St"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "445 Upper Edward St, landscape - outdoor area 2"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_edited.jpg" ;
+    qldarch:systemLocation "ba660effbdf8c5839f4b6b3e37ce9cf5.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
 
 <1131>
     dcterms:identifier "296-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
@@ -1737,6 +1799,23 @@ qldarch:transcriber
     qaat:periodical "The Australian HOME BEAUTIFUL"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
+<1873>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_BJB+P; Photos landscape office; 445 Upper Edward St"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "445 Upper Edward St, landscape - outdoor area"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_0004_edited.jpg" ;
+    qldarch:systemLocation "26c88984a5e0a150ac32e7f427741835.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
+
 <1671>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -1767,6 +1846,11 @@ qldarch:transcriber
     qldarch:sourceFilename "Topley House_001_no data_edited.jpg" ;
     qldarch:systemLocation "fbea25c19d7fb4c61ed97dca7f8e80d0.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
+
+<../../../ns/omeka/2012-11/pseudoentity#Project+Name,Sanitarium+Offices%2C+Moorooka>
+    qaat:label "Sanitarium Offices, Moorooka"^^xsd:string ;
+    qaat:pseudoEntityType "Project Name"^^xsd:string ;
+    a qaat:ProjectName, qaat:PseudoEntity .
 
 qaat:periodical
     a rdf:Property .
@@ -1878,6 +1962,23 @@ qaat:periodical
     qldarch:sourceFilename "tube172_gladstone_memorial_park_sketch_may_1974_edited.jpg" ;
     qldarch:systemLocation "64d01ecda3985391e4f7365ec3ae09c7.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
+
+<1872>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_BJB+P; Photos landscape office; 445 Upper Edward St"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "445 Upper Edward St, landscape - internal office 3"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_0003_edited.jpg" ;
+    qldarch:systemLocation "3bcb9b3258a57a81533e418c0d54c9ce.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
 
 <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Health+care+facilities>
     qaat:label "Health care facilities"^^xsd:string ;
@@ -2069,6 +2170,23 @@ qaat:periodical
     qldarch:systemLocation "792be1e292d49f497d4a8087f0f8c760.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
 
+<1871>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_BJB+P; Photos landscape office; 445 Upper Edward St"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "445 Upper Edward St, landscape - internal office 2"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_0002_edited.jpg" ;
+    qldarch:systemLocation "85c263147feff9914baeb6873ce003c7.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
+
 <1635>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -2131,6 +2249,13 @@ qaat:periodical
     qldarch:systemLocation "a828e710518c3ae29ccaa6c3e81513ae.jpg"^^xsd:string ;
     a qldarch:DigitalObject .
 
+<1326>
+    dcterms:identifier "115-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
+    dcterms:title "House for the Hot Inland"^^xsd:string ;
+    qaat:issue "August"^^xsd:string ;
+    qaat:periodical "The Australian Home Beautiful"^^xsd:string ;
+    a qldarch:Article, qldarch:DigitalObject .
+
 <1673>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -2146,12 +2271,23 @@ qaat:periodical
     qldarch:systemLocation "3b5ddf35cb483b576b2ab2ae67d5c36a.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
-<1326>
-    dcterms:identifier "115-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
-    dcterms:title "House for the Hot Inland"^^xsd:string ;
-    qaat:issue "August"^^xsd:string ;
-    qaat:periodical "The Australian Home Beautiful"^^xsd:string ;
-    a qldarch:Article, qldarch:DigitalObject .
+<1879>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Bligh Jessup Bretnall Architects"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portraits: Bligh Jessup Bretnall Architects 2"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:photographer "David McCarthy Photography"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "Bligh Jessup Bretnall_002_David McCarthy Photography_edited.jpg" ;
+    qldarch:systemLocation "69deb4a52181aa8ebd8b76d7d648bff3.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
 
 <1220>
     dcterms:description "Mention of QLD architecture in interstate journal\rAward winners: Hayes & Scott, Karl Langer"^^xsd:string ;
@@ -2314,6 +2450,13 @@ qldarch:Interview
     qaat:volume "25"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
+<1325>
+    dcterms:identifier "117-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
+    dcterms:title "Bathroom has sun court"^^xsd:string ;
+    qaat:issue "September"^^xsd:string ;
+    qaat:periodical "The Australian HOME BEAUTIFUL"^^xsd:string ;
+    a qldarch:Article, qldarch:DigitalObject .
+
 <1674>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -2329,12 +2472,23 @@ qldarch:Interview
     qldarch:systemLocation "b40c67becd713b563aa93a18f0795bed.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
-<1325>
-    dcterms:identifier "117-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
-    dcterms:title "Bathroom has sun court"^^xsd:string ;
-    qaat:issue "September"^^xsd:string ;
-    qaat:periodical "The Australian HOME BEAUTIFUL"^^xsd:string ;
-    a qldarch:Article, qldarch:DigitalObject .
+<1878>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Bligh Jessup Bretnall Architects"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portraits: Bligh Jessup Bretnall Architects 1"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:photographer "David McCarthy Photography"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "Bligh Jessup Bretnall_001_David McCarthy Photography_edited.jpg" ;
+    qldarch:systemLocation "71c9d10ddf45df3f18316876445baa11.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
 
 <1344>
     dcterms:identifier "83-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
@@ -2507,6 +2661,23 @@ qldarch:Spreadsheet
     qaat:periodical "The Australian HOME BEAUTIFUL"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
+<1877>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope Bob Gardner & Athol Bretnall"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portraits Contact Sheet: Bob Gardner (L) & Athol Bretnall (R)"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_edited.jpg" ;
+    qldarch:systemLocation "3adf9a11f43ca4aab4be041daca268d1.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
+
 <1676>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -2627,6 +2798,24 @@ qldarch:Spreadsheet
     qldarch:systemLocation "60d4fd4d359310bea732b3ec15aebc59.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
+<1876>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_BJB+P; office interior"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "445 Upper Edward St, Interior Office; Contact sheet 7640_61_AA - MM 2"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:photographer "David McCarthy Photography"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_edited.jpg" ;
+    qldarch:systemLocation "e3c7a9facd7ee20724a517a1dfdec600.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
+
 <1342>
     dcterms:identifier "18-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
     dcterms:title "Administration building, Eagle Farm, Brisbane, Queensland"^^xsd:string ;
@@ -2659,6 +2848,13 @@ qldarch:Spreadsheet
     qaat:periodical "The Australian HOME BEAUTIFUL"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
+<1322>
+    dcterms:identifier "120-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
+    dcterms:title "Sea view: seclusion too"^^xsd:string ;
+    qaat:issue "November"^^xsd:string ;
+    qaat:periodical "The Australian HOME BEAUTIFUL"^^xsd:string ;
+    a qldarch:Article, qldarch:DigitalObject .
+
 <1677>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -2674,13 +2870,6 @@ qldarch:Spreadsheet
     qldarch:sourceFilename "Roma St Redev_H515_David Knell Photographer_edited.jpg" ;
     qldarch:systemLocation "51f3aa85b54792cb86877a7651eb47a4.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
-
-<1322>
-    dcterms:identifier "120-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
-    dcterms:title "Sea view: seclusion too"^^xsd:string ;
-    qaat:issue "November"^^xsd:string ;
-    qaat:periodical "The Australian HOME BEAUTIFUL"^^xsd:string ;
-    a qldarch:Article, qldarch:DigitalObject .
 
 <1696>
     dcterms:created "2012-09"^^xsd:string ;
@@ -3483,6 +3672,24 @@ qldarch:dateSubmitted
     qldarch:systemLocation "c7535e64f007a7eef5c30fadbcd7edef.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
+<1868>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - BJB Projects_BVDD59"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Wairuna Flats A486"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Dwellings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:periodical "Commercial Property..."^^xsd:string ;
+    qaat:photographer "Millars Photographic Services, Balmoral"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,Wairuna+Flats> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:sourceFilename "Wairuna Flats Highgate Hill_A486_Millars Photographic Service_Balmoral_edited.jpg" ;
+    qldarch:systemLocation "2feaece68851c2ae8eee3ef615f07fbb.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
+
 <1628>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -3646,6 +3853,11 @@ qldarch:dateSubmitted
     qldarch:systemLocation "09f10d479142786d5a05b11d79625e4d.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
+<../../../ns/omeka/2012-11/pseudoentity#Project+Name,Camden+Apartments>
+    qaat:label "Camden Apartments"^^xsd:string ;
+    qaat:pseudoEntityType "Project Name"^^xsd:string ;
+    a qaat:ProjectName, qaat:PseudoEntity .
+
 <1691>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -3713,6 +3925,25 @@ qldarch:dateSubmitted
     qldarch:sourceFilename "They live in the old Town Hall_The Australian Home Beautiful_1950_p22-3, 49.pdf" ;
     qldarch:systemLocation "8404b516ca2d3ccfecb8db0330f9f2a4.pdf"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
+
+<1869>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - BJB Projects_BVDD59"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Windsor Fire Station A526"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Dwellings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:periodical "Commercial Property..."^^xsd:string ;
+    qaat:photographer "Millars Photographic Services, Balmoral"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,Fire+Station%2C+Windsor> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "7 Fosberry St, Windsor"^^xsd:string ;
+    qldarch:sourceFilename "Windsor Fire Station_ A526_Millars Photographic Service_edited.jpg" ;
+    qldarch:systemLocation "d976c88501ba50a03e45544161269e9d.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
 
 <1140>
     dcterms:identifier "286-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
@@ -3816,6 +4047,11 @@ qldarch:dateSubmitted
 
 qaat:PseudoEntity
     a rdfs:Class .
+
+<../../../ns/omeka/2012-11/pseudoentity#Project+Name,Fire+Station%2C+Windsor>
+    qaat:label "Fire Station, Windsor"^^xsd:string ;
+    qaat:pseudoEntityType "Project Name"^^xsd:string ;
+    a qaat:ProjectName, qaat:PseudoEntity .
 
 <1117>
     dcterms:identifier "306-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
@@ -3993,7 +4229,7 @@ qaat:PseudoEntity
     dcterms:rights "BVN Architecture"^^xsd:string ;
     dcterms:title "Roma St Redevelopment, Sections"^^xsd:string ;
     qaat:drawingType <../../../ns/omeka/2012-11/pseudoentity#Drawing+Type,Section> ;
-    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,Roma+St+Redevelopment%0D%0A> ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,Roma+St+Redevelopment> ;
     qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
     qldarch:projectNumber "1161"^^xsd:string ;
     qldarch:sourceFilename "tube302_roma_street_station_sections (3)_edited.jpg" ;
@@ -4877,6 +5113,14 @@ qldarch:Photograph
     qldarch:systemLocation "e30a5ef6fbe238a7380201ba0466746e.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
 
+<1307>
+    dcterms:identifier "565-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
+    dcterms:title "Four Queensland Homes"^^xsd:string ;
+    qaat:issue "8"^^xsd:string ;
+    qaat:periodical "Architecture and Arts"^^xsd:string ;
+    qaat:volume "33"^^xsd:string ;
+    a qldarch:Article, qldarch:DigitalObject .
+
 <209>
     dcterms:created "2012-10-04"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -4893,14 +5137,6 @@ qldarch:Photograph
     qldarch:sourceFilename "MLC_4009-73_Knell & Chester Photography.jpg" ;
     qldarch:systemLocation "7084f861665f1135d8cf277273bb97ca.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
-
-<1307>
-    dcterms:identifier "565-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
-    dcterms:title "Four Queensland Homes"^^xsd:string ;
-    qaat:issue "8"^^xsd:string ;
-    qaat:periodical "Architecture and Arts"^^xsd:string ;
-    qaat:volume "33"^^xsd:string ;
-    a qldarch:Article, qldarch:DigitalObject .
 
 <1431>
     dcterms:description "Queensland Agricultural College at Gatton - Architects Bligh, Jessup, Bretnall and partners.  Shows proposal for residence for the Vice-Chancellor of Queensland University at St Lucia, architect John Dalton."^^xsd:string ;
@@ -5311,6 +5547,13 @@ qaat:DrawingType
     qaat:volume "96"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
+<1309>
+    dcterms:identifier "13-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
+    dcterms:title "Happy Valley State School, Mount Isa, Queensland"^^xsd:string ;
+    qaat:issue "September"^^xsd:string ;
+    qaat:periodical "Architecture in Australia"^^xsd:string ;
+    a qldarch:Article, qldarch:DigitalObject .
+
 <95>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -5325,13 +5568,6 @@ qaat:DrawingType
     qldarch:sourceFilename "tube302_roma_street_station_ground_floor_level (2)_edited.jpg" ;
     qldarch:systemLocation "d841cb1d50ddc5ec3a3d542bf31a8a0c.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
-
-<1309>
-    dcterms:identifier "13-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
-    dcterms:title "Happy Valley State School, Mount Isa, Queensland"^^xsd:string ;
-    qaat:issue "September"^^xsd:string ;
-    qaat:periodical "Architecture in Australia"^^xsd:string ;
-    a qldarch:Article, qldarch:DigitalObject .
 
 <147>
     dcterms:title "Hayes&Scott013.jpg"^^xsd:string ;
@@ -5879,6 +6115,11 @@ qldarch:LineDrawing
     qaat:periodical "The Australian Home Beautiful"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
+<../../../ns/omeka/2012-11/pseudoentity#Project+Name,Wairuna+Flats>
+    qaat:label "Wairuna Flats"^^xsd:string ;
+    qaat:pseudoEntityType "Project Name"^^xsd:string ;
+    a qaat:ProjectName, qaat:PseudoEntity .
+
 <145>
     dcterms:title "Hayes&Scott011.jpg"^^xsd:string ;
     qldarch:sourceFilename "Hayes&Scott011.jpg" ;
@@ -6030,6 +6271,13 @@ qldarch:LineDrawing
     qldarch:systemLocation "ca6716bbec5c922036ec82a4b58bfd6a.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
 
+<1304>
+    dcterms:identifier "21-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
+    dcterms:title "Parliament House Extensions, Canberra"^^xsd:string ;
+    qaat:issue "September"^^xsd:string ;
+    qaat:periodical "Architecture in Australia"^^xsd:string ;
+    a qldarch:Article, qldarch:DigitalObject .
+
 <49>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -6045,13 +6293,6 @@ qldarch:LineDrawing
     qldarch:sourceFilename "tube378_magistrate_court_100_level1_edited.jpg" ;
     qldarch:systemLocation "63260d7f92aac503ab329e7111081ecd.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
-
-<1304>
-    dcterms:identifier "21-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
-    dcterms:title "Parliament House Extensions, Canberra"^^xsd:string ;
-    qaat:issue "September"^^xsd:string ;
-    qaat:periodical "Architecture in Australia"^^xsd:string ;
-    a qldarch:Article, qldarch:DigitalObject .
 
 <1518>
     dcterms:created "2012-09"^^xsd:string ;
@@ -7164,6 +7405,24 @@ qldarch:externalLocation
     qaat:pseudoEntityType "Project Name"^^xsd:string ;
     a qaat:ProjectName, qaat:PseudoEntity .
 
+<1880>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Bligh Jessup Bretnall Architects"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portraits: Bligh Jessup Bretnall Architects 2 - captioned"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:photographer "David McCarthy Photography"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "Bligh Jessup Bretnall_002_names_edited.jpg" ;
+    qldarch:systemLocation "0b0fcd6c3ff4e3230572c5f8445fb019.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
+
 <1469>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -7577,6 +7836,24 @@ qaat:volume
     qldarch:systemLocation "adf7a4cca2910222339c143f42158ab0.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
+<1882>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Bligh Jessup Bretnall Architects"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portraits: Bligh Jessup Bretnall Architects 3 - captioned"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:photographer "David McCarthy Photography"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "Bligh Jessup Bretnall_003_names_edited.jpg" ;
+    qldarch:systemLocation "fa28fc4bef9f55e9877bd92419ed1ffc.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
+
 <1552>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -7742,6 +8019,24 @@ qaat:volume
     qldarch:systemLocation "0ceb0ff7defa45cf8fba9629f89f3e77.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
+<1881>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Bligh Jessup Bretnall Architects"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portraits: Bligh Jessup Bretnall Architects 3"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:photographer "David McCarthy Photography"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "Bligh Jessup Bretnall_003_David McCarthy Photography_edited.jpg" ;
+    qldarch:systemLocation "cd66e45c88ca9ced4adfe85677582754.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
+
 <58>
     dcterms:created "2009-07-30"^^xsd:string ;
     dcterms:title "Architecture in Australia, 1957: Hotel at Broadbeach, Queensland, architect Karl Langer"^^xsd:string ;
@@ -7866,6 +8161,23 @@ dcterms:identifier
     qldarch:systemLocation "8c83cf8a4f54f505eb9459a0734e67df.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
 
+<1885>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Gerry McQuie"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portrait: Gerry McQuie - business manager"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_0001_edited.jpg" ;
+    qldarch:systemLocation "03c912fcd2efdc5410d21df42173ec43.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
+
 <1683>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -7929,15 +8241,17 @@ dcterms:identifier
     dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
     dcterms:identifier "BVN Offsite Archive, Box 6442 - BJB Projects_BVDD59"^^xsd:string ;
     dcterms:rights "BVN Architecture"^^xsd:string ;
-    dcterms:title "James Hardie Trading 84-A522, External from Cnr Commercial and Masters"^^xsd:string ;
+    dcterms:title "Picadilly Arcade A501, External stairs"^^xsd:string ;
     qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
     qaat:dateOriginalCreation "1967"^^xsd:string ;
     qaat:periodical "Commercial Property..."^^xsd:string ;
     qaat:photographer "Millars Photographic Services, Balmoral"^^xsd:string ;
-    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,James+Hardie+Office%2C+Newstead> ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,Picadilly+Arcade%2C+Brisbane+CBD> ;
     qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
     qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
-    qldarch:location "62 Commercial Rd, Newstead"^^xsd:string ;
+    qldarch:location "340 Queen St, Brisbane CDB"^^xsd:string ;
+    qldarch:sourceFilename "Picadilly Arcade_A501_Millars Photographic Service_Balmoral_edited.jpg" ;
+    qldarch:systemLocation "c1708ff68a47dc889e8523d96d6599e4.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
 <119>
@@ -8063,6 +8377,22 @@ dcterms:rights
     qldarch:systemLocation "52af49f90cffced5754faa18e6ec6cee.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
+<1884>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_BVDD59- Camden Stage 2- not built"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Camden Stage 2, Apartments - perspective"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Dwellings> ;
+    qaat:drawingType <../../../ns/omeka/2012-11/pseudoentity#Drawing+Type,Perspective> ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,Camden+Apartments> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:sourceFilename "IMG_0003_edited.jpg" ;
+    qldarch:systemLocation "05be367d1859e25b53f4678eafdd42c6.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:LineDrawing .
+
 <1684>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -8140,6 +8470,22 @@ dcterms:rights
     qldarch:sourceFilename "tube324_commerce_building_uq_floor_plans_edited.jpg" ;
     qldarch:systemLocation "92323ff8d0fcffbb0d98f8d8e6fc9210.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
+
+<1883>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_BVDD59- Camden Stage 2- not built"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Camden Stage 2, Apartments"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Dwellings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,Camden+Apartments> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:sourceFilename "IMG_0002_edited.jpg" ;
+    qldarch:systemLocation "39e7ef8d06f76ac656cccc91d4aa34e5.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
 
 <1359>
     dcterms:identifier "5-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
@@ -8289,6 +8635,23 @@ qaat:ProjectName
     qldarch:systemLocation "a20cc67d49822874f6f737a801cee85f.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
+<1887>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Graham Bligh"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portrait: Graham Bligh"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "Graham Bligh_edited.jpg" ;
+    qldarch:systemLocation "6c72e5ed8559d43a2418fdcc40314f63.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
+
 <210>
     dcterms:created "2012-10-04"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -8304,6 +8667,24 @@ qaat:ProjectName
     qldarch:location "239 George Street, Brisbane, Queensland"^^xsd:string ;
     qldarch:sourceFilename "MLC_4063-73_Knell & Chester Photography.jpg" ;
     qldarch:systemLocation "91c00eabbca10b1a86eea7752c6e5ea4.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
+
+<1867>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - BJB Projects_BVDD59"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Skirving House 415_A513"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Dwellings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:periodical "Commercial Property..."^^xsd:string ;
+    qaat:photographer "Millars Photographic Services, Balmoral"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,Skirving+House> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:sourceFilename "Skirving House415_A513_Millars Photographic Service_Balmoral_edited.jpg" ;
+    qldarch:systemLocation "425df8b295afc10b23c168c63bb432e2.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
 <../../../ns/omeka/2012-11/pseudoentity#Project+Name,Amoco%2C+Standard+Service+Station+Signs>
@@ -8447,6 +8828,23 @@ qldarch:Sound
     qldarch:systemLocation "f9d12e1fb23f8765bba7d9b9c5b2136d.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
+<1886>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Gerry McQuie"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portrait: Gerry McQuie - business manager; Contact Sheet: 2632_4_A-F"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_edited.jpg" ;
+    qldarch:systemLocation "12cfcf54b6fff1b3089373f7f34fc2a3.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
+
 qaat:Format
     a rdfs:Class .
 
@@ -8465,6 +8863,25 @@ qaat:Format
     qldarch:projectNumber "37 Swallow St, Inala"^^xsd:string ;
     qldarch:sourceFilename "IMG_0006_edited.jpg" ;
     qldarch:systemLocation "e4bc48cae23470c99ca9c996f6a657f9.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
+
+<1866>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - BJB Projects_BVDD59"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Sanitarium Offices, Moorooka 352-371_A518; view from Ipswich Rd"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:periodical "Commercial Property..."^^xsd:string ;
+    qaat:photographer "Millars Photographic Services, Balmoral"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,Sanitarium+Offices%2C+Moorooka> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "951 Ipswich Rd, Moorooka"^^xsd:string ;
+    qldarch:sourceFilename "Sanitarium352-371_A518_Millars Photographic Service_edited.jpg" ;
+    qldarch:systemLocation "dec504cbdf134daa0126d154f5976181.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
 <1332>
@@ -8532,6 +8949,23 @@ qaat:Format
     qaat:issue "February"^^xsd:string ;
     qaat:periodical "Architecture in Australia"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
+
+<1889>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_JD Legg + Graham Bligh"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portraits: JD Legg (L) & Graham Bligh (R); Contact Sheet: 2632_13_A-H"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_edited.jpg" ;
+    qldarch:systemLocation "4c86ed1aa4f9eab36e83a21a29fb71b2.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
 
 <1336>
     dcterms:identifier "123-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
@@ -8720,6 +9154,23 @@ qaat:Format
     qaat:issue "June"^^xsd:string ;
     qaat:periodical "Architecture in Australia"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
+
+<1888>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_James Grose"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portrait: James Grose"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_edited.jpg" ;
+    qldarch:systemLocation "cddebdb43c312d628e510bc1e4af52d2.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
 
 <1121>
     dcterms:identifier "300-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
@@ -9030,11 +9481,6 @@ qaat:datePublished
     qldarch:systemLocation "6cb2327aa0ad94f57f0bf9e91a46c6af.jpg"^^xsd:string ;
     a qldarch:DigitalObject .
 
-<../../../ns/omeka/2012-11/pseudoentity#Project+Name,Roma+St+Redevelopment%0D%0A>
-    qaat:label "Roma St Redevelopment\r "^^xsd:string ;
-    qaat:pseudoEntityType "Project Name"^^xsd:string ;
-    a qaat:ProjectName, qaat:PseudoEntity .
-
 <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Recreation+and+sports+facilities>
     qaat:label "Recreation and sports facilities"^^xsd:string ;
     qaat:pseudoEntityType "Building Typology"^^xsd:string ;
@@ -9331,6 +9777,13 @@ qldarch:datePhotographed
     qldarch:systemLocation "9b326ae2cafd4e1c86a6f5e1d388f7ae.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
 
+<1313>
+    dcterms:identifier "130-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
+    dcterms:title "Roofed-Terrace Charm"^^xsd:string ;
+    qaat:issue "December"^^xsd:string ;
+    qaat:periodical "The Australian HOME BEAUTIFUL"^^xsd:string ;
+    a qldarch:Article, qldarch:DigitalObject .
+
 <1106>
     dcterms:identifier "278-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
     dcterms:title "New University Building Catches Natural Daylight"^^xsd:string ;
@@ -9339,13 +9792,6 @@ qldarch:datePhotographed
     qaat:volume "24"^^xsd:string ;
     qldarch:sourceFilename "New University building catches natural daylight.pdf" ;
     qldarch:systemLocation "45f232d90cf7b1918920af85ea0a02c5.pdf"^^xsd:string ;
-    a qldarch:Article, qldarch:DigitalObject .
-
-<1313>
-    dcterms:identifier "130-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
-    dcterms:title "Roofed-Terrace Charm"^^xsd:string ;
-    qaat:issue "December"^^xsd:string ;
-    qaat:periodical "The Australian HOME BEAUTIFUL"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
 <../../../ns/omeka/2012-11/pseudoentity#Interviewee,Jon+Voller>
@@ -9620,6 +10066,14 @@ dcterms:creator
     qldarch:systemLocation "a90f3d89c766e19effd1fe4375f9e9e0.pdf"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
+<1310>
+    dcterms:description "Royal Queensland Yacht Squadron's Clubhouse, Markets at Rocklea, management house of the Australian Institute of Management, International House at the University of Queensland, Queensland chapter council of the RAIA, Staff and Student facility at Moggil Farm for  UQ."^^xsd:string ;
+    dcterms:identifier "590-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
+    dcterms:title "This is the Royal QueenslandYacht Squadron's Clubhouse ..."^^xsd:string ;
+    qaat:issue "146"^^xsd:string ;
+    qaat:periodical "Cross-Section"^^xsd:string ;
+    a qldarch:Article, qldarch:DigitalObject .
+
 <1280>
     dcterms:identifier "95-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
     dcterms:title "House in Beaumaris, near Melbourne, AUSTRALIA"^^xsd:string ;
@@ -9627,14 +10081,6 @@ dcterms:creator
     qaat:periodical "Architectural Design"^^xsd:string ;
     qldarch:sourceFilename "Australia, House in Beaumaris, near Melbourne.pdf" ;
     qldarch:systemLocation "41e4a6fc88d0c378b080820a656ce147.pdf"^^xsd:string ;
-    a qldarch:Article, qldarch:DigitalObject .
-
-<1310>
-    dcterms:description "Royal Queensland Yacht Squadron's Clubhouse, Markets at Rocklea, management house of the Australian Institute of Management, International House at the University of Queensland, Queensland chapter council of the RAIA, Staff and Student facility at Moggil Farm for  UQ."^^xsd:string ;
-    dcterms:identifier "590-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
-    dcterms:title "This is the Royal QueenslandYacht Squadron's Clubhouse ..."^^xsd:string ;
-    qaat:issue "146"^^xsd:string ;
-    qaat:periodical "Cross-Section"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
 <112>
@@ -9827,6 +10273,14 @@ dcterms:creator
     qaat:periodical "The Home Builder's Annual"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
+<1311>
+    dcterms:description "Architects: Lund, Hutton, Newell, Black and Paulsen"^^xsd:string ;
+    dcterms:identifier "572-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
+    dcterms:title "Bush Brotherhood Church, Cunamulla, Queensland"^^xsd:string ;
+    qaat:issue "130"^^xsd:string ;
+    qaat:periodical "Cross-Section"^^xsd:string ;
+    a qldarch:Article, qldarch:DigitalObject .
+
 <113>
     dcterms:created "2012-09"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -9843,14 +10297,6 @@ dcterms:creator
     qldarch:sourceFilename "tube224_residence_bouganvillea_perspective_edited.jpg" ;
     qldarch:systemLocation "eb42f84a4c8e376feb743d495f629f38.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
-
-<1311>
-    dcterms:description "Architects: Lund, Hutton, Newell, Black and Paulsen"^^xsd:string ;
-    dcterms:identifier "572-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
-    dcterms:title "Bush Brotherhood Church, Cunamulla, Queensland"^^xsd:string ;
-    qaat:issue "130"^^xsd:string ;
-    qaat:periodical "Cross-Section"^^xsd:string ;
-    a qldarch:Article, qldarch:DigitalObject .
 
 <1195>
     dcterms:identifier "560-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
@@ -9920,6 +10366,23 @@ dcterms:creator
     qldarch:sourceFilename "Neighbourhood Units and the Brisbane Plan.pdf" ;
     qldarch:systemLocation "ded26d2940fd8b60e233f9d6a5eabebd.pdf"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
+
+<1890>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Jon Voller"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portrait: Jon Voller"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_0001_edited.jpg" ;
+    qldarch:systemLocation "8ec06b839db49690e3d417ad53286905.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
 
 qldarch:Transcript
     a rdfs:Class .
@@ -10208,6 +10671,23 @@ qldarch:transcriptLocation
     qldarch:transcriber <../../../ns/omeka/2012-11/pseudoentity#Transcriber,Marina+Viner> ;
     a qldarch:DigitalObject, qldarch:Transcript .
 
+<1891>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Jon Voller"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portrait: Jon Voller - in car"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_edited.jpg" ;
+    qldarch:systemLocation "0600c2ba08514f043089dfb55dfd537c.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
+
 qaat:projectName
     a rdf:Property .
 
@@ -10368,6 +10848,23 @@ qaat:projectName
     qaat:periodical "Architecture, Building, Engineering"^^xsd:string ;
     qaat:volume "23"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
+
+<1892>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Phil Tait"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portrait: Phil Tait - sitting"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_0001_edited.jpg" ;
+    qldarch:systemLocation "2b3edb7c3cd00f9d455d386a6661612b.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
 
 <../../../ns/omeka/2012-11/pseudoentity#Project+Name,Proposed+block+of+shops+at+Ascot+for+J.%26K.+Giorgas>
     qaat:label "Proposed block of shops at Ascot for J.&K. Giorgas"^^xsd:string ;
@@ -10623,6 +11120,23 @@ qldarch:MovingImage
     qldarch:systemLocation "0c123cd362b8f82db3a7de97dbccd143.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:LineDrawing .
 
+<1893>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Phil Tait"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portrait: Phil Tait - on the phone"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_edited.jpg" ;
+    qldarch:systemLocation "712aa93734b6d97172e17ee193833e3a.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
+
 <1769>
     dcterms:created "2012-10-01"^^xsd:string ;
     dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
@@ -10849,6 +11363,23 @@ qldarch:MovingImage
     qldarch:systemLocation "b4439185a6f17c7a1ff17c5bcc612da2.pdf"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
 
+<1894>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Ron Voller & BJ Ryan"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "Portrait: Ron Voller (upper 6) & BJ Ryan (lower 2) - Contact Sheet: 2632_7 B-M"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_edited.jpg" ;
+    qldarch:systemLocation "e338064c1d1f1cd46d7ab076092edd94.jpg"^^xsd:string ;
+    a qldarch:DigitalObject .
+
 <1259>
     dcterms:description "James Birrell"^^xsd:string ;
     dcterms:identifier "612-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
@@ -11038,6 +11569,24 @@ qldarch:MovingImage
     qldarch:location "Karabil St, Kenmore"^^xsd:string ;
     qldarch:sourceFilename "l_and_d_keen_photographers13_edited.jpg" ;
     qldarch:systemLocation "aad241f1caa61fa65d3772f7c2e1132c.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
+
+<1896>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "445 Upper Edward St, Interior Office; Contact sheet 7640_47_A-M"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:photographer "David McCarthy Photography"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_0001_edited.jpg" ;
+    qldarch:systemLocation "966d86d88fc2bde89c5339eb2503a30e.jpg"^^xsd:string ;
     a qldarch:DigitalObject, qldarch:Photograph .
 
 <1399>
@@ -11254,6 +11803,24 @@ qaat:Firm
     qldarch:sourceFilename "Robin S. Dods the life and work of a distinguished Queensland architect_ Architecture in Australia_1958_p77-86.pdf" ;
     qldarch:systemLocation "6e341e698ee1dd912afe6d678e7e5361.pdf"^^xsd:string ;
     a qldarch:Article, qldarch:DigitalObject .
+
+<1897>
+    dcterms:created "2012-09"^^xsd:string ;
+    dcterms:creator <../../../ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> ;
+    dcterms:format <../../../ns/omeka/2012-11/pseudoentity#Format,image%2Fjpeg> ;
+    dcterms:identifier "BVN Offsite Archive, Box 6442"^^xsd:string ;
+    dcterms:rights "BVN Architecture"^^xsd:string ;
+    dcterms:title "445 Upper Edward St, Interior Office; Contact sheet 7640_47_A-M 2"^^xsd:string ;
+    qaat:buildingTypology <../../../ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> ;
+    qaat:dateOriginalCreation "1967"^^xsd:string ;
+    qaat:photographer "David McCarthy Photography"^^xsd:string ;
+    qaat:projectName <../../../ns/omeka/2012-11/pseudoentity#Project+Name,445+Upper+Edward+St%2C+Brisbane+CBD> ;
+    qldarch:contemporaryFirm <../../../ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> ;
+    qldarch:hasSubject <../../../ns/omeka/2012-11/pseudoentity#Subject,Project> ;
+    qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
+    qldarch:sourceFilename "IMG_edited.jpg" ;
+    qldarch:systemLocation "e19c09aae37b3af6634f2704533f0101.jpg"^^xsd:string ;
+    a qldarch:DigitalObject, qldarch:Photograph .
 
 <1398>
     dcterms:identifier "75-w0red5szczs5xrff22ixwrxkttt25ddp9ewv"^^xsd:string ;
