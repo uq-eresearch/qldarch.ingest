@@ -18,7 +18,7 @@ replacepattern = re.compile("REPLACEME")
 with open(filename, 'r') as f:
     for line in f:
         if triplepattern.match(line) :
-            print replacepattern.sub(str(index), line)
+            print replacepattern.sub(str(index), line),
             index += 1
         else:
-            print line
+            print line,

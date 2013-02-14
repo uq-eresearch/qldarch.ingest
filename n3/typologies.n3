@@ -9,12 +9,29 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
+@prefix time: <http://www.w3.org/2000/10/swap/time#>.
 
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 
+#
+# Output turtle header.
+#
+{ ("@base <http://qldarch.net/rdf/2012-12/resources/typologies/> .\n"
+   "\n"
+   "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.\n"
+   "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.\n"
+   "@prefix dcterms: <http://purl.org/dc/terms/> .\n"
+   "\n"
+   "@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .\n"
+   "\n") str:concatenation ?header .
+} => { "a" log:outputString ?header } .
+
+#
 # List buildings and their labels.
-{ ?pn a qaat:ProjectName .
+#
+{ ?pn a qaat:BuildingTypology .
   ?pn qaat:label ?label .
   (?l ?dt) log:dtlit ?label .
-  <buildings/REPLACEME> a qldarch:Structure ; qldarch:label ?l } .
+  ("<REPLACEME> a qldarch:BuildingTypology ; qldarch:label \"" ?l "\" .\n" ) str:concatenation ?output .
+} => { "b" log:outputString ?output } .
