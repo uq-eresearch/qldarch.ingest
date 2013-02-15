@@ -487,13 +487,6 @@ qaat:subjectTypeOf a owl:ObjectProperty ;
     rdfs:domain :DigitalObject ;
     rdfs:range xsd:string .
 
-:datePhotographed a owl:DatatypeProperty ;
-    :label "Date Photographed" ;
-    rdfs:subPropertyOf dcterms:created ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :DigitalObject .
-
 :projectNumber a owl:DatatypeProperty ;
     :label "Project Number" ;
     :display true ;
@@ -501,8 +494,9 @@ qaat:subjectTypeOf a owl:ObjectProperty ;
     rdfs:domain :DigitalObject .
 
 :dateOriginalCreation a owl:DatatypeProperty ;
+    rdfs:subPropertyOf dcterms:created ;
     :label "Original Creation Date" ;
-    :display false ;
+    :display true ;
     :editable false ;
     rdfs:domain :DigitalObject .
 

@@ -82,13 +82,13 @@ map:portraits a d2rq:ClassMap;
     d2rq:join "o_item_types.id <= o_items.item_type_id";
     d2rq:condition "o_item_types.name='Portrait'"
     .
-map:articles a d2rq:ClassMap;
-	d2rq:dataStorage map:database;
-	d2rq:uriPattern "http://qldarch.net/omeka/items/show/@@o_items.id@@";
-	d2rq:class qldarch:Article;
-    d2rq:containsDuplicates "true";
-    d2rq:join "o_item_types.id <= o_items.item_type_id";
-    d2rq:condition "o_item_types.name='Article'"
+#map:articles a d2rq:ClassMap;
+#	d2rq:dataStorage map:database;
+#	d2rq:uriPattern "http://qldarch.net/omeka/items/show/@@o_items.id@@";
+#	d2rq:class qldarch:Article;
+#    d2rq:containsDuplicates "true";
+#    d2rq:join "o_item_types.id <= o_items.item_type_id";
+#    d2rq:condition "o_item_types.name='Article'"
     .
 map:lineDrawings a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
@@ -487,7 +487,7 @@ map:location a d2rq:PropertyBridge;
 map:datePhotographed a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
     d2rq:belongsToClassMap map:photographs;
-    d2rq:property qldarch:datePhotographed;
+    d2rq:property qldarch:dateOriginalCreation;
     d2rq:datatype xsd:date;
     d2rq:column "o_element_texts.text";
     d2rq:join "o_elements.id <= o_element_texts.element_id";
@@ -511,8 +511,8 @@ map:projectNumber a d2rq:PropertyBridge;
 map:originalCreationDate a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
     d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qaat:dateOriginalCreation;
-    d2rq:datatype xsd:string;
+    d2rq:property qldarch:dateOriginalCreation;
+    d2rq:datatype xsd:date;
     d2rq:column "o_element_texts.text";
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
@@ -548,42 +548,42 @@ map:format a d2rq:PropertyBridge;
 #
 # Article metadata - untested.
 #
-map:periodical a d2rq:PropertyBridge;
-	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qaat:periodical;
-    d2rq:datatype xsd:string;
-    d2rq:column "o_element_texts.text";
-    d2rq:join "o_elements.id <= o_element_texts.element_id";
-    d2rq:join "o_items.id <= o_element_texts.record_id";
-    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Item Type Metadata'";
-    d2rq:condition "o_elements.name='Title of the periodical'"
-    .
-map:volume a d2rq:PropertyBridge;
-	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qaat:volume;
-    d2rq:datatype xsd:string;
-    d2rq:column "o_element_texts.text";
-    d2rq:join "o_elements.id <= o_element_texts.element_id";
-    d2rq:join "o_items.id <= o_element_texts.record_id";
-    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Item Type Metadata'";
-    d2rq:condition "o_elements.name='Volume'"
-    .
-map:issue a d2rq:PropertyBridge;
-	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qaat:issue;
-    d2rq:datatype xsd:string;
-    d2rq:column "o_element_texts.text";
-    d2rq:join "o_elements.id <= o_element_texts.element_id";
-    d2rq:join "o_items.id <= o_element_texts.record_id";
-    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Item Type Metadata'";
-    d2rq:condition "o_elements.name='Issue'"
-    .
+#map:periodical a d2rq:PropertyBridge;
+#	d2rq:dataStorage map:database;
+#    d2rq:belongsToClassMap map:digitalObjects;
+#    d2rq:property qaat:periodical;
+#    d2rq:datatype xsd:string;
+#    d2rq:column "o_element_texts.text";
+#    d2rq:join "o_elements.id <= o_element_texts.element_id";
+#    d2rq:join "o_items.id <= o_element_texts.record_id";
+#    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
+#    d2rq:condition "o_element_sets.name='Item Type Metadata'";
+#    d2rq:condition "o_elements.name='Title of the periodical'"
+#    .
+#map:volume a d2rq:PropertyBridge;
+#	d2rq:dataStorage map:database;
+#    d2rq:belongsToClassMap map:digitalObjects;
+#    d2rq:property qaat:volume;
+#    d2rq:datatype xsd:string;
+#    d2rq:column "o_element_texts.text";
+#    d2rq:join "o_elements.id <= o_element_texts.element_id";
+#    d2rq:join "o_items.id <= o_element_texts.record_id";
+#    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
+#    d2rq:condition "o_element_sets.name='Item Type Metadata'";
+#    d2rq:condition "o_elements.name='Volume'"
+#    .
+#map:issue a d2rq:PropertyBridge;
+#	d2rq:dataStorage map:database;
+#    d2rq:belongsToClassMap map:digitalObjects;
+#    d2rq:property qaat:issue;
+#    d2rq:datatype xsd:string;
+#    d2rq:column "o_element_texts.text";
+#    d2rq:join "o_elements.id <= o_element_texts.element_id";
+#    d2rq:join "o_items.id <= o_element_texts.record_id";
+#    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
+#    d2rq:condition "o_element_sets.name='Item Type Metadata'";
+#    d2rq:condition "o_elements.name='Issue'"
+#    .
 map:datePublished a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
     d2rq:belongsToClassMap map:digitalObjects;
