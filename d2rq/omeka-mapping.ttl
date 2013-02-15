@@ -89,7 +89,7 @@ map:portraits a d2rq:ClassMap;
 #    d2rq:containsDuplicates "true";
 #    d2rq:join "o_item_types.id <= o_items.item_type_id";
 #    d2rq:condition "o_item_types.name='Article'"
-    .
+#    .
 map:lineDrawings a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "http://qldarch.net/omeka/items/show/@@o_items.id@@";
