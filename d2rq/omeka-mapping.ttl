@@ -381,9 +381,9 @@ map:hasSubject a d2rq:PropertyBridge;
     .
 map:contemporaryFirm a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qldarch:contemporaryFirm;
-    d2rq:refersToClassMap map:contemporaryFirms;
+    d2rq:belongsToClassMap map:contemporaryFirms;
+    d2rq:property qaat:contemporaryTo;
+    d2rq:refersToClassMap map:digitalObjects;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
