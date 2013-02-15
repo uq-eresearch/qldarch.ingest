@@ -15,12 +15,17 @@
 
 # qaat:Person->foaf:Person
 { ?e a qaat:Person .
-  ?e qaat:label ?label .
-  (?l ?dt) log:dtlit ?label .
+  ?e qaat:label ?l .
   ?person a foaf:Person .
   ?person foaf:firstName ?fn .
   ?person foaf:lastName ?ln .
   ?l str:containsIgnoringCase ?fn .
-  ?l str:containsIgnoringCase ?ln .
+  ?l str:containsIgnoringCase ?ln } => { ?e qaat:reconciledTo ?person } .
+
+{ ?e qaat:reconciledTo ?person .
+  ?s a qldarch:Entity .
   ?s ?p ?e } => { ?s ?p ?person } .
 
+{ ?e qaat:reconciledTo ?person .
+  ?do a qldarch:DigitalObject .
+  ?e qaat:created ?do } => { ?do dcterms:creator ?person } .

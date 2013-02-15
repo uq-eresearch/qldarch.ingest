@@ -267,7 +267,7 @@ foaf:lastName a owl:DatatypeProperty ;
 # Controlled Vocabulary Export Classes
 #
 
-qaat:PseudoEntity a :Entity ;
+qaat:PseudoEntity a owl:Thing ;
     rdfs:comment "Used as a temporary placeholder for export of controlled vocabularies from omeka." ;
     :label "Pseudo Entity" .
 
@@ -278,6 +278,11 @@ qaat:label a owl:DatatypeProperty ;
     rdfs:domain qaat:PseudoEntity ;
     rdfs:range xsd:string ;
     rdfs:comment "A label for a concept from a controlled vocab" .
+
+qaat:reconciledTo a owl:ObjectProperty ;
+    :label "Reconciled To" ;
+    rdfs:domain qaat:PseudoEntity ;
+    rdfs:range :Entity .
 
 qaat:Person a qaat:PseudoEntity ;
     rdfs:comment "A person identified within Omeka" ;
@@ -335,7 +340,7 @@ dcterms:created a owl:ObjectProperty ;
 
 dcterms:creator a owl:ObjectProperty ;
     :label "Creator" ;
-    :display true ;
+    :display false ;
     :editable false ;
     rdfs:isDefinedBy dcterms:creator .
 
@@ -446,6 +451,13 @@ qaat:photographer a owl:ObjectProperty ;
     :editable false ;
     rdfs:domain :Photograph ;
     rdfs:range qaat:Person .
+
+qaat:created a owl:ObjectProperty ;
+    :label "Creator" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:Person ;
+    rdfs:range :DigitalObject .
 
 #
 # Datatype properties of Digital Objects as exported from Omeka

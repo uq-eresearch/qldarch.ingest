@@ -27,10 +27,12 @@
 <http://qldarch.net/rdf/2012-12/resources/people/2> :preferredImage <http://qldarch.net/omeka/items/show/1787>.
 <http://qldarch.net/rdf/2012-12/resources/people/6> :preferredImage <http://qldarch.net/omeka/items/show/1793>.
 <http://qldarch.net/rdf/2012-12/resources/people/7> :preferredImage <http://qldarch.net/omeka/items/show/1794>.
+<http://qldarch.net/rdf/2012-12/resources/people/7> :preferredImage <http://qldarch.net/omeka/items/show/177>.
+<http://qldarch.net/rdf/2012-12/resources/people/7> :preferredImage <http://qldarch.net/omeka/items/show/178>.
 <http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1795>.
 <http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1890>.
 <http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1891>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :preferredImage <http://qldarch.net/omeka/items/show/1800>.
 
-#ENDS 901 [msec] TC=3650 TP=17394 BC=0 BP=7068 PM=0 CM=0 FM=0 AM=0
+#ENDS 925 [msec] TC=3653 TP=17615 BC=0 BP=7161 PM=0 CM=0 FM=0 AM=0
 
