@@ -335,51 +335,51 @@ map:externalIdentifier a d2rq:PropertyBridge;
     .
 
 # Controlled Vocabs Metadata
-map:interviewer a d2rq:PropertyBridge;
+map:interviewerIn a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qldarch:interviewer;
-    d2rq:refersToClassMap map:interviewers;
+    d2rq:belongsToClassMap map:interviewers;
+    d2rq:property qaat:interviewerIn;
+    d2rq:refersToClassMap map:digitalObjects;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
     d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
     d2rq:condition "o_elements.name='Interviewer'"
     .
-map:interviewee a d2rq:PropertyBridge;
+map:intervieweeIn a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qldarch:interviewee;
-    d2rq:refersToClassMap map:interviewees;
+    d2rq:belongsToClassMap map:interviewees;
+    d2rq:property qaat:intervieweeIn;
+    d2rq:refersToClassMap map:digitalObjects;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
     d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
     d2rq:condition "o_elements.name='Interviewee'"
     .
-map:transcriber a d2rq:PropertyBridge;
+map:transcriberOf a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qldarch:transcriber;
-    d2rq:refersToClassMap map:transcribers;
+    d2rq:belongsToClassMap map:transcribers;
+    d2rq:property qaat:transcriberOf;
+    d2rq:refersToClassMap map:digitalObjects;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
     d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
     d2rq:condition "o_elements.name='Transcriber'"
     .
-map:hasSubject a d2rq:PropertyBridge;
+map:subjectOf a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qldarch:hasSubject;
-    d2rq:refersToClassMap map:subjects;
+    d2rq:belongsToClassMap map:subjects;
+    d2rq:property qaat:subjectOf;
+    d2rq:refersToClassMap map:digitalObjects;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
     d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
     d2rq:condition "o_elements.name='Subject'"
     .
-map:contemporaryFirm a d2rq:PropertyBridge;
+map:contemporaryTo a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
     d2rq:belongsToClassMap map:contemporaryFirms;
     d2rq:property qaat:contemporaryTo;
@@ -390,56 +390,44 @@ map:contemporaryFirm a d2rq:PropertyBridge;
     d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
     d2rq:condition "o_elements.name='Contemporary Firm'"
     .
-map:drawingType a d2rq:PropertyBridge;
+map:typedDrawing a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qaat:drawingType;
-    d2rq:refersToClassMap map:drawingTypes;
+    d2rq:belongsToClassMap map:drawingTypes;
+    d2rq:property qaat:typedDrawing;
+    d2rq:refersToClassMap map:digitalObjects;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
     d2rq:condition "o_element_sets.name='Item Type Metadata'";
     d2rq:condition "o_elements.name='Drawing Type'"
     .
-map:buildingTypology a d2rq:PropertyBridge;
+map:buildingTypologyOf a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qaat:buildingTypology;
-    d2rq:refersToClassMap map:buildingTypologies;
+    d2rq:belongsToClassMap map:buildingTypologies;
+    d2rq:property qaat:buildingTypologyOf;
+    d2rq:refersToClassMap map:digitalObjects;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
     d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
     d2rq:condition "o_elements.name='Building Typology'"
     .
-map:projectName a d2rq:PropertyBridge;
+map:projectNameOf a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qaat:projectName;
-    d2rq:refersToClassMap map:projectNames;
+    d2rq:belongsToClassMap map:projectNames;
+    d2rq:property qaat:projectNameOf;
+    d2rq:refersToClassMap map:digitalObjects;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
     d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
     d2rq:condition "o_elements.name='Project Name'"
     .
-map:photographer a d2rq:PropertyBridge;
-	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
-    d2rq:property qaat:photographer;
-    d2rq:datatype xsd:string;
-    d2rq:column "o_element_texts.text";
-    d2rq:join "o_elements.id <= o_element_texts.element_id";
-    d2rq:join "o_items.id <= o_element_texts.record_id";
-    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
-    d2rq:condition "o_element_sets.name='Item Type Metadata'";
-    d2rq:condition "o_elements.name='Photographer'"
-    .
 map:subjectType a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:portraits;
+    d2rq:belongsToClassMap map:subjectTypes;
     d2rq:property qaat:subjectType;
-    d2rq:refersToClassMap map:subjectTypes;
+    d2rq:refersToClassMap map:portraits;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_items.id <= o_element_texts.record_id";
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
@@ -448,6 +436,18 @@ map:subjectType a d2rq:PropertyBridge;
     .
 
 # Item Metadata Types
+map:photographer a d2rq:PropertyBridge;
+	d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:digitalObjects;
+    d2rq:property qldarch:photographer;
+    d2rq:datatype xsd:string;
+    d2rq:column "o_element_texts.text";
+    d2rq:join "o_elements.id <= o_element_texts.element_id";
+    d2rq:join "o_items.id <= o_element_texts.record_id";
+    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
+    d2rq:condition "o_element_sets.name='Item Type Metadata'";
+    d2rq:condition "o_elements.name='Photographer'"
+    .
 map:externalLocation a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
     d2rq:belongsToClassMap map:digitalObjects;

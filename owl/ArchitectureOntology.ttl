@@ -263,6 +263,12 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:domain :Structure ;
     rdfs:range :BuildingTypology .
 
+:photographer a owl:DatatypeProperty ;
+    :label "Photographer" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Photograph .
+
 #
 # Controlled Vocabulary Export Classes
 #
@@ -381,82 +387,81 @@ dcterms:identifier a owl:DatatypeProperty ;
 # Properties relating to Controlled Vocabularies
 #
 
-qaat:interviewer a owl:ObjectProperty ;
-    :label "Interviewer" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :Interview ;
-    rdfs:range qaat:Person .
-
-qaat:interviewee a owl:ObjectProperty ;
-    :label "Interviewee" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :Interview ;
-    rdfs:range qaat:Person .
-
-qaat:format a owl:ObjectProperty ;
-    :label "Format" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :DigitalObject ;
-    rdfs:range qaat:Format .
-
-qaat:transcriber a owl:ObjectProperty ;
-    :label "Transcriber" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :Transcript ;
-    rdfs:range qaat:Person .
-
-qaat:hasSubject a owl:ObjectProperty ;
-    :label "Has Subject" ;
-    :display false ;
-    :editable false ;
-    rdfs:subClassOf dcterms:subject ;
-    rdfs:domain :DigitalObject ;
-    rdfs:range qaat:Subject .
-
-qaat:contemporaryFirm a owl:ObjectProperty ;
-    :label "Contemporary Firm" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :DigitalObject ;
-    rdfs:range qaat:Firm .
-
-qaat:drawingType a owl:ObjectProperty ;
-    :label "Drawing Type" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :DigitalObject ;
-    rdfs:range qaat:DrawingType .
-
-qaat:buildingTypology a owl:ObjectProperty ;
-    :label "Building Typology" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :DigitalObject ;
-    rdfs:range qaat:BuildingTypology .
-
-qaat:projectName a owl:ObjectProperty ;
-    :label "Project Name" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :DigitalObject ;
-    rdfs:range qaat:ProjectName .
-
-qaat:photographer a owl:ObjectProperty ;
-    :label "Photographer" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :Photograph ;
-    rdfs:range qaat:Person .
-
-qaat:created a owl:ObjectProperty ;
-    :label "Creator" ;
+qaat:interviewerIn a owl:ObjectProperty ;
+    :label "Interviewer In" ;
     :display false ;
     :editable false ;
     rdfs:domain qaat:Person ;
+    rdfs:range :Interview .
+
+qaat:intervieweeIn a owl:ObjectProperty ;
+    :label "Interviewee In" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:Person ;
+    rdfs:range :Interview .
+
+qaat:transcriberOf a owl:ObjectProperty ;
+    :label "Transcriber Of" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:Person ;
+    rdfs:range :Transcript .
+
+qaat:subjectOf a owl:ObjectProperty ;
+    :label "Has Subject" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:Subject ;
+    rdfs:range :DigitalObject .
+
+qaat:contemporaryTo a owl:ObjectProperty ;
+    :label "Contemporary To" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:Firm ;
+    rdfs:range :DigitalObject .
+
+qaat:typedDrawing a owl:ObjectProperty ;
+    :label "Drawing" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:DrawingType ;
+    rdfs:range :DigitalObject .
+
+qaat:buildingTypologyOf a owl:ObjectProperty ;
+    :label "Building Typology Of" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:BuildingTypology ;
+    rdfs:range :DigitalObject .
+
+qaat:projectNameOf a owl:ObjectProperty ;
+    :label "Project Name Of" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:ProjectName ;
+    rdfs:range :DigitalObject .
+
+qaat:created a owl:ObjectProperty ;
+    :label "Created" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:Person ;
+    rdfs:range :DigitalObject .
+
+qaat:created a owl:ObjectProperty ;
+    :label "Created" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:Person ;
+    rdfs:range :DigitalObject .
+
+qaat:subjectTypeOf a owl:ObjectProperty ;
+    :label "Subject Type Of" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain qaat:Portrait ;
     rdfs:range :DigitalObject .
 
 #
