@@ -13,11 +13,14 @@
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 
-# qaat:ProjectName->qldarch:hasTopic
+# qaat:ProjectName->Buildings
 { ?e a qaat:ProjectName .
-  ?e qaat:label ?label .
-  (?l ?dt) log:dtlit ?label .
+  ?e qaat:label ?l .
   ?building a qldarch:Structure .
   ?building qldarch:label ?buildinglabel .
   ?l str:equalIgnoringCase ?buildinglabel .
-  ?s qaat:projectName ?e } => { ?s qldarch:hasTopic ?building } .
+} => { ?e qaat:reconciledTo ?building } .
+
+{ ?e qaat:reconciledTo ?building .
+  ?e qaat:projectNameOf ?s .
+} => { ?s qldarch:hasTopic ?building } .

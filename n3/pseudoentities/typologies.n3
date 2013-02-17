@@ -13,16 +13,19 @@
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 
-# qaat:BuildingTypology->qldarch:buildingTypology
 { ?e a qaat:BuildingTypology .
   ?e qaat:label ?label .
-  (?l ?dt) log:dtlit ?label . 
   ?type a qldarch:BuildingTypology .
   ?type qldarch:label ?typelabel .
-  ?l str:equalIgnoringCase ?typelabel .
-  # Unify ?e with ?type by finding all digital objects that refer to ?e and use the topics
-  # identified in rule qaat:ProjectName->qldarch:hasTopic
+  ?label str:equalIgnoringCase ?typelabel .
+} => { ?e qaat:reconciledTo ?type } .
+
+# Unify ?e with ?type by finding all digital objects that refer to ?e
+# and use the topics identified in rule:
+# qaat:ProjectName->qldarch:hasTopic
+{ ?e qaat:reconciledTo ?type .
   ?do a qldarch:DigitalObject .
-  ?do qaat:buildingTypology ?e .
-  ?do qldarch:hasTopic ?building } => { ?building qldarch:buildingTypology ?type } .
+  ?e qaat:buildingTypology ?do .
+  ?do qldarch:hasTopic ?building .
+} => { ?building qldarch:buildingTypology ?type } .
 

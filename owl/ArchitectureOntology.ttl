@@ -137,6 +137,11 @@ foaf:Person a owl:Class ;
     :label "Interviews" ;
     :toplevel true .
 
+:Transcript a owl:Class ;
+    rdfs:subClassOf :DigitalObject ;
+    :label "Transcripts" ;
+    :toplevel false .
+
 :Format a owl:Class ;
     :label "Format" ;
     rdfs:subClassOf :DigitalThing .
@@ -228,6 +233,30 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:subPropertyOf dcterms:subject ;
     rdfs:domain :DigitalObject ;
     rdfs:range :TopicConcept .
+
+:interviewer a owl:ObjectProperty ;
+    :label "Interviewer" ;
+    :display true ;
+    :editable false ;
+    rdfs:subPropertyOf dcterms:subject ;
+    rdfs:domain :Interview ;
+    rdfs:range foaf:Person .
+
+:interviewee a owl:ObjectProperty ;
+    :label "Interviewee" ;
+    :display true ;
+    :editable false ;
+    rdfs:subPropertyOf dcterms:subject ;
+    rdfs:domain :Interview ;
+    rdfs:range foaf:Person .
+
+:transcriber a owl:ObjectProperty ;
+    :label "Transcriber" ;
+    :display true ;
+    :editable false ;
+    rdfs:subPropertyOf dcterms:subject ;
+    rdfs:domain :Transcript ;
+    rdfs:range foaf:Person .
 
 :location a owl:DatatypeProperty ;
     :label "Location of Subject" ;
@@ -375,6 +404,12 @@ dcterms:identifier a owl:DatatypeProperty ;
     :display true ;
     :editable false ;
     rdfs:isDefinedBy dcterms:identifier .
+
+dcterms:subject a owl:DatatypeProperty ;
+    :label "Subject" ;
+    :display true ;
+    :editable false ;
+    rdfs:isDefinedBy dcterms:subject .
 
 :identifier a owl:DatatypeProperty ;
     :label "System Identifier" ;
