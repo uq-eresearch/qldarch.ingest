@@ -1,0 +1,37 @@
+@base <http://qldarch.net/rdf/2012-12/resources/> .
+
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix str: <http://www.w3.org/2000/10/swap/string#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
+@prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
+
+@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
+
+#
+# Output turtle header.
+#
+{ ("@base <http://qldarch.net/rdf/2012-12/resources/firms/> .\n"
+   "\n"
+   "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.\n"
+   "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.\n"
+   "@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n"
+   "@prefix dcterms: <http://purl.org/dc/terms/> .\n"
+   "\n"
+   "@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .\n"
+   "\n") str:concatenation ?header .
+} => { "a" log:outputString ?header } .
+
+#
+# List People, their labels, and provide content for human editing of first and last names.
+#
+{ ?pn a qaat:Firm .
+  ?pn qaat:label ?label .
+  (?l ?dt) log:dtlit ?label .
+  ("<REPLACEME> a qldarch:Firm ; qldarch:firmName \"" ?l "\" .\n" ) str:concatenation ?output .
+} => { "b" log:outputString ?output } .

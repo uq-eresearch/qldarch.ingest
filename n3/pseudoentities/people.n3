@@ -47,8 +47,3 @@
   ?do a qldarch:Transcript .
   ?e qaat:transcriberOf ?do .
 } => { ?do qldarch:transcriber ?person } .
-
-{ ?e qaat:reconciledTo ?person .
-  ?do a qldarch:DigitalObject .
-  ?e qaat:subjectOf ?do .
-} => { ?do dcterms:subject ?person } .

@@ -1,0 +1,29 @@
+@base <http://qldarch.net/ns/rdf/2012-06/terms> .
+
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix str: <http://www.w3.org/2000/10/swap/string#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
+@prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
+
+@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
+@prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#> .
+
+{ ?e a qaat:DrawingType .
+  ?e qaat:label ?label .
+  ?type a skos:Concept .
+  ?type skos:inScheme qavocab:DrawingType .
+  ?type qldarch:label ?typelabel .
+  ?label str:equalIgnoringCase ?typelabel .
+} => { ?e qaat:reconciledTo ?type } .
+
+{ ?e qaat:reconciledTo ?type .
+  ?do a qldarch:LineDrawing .
+  ?e qaat:typedDrawing ?do .
+} => { ?do qldarch:drawingType ?type } .
+

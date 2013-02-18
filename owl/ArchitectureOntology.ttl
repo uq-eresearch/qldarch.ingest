@@ -8,6 +8,7 @@
 
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
+@prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -154,8 +155,7 @@ foaf:Person a owl:Class ;
     rdfs:subClassOf :Entity ;
     rdfs:subClassOf skos:Concept ;
     :label "Topic" ;
-    :toplevel 4 ;
-    :displayPrecedence 3 .
+    :toplevel false .
 
 #
 # External Ontology Properties
@@ -297,6 +297,20 @@ foaf:lastName a owl:DatatypeProperty ;
     :display false ;
     :editable false ;
     rdfs:domain :Photograph .
+
+:drawingType a owl:ObjectProperty ;
+    :label "Drawing Type" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :LineDrawing ;
+    rdfs:range qavocab:DrawingType
+
+:relatedTo a owl:ObjectProperty ;
+    :label "Related To" ;
+    :display false ;
+    :editable false ;
+    :reifiedAs :RelatedToRelation .
+
 
 #
 # Controlled Vocabulary Export Classes
@@ -534,5 +548,52 @@ qaat:subjectTypeOf a owl:ObjectProperty ;
     :display true ;
     :editable false ;
     rdfs:domain :DigitalObject .
+
+#
+# Drawing Type vocabulary
+#
+
+qavocab:DrawingType a skos:ConceptScheme ;
+    skos:hasTopConcept qavocab:LineDrawing .
+
+qavocab:LineDrawing a skos:Concept ;
+    a qldarch:DrawingType ;
+    skos:inScheme qavocab:DrawingType ;
+    :label "Line Drawing" .
+
+qavocab:Perspective a skos:Concept ;
+    a qldarch:DrawingType ;
+    skos:inScheme qavocab:DrawingType ;
+    skos:broader qavocab:LineDrawing ;
+    skos:altLabel "Perspective" ;
+    :label "Perspective" .
+
+qavocab:Section a skos:Concept ;
+    a qldarch:DrawingType ;
+    skos:inScheme qavocab:DrawingType ;
+    skos:broader qavocab:LineDrawing ;
+    skos:altLabel "Section" ;
+    :label "Section" .
+
+qavocab:Sketch a skos:Concept ;
+    a qldarch:DrawingType ;
+    skos:inScheme qavocab:DrawingType ;
+    skos:broader qavocab:LineDrawing ;
+    skos:altLabel "Sketch" ;
+    :label "Sketch" .
+
+qavocab:Elevation a skos:Concept ;
+    a qldarch:DrawingType ;
+    skos:inScheme qavocab:DrawingType ;
+    skos:broader qavocab:LineDrawing ;
+    skos:altLabel "Elevation" ;
+    :label "Elevation" .
+
+qavocab:Plan a skos:Concept ;
+    a qldarch:DrawingType ;
+    skos:inScheme qavocab:DrawingType ;
+    skos:broader qavocab:LineDrawing ;
+    skos:altLabel "Plan" ;
+    :label "Plan" .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:
