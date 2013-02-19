@@ -10,8 +10,27 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 
-{ ?s a foaf:Person .
-  ?s ?p ?o .
-  ?p list:in ( qldarch:employedBy, qldarch:taughtBy, qldarch:mentoredBy ) .
-} => { ?s qldarch:relatedTo ?o } .
+{ ?rclass a qldarch:Relationship ;
+    qldarch:impliesRelationship ?impliedPredicate .
+  [ a ?rclass ;
+    qldarch:subject ?s ;
+    qldarch:object ?o ] .
+} => {
+  ?s ?impliedPredicate ?o
+} .
 
+{ ?s ?p ?o .
+  ?p a owl:ObjectProperty ;
+      :entailsRelationship ?rclass .
+  ?rclass a :Relationship .
+} => {
+  [ a ?rclass ;
+    qldarch:subject ?s ;
+    qldarch:object ?o ;
+    qldarch:evidence [ a :Evidence ;
+      rdf:subject ?s ;
+      rdf:predicate ?p ;
+      rdf:object ?p ] ] .
+} . 
+
+# vim: set ai si sw=2 sts=2 ts=2 expandtab:

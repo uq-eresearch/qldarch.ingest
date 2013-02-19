@@ -1,0 +1,170 @@
+#
+# Ontology for an Oral History of Architecture
+# (c) eResearch Laboratory, School of ITEE, The University of Queensland
+# Licensed Apache 2.0
+#
+
+@base <http://qldarch.net/ns/rdf/2012-06/terms#> .
+
+@prefix : <http://qldarch.net/ns/rdf/2012-06/terms#> .
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
+@prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+#
+# Preliminaries
+#
+
+<http://qldarch.net/ns/rdf/2012-06/terms#> a owl:Ontology .
+
+#
+# OWL as RDFS header, redundant if using OWL, but allows OWL file to be used
+# within an RDFS reasoner unchanged.
+# 
+# 
+owl:Class rdfs:subClassOf rdfs:Class .
+
+owl:AnnotationProperty rdfs:subClassOf rdf:Property .
+
+owl:ObjectProperty rdfs:subClassOf rdf:Property .
+
+owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:range rdfs:Literal .
+
+#
+# Annotation Properties
+#
+
+:label a owl:AnnotationProperty ;
+    a owl:DatatypeProperty ;
+    :label "Preferred label" ;
+    rdfs:subPropertyOf rdfs:label ;
+    rdfs:comment "The preferred label for a thing" .
+
+:display a owl:AnnotationProperty .
+:editable a owl:AnnotationProperty .
+:shortName a owl:AnnotationProperty .
+:toplevel a owl:AnnotationProperty .
+:displayPrecedence a owl:AnnotationProperty .
+
+
+:Relationship a owl:Class ;
+    rdfs:subClassOf rdf:Statement .
+
+:Evidence a owl:Class ;
+    rdfs:subClassOf rdf:Statement .
+
+:RelatedToRelation a :Relationship ;
+    :label "Related To" ;
+    :impliesRelationship :relatedTo .
+
+:EmploymentRelation a :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation .
+#
+# Reification properties.
+#
+
+:entailsRelationship a owl:AnnotationProperty ;
+    :label "Entails Relationship" ;
+    rdfs:domain owl:ObjectProperty ;
+    rdfs:range :Relationship .
+
+:impliesRelationship a owl:AnnotationProperty ;
+    :label "Implies Relationship" ;
+    rdfs:domain :Relationship ;
+    rdfs:range owl:ObjectProperty .
+
+:subject rdfs:subPropertyOf rdf:subject ;
+    :label "Subject" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Evidence .
+
+:predicate rdfs:subPropertyOf rdf:predicate ;
+    :label "Predicate" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Evidence .
+
+:object rdfs:subPropertyOf rdf:object ;
+    :label "Object" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Evidence .
+
+:evidence a owl:ObjectProperty ;
+    :label "Evidence" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Relationship ;
+    rdfs:range :Evidence .
+
+#
+# Extra properties of reified relationships.
+#
+
+:startDate a owl:DatatypeProperty ;
+    :label "Start Date" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Relationship ;
+    rdfs:range xsd:date .
+
+:endDate a owl:DatatypeProperty ;
+    :label "End Date" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Relationship ;
+    rdfs:range xsd:date .
+
+#
+# Reified types.
+#
+
+:employedBy a owl:ObjectProperty ;
+    :label "Employed By" ;
+    :display true ;
+    :editable false ;
+    :entailsRelationship :EmploymentRelation .
+
+:taughtBy a owl:ObjectProperty ;
+    :label "Taught By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    :entailsRelationship :RelatedToRelation .
+
+:mentoredBy a owl:ObjectProperty ;
+    :label "Mentored By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    :entailsRelationship :RelatedToRelation .
+
+:partnerOf a owl:ObjectProperty ;
+    :label "Partner Of" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Firm ;
+    rdfs:range foaf:Person ;
+    :entailsRelationship :EmploymentRelation .
+
+:relatedTo a owl:ObjectProperty ;
+    a owl:SymmetricProperty ;
+    :label "Related To" ;
+    :display false ;
+    :editable false ;
+    :entailsRelationship :RelatedToRelation .
+
+# vim: set ai si sw=4 sts=4 ts=4 expandtab:
