@@ -63,11 +63,13 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 :Evidence a owl:Class ;
     rdfs:subClassOf rdf:Statement .
 
-:RelatedToRelation a :Relationship ;
+:RelatedToRelation a owl:Class ;
+    rdfs:subClassOf :Relationship ;
     :label "Related To" ;
     :impliesRelationship :relatedTo .
 
-:EmploymentRelation a :Relationship ; 
+:EmploymentRelation a owl:Class ;
+    rdfs:subClassOf :Relationship ; 
     rdfs:subClassOf :RelatedToRelation .
 #
 # Reification properties.

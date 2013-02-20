@@ -7,8 +7,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
-@prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .

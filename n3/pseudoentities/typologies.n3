@@ -20,12 +20,3 @@
   ?label str:equalIgnoringCase ?typelabel .
 } => { ?e qaat:reconciledTo ?type } .
 
-# Unify ?e with ?type by finding all digital objects that refer to ?e
-# and use the topics identified in rule:
-# qaat:ProjectName->qldarch:hasTopic
-{ ?e qaat:reconciledTo ?type .
-  ?do a qldarch:DigitalObject .
-  ?e qaat:buildingTypology ?do .
-  ?do qldarch:hasTopic ?building .
-} => { ?building qldarch:buildingTypology ?type } .
-

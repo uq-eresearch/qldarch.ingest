@@ -13,13 +13,6 @@
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 
-# qaat:Person->foaf:Person
-{ ?e a qaat:Person .
-  ?e qaat:label ?l .
-  ?person a foaf:Person .
-  ?person foaf:firstName ?fn .
-  ?person foaf:lastName ?ln .
-  ?l str:containsIgnoringCase ?fn .
-  ?l str:containsIgnoringCase ?ln .
-} => { ?e qaat:reconciledTo ?person } .
-
+{ ?e qaat:reconciledTo ?building .
+  ?e qaat:projectNameOf ?s .
+} => { ?s qldarch:hasTopic ?building } .

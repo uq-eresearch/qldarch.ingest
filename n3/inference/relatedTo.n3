@@ -1,4 +1,4 @@
-@base <http://qldarch.net/ns/rdf/2012-06/terms> .
+@base <http://qldarch.net/ns/rdf/2012-06/terms#> .
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
@@ -9,8 +9,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-{ ?rclass a qldarch:Relationship ;
+{ ?rclass rdfs:subClassOf qldarch:Relationship ;
     qldarch:impliesRelationship ?impliedPredicate .
   [ a ?rclass ;
     qldarch:subject ?s ;
@@ -21,16 +22,16 @@
 
 { ?s ?p ?o .
   ?p a owl:ObjectProperty ;
-      :entailsRelationship ?rclass .
-  ?rclass a :Relationship .
+     qldarch:entailsRelationship ?rclass .
+  ?rclass rdfs:subClassOf qldarch:Relationship .
 } => {
   [ a ?rclass ;
     qldarch:subject ?s ;
     qldarch:object ?o ;
-    qldarch:evidence [ a :Evidence ;
+    qldarch:evidence [ a qldarch:Evidence ;
       rdf:subject ?s ;
       rdf:predicate ?p ;
-      rdf:object ?p ] ] .
+      rdf:object ?o ] ] .
 } . 
 
 # vim: set ai si sw=2 sts=2 ts=2 expandtab:

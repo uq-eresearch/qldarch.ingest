@@ -205,8 +205,8 @@ foaf:lastName a owl:DatatypeProperty ;
     :display true ;
     :editable false ;
     rdfs:subPropertyOf dcterms:subject ;
-    rdfs:domain :DigitalObject ;
-    rdfs:range :TopicConcept .
+    :entailsRelationship :RelatedToRelation ;
+    rdfs:domain :DigitalObject .
 
 :interviewer a owl:ObjectProperty ;
     :label "Interviewer" ;

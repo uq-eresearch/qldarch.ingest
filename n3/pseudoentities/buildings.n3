@@ -20,7 +20,3 @@
   ?building qldarch:label ?buildinglabel .
   ?l str:equalIgnoringCase ?buildinglabel .
 } => { ?e qaat:reconciledTo ?building } .
-
-{ ?e qaat:reconciledTo ?building .
-  ?e qaat:projectNameOf ?s .
-} => { ?s qldarch:hasTopic ?building } .

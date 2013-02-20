@@ -13,13 +13,12 @@
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 
-# qaat:Person->foaf:Person
-{ ?e a qaat:Person .
-  ?e qaat:label ?l .
-  ?person a foaf:Person .
-  ?person foaf:firstName ?fn .
-  ?person foaf:lastName ?ln .
-  ?l str:containsIgnoringCase ?fn .
-  ?l str:containsIgnoringCase ?ln .
-} => { ?e qaat:reconciledTo ?person } .
+# Unify ?e with ?type by finding all digital objects that refer to ?e
+# and use the topics identified in rule:
+# qaat:ProjectName->qldarch:hasTopic
+{ ?e qaat:reconciledTo ?type .
+  ?do a qldarch:DigitalObject .
+  ?e qaat:buildingTypology ?do .
+  ?do qldarch:hasTopic ?building .
+} => { ?building qldarch:buildingTypology ?type } .
 
