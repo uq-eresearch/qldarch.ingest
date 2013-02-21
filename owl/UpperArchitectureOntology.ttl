@@ -126,6 +126,12 @@ foaf:Person a owl:Class ;
     :label "Photographs" ;
     :toplevel true .
 
+:Portrait a owl:Class ;
+    rdfs:subClassOf :Photograph ;
+    :displayPrecedence 1 ;
+    :label "Photographs" ;
+    :toplevel true .
+
 :LineDrawing a owl:Class ;
     rdfs:subClassOf :DigitalObject ;
     :displayPrecedence 2 ;
@@ -187,6 +193,11 @@ foaf:firstName a owl:DatatypeProperty ;
 foaf:lastName a owl:DatatypeProperty ;
     :label "Last Name" ;
     :display true ;
+    :editable true .
+
+:summary a owl:DatatypeProperty ;
+    :label "Short Biography" ;
+    :display false ;
     :editable true .
 
 :firmName a owl:DatatypeProperty ;

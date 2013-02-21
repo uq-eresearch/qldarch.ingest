@@ -11,16 +11,8 @@
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
 
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
-@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 
-{ ?A a foaf:Person .
-  ?A foaf:firstName ?FN .
-  ?A foaf:lastName ?LN .
-  ?DO a qldarch:DigitalObject .
-  ?DO dcterms:title ?T .
-  ?DO qaat:preferredImage "Yes"^^xsd:string .
-  (?L ?DT) log:dtlit ?T .
-  ?L string:containsIgnoringCase "Portrait" .
-  ?L string:containsIgnoringCase ?FN .
-  ?L string:containsIgnoringCase ?LN } => { ?A qldarch:preferredImage ?DO } .
+{ ?do a qldarch:DigitalObject .
+  ?do ?p ?o .
+} => { ?do ?p ?o } .
 

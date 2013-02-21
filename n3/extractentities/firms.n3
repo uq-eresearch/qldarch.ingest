@@ -33,5 +33,5 @@
 { ?pn a qaat:Firm .
   ?pn qaat:label ?label .
   (?l ?dt) log:dtlit ?label .
-  ("<REPLACEME> a qldarch:Firm ; qldarch:firmName \"" ?l "\" .\n" ) str:concatenation ?output .
+  ("<REPLACEME> a qldarch:Firm ; qldarch:firmName \"" ?l "\" ; qldarch:label \"" ?l "\" .\n" ) str:concatenation ?output .
 } => { "b" log:outputString ?output } .

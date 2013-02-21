@@ -7,6 +7,6 @@
 
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 
-<1> a qldarch:Firm ; qldarch:firmName "Bligh Jessup Bretnall and Partners" .
-<2> a qldarch:Firm ; qldarch:firmName "Hayes & Scott" .
-<3> a qldarch:Firm ; qldarch:firmName "R. Martin Wilson and son Architects" .
+<1> a qldarch:Firm ; qldarch:firmName "Bligh Jessup Bretnall and Partners" ; qldarch:label "Bligh Jessup Bretnall and Partners" .
+<2> a qldarch:Firm ; qldarch:firmName "Hayes & Scott" ; qldarch:label "Hayes & Scott" .
+<3> a qldarch:Firm ; qldarch:firmName "R. Martin Wilson and son Architects" ; qldarch:label "R. Martin Wilson and son Architects" .

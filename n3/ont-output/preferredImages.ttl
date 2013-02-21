@@ -1,5 +1,5 @@
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
-#eye --yap --nope rules/rdfs-subClassOf.n3 ../owl/AuxilaryArchitectureOntology.ttl ../owl/ReificationsArchitectureOntology.ttl ../owl/UpperArchitectureOntology.ttl omekaexport/latest.ttl entities/buildings.ttl entities/firms.ttl entities/knownpeople.ttl entities/people.ttl entities/typologies.ttl classification/architects.n3 classification/buildings.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/preferredImage.n3
+#eye --yap --nope rules/rdfs-subClassOf.n3 ../owl/AuxilaryArchitectureOntology.ttl ../owl/ReificationsArchitectureOntology.ttl ../owl/UpperArchitectureOntology.ttl omekaexport/latest.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl classification/architects.n3 classification/buildings.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/preferredImage.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -26,18 +26,12 @@
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
 <http://qldarch.net/rdf/2012-12/resources/people/2> :preferredImage <http://qldarch.net/omeka/items/show/1787>.
-<http://qldarch.net/rdf/2012-12/resources/people/5> :preferredImage <http://qldarch.net/omeka/items/show/1849>.
 <http://qldarch.net/rdf/2012-12/resources/people/5> :preferredImage <http://qldarch.net/omeka/items/show/1791>.
-<http://qldarch.net/rdf/2012-12/resources/people/5> :preferredImage <http://qldarch.net/omeka/items/show/1887>.
-<http://qldarch.net/rdf/2012-12/resources/people/5> :preferredImage <http://qldarch.net/omeka/items/show/1889>.
 <http://qldarch.net/rdf/2012-12/resources/people/6> :preferredImage <http://qldarch.net/omeka/items/show/1793>.
 <http://qldarch.net/rdf/2012-12/resources/people/7> :preferredImage <http://qldarch.net/omeka/items/show/1794>.
 <http://qldarch.net/rdf/2012-12/resources/people/7> :preferredImage <http://qldarch.net/omeka/items/show/177>.
-<http://qldarch.net/rdf/2012-12/resources/people/7> :preferredImage <http://qldarch.net/omeka/items/show/178>.
 <http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1795>.
-<http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1890>.
-<http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1891>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :preferredImage <http://qldarch.net/omeka/items/show/1800>.
 
-#ENDS 3651 [msec] TC=3714 TP=22561 BC=0 BP=6904 PM=0 CM=0 FM=0 AM=0
+#ENDS 2913 [msec] TC=3780 TP=23876 BC=0 BP=7344 PM=0 CM=0 FM=0 AM=0
 
