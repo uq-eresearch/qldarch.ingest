@@ -13,9 +13,6 @@
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 
-{ ?e a qaat:Firm .
-  ?e qaat:label ?l .
-  ?firm a qldarch:Firm .
-  ?firm rdfs:label ?firmName .
-  ?l str:equalIgnoringCase ?firmName .
-} => { ?e qaat:reconciledTo ?firm } .
+{ ?e qaat:reconciledTo ?firm .
+  ?e qaat:contemporaryTo ?s .
+} => { ?s qldarch:associatedFirm ?firm } .

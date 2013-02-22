@@ -1,5 +1,5 @@
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
-#eye --yap --nope rules/rdfs-subClassOf.n3 ../owl/AuxilaryArchitectureOntology.ttl ../owl/ReificationsArchitectureOntology.ttl ../owl/UpperArchitectureOntology.ttl omekaexport/latest.ttl entities/buildings.ttl entities/firms.ttl entities/knownpeople.ttl entities/people.ttl entities/typologies.ttl classification/architects.n3 classification/buildings.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query classification/buildings.n3
+#eye --yap --nope rules/rdfs-subClassOf.n3 ../owl/AuxilaryArchitectureOntology.ttl ../owl/ReificationsArchitectureOntology.ttl ../owl/UpperArchitectureOntology.ttl omekaexport/latest.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl classification/architects.n3 classification/buildings.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query classification/buildings.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -551,5 +551,5 @@
 <http://qldarch.net/omeka/items/show/1681> :hasTopic <http://qldarch.net/rdf/2012-12/resources/buildings/25>.
 <http://qldarch.net/omeka/items/show/1682> :hasTopic <http://qldarch.net/rdf/2012-12/resources/buildings/25>.
 
-#ENDS 2967 [msec] TC=4226 TP=24609 BC=0 BP=7416 PM=0 CM=0 FM=0 AM=0
+#ENDS 2923 [msec] TC=4347 TP=26915 BC=0 BP=8167 PM=0 CM=0 FM=0 AM=0
 

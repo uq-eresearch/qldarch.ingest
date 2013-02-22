@@ -68,7 +68,7 @@ rdfs:label a owl:DatatypeProperty.
 rdf:type a owl:DatatypeProperty.
 <http://xmlns.com/foaf/0.1/firstName> a owl:DatatypeProperty.
 <http://xmlns.com/foaf/0.1/lastName> a owl:DatatypeProperty.
-:biography a owl:DatatypeProperty.
+:summary a owl:DatatypeProperty.
 :firmName a owl:DatatypeProperty.
 :preferredImage a owl:ObjectProperty.
 :hasTopic a owl:ObjectProperty.
@@ -82,9 +82,10 @@ rdf:type a owl:DatatypeProperty.
 :buildingTypology a owl:ObjectProperty.
 :photographer a owl:DatatypeProperty.
 :drawingType a owl:ObjectProperty.
+:associatedFirm a owl:ObjectProperty.
 :sourceFilename a owl:DatatypeProperty.
 :systemLocation a owl:DatatypeProperty.
-<http://purl.org/dc/terms/created> a owl:ObjectProperty.
+<http://purl.org/dc/terms/created> a owl:DatatypeProperty.
 <http://purl.org/dc/terms/creator> a owl:ObjectProperty.
 <http://purl.org/dc/terms/title> a owl:DatatypeProperty.
 <http://purl.org/dc/terms/description> a owl:DatatypeProperty.
@@ -145,7 +146,7 @@ rdf:type a owl:DatatypeProperty.
 :manifestationOf a rdf:Property.
 :buildingTypology a rdf:Property.
 :drawingType a rdf:Property.
-<http://purl.org/dc/terms/created> a rdf:Property.
+:associatedFirm a rdf:Property.
 <http://purl.org/dc/terms/creator> a rdf:Property.
 :startDate a rdf:Property.
 :endDate a rdf:Property.
@@ -154,12 +155,13 @@ rdfs:label a rdf:Property.
 rdf:type a rdf:Property.
 <http://xmlns.com/foaf/0.1/firstName> a rdf:Property.
 <http://xmlns.com/foaf/0.1/lastName> a rdf:Property.
-:biography a rdf:Property.
+:summary a rdf:Property.
 :firmName a rdf:Property.
 :location a rdf:Property.
 :photographer a rdf:Property.
 :sourceFilename a rdf:Property.
 :systemLocation a rdf:Property.
+<http://purl.org/dc/terms/created> a rdf:Property.
 <http://purl.org/dc/terms/title> a rdf:Property.
 <http://purl.org/dc/terms/description> a rdf:Property.
 <http://purl.org/dc/terms/rights> a rdf:Property.
@@ -257,6 +259,7 @@ owl:DatatypeProperty rdfs:domain rdfs:Resource.
 :buildingTypology rdfs:domain :Structure.
 :photographer rdfs:domain :Photograph.
 :drawingType rdfs:domain :LineDrawing.
+:associatedFirm rdfs:domain :Entity.
 :sourceFilename rdfs:domain :DigitalObject.
 :systemLocation rdfs:domain :DigitalObject.
 <http://purl.org/dc/terms/rights> rdfs:domain :DigitalObject.
@@ -350,6 +353,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :manifestationOf rdfs:range :Firm.
 :buildingTypology rdfs:range :BuildingTypology.
 :drawingType rdfs:range skos:Concept.
+:associatedFirm rdfs:range :Firm.
 :location rdfs:range xsd:string.
 :impliesRelationship rdfs:range rdf:Property.
 :entailsRelationship rdfs:range rdf:Statement.
@@ -362,6 +366,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :interviewee rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
 :transcriber rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
 :manifestationOf rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
+:associatedFirm rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
 :succeededBy rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
 :preceededBy rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
 :buildingTypology rdfs:range :Entity.
@@ -372,6 +377,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :interviewee rdfs:range :NonDigitalThing.
 :transcriber rdfs:range :NonDigitalThing.
 :manifestationOf rdfs:range :NonDigitalThing.
+:associatedFirm rdfs:range :NonDigitalThing.
 :succeededBy rdfs:range :NonDigitalThing.
 :preceededBy rdfs:range :NonDigitalThing.
 :taughtBy rdfs:range :Entity.
@@ -381,6 +387,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :interviewee rdfs:range :Entity.
 :transcriber rdfs:range :Entity.
 :manifestationOf rdfs:range :Entity.
+:associatedFirm rdfs:range :Entity.
 :succeededBy rdfs:range :Entity.
 :preceededBy rdfs:range :Entity.
 :taughtBy rdfs:range :StructureOrAgent.
@@ -390,6 +397,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :interviewee rdfs:range :StructureOrAgent.
 :transcriber rdfs:range :StructureOrAgent.
 :manifestationOf rdfs:range :StructureOrAgent.
+:associatedFirm rdfs:range :StructureOrAgent.
 :succeededBy rdfs:range :StructureOrAgent.
 :preceededBy rdfs:range :StructureOrAgent.
 :label :label "Preferred label".
@@ -431,7 +439,7 @@ rdfs:label :label "Label".
 rdf:type :label "Type".
 <http://xmlns.com/foaf/0.1/firstName> :label "First Name".
 <http://xmlns.com/foaf/0.1/lastName> :label "Last Name".
-:biography :label "Short Biography".
+:summary :label "Short Biography".
 :firmName :label "Firm Name".
 :preferredImage :label "Preferred Image".
 :hasTopic :label "Has Subject".
@@ -445,6 +453,7 @@ rdf:type :label "Type".
 :buildingTypology :label "Building Typology".
 :photographer :label "Photographer".
 :drawingType :label "Drawing Type".
+:associatedFirm :label "Firm".
 :sourceFilename :label "Source Filename".
 :systemLocation :label "System Location".
 <http://purl.org/dc/terms/created> :label "Date Created".
@@ -493,7 +502,7 @@ rdfs:label :display true .
 rdf:type :display false .
 <http://xmlns.com/foaf/0.1/firstName> :display true .
 <http://xmlns.com/foaf/0.1/lastName> :display true .
-:biography :display false .
+:summary :display false .
 :firmName :display true .
 :preferredImage :display false .
 :hasTopic :display true .
@@ -507,6 +516,7 @@ rdf:type :display false .
 :buildingTypology :display true .
 :photographer :display false .
 :drawingType :display true .
+:associatedFirm :display true .
 :sourceFilename :display false .
 :systemLocation :display false .
 <http://purl.org/dc/terms/created> :display true .
@@ -537,7 +547,7 @@ rdfs:label :editable true .
 rdf:type :editable false .
 <http://xmlns.com/foaf/0.1/firstName> :editable true .
 <http://xmlns.com/foaf/0.1/lastName> :editable true .
-:biography :editable true .
+:summary :editable true .
 :firmName :editable true .
 :preferredImage :editable true .
 :hasTopic :editable false .
@@ -551,6 +561,7 @@ rdf:type :editable false .
 :buildingTypology :editable false .
 :photographer :editable false .
 :drawingType :editable false .
+:associatedFirm :editable false .
 :sourceFilename :editable false .
 :systemLocation :editable false .
 <http://purl.org/dc/terms/created> :editable false .
@@ -588,7 +599,7 @@ rdf:type :editable false .
 :Architect :toplevel true .
 :Firm :toplevel true .
 :Photograph :toplevel true .
-:Portrait :toplevel true .
+:Portrait :toplevel false .
 :LineDrawing :toplevel true .
 :Interview :toplevel true .
 :Transcript :toplevel false .
@@ -604,5 +615,5 @@ rdf:type :editable false .
 <http://purl.org/dc/terms/subject> rdfs:isDefinedBy <http://purl.org/dc/terms/subject>.
 :identifier :shortName "uri".
 
-#ENDS 28 [msec] TC=803 TP=1793 BC=0 BP=951 PM=0 CM=0 FM=0 AM=0
+#ENDS 27 [msec] TC=819 TP=1833 BC=0 BP=973 PM=0 CM=0 FM=0 AM=0
 

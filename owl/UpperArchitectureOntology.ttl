@@ -130,7 +130,7 @@ foaf:Person a owl:Class ;
     rdfs:subClassOf :Photograph ;
     :displayPrecedence 1 ;
     :label "Photographs" ;
-    :toplevel true .
+    :toplevel false .
 
 :LineDrawing a owl:Class ;
     rdfs:subClassOf :DigitalObject ;
@@ -293,6 +293,13 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:domain :LineDrawing ;
     rdfs:range skos:Concept .
 
+:associatedFirm a owl:ObjectProperty ;
+    :label "Firm" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Entity ;
+    rdfs:range :Firm .
+
 #
 # Digital Object properties
 #
@@ -313,7 +320,7 @@ foaf:lastName a owl:DatatypeProperty ;
 # Integration of adopted Dublin Core properties
 #
 
-dcterms:created a owl:ObjectProperty ;
+dcterms:created a owl:DatatypeProperty ;
     :label "Date Created" ;
     :display true ;
     :editable false ;
