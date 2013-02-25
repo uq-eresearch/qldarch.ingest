@@ -15,4 +15,4 @@
 
 { ?e qaat:reconciledTo ?building .
   ?e qaat:projectNameOf ?s .
-} => { ?s qldarch:hasTopic ?building } .
+} => { ?s qldarch:depictsBuilding ?building } .

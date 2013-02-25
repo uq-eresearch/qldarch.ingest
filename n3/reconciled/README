@@ -1,0 +1,5 @@
+Turtle files resulting from the reconciliation of an omeka export to the existing resources.
+
+These files do not get uploaded (nothing containing a qaat:* class or property should).
+
+Instead they are used as input to the second stage inferencing.

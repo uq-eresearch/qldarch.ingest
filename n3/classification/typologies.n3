@@ -20,6 +20,6 @@
 { ?e qaat:reconciledTo ?type .
   ?do a qldarch:DigitalObject .
   ?e qaat:buildingTypologyOf ?do .
-  ?do qldarch:hasTopic ?building .
+  ?do qldarch:depictsBuilding ?building .
 } => { ?building qldarch:buildingTypology ?type } .
 

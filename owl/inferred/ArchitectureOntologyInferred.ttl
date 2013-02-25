@@ -371,8 +371,6 @@ rdfs:isDefinedBy a rdfs:Resource.
 rdfs:isDefinedBy rdfs:domain rdfs:Resource.
 rdfs:isDefinedBy rdfs:range rdfs:Resource.
 rdfs:isDefinedBy rdfs:subPropertyOf rdfs:seeAlso.
-:displayPrecidence a rdf:Property.
-:displayPrecidence a rdfs:Resource.
 :shortName a owl:AnnotationProperty.
 :shortName a rdf:Property.
 :shortName a rdfs:Resource.
@@ -472,17 +470,17 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :partnerOf :editable false .
 :partnerOf :entailsRelationship :EmploymentRelation.
 :partnerOf rdfs:label "Partner Of".
-:hasTopic a owl:ObjectProperty.
-:hasTopic a rdf:Property.
-:hasTopic a rdfs:Resource.
-:hasTopic rdfs:domain :DigitalObject.
-:hasTopic :label "Has Subject".
-:hasTopic rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
-:hasTopic :display true .
-:hasTopic :editable false .
-:hasTopic :entailsRelationship :RelatedToRelation.
-:hasTopic :displayPrecidence 20 .
-:hasTopic rdfs:label "Has Subject".
+:depictsBuilding a owl:ObjectProperty.
+:depictsBuilding a rdf:Property.
+:depictsBuilding a rdfs:Resource.
+:depictsBuilding rdfs:domain :DigitalObject.
+:depictsBuilding :label "Depicts".
+:depictsBuilding rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
+:depictsBuilding :display true .
+:depictsBuilding :editable false .
+:depictsBuilding :entailsRelationship :RelatedToRelation.
+:depictsBuilding :displayPrecedence 20 .
+:depictsBuilding rdfs:label "Depicts".
 :interviewer a owl:ObjectProperty.
 :interviewer a rdf:Property.
 :interviewer a rdfs:Resource.
@@ -493,7 +491,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :interviewer :display true .
 :interviewer :editable false .
 :interviewer :entailsRelationship :RelatedToRelation.
-:interviewer :displayPrecidence 110 .
+:interviewer :displayPrecedence 110 .
 :interviewer rdfs:label "Interviewer".
 :interviewee a owl:ObjectProperty.
 :interviewee a rdf:Property.
@@ -505,7 +503,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :interviewee :display true .
 :interviewee :editable false .
 :interviewee :entailsRelationship :RelatedToRelation.
-:interviewee :displayPrecidence 120 .
+:interviewee :displayPrecedence 120 .
 :interviewee rdfs:label "Interviewee".
 :transcriber a owl:ObjectProperty.
 :transcriber a rdf:Property.
@@ -517,7 +515,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :transcriber :display true .
 :transcriber :editable false .
 :transcriber :entailsRelationship :RelatedToRelation.
-:transcriber :displayPrecidence 130 .
+:transcriber :displayPrecedence 130 .
 :transcriber rdfs:label "Transcriber".
 :location a owl:DatatypeProperty.
 :location a rdf:Property.
@@ -527,8 +525,8 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :location :label "Location of Subject".
 :location :display true .
 :location :editable false .
-:location :displayPrecidence 140 .
-:location :displayPrecidence 50 .
+:location :displayPrecedence 140 .
+:location :displayPrecedence 50 .
 :location rdfs:label "Location of Subject".
 :succeededBy a owl:ObjectProperty.
 :succeededBy a rdf:Property.
@@ -565,7 +563,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :buildingTypology :label "Building Typology".
 :buildingTypology :display true .
 :buildingTypology :editable false .
-:buildingTypology :displayPrecidence 30 .
+:buildingTypology :displayPrecedence 30 .
 :buildingTypology rdfs:label "Building Typology".
 :photographer a owl:DatatypeProperty.
 :photographer a rdf:Property.
@@ -574,7 +572,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :photographer :label "Photographer".
 :photographer :display true .
 :photographer :editable false .
-:photographer :displayPrecidence 150 .
+:photographer :displayPrecedence 150 .
 :photographer rdfs:label "Photographer".
 :drawingType a owl:ObjectProperty.
 :drawingType a rdf:Property.
@@ -584,7 +582,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :drawingType :label "Drawing Type".
 :drawingType :display true .
 :drawingType :editable false .
-:drawingType :displayPrecidence 40 .
+:drawingType :displayPrecedence 40 .
 :drawingType rdfs:label "Drawing Type".
 :associatedFirm a owl:ObjectProperty.
 :associatedFirm a rdf:Property.
@@ -594,7 +592,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :associatedFirm :label "Firm".
 :associatedFirm :display true .
 :associatedFirm :editable false .
-:associatedFirm :displayPrecidence 10 .
+:associatedFirm :displayPrecedence 10 .
 :associatedFirm rdfs:label "Firm".
 :sourceFilename a owl:DatatypeProperty.
 :sourceFilename a rdf:Property.
@@ -611,7 +609,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :systemLocation :label "System Location".
 :systemLocation :display false .
 :systemLocation :editable false .
-:systemLocation :displayPrecidence 80 .
+:systemLocation :displayPrecedence 80 .
 :systemLocation rdfs:label "System Location".
 <http://purl.org/dc/terms/rights> a owl:DatatypeProperty.
 <http://purl.org/dc/terms/rights> a rdfs:Resource.
@@ -621,8 +619,8 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 <http://purl.org/dc/terms/rights> rdfs:comment "Currently a plain text statement of IP status of the work. If required can model this further".
 <http://purl.org/dc/terms/rights> :display true .
 <http://purl.org/dc/terms/rights> :editable false .
+<http://purl.org/dc/terms/rights> :displayPrecedence 90 .
 <http://purl.org/dc/terms/rights> rdfs:isDefinedBy <http://purl.org/dc/terms/rights>.
-<http://purl.org/dc/terms/rights> :displayPrecidence 90 .
 <http://purl.org/dc/terms/rights> rdfs:label "Rights".
 <http://purl.org/dc/terms/rights> rdfs:seeAlso <http://purl.org/dc/terms/rights>.
 :externalLocation a owl:DatatypeProperty.
@@ -648,7 +646,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :projectNumber :label "Project Number".
 :projectNumber :display true .
 :projectNumber :editable false .
-:projectNumber :displayPrecidence 180 .
+:projectNumber :displayPrecedence 180 .
 :projectNumber rdfs:label "Project Number".
 :dateOriginalCreation a owl:DatatypeProperty.
 :dateOriginalCreation a rdf:Property.
@@ -658,7 +656,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :dateOriginalCreation rdfs:subPropertyOf <http://purl.org/dc/terms/created>.
 :dateOriginalCreation :display true .
 :dateOriginalCreation :editable false .
-:dateOriginalCreation :displayPrecidence 190 .
+:dateOriginalCreation :displayPrecedence 190 .
 :dateOriginalCreation rdfs:label "Original Creation Date".
 rdf:first a owl:FunctionalProperty.
 rdf:first a rdf:Property.
@@ -719,8 +717,8 @@ rdf:value rdfs:range rdfs:Resource.
 <http://purl.org/dc/terms/subject> :label "Subject".
 <http://purl.org/dc/terms/subject> :display true .
 <http://purl.org/dc/terms/subject> :editable false .
+<http://purl.org/dc/terms/subject> :displayPrecedence 170 .
 <http://purl.org/dc/terms/subject> rdfs:isDefinedBy <http://purl.org/dc/terms/subject>.
-<http://purl.org/dc/terms/subject> :displayPrecidence 170 .
 <http://purl.org/dc/terms/subject> rdfs:label "Subject".
 <http://purl.org/dc/terms/subject> rdfs:seeAlso <http://purl.org/dc/terms/subject>.
 <http://purl.org/dc/terms/identifier> a owl:DatatypeProperty.
@@ -729,8 +727,8 @@ rdf:value rdfs:range rdfs:Resource.
 <http://purl.org/dc/terms/identifier> :label "External Identifier".
 <http://purl.org/dc/terms/identifier> :display true .
 <http://purl.org/dc/terms/identifier> :editable false .
+<http://purl.org/dc/terms/identifier> :displayPrecedence 70 .
 <http://purl.org/dc/terms/identifier> rdfs:isDefinedBy <http://purl.org/dc/terms/identifier>.
-<http://purl.org/dc/terms/identifier> :displayPrecidence 70 .
 <http://purl.org/dc/terms/identifier> rdfs:label "External Identifier".
 <http://purl.org/dc/terms/identifier> rdfs:seeAlso <http://purl.org/dc/terms/identifier>.
 <http://purl.org/dc/terms/created> a owl:DatatypeProperty.
@@ -739,8 +737,8 @@ rdf:value rdfs:range rdfs:Resource.
 <http://purl.org/dc/terms/created> :label "Date Created".
 <http://purl.org/dc/terms/created> :display true .
 <http://purl.org/dc/terms/created> :editable false .
+<http://purl.org/dc/terms/created> :displayPrecedence 60 .
 <http://purl.org/dc/terms/created> rdfs:isDefinedBy <http://purl.org/dc/terms/created>.
-<http://purl.org/dc/terms/created> :displayPrecidence 60 .
 <http://purl.org/dc/terms/created> rdfs:label "Date Created".
 <http://purl.org/dc/terms/created> rdfs:seeAlso <http://purl.org/dc/terms/created>.
 :reifiedAs a owl:AnnotationProperty.
@@ -786,7 +784,7 @@ rdf:value rdfs:range rdfs:Resource.
 :prefLabel rdfs:comment "A preferred label for a thing".
 :prefLabel :display true .
 :prefLabel :editable true .
-:prefLabel :displayPrecidence 100 .
+:prefLabel :displayPrecedence 100 .
 :prefLabel rdfs:label "Known as".
 <http://xmlns.com/foaf/0.1/firstName> a owl:DatatypeProperty.
 <http://xmlns.com/foaf/0.1/firstName> a rdfs:Resource.
@@ -822,8 +820,8 @@ rdf:value rdfs:range rdfs:Resource.
 <http://purl.org/dc/terms/title> :label "Title".
 <http://purl.org/dc/terms/title> :display true .
 <http://purl.org/dc/terms/title> :editable false .
+<http://purl.org/dc/terms/title> :displayPrecedence 0 .
 <http://purl.org/dc/terms/title> rdfs:isDefinedBy <http://purl.org/dc/terms/title>.
-<http://purl.org/dc/terms/title> :displayPrecidence 0 .
 <http://purl.org/dc/terms/title> rdfs:label "Title".
 <http://purl.org/dc/terms/title> rdfs:seeAlso <http://purl.org/dc/terms/title>.
 <http://purl.org/dc/terms/description> a owl:DatatypeProperty.
@@ -832,8 +830,8 @@ rdf:value rdfs:range rdfs:Resource.
 <http://purl.org/dc/terms/description> :label "Description".
 <http://purl.org/dc/terms/description> :display true .
 <http://purl.org/dc/terms/description> :editable false .
+<http://purl.org/dc/terms/description> :displayPrecedence 160 .
 <http://purl.org/dc/terms/description> rdfs:isDefinedBy <http://purl.org/dc/terms/description>.
-<http://purl.org/dc/terms/description> :displayPrecidence 160 .
 <http://purl.org/dc/terms/description> rdfs:label "Description".
 <http://purl.org/dc/terms/description> rdfs:seeAlso <http://purl.org/dc/terms/description>.
 qavocab:LineDrawing a :Entity.
@@ -880,5 +878,5 @@ skos:narrowerTransitive a rdfs:Resource.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 66 [msec] TC=1508 TP=25027 BC=0 BP=6993 PM=0 CM=0 FM=0 AM=0
+#ENDS 65 [msec] TC=1504 TP=24974 BC=0 BP=6979 PM=0 CM=0 FM=0 AM=0
 

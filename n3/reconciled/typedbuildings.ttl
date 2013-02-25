@@ -34,5 +34,5 @@
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Recreation+and+sports+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/6>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Religious+buildings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
 
-#ENDS 2840 [msec] TC=3830 TP=24847 BC=0 BP=7650 PM=0 CM=0 FM=0 AM=0
+#ENDS 2843 [msec] TC=3830 TP=24847 BC=0 BP=7650 PM=0 CM=0 FM=0 AM=0
 

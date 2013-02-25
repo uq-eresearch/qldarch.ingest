@@ -1,13 +1,13 @@
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
-#eye --yap --nope rules/rdfs-subClassOf.n3 ../owl/AuxilaryArchitectureOntology.ttl ../owl/ReificationsArchitectureOntology.ttl ../owl/UpperArchitectureOntology.ttl omekaexport/latest.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl classification/architects.n3 classification/buildings.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query classification/architects.n3
+#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/AuxilaryArchitectureOntology.ttl ../owl/ReificationsArchitectureOntology.ttl ../owl/UpperArchitectureOntology.ttl omekaexport/latest.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl classification/architects.n3 classification/buildings.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query pseudoentities/firms.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dcam: <http://purl.org/dc/dcam/>.
@@ -25,13 +25,9 @@
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
-<http://qldarch.net/rdf/2012-12/resources/people/2> a :Architect.
-<http://qldarch.net/rdf/2012-12/resources/people/4> a :Architect.
-<http://qldarch.net/rdf/2012-12/resources/people/5> a :Architect.
-<http://qldarch.net/rdf/2012-12/resources/people/6> a :Architect.
-<http://qldarch.net/rdf/2012-12/resources/people/7> a :Architect.
-<http://qldarch.net/rdf/2012-12/resources/people/8> a :Architect.
-<http://qldarch.net/rdf/2012-12/resources/people/11> a :Architect.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,R.+Martin+Wilson+and+son+Architects> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/3>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/1>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Hayes+%26+Scott> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/2>.
 
-#ENDS 2846 [msec] TC=3829 TP=24836 BC=0 BP=7649 PM=0 CM=0 FM=0 AM=0
+#ENDS 3058 [msec] TC=4666 TP=27079 BC=0 BP=8486 PM=0 CM=0 FM=0 AM=0
 
