@@ -171,11 +171,12 @@ foaf:Person a owl:Class ;
     :label "Known as" ;
     :display true ;
     :editable true ;
+    :displayPrecidence 100 ;
     rdfs:comment "A preferred label for a thing" .
 
 rdfs:label a owl:DatatypeProperty ;
     :label "Label" ;
-    :display true ;
+    :display false ;
     :editable true ;
     rdfs:comment "A label for a thing" .
 
@@ -215,6 +216,7 @@ foaf:lastName a owl:DatatypeProperty ;
     :label "Has Subject" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 20 ;
     rdfs:subPropertyOf dcterms:subject ;
     :entailsRelationship :RelatedToRelation ;
     rdfs:domain :DigitalObject .
@@ -223,6 +225,7 @@ foaf:lastName a owl:DatatypeProperty ;
     :label "Interviewer" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 110 ;
     rdfs:subPropertyOf dcterms:subject ;
     :entailsRelationship :RelatedToRelation ;
     rdfs:domain :Interview ;
@@ -232,6 +235,7 @@ foaf:lastName a owl:DatatypeProperty ;
     :label "Interviewee" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 120 ;
     rdfs:subPropertyOf dcterms:subject ;
     :entailsRelationship :RelatedToRelation ;
     rdfs:domain :Interview ;
@@ -241,6 +245,7 @@ foaf:lastName a owl:DatatypeProperty ;
     :label "Transcriber" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 130 ;
     rdfs:subPropertyOf dcterms:subject ;
     :entailsRelationship :RelatedToRelation ;
     rdfs:domain :Transcript ;
@@ -249,6 +254,7 @@ foaf:lastName a owl:DatatypeProperty ;
 :location a owl:DatatypeProperty ;
     :label "Location of Subject" ;
     :display true ;
+    :displayPrecidence 140 ;
     :editable false ;
     rdfs:domain :DigitalObject .
 
@@ -277,19 +283,22 @@ foaf:lastName a owl:DatatypeProperty ;
     :label "Building Typology" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 30 ;
     rdfs:domain :Structure ;
     rdfs:range :BuildingTypology .
 
 :photographer a owl:DatatypeProperty ;
     :label "Photographer" ;
-    :display false ;
+    :display true ;
     :editable false ;
+    :displayPrecidence 150 ;
     rdfs:domain :Photograph .
 
 :drawingType a owl:ObjectProperty ;
     :label "Drawing Type" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 40 ;
     rdfs:domain :LineDrawing ;
     rdfs:range skos:Concept .
 
@@ -297,6 +306,7 @@ foaf:lastName a owl:DatatypeProperty ;
     :label "Firm" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 10 ;
     rdfs:domain :Entity ;
     rdfs:range :Firm .
 
@@ -314,6 +324,7 @@ foaf:lastName a owl:DatatypeProperty ;
     :label "System Location" ;
     :display false ;
     :editable false ;
+    :displayPrecidence 80 ;
     rdfs:domain :DigitalObject .
 
 #
@@ -324,6 +335,7 @@ dcterms:created a owl:DatatypeProperty ;
     :label "Date Created" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 60 ;
     rdfs:isDefinedBy dcterms:created .
 
 dcterms:creator a owl:ObjectProperty ;
@@ -336,18 +348,21 @@ dcterms:title a owl:DatatypeProperty ;
     :label "Title" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 0 ;
     rdfs:isDefinedBy dcterms:title .
 
 dcterms:description a owl:DatatypeProperty ;
     :label "Description" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 160 ;
     rdfs:isDefinedBy dcterms:description .
 
 dcterms:rights a owl:DatatypeProperty ;
     :label "Rights" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 90 ;
     rdfs:domain :DigitalObject ;
     rdfs:isDefinedBy dcterms:rights ;
     rdfs:comment "Currently a plain text statement of IP status of the work. If required can model this further" .
@@ -356,12 +371,14 @@ dcterms:identifier a owl:DatatypeProperty ;
     :label "External Identifier" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 70 ;
     rdfs:isDefinedBy dcterms:identifier .
 
 dcterms:subject a owl:DatatypeProperty ;
     :label "Subject" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 170 ;
     rdfs:isDefinedBy dcterms:subject .
 
 :identifier a owl:DatatypeProperty ;
@@ -391,6 +408,7 @@ dcterms:subject a owl:DatatypeProperty ;
     :label "Location of Subject" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 50 ;
     rdfs:domain :DigitalObject ;
     rdfs:range xsd:string .
 
@@ -398,6 +416,7 @@ dcterms:subject a owl:DatatypeProperty ;
     :label "Project Number" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 180 ;
     rdfs:domain :DigitalObject .
 
 :dateOriginalCreation a owl:DatatypeProperty ;
@@ -405,6 +424,7 @@ dcterms:subject a owl:DatatypeProperty ;
     :label "Original Creation Date" ;
     :display true ;
     :editable false ;
+    :displayPrecidence 190 ;
     rdfs:domain :DigitalObject .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:

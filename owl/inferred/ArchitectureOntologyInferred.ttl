@@ -1,10 +1,11 @@
-#Processed by Id: euler.yap 5820 2012-11-27 15:29:04Z josd
-#eye --yap --nope /opt/euler/rdfs-subClassOf.n3 /opt/euler/rdfs-subPropertyOf.n3 ArchitectureOntology.ttl --pass
+#Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
+#eye --yap --nope ReificationsArchitectureOntology.ttl UpperArchitectureOntology.ttl ControlledArchitectureVocabularies.ttl rules/rdfs-rules.n3 rules/skos-rules.n3 --query queries/ExtractOntology.n3
 
-@prefix log: <http://www.w3.org/2000/10/swap/log#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
+@prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
@@ -12,310 +13,872 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
-@prefix var: <http://localhost/var#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
+@prefix var: <http://localhost/var#>.
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
-<http://qldarch.net/ns/rdf/2012-06/terms#> a owl:Ontology.
-:label a owl:AnnotationProperty.
-:display a owl:AnnotationProperty.
-:editable a owl:AnnotationProperty.
-:shortName a owl:AnnotationProperty.
-:reifiedAs a owl:AnnotationProperty.
-:toplevel a owl:AnnotationProperty.
-:displayPrecedence a owl:AnnotationProperty.
+qavocab:DrawingTypes a skos:ConceptScheme.
+qavocab:DrawingTypes a rdfs:Resource.
+qavocab:DrawingTypes skos:hasTopConcept qavocab:LineDrawing.
+qavocab:LineDrawing a skos:Concept.
+qavocab:LineDrawing a :DrawingType.
+qavocab:LineDrawing a rdfs:Resource.
+qavocab:LineDrawing a :DigitalThing.
+qavocab:LineDrawing :label "Line Drawing".
+qavocab:LineDrawing skos:inScheme qavocab:DrawingTypes.
+qavocab:LineDrawing rdfs:label "Line Drawing".
+qavocab:LineDrawing skos:topConceptOf qavocab:DrawingTypes.
+qavocab:LineDrawing skos:narrower qavocab:Perspective.
+qavocab:LineDrawing skos:narrower qavocab:Section.
+qavocab:LineDrawing skos:narrower qavocab:Sketch.
+qavocab:LineDrawing skos:narrower qavocab:Elevation.
+qavocab:LineDrawing skos:narrower qavocab:Plan.
+qavocab:LineDrawing skos:narrowerTransitive qavocab:Perspective.
+qavocab:LineDrawing skos:narrowerTransitive qavocab:Section.
+qavocab:LineDrawing skos:narrowerTransitive qavocab:Sketch.
+qavocab:LineDrawing skos:narrowerTransitive qavocab:Elevation.
+qavocab:LineDrawing skos:narrowerTransitive qavocab:Plan.
+qavocab:Perspective a skos:Concept.
+qavocab:Perspective a :DrawingType.
+qavocab:Perspective a rdfs:Resource.
+qavocab:Perspective a :DigitalThing.
+qavocab:Perspective :label "Perspective".
+qavocab:Perspective skos:inScheme qavocab:DrawingTypes.
+qavocab:Perspective skos:broader qavocab:LineDrawing.
+qavocab:Perspective skos:altLabel "Perspective".
+qavocab:Perspective rdfs:label "Perspective".
+qavocab:Perspective skos:broaderTransitive qavocab:LineDrawing.
+qavocab:Section a skos:Concept.
+qavocab:Section a :DrawingType.
+qavocab:Section a rdfs:Resource.
+qavocab:Section a :DigitalThing.
+qavocab:Section :label "Section".
+qavocab:Section skos:inScheme qavocab:DrawingTypes.
+qavocab:Section skos:broader qavocab:LineDrawing.
+qavocab:Section skos:altLabel "Section".
+qavocab:Section rdfs:label "Section".
+qavocab:Section skos:broaderTransitive qavocab:LineDrawing.
+qavocab:Sketch a skos:Concept.
+qavocab:Sketch a :DrawingType.
+qavocab:Sketch a rdfs:Resource.
+qavocab:Sketch a :DigitalThing.
+qavocab:Sketch :label "Sketch".
+qavocab:Sketch skos:inScheme qavocab:DrawingTypes.
+qavocab:Sketch skos:broader qavocab:LineDrawing.
+qavocab:Sketch skos:altLabel "Sketch".
+qavocab:Sketch rdfs:label "Sketch".
+qavocab:Sketch skos:broaderTransitive qavocab:LineDrawing.
+qavocab:Elevation a skos:Concept.
+qavocab:Elevation a :DrawingType.
+qavocab:Elevation a rdfs:Resource.
+qavocab:Elevation a :DigitalThing.
+qavocab:Elevation :label "Elevation".
+qavocab:Elevation skos:inScheme qavocab:DrawingTypes.
+qavocab:Elevation skos:broader qavocab:LineDrawing.
+qavocab:Elevation skos:altLabel "Elevation".
+qavocab:Elevation rdfs:label "Elevation".
+qavocab:Elevation skos:broaderTransitive qavocab:LineDrawing.
+qavocab:Plan a skos:Concept.
+qavocab:Plan a :DrawingType.
+qavocab:Plan a rdfs:Resource.
+qavocab:Plan a :DigitalThing.
+qavocab:Plan :label "Plan".
+qavocab:Plan skos:inScheme qavocab:DrawingTypes.
+qavocab:Plan skos:broader qavocab:LineDrawing.
+qavocab:Plan skos:altLabel "Plan".
+qavocab:Plan rdfs:label "Plan".
+qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
+:Relationship a owl:Class.
+:Relationship a rdfs:Class.
+:Relationship a rdfs:Resource.
+:Relationship rdfs:subClassOf rdf:Statement.
+:Relationship rdfs:subClassOf rdfs:Resource.
+:Evidence a owl:Class.
+:Evidence a rdfs:Class.
+:Evidence a rdfs:Resource.
+:Evidence rdfs:subClassOf rdf:Statement.
+:Evidence rdfs:subClassOf rdfs:Resource.
+:RelatedToRelation a owl:Class.
+:RelatedToRelation a :Relationship.
+:RelatedToRelation a rdfs:Class.
+:RelatedToRelation a rdfs:Resource.
+:RelatedToRelation a rdf:Statement.
+:RelatedToRelation rdfs:subClassOf :Relationship.
+:RelatedToRelation rdfs:subClassOf rdfs:Resource.
+:RelatedToRelation rdfs:subClassOf rdf:Statement.
+:RelatedToRelation :label "Related To".
+:RelatedToRelation :impliesRelationship :relatedTo.
+:RelatedToRelation rdfs:label "Related To".
+:EmploymentRelation a owl:Class.
+:EmploymentRelation a rdfs:Class.
+:EmploymentRelation a rdfs:Resource.
+:EmploymentRelation a :Relationship.
+:EmploymentRelation a rdf:Statement.
+:EmploymentRelation rdfs:subClassOf :Relationship.
+:EmploymentRelation rdfs:subClassOf :RelatedToRelation.
+:EmploymentRelation rdfs:subClassOf rdfs:Resource.
+:EmploymentRelation rdfs:subClassOf rdf:Statement.
 :Entity a owl:Class.
-:NonDigitalThing a owl:Class.
-:DigitalThing a owl:Class.
-:DigitalObject a owl:Class.
-:StructureOrAgent a owl:Class.
-:Structure a owl:Class.
-<http://xmlns.com/foaf/0.1/Agent> a owl:Class.
-<http://xmlns.com/foaf/0.1/Person> a owl:Class.
-:Architect a owl:Class.
-:Firm a owl:Class.
-:Photograph a owl:Class.
-:LineDrawing a owl:Class.
-:Interview a owl:Class.
-:identifier a owl:DatatypeProperty.
-:label a owl:DatatypeProperty.
-rdfs:label a owl:DatatypeProperty.
-rdf:type a owl:DatatypeProperty.
-<http://xmlns.com/foaf/0.1/firstName> a owl:DatatypeProperty.
-<http://xmlns.com/foaf/0.1/lastName> a owl:DatatypeProperty.
-:firmName a owl:DatatypeProperty.
-:preferredImage a owl:ObjectProperty.
-:employedBy a owl:ObjectProperty.
-:taughtBy a owl:ObjectProperty.
-:mentoredBy a owl:ObjectProperty.
-:hasPartner a owl:ObjectProperty.
-<http://purl.org/dc/terms/creator> a owl:ObjectProperty.
-<http://purl.org/dc/terms/title> a owl:DatatypeProperty.
-<http://purl.org/dc/terms/description> a owl:DatatypeProperty.
-:hasSubject a owl:ObjectProperty.
-<http://purl.org/dc/terms/rights> a owl:DatatypeProperty.
-:systemLocation a owl:DatatypeProperty.
-:interviewer a owl:ObjectProperty.
-:interviewee a owl:ObjectProperty.
-:transcriber a owl:ObjectProperty.
+:Entity a rdfs:Resource.
 :Entity a rdfs:Class.
+:Entity rdfs:subClassOf rdfs:Resource.
+:Entity rdfs:comment "Top for concepts related by this vocabularly".
+:NonDigitalThing a owl:Class.
 :NonDigitalThing a rdfs:Class.
-:DigitalThing a rdfs:Class.
-:DigitalObject a rdfs:Class.
-:StructureOrAgent a rdfs:Class.
-:Structure a rdfs:Class.
-<http://xmlns.com/foaf/0.1/Agent> a rdfs:Class.
-<http://xmlns.com/foaf/0.1/Person> a rdfs:Class.
-:Architect a rdfs:Class.
-:Firm a rdfs:Class.
-:Photograph a rdfs:Class.
-:LineDrawing a rdfs:Class.
-:Interview a rdfs:Class.
-:label a rdf:Property.
-:display a rdf:Property.
-:editable a rdf:Property.
-:shortName a rdf:Property.
-:reifiedAs a rdf:Property.
-:toplevel a rdf:Property.
-:displayPrecedence a rdf:Property.
-:preferredImage a rdfs:Property.
-:employedBy a rdfs:Property.
-:taughtBy a rdfs:Property.
-:mentoredBy a rdfs:Property.
-:hasPartner a rdfs:Property.
-<http://purl.org/dc/terms/creator> a rdfs:Property.
-:hasSubject a rdfs:Property.
-:interviewer a rdfs:Property.
-:interviewee a rdfs:Property.
-:transcriber a rdfs:Property.
-:identifier a rdf:Property.
-rdfs:label a rdf:Property.
-rdf:type a rdf:Property.
-<http://xmlns.com/foaf/0.1/firstName> a rdf:Property.
-<http://xmlns.com/foaf/0.1/lastName> a rdf:Property.
-:firmName a rdf:Property.
-<http://purl.org/dc/terms/title> a rdf:Property.
-<http://purl.org/dc/terms/description> a rdf:Property.
-<http://purl.org/dc/terms/rights> a rdf:Property.
-:systemLocation a rdf:Property.
-owl:Class rdfs:subClassOf rdfs:Class.
-owl:AnnotationProperty rdfs:subClassOf rdf:Property.
-owl:ObjectProperty rdfs:subClassOf rdfs:Property.
-owl:DatatypeProperty rdfs:subClassOf rdf:Property.
+:NonDigitalThing a rdfs:Resource.
 :NonDigitalThing rdfs:subClassOf :Entity.
+:NonDigitalThing rdfs:subClassOf rdfs:Resource.
+:NonDigitalThing :label "Non-Digital Thing".
+:NonDigitalThing rdfs:label "Non-Digital Thing".
+:DigitalThing a owl:Class.
+:DigitalThing a rdfs:Class.
+:DigitalThing a rdfs:Resource.
+:DigitalThing rdfs:subClassOf :Entity.
+:DigitalThing rdfs:subClassOf rdfs:Resource.
+:DigitalThing :label "Digital Thing".
+:DigitalThing rdfs:label "Digital Thing".
+:DigitalObject a owl:Class.
+:DigitalObject a rdfs:Resource.
+:DigitalObject a rdfs:Class.
 :DigitalObject rdfs:subClassOf :DigitalThing.
+:DigitalObject rdfs:subClassOf rdfs:Resource.
+:DigitalObject rdfs:subClassOf :Entity.
+:DigitalObject :label "Digital Object".
+:DigitalObject rdfs:comment "This will be replaced by a reconciliation with FRBR Work/Expression distinction".
+:DigitalObject rdfs:label "Digital Object".
+:StructureOrAgent a owl:Class.
+:StructureOrAgent a rdfs:Class.
+:StructureOrAgent a rdfs:Resource.
 :StructureOrAgent rdfs:subClassOf :NonDigitalThing.
-:Structure rdfs:subClassOf :StructureOrAgent.
-<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :StructureOrAgent.
-<http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
-:Architect rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person>.
-:Firm rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
-:Photograph rdfs:subClassOf :DigitalObject.
-:LineDrawing rdfs:subClassOf :DigitalObject.
-:Interview rdfs:subClassOf :DigitalObject.
-:hasSubject rdfs:subClassOf <http://purl.org/dc/terms/subject>.
+:StructureOrAgent rdfs:subClassOf rdfs:Resource.
 :StructureOrAgent rdfs:subClassOf :Entity.
+:StructureOrAgent :label "Structure or Agent".
+:StructureOrAgent rdfs:label "Structure or Agent".
+:Structure a owl:Class.
+:Structure a rdfs:Class.
+:Structure a rdfs:Resource.
+:Structure rdfs:subClassOf :StructureOrAgent.
+:Structure rdfs:subClassOf rdfs:Resource.
 :Structure rdfs:subClassOf :NonDigitalThing.
-:Structure rdfs:subClassOf :Entity.
+:Structure :label "Structures".
+:Structure :displayPrecedence 2 .
+:Structure :toplevel true .
+:Structure rdfs:label "Structures".
+:BuildingTypology a owl:Class.
+:BuildingTypology a rdfs:Class.
+:BuildingTypology a rdfs:Resource.
+:BuildingTypology rdfs:subClassOf :NonDigitalThing.
+:BuildingTypology rdfs:subClassOf rdfs:Resource.
+:BuildingTypology rdfs:subClassOf :Entity.
+:BuildingTypology :label "Building Typologies".
+:BuildingTypology :displayPrecedence 3 .
+:BuildingTypology :toplevel true .
+:BuildingTypology rdfs:label "Building Typologies".
+<http://xmlns.com/foaf/0.1/Agent> a owl:Class.
+<http://xmlns.com/foaf/0.1/Agent> a rdfs:Resource.
+<http://xmlns.com/foaf/0.1/Agent> a rdfs:Class.
+<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :StructureOrAgent.
+<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf rdfs:Resource.
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :NonDigitalThing.
-<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :Entity.
+<http://xmlns.com/foaf/0.1/Agent> :label "Agent".
+<http://xmlns.com/foaf/0.1/Agent> rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Agent>.
+<http://xmlns.com/foaf/0.1/Agent> rdfs:label "Agent".
+<http://xmlns.com/foaf/0.1/Agent> rdfs:seeAlso <http://http://xmlns.com/foaf/spec/#term_Agent>.
+<http://xmlns.com/foaf/0.1/Person> a owl:Class.
+<http://xmlns.com/foaf/0.1/Person> a rdfs:Resource.
+<http://xmlns.com/foaf/0.1/Person> a rdfs:Class.
+<http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
+<http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf rdfs:Resource.
 <http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :StructureOrAgent.
+<http://xmlns.com/foaf/0.1/Person> :label "Person".
+<http://xmlns.com/foaf/0.1/Person> rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Person>.
+<http://xmlns.com/foaf/0.1/Person> rdfs:label "Person".
+<http://xmlns.com/foaf/0.1/Person> rdfs:seeAlso <http://http://xmlns.com/foaf/spec/#term_Person>.
+:Architect a owl:Class.
+:Architect a rdfs:Class.
+:Architect a rdfs:Resource.
+:Architect rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person>.
+:Architect rdfs:subClassOf rdfs:Resource.
+:Architect rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
+:Architect :label "Architects".
+:Architect :displayPrecedence 0 .
+:Architect :toplevel true .
+:Architect rdfs:label "Architects".
+:Firm a owl:Class.
+:Firm a rdfs:Class.
+:Firm a rdfs:Resource.
+:Firm rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
+:Firm rdfs:subClassOf rdfs:Resource.
+:Firm rdfs:subClassOf :StructureOrAgent.
+:Firm :label "Firms".
+:Firm :displayPrecedence 1 .
+:Firm :toplevel true .
+:Firm rdfs:label "Firms".
+:FirmManifestation a owl:Class.
+:FirmManifestation a rdfs:Class.
+:FirmManifestation a rdfs:Resource.
+:FirmManifestation rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
+:FirmManifestation rdfs:subClassOf rdfs:Resource.
+:FirmManifestation rdfs:subClassOf :StructureOrAgent.
+:FirmManifestation :label "Firm Manifestation".
+:FirmManifestation rdfs:label "Firm Manifestation".
+:Photograph a owl:Class.
+:Photograph a rdfs:Class.
+:Photograph a rdfs:Resource.
+:Photograph rdfs:subClassOf :DigitalObject.
+:Photograph rdfs:subClassOf rdfs:Resource.
+:Photograph rdfs:subClassOf :DigitalThing.
+:Photograph :label "Photographs".
+:Photograph :displayPrecedence 1 .
+:Photograph :toplevel true .
+:Photograph rdfs:label "Photographs".
+:Portrait a owl:Class.
+:Portrait a rdfs:Class.
+:Portrait a rdfs:Resource.
+:Portrait rdfs:subClassOf :Photograph.
+:Portrait rdfs:subClassOf rdfs:Resource.
+:Portrait rdfs:subClassOf :DigitalObject.
+:Portrait :label "Photographs".
+:Portrait :displayPrecedence 1 .
+:Portrait :toplevel false .
+:Portrait rdfs:label "Photographs".
+:LineDrawing a owl:Class.
+:LineDrawing a rdfs:Class.
+:LineDrawing a rdfs:Resource.
+:LineDrawing rdfs:subClassOf :DigitalObject.
+:LineDrawing rdfs:subClassOf rdfs:Resource.
+:LineDrawing rdfs:subClassOf :DigitalThing.
+:LineDrawing :label "Line Drawings".
+:LineDrawing :displayPrecedence 2 .
+:LineDrawing :toplevel true .
+:LineDrawing rdfs:label "Line Drawings".
+:Interview a owl:Class.
+:Interview a rdfs:Class.
+:Interview a rdfs:Resource.
+:Interview rdfs:subClassOf :DigitalObject.
+:Interview rdfs:subClassOf rdfs:Resource.
+:Interview rdfs:subClassOf :DigitalThing.
+:Interview :label "Interviews".
+:Interview :displayPrecedence 0 .
+:Interview :toplevel true .
+:Interview rdfs:label "Interviews".
+:Transcript a owl:Class.
+:Transcript a rdfs:Class.
+:Transcript a rdfs:Resource.
+:Transcript rdfs:subClassOf :DigitalObject.
+:Transcript rdfs:subClassOf rdfs:Resource.
+:Transcript rdfs:subClassOf :DigitalThing.
+:Transcript :label "Transcripts".
+:Transcript :toplevel false .
+:Transcript rdfs:label "Transcripts".
+:Format a owl:Class.
+:Format a rdfs:Class.
+:Format a rdfs:Resource.
+:Format rdfs:subClassOf :DigitalThing.
+:Format rdfs:subClassOf rdfs:Resource.
+:Format rdfs:subClassOf :Entity.
+:Format :label "Format".
+:Format rdfs:label "Format".
+:DrawingType a owl:Class.
+:DrawingType a rdfs:Class.
+:DrawingType a rdfs:Resource.
+:DrawingType rdfs:subClassOf :DigitalThing.
+:DrawingType rdfs:subClassOf rdfs:Resource.
+:DrawingType rdfs:subClassOf :Entity.
+:DrawingType :label "Drawing Type".
+:DrawingType rdfs:label "Drawing Type".
+:TopicConcept a owl:Class.
+:TopicConcept a rdfs:Class.
+:TopicConcept a rdfs:Resource.
+:TopicConcept rdfs:subClassOf :Entity.
+:TopicConcept rdfs:subClassOf skos:Concept.
+:TopicConcept rdfs:subClassOf rdfs:Resource.
+:TopicConcept :label "Topic".
+:TopicConcept :toplevel false .
+:TopicConcept rdfs:label "Topic".
+rdf:type a owl:DatatypeProperty.
+rdf:type a rdf:Property.
+rdf:type a rdfs:Resource.
+rdf:type rdfs:domain rdfs:Resource.
+rdf:type rdfs:range rdfs:Class.
+rdf:type :label "Type".
+rdf:type rdfs:comment "The type of a thing".
+rdf:type :display false .
+rdf:type :editable false .
+rdf:type rdfs:label "Type".
+rdfs:subClassOf a rdf:Property.
+rdfs:subClassOf a rdfs:Resource.
+rdfs:subClassOf rdfs:domain rdfs:Class.
+rdfs:subClassOf rdfs:range rdfs:Class.
+rdfs:domain a rdf:Property.
+rdfs:domain a rdfs:Resource.
+rdfs:domain rdfs:domain rdf:Property.
+rdfs:domain rdfs:range rdfs:Class.
+rdfs:range a rdf:Property.
+rdfs:range a rdfs:Resource.
+rdfs:range rdfs:domain rdf:Property.
+rdfs:range rdfs:range rdfs:Class.
+:label a owl:AnnotationProperty.
+:label a owl:DatatypeProperty.
+:label a rdf:Property.
+:label a rdfs:Resource.
+:label :label "Preferred label".
+:label rdfs:subPropertyOf rdfs:label.
+:label rdfs:comment "The preferred label for a thing".
+:label rdfs:label "Preferred label".
+rdfs:subPropertyOf a rdf:Property.
+rdfs:subPropertyOf a rdfs:Resource.
+rdfs:subPropertyOf rdfs:domain rdf:Property.
+rdfs:subPropertyOf rdfs:range rdf:Property.
+rdfs:comment a rdf:Property.
+rdfs:comment a rdfs:Resource.
+rdfs:comment rdfs:domain rdfs:Resource.
+rdfs:comment rdfs:range rdfs:Literal.
+:impliesRelationship a owl:AnnotationProperty.
+:impliesRelationship a rdf:Property.
+:impliesRelationship a rdfs:Resource.
+:impliesRelationship rdfs:domain :Relationship.
+:impliesRelationship rdfs:range owl:ObjectProperty.
+:impliesRelationship :label "Implies Relationship".
+:impliesRelationship rdfs:label "Implies Relationship".
+:display a owl:AnnotationProperty.
+:display a rdf:Property.
+:display a rdfs:Resource.
+:editable a owl:AnnotationProperty.
+:editable a rdf:Property.
+:editable a rdfs:Resource.
+:entailsRelationship a owl:AnnotationProperty.
+:entailsRelationship a rdf:Property.
+:entailsRelationship a rdfs:Resource.
+:entailsRelationship rdfs:domain owl:ObjectProperty.
+:entailsRelationship rdfs:range :Relationship.
+:entailsRelationship :label "Entails Relationship".
+:entailsRelationship rdfs:label "Entails Relationship".
+:displayPrecedence a owl:AnnotationProperty.
+:displayPrecedence a rdf:Property.
+:displayPrecedence a rdfs:Resource.
+:toplevel a owl:AnnotationProperty.
+:toplevel a rdf:Property.
+:toplevel a rdfs:Resource.
+rdfs:isDefinedBy a rdf:Property.
+rdfs:isDefinedBy a rdfs:Resource.
+rdfs:isDefinedBy rdfs:domain rdfs:Resource.
+rdfs:isDefinedBy rdfs:range rdfs:Resource.
+rdfs:isDefinedBy rdfs:subPropertyOf rdfs:seeAlso.
+:displayPrecidence a rdf:Property.
+:displayPrecidence a rdfs:Resource.
+:shortName a owl:AnnotationProperty.
+:shortName a rdf:Property.
+:shortName a rdfs:Resource.
+skos:hasTopConcept a rdf:Property.
+skos:hasTopConcept a rdfs:Resource.
+skos:inScheme a rdf:Property.
+skos:inScheme a rdfs:Resource.
+skos:broader a rdf:Property.
+skos:broader a rdfs:Resource.
+skos:altLabel a rdf:Property.
+skos:altLabel a rdfs:Resource.
+owl:DatatypeProperty a rdf:Property.
+owl:DatatypeProperty a rdfs:Class.
+owl:DatatypeProperty a rdfs:Resource.
+owl:DatatypeProperty rdfs:subClassOf rdf:Property.
+owl:DatatypeProperty rdfs:subClassOf rdfs:Resource.
+owl:DatatypeProperty rdfs:domain rdfs:Resource.
+owl:DatatypeProperty rdfs:range rdfs:Literal.
+:subject a rdf:Property.
+:subject a rdfs:Resource.
+:subject rdfs:domain :Evidence.
+:subject :label "Subject".
+:subject rdfs:subPropertyOf rdf:subject.
+:subject :display false .
+:subject :editable false .
+:subject rdfs:label "Subject".
+:predicate a rdf:Property.
+:predicate a rdfs:Resource.
+:predicate rdfs:domain :Evidence.
+:predicate :label "Predicate".
+:predicate rdfs:subPropertyOf rdf:predicate.
+:predicate :display false .
+:predicate :editable false .
+:predicate rdfs:label "Predicate".
+:object a rdf:Property.
+:object a rdfs:Resource.
+:object rdfs:domain :Evidence.
+:object :label "Object".
+:object rdfs:subPropertyOf rdf:object.
+:object :display false .
+:object :editable false .
+:object rdfs:label "Object".
+:evidence a owl:ObjectProperty.
+:evidence a rdf:Property.
+:evidence a rdfs:Resource.
+:evidence rdfs:domain :Relationship.
+:evidence rdfs:range :Evidence.
+:evidence :label "Evidence".
+:evidence :display false .
+:evidence :editable false .
+:evidence rdfs:label "Evidence".
+:startDate a owl:DatatypeProperty.
+:startDate a rdf:Property.
+:startDate a rdfs:Resource.
+:startDate rdfs:domain :Relationship.
+:startDate rdfs:range xsd:date.
+:startDate :label "Start Date".
+:startDate :display true .
+:startDate :editable false .
+:startDate rdfs:label "Start Date".
+:endDate a owl:DatatypeProperty.
+:endDate a rdf:Property.
+:endDate a rdfs:Resource.
+:endDate rdfs:domain :Relationship.
+:endDate rdfs:range xsd:date.
+:endDate :label "End Date".
+:endDate :display true .
+:endDate :editable false .
+:endDate rdfs:label "End Date".
+:taughtBy a owl:ObjectProperty.
+:taughtBy a rdf:Property.
+:taughtBy a rdfs:Resource.
+:taughtBy rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:taughtBy rdfs:range <http://xmlns.com/foaf/0.1/Person>.
+:taughtBy :label "Taught By".
+:taughtBy :display true .
+:taughtBy :editable false .
+:taughtBy :entailsRelationship :RelatedToRelation.
+:taughtBy rdfs:label "Taught By".
+:mentoredBy a owl:ObjectProperty.
+:mentoredBy a rdf:Property.
+:mentoredBy a rdfs:Resource.
+:mentoredBy rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:mentoredBy rdfs:range <http://xmlns.com/foaf/0.1/Person>.
+:mentoredBy :label "Mentored By".
+:mentoredBy :display true .
+:mentoredBy :editable false .
+:mentoredBy :entailsRelationship :RelatedToRelation.
+:mentoredBy rdfs:label "Mentored By".
+:partnerOf a owl:ObjectProperty.
+:partnerOf a rdf:Property.
+:partnerOf a rdfs:Resource.
+:partnerOf rdfs:domain :Firm.
+:partnerOf rdfs:range <http://xmlns.com/foaf/0.1/Person>.
+:partnerOf :label "Partner Of".
+:partnerOf :display true .
+:partnerOf :editable false .
+:partnerOf :entailsRelationship :EmploymentRelation.
+:partnerOf rdfs:label "Partner Of".
+:hasTopic a owl:ObjectProperty.
+:hasTopic a rdf:Property.
+:hasTopic a rdfs:Resource.
+:hasTopic rdfs:domain :DigitalObject.
+:hasTopic :label "Has Subject".
+:hasTopic rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
+:hasTopic :display true .
+:hasTopic :editable false .
+:hasTopic :entailsRelationship :RelatedToRelation.
+:hasTopic :displayPrecidence 20 .
+:hasTopic rdfs:label "Has Subject".
+:interviewer a owl:ObjectProperty.
+:interviewer a rdf:Property.
+:interviewer a rdfs:Resource.
+:interviewer rdfs:domain :Interview.
+:interviewer rdfs:range <http://xmlns.com/foaf/0.1/Person>.
+:interviewer :label "Interviewer".
+:interviewer rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
+:interviewer :display true .
+:interviewer :editable false .
+:interviewer :entailsRelationship :RelatedToRelation.
+:interviewer :displayPrecidence 110 .
+:interviewer rdfs:label "Interviewer".
+:interviewee a owl:ObjectProperty.
+:interviewee a rdf:Property.
+:interviewee a rdfs:Resource.
+:interviewee rdfs:domain :Interview.
+:interviewee rdfs:range <http://xmlns.com/foaf/0.1/Person>.
+:interviewee :label "Interviewee".
+:interviewee rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
+:interviewee :display true .
+:interviewee :editable false .
+:interviewee :entailsRelationship :RelatedToRelation.
+:interviewee :displayPrecidence 120 .
+:interviewee rdfs:label "Interviewee".
+:transcriber a owl:ObjectProperty.
+:transcriber a rdf:Property.
+:transcriber a rdfs:Resource.
+:transcriber rdfs:domain :Transcript.
+:transcriber rdfs:range <http://xmlns.com/foaf/0.1/Person>.
+:transcriber :label "Transcriber".
+:transcriber rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
+:transcriber :display true .
+:transcriber :editable false .
+:transcriber :entailsRelationship :RelatedToRelation.
+:transcriber :displayPrecidence 130 .
+:transcriber rdfs:label "Transcriber".
+:location a owl:DatatypeProperty.
+:location a rdf:Property.
+:location a rdfs:Resource.
+:location rdfs:domain :DigitalObject.
+:location rdfs:range xsd:string.
+:location :label "Location of Subject".
+:location :display true .
+:location :editable false .
+:location :displayPrecidence 140 .
+:location :displayPrecidence 50 .
+:location rdfs:label "Location of Subject".
+:succeededBy a owl:ObjectProperty.
+:succeededBy a rdf:Property.
+:succeededBy a rdfs:Resource.
+:succeededBy rdfs:domain :FirmManifestation.
+:succeededBy rdfs:range :FirmManifestation.
+:succeededBy :label "Succeded By".
+:succeededBy :display true .
+:succeededBy :editable false .
+:succeededBy rdfs:label "Succeded By".
+:preceededBy a owl:ObjectProperty.
+:preceededBy a rdf:Property.
+:preceededBy a rdfs:Resource.
+:preceededBy rdfs:domain :FirmManifestation.
+:preceededBy rdfs:range :FirmManifestation.
+:preceededBy :label "Preceeded By".
+:preceededBy :display true .
+:preceededBy :editable false .
+:preceededBy rdfs:label "Preceeded By".
+:manifestationOf a owl:ObjectProperty.
+:manifestationOf a rdf:Property.
+:manifestationOf a rdfs:Resource.
+:manifestationOf rdfs:domain :FirmManifestation.
+:manifestationOf rdfs:range :Firm.
+:manifestationOf :label "Firm Manifestation Of".
+:manifestationOf :display true .
+:manifestationOf :editable false .
+:manifestationOf rdfs:label "Firm Manifestation Of".
+:buildingTypology a owl:ObjectProperty.
+:buildingTypology a rdf:Property.
+:buildingTypology a rdfs:Resource.
+:buildingTypology rdfs:domain :Structure.
+:buildingTypology rdfs:range :BuildingTypology.
+:buildingTypology :label "Building Typology".
+:buildingTypology :display true .
+:buildingTypology :editable false .
+:buildingTypology :displayPrecidence 30 .
+:buildingTypology rdfs:label "Building Typology".
+:photographer a owl:DatatypeProperty.
+:photographer a rdf:Property.
+:photographer a rdfs:Resource.
+:photographer rdfs:domain :Photograph.
+:photographer :label "Photographer".
+:photographer :display true .
+:photographer :editable false .
+:photographer :displayPrecidence 150 .
+:photographer rdfs:label "Photographer".
+:drawingType a owl:ObjectProperty.
+:drawingType a rdf:Property.
+:drawingType a rdfs:Resource.
+:drawingType rdfs:domain :LineDrawing.
+:drawingType rdfs:range skos:Concept.
+:drawingType :label "Drawing Type".
+:drawingType :display true .
+:drawingType :editable false .
+:drawingType :displayPrecidence 40 .
+:drawingType rdfs:label "Drawing Type".
+:associatedFirm a owl:ObjectProperty.
+:associatedFirm a rdf:Property.
+:associatedFirm a rdfs:Resource.
+:associatedFirm rdfs:domain :Entity.
+:associatedFirm rdfs:range :Firm.
+:associatedFirm :label "Firm".
+:associatedFirm :display true .
+:associatedFirm :editable false .
+:associatedFirm :displayPrecidence 10 .
+:associatedFirm rdfs:label "Firm".
+:sourceFilename a owl:DatatypeProperty.
+:sourceFilename a rdf:Property.
+:sourceFilename a rdfs:Resource.
+:sourceFilename rdfs:domain :DigitalObject.
+:sourceFilename :label "Source Filename".
+:sourceFilename :display false .
+:sourceFilename :editable false .
+:sourceFilename rdfs:label "Source Filename".
+:systemLocation a owl:DatatypeProperty.
+:systemLocation a rdf:Property.
+:systemLocation a rdfs:Resource.
+:systemLocation rdfs:domain :DigitalObject.
+:systemLocation :label "System Location".
+:systemLocation :display false .
+:systemLocation :editable false .
+:systemLocation :displayPrecidence 80 .
+:systemLocation rdfs:label "System Location".
+<http://purl.org/dc/terms/rights> a owl:DatatypeProperty.
+<http://purl.org/dc/terms/rights> a rdfs:Resource.
+<http://purl.org/dc/terms/rights> a rdf:Property.
+<http://purl.org/dc/terms/rights> rdfs:domain :DigitalObject.
+<http://purl.org/dc/terms/rights> :label "Rights".
+<http://purl.org/dc/terms/rights> rdfs:comment "Currently a plain text statement of IP status of the work. If required can model this further".
+<http://purl.org/dc/terms/rights> :display true .
+<http://purl.org/dc/terms/rights> :editable false .
+<http://purl.org/dc/terms/rights> rdfs:isDefinedBy <http://purl.org/dc/terms/rights>.
+<http://purl.org/dc/terms/rights> :displayPrecidence 90 .
+<http://purl.org/dc/terms/rights> rdfs:label "Rights".
+<http://purl.org/dc/terms/rights> rdfs:seeAlso <http://purl.org/dc/terms/rights>.
+:externalLocation a owl:DatatypeProperty.
+:externalLocation a rdf:Property.
+:externalLocation a rdfs:Resource.
+:externalLocation rdfs:domain :DigitalObject.
+:externalLocation :label "External Location".
+:externalLocation :display false .
+:externalLocation :editable false .
+:externalLocation rdfs:label "External Location".
+:transcriptLocation a owl:DatatypeProperty.
+:transcriptLocation a rdf:Property.
+:transcriptLocation a rdfs:Resource.
+:transcriptLocation rdfs:domain :Interview.
+:transcriptLocation :label "Transcript Location".
+:transcriptLocation :display false .
+:transcriptLocation :editable false .
+:transcriptLocation rdfs:label "Transcript Location".
+:projectNumber a owl:DatatypeProperty.
+:projectNumber a rdf:Property.
+:projectNumber a rdfs:Resource.
+:projectNumber rdfs:domain :DigitalObject.
+:projectNumber :label "Project Number".
+:projectNumber :display true .
+:projectNumber :editable false .
+:projectNumber :displayPrecidence 180 .
+:projectNumber rdfs:label "Project Number".
+:dateOriginalCreation a owl:DatatypeProperty.
+:dateOriginalCreation a rdf:Property.
+:dateOriginalCreation a rdfs:Resource.
+:dateOriginalCreation rdfs:domain :DigitalObject.
+:dateOriginalCreation :label "Original Creation Date".
+:dateOriginalCreation rdfs:subPropertyOf <http://purl.org/dc/terms/created>.
+:dateOriginalCreation :display true .
+:dateOriginalCreation :editable false .
+:dateOriginalCreation :displayPrecidence 190 .
+:dateOriginalCreation rdfs:label "Original Creation Date".
+rdf:first a owl:FunctionalProperty.
+rdf:first a rdf:Property.
+rdf:first a rdfs:Resource.
+rdf:first rdfs:domain rdf:List.
+rdf:first rdfs:range rdfs:Resource.
+rdfs:label a owl:DatatypeProperty.
+rdfs:label a rdfs:Resource.
+rdfs:label a rdf:Property.
+rdfs:label rdfs:domain rdfs:Resource.
+rdfs:label rdfs:range rdfs:Literal.
+rdfs:label :label "Label".
+rdfs:label rdfs:comment "A label for a thing".
+rdfs:label :display false .
+rdfs:label :editable true .
+rdfs:label rdfs:label "Label".
+rdfs:member a rdf:Property.
+rdfs:member a rdfs:Resource.
+rdfs:member rdfs:domain rdfs:Container.
+rdfs:member rdfs:range rdfs:Resource.
+rdf:object a rdf:Property.
+rdf:object a rdfs:Resource.
+rdf:object rdfs:domain rdf:Statement.
+rdf:object rdfs:range rdfs:Resource.
+rdf:predicate a rdf:Property.
+rdf:predicate a rdfs:Resource.
+rdf:predicate rdfs:domain rdf:Statement.
+rdf:predicate rdfs:range rdf:Property.
+rdf:rest a owl:FunctionalProperty.
+rdf:rest a rdf:Property.
+rdf:rest a rdfs:Resource.
+rdf:rest rdfs:domain rdf:List.
+rdf:rest rdfs:range rdf:List.
+rdfs:seeAlso a rdf:Property.
+rdfs:seeAlso a rdfs:Resource.
+rdfs:seeAlso rdfs:domain rdfs:Resource.
+rdfs:seeAlso rdfs:range rdfs:Resource.
+rdf:subject a rdf:Property.
+rdf:subject a rdfs:Resource.
+rdf:subject rdfs:domain rdf:Statement.
+rdf:subject rdfs:range rdfs:Resource.
+rdf:value a rdf:Property.
+rdf:value a rdfs:Resource.
+rdf:value rdfs:domain rdfs:Resource.
+rdf:value rdfs:range rdfs:Resource.
+:identifier a owl:DatatypeProperty.
+:identifier a rdf:Property.
+:identifier a rdfs:Resource.
+:identifier :label "System Identifier".
+:identifier rdfs:subPropertyOf <http://purl.org/dc/terms/identifier>.
+:identifier :display false .
+:identifier :editable false .
+:identifier :shortName "uri".
+:identifier rdfs:label "System Identifier".
+<http://purl.org/dc/terms/subject> a owl:DatatypeProperty.
+<http://purl.org/dc/terms/subject> a rdfs:Resource.
+<http://purl.org/dc/terms/subject> a rdf:Property.
+<http://purl.org/dc/terms/subject> :label "Subject".
+<http://purl.org/dc/terms/subject> :display true .
+<http://purl.org/dc/terms/subject> :editable false .
+<http://purl.org/dc/terms/subject> rdfs:isDefinedBy <http://purl.org/dc/terms/subject>.
+<http://purl.org/dc/terms/subject> :displayPrecidence 170 .
+<http://purl.org/dc/terms/subject> rdfs:label "Subject".
+<http://purl.org/dc/terms/subject> rdfs:seeAlso <http://purl.org/dc/terms/subject>.
+<http://purl.org/dc/terms/identifier> a owl:DatatypeProperty.
+<http://purl.org/dc/terms/identifier> a rdfs:Resource.
+<http://purl.org/dc/terms/identifier> a rdf:Property.
+<http://purl.org/dc/terms/identifier> :label "External Identifier".
+<http://purl.org/dc/terms/identifier> :display true .
+<http://purl.org/dc/terms/identifier> :editable false .
+<http://purl.org/dc/terms/identifier> rdfs:isDefinedBy <http://purl.org/dc/terms/identifier>.
+<http://purl.org/dc/terms/identifier> :displayPrecidence 70 .
+<http://purl.org/dc/terms/identifier> rdfs:label "External Identifier".
+<http://purl.org/dc/terms/identifier> rdfs:seeAlso <http://purl.org/dc/terms/identifier>.
+<http://purl.org/dc/terms/created> a owl:DatatypeProperty.
+<http://purl.org/dc/terms/created> a rdfs:Resource.
+<http://purl.org/dc/terms/created> a rdf:Property.
+<http://purl.org/dc/terms/created> :label "Date Created".
+<http://purl.org/dc/terms/created> :display true .
+<http://purl.org/dc/terms/created> :editable false .
+<http://purl.org/dc/terms/created> rdfs:isDefinedBy <http://purl.org/dc/terms/created>.
+<http://purl.org/dc/terms/created> :displayPrecidence 60 .
+<http://purl.org/dc/terms/created> rdfs:label "Date Created".
+<http://purl.org/dc/terms/created> rdfs:seeAlso <http://purl.org/dc/terms/created>.
+:reifiedAs a owl:AnnotationProperty.
+:reifiedAs a rdfs:Resource.
+:reifiedAs a rdf:Property.
+:employedBy a owl:ObjectProperty.
+:employedBy a rdfs:Resource.
+:employedBy a rdf:Property.
+:employedBy :label "Employed By".
+:employedBy :display true .
+:employedBy :editable false .
+:employedBy :entailsRelationship :EmploymentRelation.
+:employedBy rdfs:label "Employed By".
+:relatedTo a owl:ObjectProperty.
+:relatedTo a owl:SymmetricProperty.
+:relatedTo a rdfs:Resource.
+:relatedTo a rdf:Property.
+:relatedTo :label "Related To".
+:relatedTo :display false .
+:relatedTo :editable false .
+:relatedTo rdfs:label "Related To".
+:preferredImage a owl:ObjectProperty.
+:preferredImage a rdfs:Resource.
+:preferredImage a rdf:Property.
+:preferredImage :label "Preferred Image".
+:preferredImage :display false .
+:preferredImage :editable true .
+:preferredImage :entailsRelationship :RelatedToRelation.
+:preferredImage rdfs:label "Preferred Image".
+<http://purl.org/dc/terms/creator> a owl:ObjectProperty.
+<http://purl.org/dc/terms/creator> a rdfs:Resource.
+<http://purl.org/dc/terms/creator> a rdf:Property.
+<http://purl.org/dc/terms/creator> :label "Creator".
+<http://purl.org/dc/terms/creator> :display false .
+<http://purl.org/dc/terms/creator> :editable false .
+<http://purl.org/dc/terms/creator> rdfs:isDefinedBy <http://purl.org/dc/terms/creator>.
+<http://purl.org/dc/terms/creator> rdfs:label "Creator".
+<http://purl.org/dc/terms/creator> rdfs:seeAlso <http://purl.org/dc/terms/creator>.
+:prefLabel a owl:DatatypeProperty.
+:prefLabel a rdfs:Resource.
+:prefLabel a rdf:Property.
+:prefLabel :label "Known as".
+:prefLabel rdfs:comment "A preferred label for a thing".
+:prefLabel :display true .
+:prefLabel :editable true .
+:prefLabel :displayPrecidence 100 .
+:prefLabel rdfs:label "Known as".
+<http://xmlns.com/foaf/0.1/firstName> a owl:DatatypeProperty.
+<http://xmlns.com/foaf/0.1/firstName> a rdfs:Resource.
+<http://xmlns.com/foaf/0.1/firstName> a rdf:Property.
+<http://xmlns.com/foaf/0.1/firstName> :label "First Name".
+<http://xmlns.com/foaf/0.1/firstName> :display true .
+<http://xmlns.com/foaf/0.1/firstName> :editable true .
+<http://xmlns.com/foaf/0.1/firstName> rdfs:label "First Name".
+<http://xmlns.com/foaf/0.1/lastName> a owl:DatatypeProperty.
+<http://xmlns.com/foaf/0.1/lastName> a rdfs:Resource.
+<http://xmlns.com/foaf/0.1/lastName> a rdf:Property.
+<http://xmlns.com/foaf/0.1/lastName> :label "Last Name".
+<http://xmlns.com/foaf/0.1/lastName> :display true .
+<http://xmlns.com/foaf/0.1/lastName> :editable true .
+<http://xmlns.com/foaf/0.1/lastName> rdfs:label "Last Name".
+:summary a owl:DatatypeProperty.
+:summary a rdfs:Resource.
+:summary a rdf:Property.
+:summary :label "Short Biography".
+:summary :display false .
+:summary :editable true .
+:summary rdfs:label "Short Biography".
+:firmName a owl:DatatypeProperty.
+:firmName a rdfs:Resource.
+:firmName a rdf:Property.
+:firmName :label "Firm Name".
+:firmName :display true .
+:firmName :editable true .
+:firmName rdfs:label "Firm Name".
+<http://purl.org/dc/terms/title> a owl:DatatypeProperty.
+<http://purl.org/dc/terms/title> a rdfs:Resource.
+<http://purl.org/dc/terms/title> a rdf:Property.
+<http://purl.org/dc/terms/title> :label "Title".
+<http://purl.org/dc/terms/title> :display true .
+<http://purl.org/dc/terms/title> :editable false .
+<http://purl.org/dc/terms/title> rdfs:isDefinedBy <http://purl.org/dc/terms/title>.
+<http://purl.org/dc/terms/title> :displayPrecidence 0 .
+<http://purl.org/dc/terms/title> rdfs:label "Title".
+<http://purl.org/dc/terms/title> rdfs:seeAlso <http://purl.org/dc/terms/title>.
+<http://purl.org/dc/terms/description> a owl:DatatypeProperty.
+<http://purl.org/dc/terms/description> a rdfs:Resource.
+<http://purl.org/dc/terms/description> a rdf:Property.
+<http://purl.org/dc/terms/description> :label "Description".
+<http://purl.org/dc/terms/description> :display true .
+<http://purl.org/dc/terms/description> :editable false .
+<http://purl.org/dc/terms/description> rdfs:isDefinedBy <http://purl.org/dc/terms/description>.
+<http://purl.org/dc/terms/description> :displayPrecidence 160 .
+<http://purl.org/dc/terms/description> rdfs:label "Description".
+<http://purl.org/dc/terms/description> rdfs:seeAlso <http://purl.org/dc/terms/description>.
+qavocab:LineDrawing a :Entity.
+qavocab:LineDrawing skos:semanticRelation qavocab:Perspective.
+qavocab:LineDrawing skos:semanticRelation qavocab:Section.
+qavocab:LineDrawing skos:semanticRelation qavocab:Sketch.
+qavocab:LineDrawing skos:semanticRelation qavocab:Elevation.
+qavocab:LineDrawing skos:semanticRelation qavocab:Plan.
+qavocab:Perspective a :Entity.
+qavocab:Perspective skos:semanticRelation qavocab:LineDrawing.
+qavocab:Section a :Entity.
+qavocab:Section skos:semanticRelation qavocab:LineDrawing.
+qavocab:Sketch a :Entity.
+qavocab:Sketch skos:semanticRelation qavocab:LineDrawing.
+qavocab:Elevation a :Entity.
+qavocab:Elevation skos:semanticRelation qavocab:LineDrawing.
+qavocab:Plan a :Entity.
+qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
+:Structure rdfs:subClassOf :Entity.
+<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :Entity.
 <http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :NonDigitalThing.
 <http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :Entity.
-:Architect rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
 :Architect rdfs:subClassOf :StructureOrAgent.
-:Architect rdfs:subClassOf :NonDigitalThing.
 :Architect rdfs:subClassOf :Entity.
-:Firm rdfs:subClassOf :StructureOrAgent.
+:Architect rdfs:subClassOf :NonDigitalThing.
 :Firm rdfs:subClassOf :NonDigitalThing.
 :Firm rdfs:subClassOf :Entity.
-:Photograph rdfs:subClassOf :DigitalThing.
-:LineDrawing rdfs:subClassOf :DigitalThing.
-:Interview rdfs:subClassOf :DigitalThing.
-owl:DatatypeProperty rdfs:domain rdfs:Resource.
-:taughtBy rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
-:mentoredBy rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
-:employedBy rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
-:hasPartner rdfs:domain :Firm.
-:hasSubject rdfs:domain :DigitalObject.
-<http://purl.org/dc/terms/rights> rdfs:domain :DigitalObject.
-:systemLocation rdfs:domain :DigitalObject.
-:interviewer rdfs:domain :Interview.
-:interviewee rdfs:domain :Interview.
-:transcriber rdfs:domain :Transcript.
-:hasSubject rdfs:domain :DigitalThing.
-<http://purl.org/dc/terms/rights> rdfs:domain :DigitalThing.
-:systemLocation rdfs:domain :DigitalThing.
-:taughtBy rdfs:domain <http://xmlns.com/foaf/0.1/Agent>.
-:mentoredBy rdfs:domain <http://xmlns.com/foaf/0.1/Agent>.
-:employedBy rdfs:domain <http://xmlns.com/foaf/0.1/Agent>.
-:hasPartner rdfs:domain <http://xmlns.com/foaf/0.1/Agent>.
-:interviewer rdfs:domain :DigitalObject.
-:interviewee rdfs:domain :DigitalObject.
-:taughtBy rdfs:domain :NonDigitalThing.
-:mentoredBy rdfs:domain :NonDigitalThing.
-:employedBy rdfs:domain :NonDigitalThing.
-:hasPartner rdfs:domain :NonDigitalThing.
-:taughtBy rdfs:domain :Entity.
-:mentoredBy rdfs:domain :Entity.
-:employedBy rdfs:domain :Entity.
-:hasPartner rdfs:domain :Entity.
-:taughtBy rdfs:domain :StructureOrAgent.
-:mentoredBy rdfs:domain :StructureOrAgent.
-:employedBy rdfs:domain :StructureOrAgent.
-:hasPartner rdfs:domain :StructureOrAgent.
-:interviewer rdfs:domain :DigitalThing.
-:interviewee rdfs:domain :DigitalThing.
-owl:DatatypeProperty rdfs:range rdfs:Literal.
-:taughtBy rdfs:range <http://xmlns.com/foaf/0.1/Person>.
-:mentoredBy rdfs:range <http://xmlns.com/foaf/0.1/Person>.
-:employedBy rdfs:range :Firm.
-:hasPartner rdfs:range <http://xmlns.com/foaf/0.1/Person>.
-:hasSubject rdfs:range :TopicConcept.
-:systemLocation rdfs:range xsd:anyURI.
-:interviewer rdfs:range <http://xmlns.com/foaf/0.1/Person>.
-:interviewee rdfs:range <http://xmlns.com/foaf/0.1/Person>.
-:transcriber rdfs:range <http://xmlns.com/foaf/0.1/Person>.
-:taughtBy rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
-:mentoredBy rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
-:hasPartner rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
-:interviewer rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
-:interviewee rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
-:transcriber rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
-:employedBy rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
-:taughtBy rdfs:range :NonDigitalThing.
-:mentoredBy rdfs:range :NonDigitalThing.
-:hasPartner rdfs:range :NonDigitalThing.
-:interviewer rdfs:range :NonDigitalThing.
-:interviewee rdfs:range :NonDigitalThing.
-:transcriber rdfs:range :NonDigitalThing.
-:employedBy rdfs:range :NonDigitalThing.
-:taughtBy rdfs:range :Entity.
-:mentoredBy rdfs:range :Entity.
-:hasPartner rdfs:range :Entity.
-:interviewer rdfs:range :Entity.
-:interviewee rdfs:range :Entity.
-:transcriber rdfs:range :Entity.
-:employedBy rdfs:range :Entity.
-:taughtBy rdfs:range :StructureOrAgent.
-:mentoredBy rdfs:range :StructureOrAgent.
-:hasPartner rdfs:range :StructureOrAgent.
-:interviewer rdfs:range :StructureOrAgent.
-:interviewee rdfs:range :StructureOrAgent.
-:transcriber rdfs:range :StructureOrAgent.
-:employedBy rdfs:range :StructureOrAgent.
-:label rdfs:subPropertyOf rdfs:label.
-:Entity rdfs:comment "Top for concepts related by this vocabularly".
-:DigitalObject rdfs:comment "This will be replaced by a reconciliation with FRBR Work/Expression distinction".
-<http://purl.org/dc/terms/rights> rdfs:comment "Currently a plain text statement of IP status of the work. If required can model this further".
-:DigitalThing rdfs:subClassof :Entity.
-:Structure :displayPrecedence 2 .
-:Architect :displayPrecedence 0 .
-:Firm :displayPrecedence 1 .
-:Photograph :displayPrecedence 1 .
-:LineDrawing :displayPrecedence 2 .
-:Interview :displayPrecedence 0 .
-:Structure :toplevel true.
-:Architect :toplevel true.
-:Firm :toplevel true.
-:Photograph :toplevel true.
-:LineDrawing :toplevel true.
-:Interview :toplevel true.
-<http://xmlns.com/foaf/0.1/Agent> rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Agent>.
-<http://xmlns.com/foaf/0.1/Person> rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Person>.
-<http://purl.org/dc/terms/creator> rdfs:isDefinedBy <http://purl.org/dc/terms/creator>.
-<http://purl.org/dc/terms/title> rdfs:isDefinedBy <http://purl.org/dc/terms/title>.
-<http://purl.org/dc/terms/description> rdfs:isDefinedBy <http://purl.org/dc/terms/description>.
-:identifier :label "System Identifier".
-:label :label "The preferred label for a thing".
-rdfs:label :label "A label for a thing".
-rdf:type :label "A label for a thing".
-<http://xmlns.com/foaf/0.1/firstName> :label "First Name".
-<http://xmlns.com/foaf/0.1/lastName> :label "Last Name".
-:firmName :label "Firm Name".
-:preferredImage :label "Preferred Image".
-:employedBy :label "Employed By".
-:taughtBy :label "Taught By".
-:mentoredBy :label "Mentored By".
-:hasPartner :label "Has Partner".
-<http://purl.org/dc/terms/creator> :label "Creator".
-<http://purl.org/dc/terms/title> :label "Title".
-<http://purl.org/dc/terms/description> :label "Description".
-:hasSubject :label "Has Subject".
-<http://purl.org/dc/terms/rights> :label "Rights".
-:systemLocation :label "System Location".
-:interviewer :label "Interviewer".
-:interviewee :label "Interviewee".
-:transcriber :label "Transcriber".
-:identifier :display false.
-:label :display false.
-rdfs:label :display true.
-rdf:type :display false.
-<http://xmlns.com/foaf/0.1/firstName> :display true.
-<http://xmlns.com/foaf/0.1/lastName> :display true.
-:firmName :display true.
-:preferredImage :display false.
-:employedBy :display true.
-:taughtBy :display true.
-:mentoredBy :display true.
-:hasPartner :display true.
-<http://purl.org/dc/terms/creator> :display true.
-<http://purl.org/dc/terms/title> :display true.
-<http://purl.org/dc/terms/description> :display true.
-:hasSubject :display true.
-<http://purl.org/dc/terms/rights> :display true.
-:systemLocation :display false.
-:interviewer :display true.
-:interviewee :display true.
-:transcriber :display true.
-:identifier :editable false.
-:label :editable true.
-rdfs:label :editable true.
-rdf:type :editable false.
-<http://xmlns.com/foaf/0.1/firstName> :editable true.
-<http://xmlns.com/foaf/0.1/lastName> :editable true.
-:firmName :editable true.
-:preferredImage :editable true.
-:employedBy :editable false.
-:taughtBy :editable false.
-:mentoredBy :editable false.
-:hasPartner :editable false.
-<http://purl.org/dc/terms/creator> :editable false.
-<http://purl.org/dc/terms/title> :editable false.
-<http://purl.org/dc/terms/description> :editable false.
-:hasSubject :editable false.
-<http://purl.org/dc/terms/rights> :editable false.
-:systemLocation :editable false.
-:interviewer :editable false.
-:interviewee :editable false.
-:transcriber :editable false.
-:identifier :shortName "uri".
-:label :shortName "label".
-rdfs:label :shortName "altlabel".
-:preferredImage :shortName "preferredImage".
-:employedBy :reifiedAs :EmploymentRelation.
-:identifier rdfs:label "System Identifier".
-:label rdfs:label "The preferred label for a thing".
-rdfs:label rdfs:label "A label for a thing".
-rdf:type rdfs:label "A label for a thing".
-<http://xmlns.com/foaf/0.1/firstName> rdfs:label "First Name".
-<http://xmlns.com/foaf/0.1/lastName> rdfs:label "Last Name".
-:firmName rdfs:label "Firm Name".
-:preferredImage rdfs:label "Preferred Image".
-:employedBy rdfs:label "Employed By".
-:taughtBy rdfs:label "Taught By".
-:mentoredBy rdfs:label "Mentored By".
-:hasPartner rdfs:label "Has Partner".
-<http://purl.org/dc/terms/creator> rdfs:label "Creator".
-<http://purl.org/dc/terms/title> rdfs:label "Title".
-<http://purl.org/dc/terms/description> rdfs:label "Description".
-:hasSubject rdfs:label "Has Subject".
-<http://purl.org/dc/terms/rights> rdfs:label "Rights".
-:systemLocation rdfs:label "System Location".
-:interviewer rdfs:label "Interviewer".
-:interviewee rdfs:label "Interviewee".
-:transcriber rdfs:label "Transcriber".
+:FirmManifestation rdfs:subClassOf :NonDigitalThing.
+:FirmManifestation rdfs:subClassOf :Entity.
+:Photograph rdfs:subClassOf :Entity.
+:Portrait rdfs:subClassOf :DigitalThing.
+:Portrait rdfs:subClassOf :Entity.
+:LineDrawing rdfs:subClassOf :Entity.
+:Interview rdfs:subClassOf :Entity.
+:Transcript rdfs:subClassOf :Entity.
+skos:topConceptOf a rdf:Property.
+skos:topConceptOf a rdfs:Resource.
+skos:narrower a rdf:Property.
+skos:narrower a rdfs:Resource.
+skos:broaderTransitive a rdf:Property.
+skos:broaderTransitive a rdfs:Resource.
+skos:narrowerTransitive a rdf:Property.
+skos:narrowerTransitive a rdfs:Resource.
+skos:semanticRelation a rdf:Property.
+skos:semanticRelation a rdfs:Resource.
 
-#ENDS 14 [msec] TC=429 TP=964 BC=0 BP=513 PM=0 CM=0 FM=0 AM=0
+#ENDS 66 [msec] TC=1508 TP=25027 BC=0 BP=6993 PM=0 CM=0 FM=0 AM=0
 

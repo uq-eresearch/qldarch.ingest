@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/opt/euler/eye --yap --nope ReificationsArchitectureOntology.ttl UpperArchitectureOntology.ttl /opt/euler/rdfs-subClassOf.n3 --pass | ./fixbools > inferred/ArchitectureOntologyInferredFixed.ttl
+/opt/euler/eye --yap --nope ReificationsArchitectureOntology.ttl UpperArchitectureOntology.ttl ControlledArchitectureVocabularies.ttl rules/*.n3 --query queries/ExtractOntology.n3 | ./fixbools > inferred/ArchitectureOntologyInferred.ttl

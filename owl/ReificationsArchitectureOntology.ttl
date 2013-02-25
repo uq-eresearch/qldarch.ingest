@@ -166,7 +166,7 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     a owl:SymmetricProperty ;
     :label "Related To" ;
     :display false ;
-    :editable false ;
-    :entailsRelationship :RelatedToRelation .
+    :editable false .
+# NOTE: relatedTo does not entail a reified relationship, as then it would be evidence of itself.
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:

@@ -6,7 +6,7 @@
 
 @base <http://qldarch.net/ns/rdf/2012-06/terms#> .
 
-@prefix : <http://qldarch.net/ns/rdf/2012-06/terms#> .
+@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -23,47 +23,47 @@
 # Drawing Type vocabulary
 #
 
-qavocab:DrawingType a skos:ConceptScheme ;
+qavocab:DrawingTypes a skos:ConceptScheme ;
     skos:hasTopConcept qavocab:LineDrawing .
 
 qavocab:LineDrawing a skos:Concept ;
     a qldarch:DrawingType ;
-    skos:inScheme qavocab:DrawingType ;
-    :label "Line Drawing" .
+    skos:inScheme qavocab:DrawingTypes ;
+    qldarch:label "Line Drawing" .
 
 qavocab:Perspective a skos:Concept ;
     a qldarch:DrawingType ;
-    skos:inScheme qavocab:DrawingType ;
+    skos:inScheme qavocab:DrawingTypes ;
     skos:broader qavocab:LineDrawing ;
     skos:altLabel "Perspective" ;
-    :label "Perspective" .
+    qldarch:label "Perspective" .
 
 qavocab:Section a skos:Concept ;
     a qldarch:DrawingType ;
-    skos:inScheme qavocab:DrawingType ;
+    skos:inScheme qavocab:DrawingTypes ;
     skos:broader qavocab:LineDrawing ;
     skos:altLabel "Section" ;
-    :label "Section" .
+    qldarch:label "Section" .
 
 qavocab:Sketch a skos:Concept ;
     a qldarch:DrawingType ;
-    skos:inScheme qavocab:DrawingType ;
+    skos:inScheme qavocab:DrawingTypes ;
     skos:broader qavocab:LineDrawing ;
     skos:altLabel "Sketch" ;
-    :label "Sketch" .
+    qldarch:label "Sketch" .
 
 qavocab:Elevation a skos:Concept ;
     a qldarch:DrawingType ;
-    skos:inScheme qavocab:DrawingType ;
+    skos:inScheme qavocab:DrawingTypes ;
     skos:broader qavocab:LineDrawing ;
     skos:altLabel "Elevation" ;
-    :label "Elevation" .
+    qldarch:label "Elevation" .
 
 qavocab:Plan a skos:Concept ;
     a qldarch:DrawingType ;
-    skos:inScheme qavocab:DrawingType ;
+    skos:inScheme qavocab:DrawingTypes ;
     skos:broader qavocab:LineDrawing ;
     skos:altLabel "Plan" ;
-    :label "Plan" .
+    qldarch:label "Plan" .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:
