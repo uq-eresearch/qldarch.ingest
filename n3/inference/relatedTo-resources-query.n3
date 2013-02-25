@@ -1,0 +1,21 @@
+@base <http://qldarch.net/ns/rdf/2012-06/terms#> .
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+{ [ rdfs:subClassOf qldarch:Relationship ;
+    qldarch:impliesRelationship ?impliedPredicate ] .
+  ?s a qldarch:NonDigitalThing ; ?impliedPredicate ?o
+} => {
+  ?s ?impliedPredicate ?o .
+} .
+
+# vim: set ai si sw=2 sts=2 ts=2 expandtab:

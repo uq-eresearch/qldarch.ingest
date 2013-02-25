@@ -1,29 +1,31 @@
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
-#eye --yap --nope rules/rdfs-subClassOf.n3 ../owl/AuxilaryArchitectureOntology.ttl ../owl/ReificationsArchitectureOntology.ttl ../owl/UpperArchitectureOntology.ttl omekaexport/latest.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl classification/architects.n3 classification/buildings.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query pseudoentities/typologies.n3
+#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/architects.ttl resources/entities.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query pseudoentities/typologies.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dcam: <http://purl.org/dc/dcam/>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix str: <http://www.w3.org/2000/10/swap/string#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
+@prefix var: <http://localhost/var#>.
+@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+@prefix n3: <http://www.w3.org/2004/06/rei#>.
 @prefix qaomeka: <http://qldarch.net/omeka/items/show/>.
 @prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#>.
 @prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#>.
-@prefix str: <http://www.w3.org/2000/10/swap/string#>.
-@prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
-@prefix var: <http://localhost/var#>.
-@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
-@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
-@prefix n3: <http://www.w3.org/2004/06/rei#>.
 
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Dwellings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/2>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Transport+infrastructure> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/8>.
@@ -34,5 +36,5 @@
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Recreation+and+sports+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/6>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Religious+buildings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
 
-#ENDS 2843 [msec] TC=3830 TP=24847 BC=0 BP=7650 PM=0 CM=0 FM=0 AM=0
+#ENDS 3855 [msec] TC=5018 TP=94437 BC=0 BP=25802 PM=0 CM=0 FM=0 AM=0
 

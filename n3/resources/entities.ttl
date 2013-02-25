@@ -1,0 +1,836 @@
+#Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
+#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl --query classification/expand-entities-query.n3
+
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
+@prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcam: <http://purl.org/dc/dcam/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix str: <http://www.w3.org/2000/10/swap/string#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
+@prefix var: <http://localhost/var#>.
+@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+@prefix n3: <http://www.w3.org/2004/06/rei#>.
+@prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
+
+qavocab:LineDrawing a skos:Concept.
+qavocab:LineDrawing a :DrawingType.
+qavocab:LineDrawing a rdfs:Resource.
+qavocab:LineDrawing a :DigitalThing.
+qavocab:LineDrawing a :Entity.
+qavocab:LineDrawing :label "Line Drawing".
+qavocab:LineDrawing skos:inScheme qavocab:DrawingTypes.
+qavocab:LineDrawing rdfs:label "Line Drawing".
+qavocab:LineDrawing skos:topConceptOf qavocab:DrawingTypes.
+qavocab:LineDrawing skos:narrower qavocab:Perspective.
+qavocab:LineDrawing skos:narrower qavocab:Section.
+qavocab:LineDrawing skos:narrower qavocab:Sketch.
+qavocab:LineDrawing skos:narrower qavocab:Elevation.
+qavocab:LineDrawing skos:narrower qavocab:Plan.
+qavocab:LineDrawing skos:narrowerTransitive qavocab:Perspective.
+qavocab:LineDrawing skos:narrowerTransitive qavocab:Section.
+qavocab:LineDrawing skos:narrowerTransitive qavocab:Sketch.
+qavocab:LineDrawing skos:narrowerTransitive qavocab:Elevation.
+qavocab:LineDrawing skos:narrowerTransitive qavocab:Plan.
+qavocab:LineDrawing skos:semanticRelation qavocab:Perspective.
+qavocab:LineDrawing skos:semanticRelation qavocab:Section.
+qavocab:LineDrawing skos:semanticRelation qavocab:Sketch.
+qavocab:LineDrawing skos:semanticRelation qavocab:Elevation.
+qavocab:LineDrawing skos:semanticRelation qavocab:Plan.
+qavocab:Perspective a skos:Concept.
+qavocab:Perspective a :DrawingType.
+qavocab:Perspective a rdfs:Resource.
+qavocab:Perspective a :DigitalThing.
+qavocab:Perspective a :Entity.
+qavocab:Perspective :label "Perspective".
+qavocab:Perspective skos:inScheme qavocab:DrawingTypes.
+qavocab:Perspective rdfs:label "Perspective".
+qavocab:Perspective skos:broader qavocab:LineDrawing.
+qavocab:Perspective skos:altLabel "Perspective".
+qavocab:Perspective skos:broaderTransitive qavocab:LineDrawing.
+qavocab:Perspective skos:semanticRelation qavocab:LineDrawing.
+qavocab:Section a skos:Concept.
+qavocab:Section a :DrawingType.
+qavocab:Section a rdfs:Resource.
+qavocab:Section a :DigitalThing.
+qavocab:Section a :Entity.
+qavocab:Section :label "Section".
+qavocab:Section skos:inScheme qavocab:DrawingTypes.
+qavocab:Section rdfs:label "Section".
+qavocab:Section skos:broader qavocab:LineDrawing.
+qavocab:Section skos:altLabel "Section".
+qavocab:Section skos:broaderTransitive qavocab:LineDrawing.
+qavocab:Section skos:semanticRelation qavocab:LineDrawing.
+qavocab:Sketch a skos:Concept.
+qavocab:Sketch a :DrawingType.
+qavocab:Sketch a rdfs:Resource.
+qavocab:Sketch a :DigitalThing.
+qavocab:Sketch a :Entity.
+qavocab:Sketch :label "Sketch".
+qavocab:Sketch skos:inScheme qavocab:DrawingTypes.
+qavocab:Sketch rdfs:label "Sketch".
+qavocab:Sketch skos:broader qavocab:LineDrawing.
+qavocab:Sketch skos:altLabel "Sketch".
+qavocab:Sketch skos:broaderTransitive qavocab:LineDrawing.
+qavocab:Sketch skos:semanticRelation qavocab:LineDrawing.
+qavocab:Elevation a skos:Concept.
+qavocab:Elevation a :DrawingType.
+qavocab:Elevation a rdfs:Resource.
+qavocab:Elevation a :DigitalThing.
+qavocab:Elevation a :Entity.
+qavocab:Elevation :label "Elevation".
+qavocab:Elevation skos:inScheme qavocab:DrawingTypes.
+qavocab:Elevation rdfs:label "Elevation".
+qavocab:Elevation skos:broader qavocab:LineDrawing.
+qavocab:Elevation skos:altLabel "Elevation".
+qavocab:Elevation skos:broaderTransitive qavocab:LineDrawing.
+qavocab:Elevation skos:semanticRelation qavocab:LineDrawing.
+qavocab:Plan a skos:Concept.
+qavocab:Plan a :DrawingType.
+qavocab:Plan a rdfs:Resource.
+qavocab:Plan a :DigitalThing.
+qavocab:Plan a :Entity.
+qavocab:Plan :label "Plan".
+qavocab:Plan skos:inScheme qavocab:DrawingTypes.
+qavocab:Plan rdfs:label "Plan".
+qavocab:Plan skos:broader qavocab:LineDrawing.
+qavocab:Plan skos:altLabel "Plan".
+qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
+qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> :label "Commercial buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> rdfs:label "Commercial buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> :label "Dwellings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> rdfs:label "Dwellings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> :label "Educational facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> rdfs:label "Educational facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> :label "Government buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> rdfs:label "Government buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> :label "Health care facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> rdfs:label "Health care facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> :label "Recreation and sports facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> rdfs:label "Recreation and sports facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> :label "Religious buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> rdfs:label "Religious buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> :label "Transport infrastructure".
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> rdfs:label "Transport infrastructure".
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> :label "445 Upper Edward St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> rdfs:label "445 Upper Edward St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> :label "Agricultural College, Dalby".
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> rdfs:label "Agricultural College, Dalby".
+<http://qldarch.net/rdf/2012-12/resources/buildings/3> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/3> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/3> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/3> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/3> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/3> :label "Amoco Service Station, Carina".
+<http://qldarch.net/rdf/2012-12/resources/buildings/3> rdfs:label "Amoco Service Station, Carina".
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> :label "Amoco Service Station, Kenmore".
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> rdfs:label "Amoco Service Station, Kenmore".
+<http://qldarch.net/rdf/2012-12/resources/buildings/5> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/5> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/5> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/5> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/5> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/5> :label "Amoco Service Station, Moorooka".
+<http://qldarch.net/rdf/2012-12/resources/buildings/5> rdfs:label "Amoco Service Station, Moorooka".
+<http://qldarch.net/rdf/2012-12/resources/buildings/6> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/6> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/6> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/6> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/6> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/6> :label "Amoco Service Station, Salisbury".
+<http://qldarch.net/rdf/2012-12/resources/buildings/6> rdfs:label "Amoco Service Station, Salisbury".
+<http://qldarch.net/rdf/2012-12/resources/buildings/7> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/7> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/7> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/7> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/7> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/7> :label "Amoco Service Station, Stafford".
+<http://qldarch.net/rdf/2012-12/resources/buildings/7> rdfs:label "Amoco Service Station, Stafford".
+<http://qldarch.net/rdf/2012-12/resources/buildings/8> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/8> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/8> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/8> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/8> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/8> :label "Amoco Service Station, Unknown Location".
+<http://qldarch.net/rdf/2012-12/resources/buildings/8> rdfs:label "Amoco Service Station, Unknown Location".
+<http://qldarch.net/rdf/2012-12/resources/buildings/9> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/9> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/9> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/9> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/9> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/9> :label "Amoco Service Station, for James M. Samios, Beaudesert Rd, Acacia Ridge".
+<http://qldarch.net/rdf/2012-12/resources/buildings/9> rdfs:label "Amoco Service Station, for James M. Samios, Beaudesert Rd, Acacia Ridge".
+<http://qldarch.net/rdf/2012-12/resources/buildings/10> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/10> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/10> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/10> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/10> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/10> :label "Amoco, Standard Service Station Signs".
+<http://qldarch.net/rdf/2012-12/resources/buildings/10> rdfs:label "Amoco, Standard Service Station Signs".
+<http://qldarch.net/rdf/2012-12/resources/buildings/11> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/11> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/11> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/11> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/11> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/11> :label "Arcade at Gympie for A.H. Leitch & son".
+<http://qldarch.net/rdf/2012-12/resources/buildings/11> rdfs:label "Arcade at Gympie for A.H. Leitch & son".
+<http://qldarch.net/rdf/2012-12/resources/buildings/12> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/12> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/12> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/12> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/12> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/12> :label "B.C.H Southport Bowl".
+<http://qldarch.net/rdf/2012-12/resources/buildings/12> rdfs:label "B.C.H Southport Bowl".
+<http://qldarch.net/rdf/2012-12/resources/buildings/13> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/13> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/13> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/13> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/13> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/13> :label "Bligh House, Kenmore".
+<http://qldarch.net/rdf/2012-12/resources/buildings/13> rdfs:label "Bligh House, Kenmore".
+<http://qldarch.net/rdf/2012-12/resources/buildings/14> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/14> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/14> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/14> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/14> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/14> :label "Brisbane Milk Board".
+<http://qldarch.net/rdf/2012-12/resources/buildings/14> rdfs:label "Brisbane Milk Board".
+<http://qldarch.net/rdf/2012-12/resources/buildings/15> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/15> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/15> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/15> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/15> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/15> :label "Camden Apartments".
+<http://qldarch.net/rdf/2012-12/resources/buildings/15> rdfs:label "Camden Apartments".
+<http://qldarch.net/rdf/2012-12/resources/buildings/16> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/16> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/16> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/16> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/16> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/16> :label "Caravan Park and Facilities, for T.M. Burke Estates, Peregian".
+<http://qldarch.net/rdf/2012-12/resources/buildings/16> rdfs:label "Caravan Park and Facilities, for T.M. Burke Estates, Peregian".
+<http://qldarch.net/rdf/2012-12/resources/buildings/17> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/17> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/17> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/17> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/17> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/17> :label "Carramar Flats".
+<http://qldarch.net/rdf/2012-12/resources/buildings/17> rdfs:label "Carramar Flats".
+<http://qldarch.net/rdf/2012-12/resources/buildings/18> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/18> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/18> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/18> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/18> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/18> :label "Chermside Olympic Swimming Pool".
+<http://qldarch.net/rdf/2012-12/resources/buildings/18> rdfs:label "Chermside Olympic Swimming Pool".
+<http://qldarch.net/rdf/2012-12/resources/buildings/19> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/19> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/19> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/19> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/19> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/19> :label "Childcare Centre, Inala".
+<http://qldarch.net/rdf/2012-12/resources/buildings/19> rdfs:label "Childcare Centre, Inala".
+<http://qldarch.net/rdf/2012-12/resources/buildings/20> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/20> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/20> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/20> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/20> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/20> :label "Childcare Centre, Mitchelton".
+<http://qldarch.net/rdf/2012-12/resources/buildings/20> rdfs:label "Childcare Centre, Mitchelton".
+<http://qldarch.net/rdf/2012-12/resources/buildings/21> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/21> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/21> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/21> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/21> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/21> :label "Christ Church, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/21> rdfs:label "Christ Church, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/22> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/22> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/22> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/22> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/22> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/22> :label "Civic Centre, Gladstone".
+<http://qldarch.net/rdf/2012-12/resources/buildings/22> rdfs:label "Civic Centre, Gladstone".
+<http://qldarch.net/rdf/2012-12/resources/buildings/23> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/23> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/23> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/23> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/23> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/23> :label "Commerce Building (Chamberlain), University of Queensland, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/23> rdfs:label "Commerce Building (Chamberlain), University of Queensland, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/24> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/24> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/24> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/24> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/24> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/24> :label "Cooper House".
+<http://qldarch.net/rdf/2012-12/resources/buildings/24> rdfs:label "Cooper House".
+<http://qldarch.net/rdf/2012-12/resources/buildings/25> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/25> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/25> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/25> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/25> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/25> :label "Department Store, Arawa, Papua New Guinea".
+<http://qldarch.net/rdf/2012-12/resources/buildings/25> rdfs:label "Department Store, Arawa, Papua New Guinea".
+<http://qldarch.net/rdf/2012-12/resources/buildings/26> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/26> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/26> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/26> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/26> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/26> :label "Development Study Central Railway Station, Brisbane".
+<http://qldarch.net/rdf/2012-12/resources/buildings/26> rdfs:label "Development Study Central Railway Station, Brisbane".
+<http://qldarch.net/rdf/2012-12/resources/buildings/27> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/27> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/27> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/27> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/27> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/27> :label "Exhibition Bowl, Brisbane".
+<http://qldarch.net/rdf/2012-12/resources/buildings/27> rdfs:label "Exhibition Bowl, Brisbane".
+<http://qldarch.net/rdf/2012-12/resources/buildings/28> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/28> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/28> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/28> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/28> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/28> :label "Extensions to Premises Queensland Conference of Seventh-day Adventists".
+<http://qldarch.net/rdf/2012-12/resources/buildings/28> rdfs:label "Extensions to Premises Queensland Conference of Seventh-day Adventists".
+<http://qldarch.net/rdf/2012-12/resources/buildings/29> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/29> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/29> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/29> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/29> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/29> :label "Fire Station, Windsor".
+<http://qldarch.net/rdf/2012-12/resources/buildings/29> rdfs:label "Fire Station, Windsor".
+<http://qldarch.net/rdf/2012-12/resources/buildings/30> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/30> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/30> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/30> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/30> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/30> :label "First Year Science Building, University of Queensland, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/30> rdfs:label "First Year Science Building, University of Queensland, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/31> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/31> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/31> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/31> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/31> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/31> :label "General Post Office, Forecourt Development, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/31> rdfs:label "General Post Office, Forecourt Development, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/32> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/32> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/32> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/32> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/32> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/32> :label "Gladstone Town Council, Memorial Park".
+<http://qldarch.net/rdf/2012-12/resources/buildings/32> rdfs:label "Gladstone Town Council, Memorial Park".
+<http://qldarch.net/rdf/2012-12/resources/buildings/33> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/33> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/33> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/33> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/33> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/33> :label "Greenslopes Bowling Centre".
+<http://qldarch.net/rdf/2012-12/resources/buildings/33> rdfs:label "Greenslopes Bowling Centre".
+<http://qldarch.net/rdf/2012-12/resources/buildings/34> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/34> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/34> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/34> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/34> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/34> :label "Hayes House, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/34> rdfs:label "Hayes House, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/35> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/35> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/35> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/35> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/35> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/35> :label "Hill Residence, Clayfield".
+<http://qldarch.net/rdf/2012-12/resources/buildings/35> rdfs:label "Hill Residence, Clayfield".
+<http://qldarch.net/rdf/2012-12/resources/buildings/36> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/36> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/36> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/36> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/36> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/36> :label "House P.&J. Doherty, Everton park".
+<http://qldarch.net/rdf/2012-12/resources/buildings/36> rdfs:label "House P.&J. Doherty, Everton park".
+<http://qldarch.net/rdf/2012-12/resources/buildings/37> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/37> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/37> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/37> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/37> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/37> :label "House for V.L. & C.S. Matchett, Indooroopilly".
+<http://qldarch.net/rdf/2012-12/resources/buildings/37> rdfs:label "House for V.L. & C.S. Matchett, Indooroopilly".
+<http://qldarch.net/rdf/2012-12/resources/buildings/38> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/38> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/38> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/38> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/38> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/38> :label "Illowra St House, for A. Harkin, The Gap".
+<http://qldarch.net/rdf/2012-12/resources/buildings/38> rdfs:label "Illowra St House, for A. Harkin, The Gap".
+<http://qldarch.net/rdf/2012-12/resources/buildings/39> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/39> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/39> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/39> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/39> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/39> :label "Inala Sports Centre".
+<http://qldarch.net/rdf/2012-12/resources/buildings/39> rdfs:label "Inala Sports Centre".
+<http://qldarch.net/rdf/2012-12/resources/buildings/40> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/40> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/40> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/40> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/40> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/40> :label "J. Gould Residence, Aspley".
+<http://qldarch.net/rdf/2012-12/resources/buildings/40> rdfs:label "J. Gould Residence, Aspley".
+<http://qldarch.net/rdf/2012-12/resources/buildings/41> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/41> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/41> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/41> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/41> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/41> :label "Jacobsen House".
+<http://qldarch.net/rdf/2012-12/resources/buildings/41> rdfs:label "Jacobsen House".
+<http://qldarch.net/rdf/2012-12/resources/buildings/42> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/42> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/42> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/42> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/42> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/42> :label "James Hardie Office, Newstead".
+<http://qldarch.net/rdf/2012-12/resources/buildings/42> rdfs:label "James Hardie Office, Newstead".
+<http://qldarch.net/rdf/2012-12/resources/buildings/43> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/43> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/43> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/43> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/43> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/43> :label "Kahn House".
+<http://qldarch.net/rdf/2012-12/resources/buildings/43> rdfs:label "Kahn House".
+<http://qldarch.net/rdf/2012-12/resources/buildings/44> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/44> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/44> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/44> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/44> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/44> :label "Kenmore Residence, for David Hawkes".
+<http://qldarch.net/rdf/2012-12/resources/buildings/44> rdfs:label "Kenmore Residence, for David Hawkes".
+<http://qldarch.net/rdf/2012-12/resources/buildings/45> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/45> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/45> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/45> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/45> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/45> :label "Library and Science Block, Brisbane Boys College, Toowong".
+<http://qldarch.net/rdf/2012-12/resources/buildings/45> rdfs:label "Library and Science Block, Brisbane Boys College, Toowong".
+<http://qldarch.net/rdf/2012-12/resources/buildings/46> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/46> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/46> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/46> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/46> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/46> :label "Milton Residence, for W. Power".
+<http://qldarch.net/rdf/2012-12/resources/buildings/46> rdfs:label "Milton Residence, for W. Power".
+<http://qldarch.net/rdf/2012-12/resources/buildings/47> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/47> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/47> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/47> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/47> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/47> :label "Mt Gravatt Teachers College".
+<http://qldarch.net/rdf/2012-12/resources/buildings/47> rdfs:label "Mt Gravatt Teachers College".
+<http://qldarch.net/rdf/2012-12/resources/buildings/48> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/48> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/48> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/48> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/48> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/48> :label "Mutual Life and Citizens Assurance Company (M.L.C.) Building".
+<http://qldarch.net/rdf/2012-12/resources/buildings/48> rdfs:label "Mutual Life and Citizens Assurance Company (M.L.C.) Building".
+<http://qldarch.net/rdf/2012-12/resources/buildings/49> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/49> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/49> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/49> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/49> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/49> :label "New Courts of Law, Brisbane Phase 2, Supreme Court Building".
+<http://qldarch.net/rdf/2012-12/resources/buildings/49> rdfs:label "New Courts of Law, Brisbane Phase 2, Supreme Court Building".
+<http://qldarch.net/rdf/2012-12/resources/buildings/50> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/50> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/50> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/50> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/50> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/50> :label "New Courts of Law, Magistrates Court".
+<http://qldarch.net/rdf/2012-12/resources/buildings/50> rdfs:label "New Courts of Law, Magistrates Court".
+<http://qldarch.net/rdf/2012-12/resources/buildings/51> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/51> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/51> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/51> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/51> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/51> :label "New Courts of Law".
+<http://qldarch.net/rdf/2012-12/resources/buildings/51> rdfs:label "New Courts of Law".
+<http://qldarch.net/rdf/2012-12/resources/buildings/52> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/52> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/52> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/52> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/52> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/52> :label "O'Neill House, Ironside St, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/52> rdfs:label "O'Neill House, Ironside St, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/53> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/53> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/53> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/53> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/53> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/53> :label "Pharmacy at Albert St City for R.G. Malouf".
+<http://qldarch.net/rdf/2012-12/resources/buildings/53> rdfs:label "Pharmacy at Albert St City for R.G. Malouf".
+<http://qldarch.net/rdf/2012-12/resources/buildings/54> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/54> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/54> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/54> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/54> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/54> :label "Picadilly Arcade, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/54> rdfs:label "Picadilly Arcade, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/55> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/55> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/55> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/55> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/55> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/55> :label "Police Citizens Youth Club Building, Inala".
+<http://qldarch.net/rdf/2012-12/resources/buildings/55> rdfs:label "Police Citizens Youth Club Building, Inala".
+<http://qldarch.net/rdf/2012-12/resources/buildings/56> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/56> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/56> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/56> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/56> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/56> :label "Proposed Development Catholic Church Property, The Gap".
+<http://qldarch.net/rdf/2012-12/resources/buildings/56> rdfs:label "Proposed Development Catholic Church Property, The Gap".
+<http://qldarch.net/rdf/2012-12/resources/buildings/57> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/57> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/57> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/57> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/57> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/57> :label "Proposed block of shops at Ascot for J.&K. Giorgas".
+<http://qldarch.net/rdf/2012-12/resources/buildings/57> rdfs:label "Proposed block of shops at Ascot for J.&K. Giorgas".
+<http://qldarch.net/rdf/2012-12/resources/buildings/58> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/58> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/58> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/58> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/58> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/58> :label "Queensland Agricultural College (University of Queensland), Gatton".
+<http://qldarch.net/rdf/2012-12/resources/buildings/58> rdfs:label "Queensland Agricultural College (University of Queensland), Gatton".
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> :label "Queensland Agricultural College".
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> rdfs:label "Queensland Agricultural College".
+<http://qldarch.net/rdf/2012-12/resources/buildings/60> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/60> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/60> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/60> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/60> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/60> :label "Residence at Beecroft for Mr.&Mrs. R.J. Bligh".
+<http://qldarch.net/rdf/2012-12/resources/buildings/60> rdfs:label "Residence at Beecroft for Mr.&Mrs. R.J. Bligh".
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> :label "Residence, for Mr & Mrs A. Campbell, Mt Isa".
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> rdfs:label "Residence, for Mr & Mrs A. Campbell, Mt Isa".
+<http://qldarch.net/rdf/2012-12/resources/buildings/62> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/62> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/62> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/62> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/62> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/62> :label "Retail Development, for Westfield, Everton Park".
+<http://qldarch.net/rdf/2012-12/resources/buildings/62> rdfs:label "Retail Development, for Westfield, Everton Park".
+<http://qldarch.net/rdf/2012-12/resources/buildings/63> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/63> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/63> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/63> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/63> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/63> :label "Retirement Village, Hervey Bay".
+<http://qldarch.net/rdf/2012-12/resources/buildings/63> rdfs:label "Retirement Village, Hervey Bay".
+<http://qldarch.net/rdf/2012-12/resources/buildings/64> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/64> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/64> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/64> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/64> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/64> :label "Roma St Redevelopment".
+<http://qldarch.net/rdf/2012-12/resources/buildings/64> rdfs:label "Roma St Redevelopment".
+<http://qldarch.net/rdf/2012-12/resources/buildings/65> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/65> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/65> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/65> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/65> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/65> :label "Sanitarium Offices, Moorooka".
+<http://qldarch.net/rdf/2012-12/resources/buildings/65> rdfs:label "Sanitarium Offices, Moorooka".
+<http://qldarch.net/rdf/2012-12/resources/buildings/66> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/66> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/66> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/66> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/66> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/66> :label "Shopping Centre, Runaway Bay".
+<http://qldarch.net/rdf/2012-12/resources/buildings/66> rdfs:label "Shopping Centre, Runaway Bay".
+<http://qldarch.net/rdf/2012-12/resources/buildings/67> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/67> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/67> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/67> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/67> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/67> :label "Shopping Centre, for Poulos Holdings Pty Ltd, Tarragindi".
+<http://qldarch.net/rdf/2012-12/resources/buildings/67> rdfs:label "Shopping Centre, for Poulos Holdings Pty Ltd, Tarragindi".
+<http://qldarch.net/rdf/2012-12/resources/buildings/68> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/68> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/68> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/68> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/68> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/68> :label "Skirving House".
+<http://qldarch.net/rdf/2012-12/resources/buildings/68> rdfs:label "Skirving House".
+<http://qldarch.net/rdf/2012-12/resources/buildings/69> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/69> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/69> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/69> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/69> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/69> :label "Split Level Cottage, for Ross McCowan, Bribie Island".
+<http://qldarch.net/rdf/2012-12/resources/buildings/69> rdfs:label "Split Level Cottage, for Ross McCowan, Bribie Island".
+<http://qldarch.net/rdf/2012-12/resources/buildings/70> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/70> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/70> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/70> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/70> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/70> :label "Topley House".
+<http://qldarch.net/rdf/2012-12/resources/buildings/70> rdfs:label "Topley House".
+<http://qldarch.net/rdf/2012-12/resources/buildings/71> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/71> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/71> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/71> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/71> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/71> :label "Trickett Gardens Holiday Inn, Surfers Paradise".
+<http://qldarch.net/rdf/2012-12/resources/buildings/71> rdfs:label "Trickett Gardens Holiday Inn, Surfers Paradise".
+<http://qldarch.net/rdf/2012-12/resources/buildings/72> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/72> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/72> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/72> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/72> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/72> :label "Wairuna Flats".
+<http://qldarch.net/rdf/2012-12/resources/buildings/72> rdfs:label "Wairuna Flats".
+<http://qldarch.net/rdf/2012-12/resources/buildings/73> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/73> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/73> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/73> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/73> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/73> :label "Watkins Place".
+<http://qldarch.net/rdf/2012-12/resources/buildings/73> rdfs:label "Watkins Place".
+<http://qldarch.net/rdf/2012-12/resources/buildings/74> a :Structure.
+<http://qldarch.net/rdf/2012-12/resources/buildings/74> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/buildings/74> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/74> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/74> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/buildings/74> :label "Yeronga Park Swimming Pool, Brisbane City Council, Yeronga".
+<http://qldarch.net/rdf/2012-12/resources/buildings/74> rdfs:label "Yeronga Park Swimming Pool, Brisbane City Council, Yeronga".
+<http://qldarch.net/rdf/2012-12/resources/people/1> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/1> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/1> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/1> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/1> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/1> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/1> :label "Andrew Wilson".
+<http://qldarch.net/rdf/2012-12/resources/people/1> rdfs:label "Andrew Wilson".
+<http://qldarch.net/rdf/2012-12/resources/people/1> <http://xmlns.com/foaf/0.1/firstName> "Andrew".
+<http://qldarch.net/rdf/2012-12/resources/people/1> <http://xmlns.com/foaf/0.1/lastName> "Wilson".
+<http://qldarch.net/rdf/2012-12/resources/people/2> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/2> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/2> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/2> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/2> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/2> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/2> :label "Blair Wilson".
+<http://qldarch.net/rdf/2012-12/resources/people/2> rdfs:label "Blair Wilson".
+<http://qldarch.net/rdf/2012-12/resources/people/2> <http://xmlns.com/foaf/0.1/firstName> "Blair".
+<http://qldarch.net/rdf/2012-12/resources/people/2> <http://xmlns.com/foaf/0.1/lastName> "Wilson".
+<http://qldarch.net/rdf/2012-12/resources/people/3> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/3> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/3> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/3> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :label "Deborah van der Plaat".
+<http://qldarch.net/rdf/2012-12/resources/people/3> rdfs:label "Deborah van der Plaat".
+<http://qldarch.net/rdf/2012-12/resources/people/3> <http://xmlns.com/foaf/0.1/firstName> "Deborah".
+<http://qldarch.net/rdf/2012-12/resources/people/3> <http://xmlns.com/foaf/0.1/lastName> "van der Plaat".
+<http://qldarch.net/rdf/2012-12/resources/people/4> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/4> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/4> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/4> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/4> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/4> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/4> :label "Ducan McPhee".
+<http://qldarch.net/rdf/2012-12/resources/people/4> rdfs:label "Ducan McPhee".
+<http://qldarch.net/rdf/2012-12/resources/people/4> <http://xmlns.com/foaf/0.1/firstName> "Ducan".
+<http://qldarch.net/rdf/2012-12/resources/people/4> <http://xmlns.com/foaf/0.1/lastName> "McPhee".
+<http://qldarch.net/rdf/2012-12/resources/people/5> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/5> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/5> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/5> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/5> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/5> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/5> :label "Graham Bligh".
+<http://qldarch.net/rdf/2012-12/resources/people/5> rdfs:label "Graham Bligh".
+<http://qldarch.net/rdf/2012-12/resources/people/5> <http://xmlns.com/foaf/0.1/firstName> "Graham".
+<http://qldarch.net/rdf/2012-12/resources/people/5> <http://xmlns.com/foaf/0.1/lastName> "Bligh".
+<http://qldarch.net/rdf/2012-12/resources/people/6> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/6> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/6> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/6> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/6> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/6> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/6> :label "Helen Mills".
+<http://qldarch.net/rdf/2012-12/resources/people/6> rdfs:label "Helen Mills".
+<http://qldarch.net/rdf/2012-12/resources/people/6> <http://xmlns.com/foaf/0.1/firstName> "Helen".
+<http://qldarch.net/rdf/2012-12/resources/people/6> <http://xmlns.com/foaf/0.1/lastName> "Mills".
+<http://qldarch.net/rdf/2012-12/resources/people/7> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/7> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/7> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/7> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/7> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/7> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/7> :label "Ian Charlton".
+<http://qldarch.net/rdf/2012-12/resources/people/7> rdfs:label "Ian Charlton".
+<http://qldarch.net/rdf/2012-12/resources/people/7> <http://xmlns.com/foaf/0.1/firstName> "Ian".
+<http://qldarch.net/rdf/2012-12/resources/people/7> <http://xmlns.com/foaf/0.1/lastName> "Charlton".
+<http://qldarch.net/rdf/2012-12/resources/people/8> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/8> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/8> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/8> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/8> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/8> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/8> :label "James Birrell".
+<http://qldarch.net/rdf/2012-12/resources/people/8> rdfs:label "James Birrell".
+<http://qldarch.net/rdf/2012-12/resources/people/8> <http://xmlns.com/foaf/0.1/firstName> "James".
+<http://qldarch.net/rdf/2012-12/resources/people/8> <http://xmlns.com/foaf/0.1/lastName> "Birrell".
+<http://qldarch.net/rdf/2012-12/resources/people/9> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/9> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/9> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/9> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :label "Janina Gosseye".
+<http://qldarch.net/rdf/2012-12/resources/people/9> rdfs:label "Janina Gosseye".
+<http://qldarch.net/rdf/2012-12/resources/people/9> <http://xmlns.com/foaf/0.1/firstName> "Janina".
+<http://qldarch.net/rdf/2012-12/resources/people/9> <http://xmlns.com/foaf/0.1/lastName> "Gosseye".
+<http://qldarch.net/rdf/2012-12/resources/people/10> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/10> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/10> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/10> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/10> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/10> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/10> :label "John Macarthur".
+<http://qldarch.net/rdf/2012-12/resources/people/10> rdfs:label "John Macarthur".
+<http://qldarch.net/rdf/2012-12/resources/people/10> <http://xmlns.com/foaf/0.1/firstName> "John".
+<http://qldarch.net/rdf/2012-12/resources/people/10> <http://xmlns.com/foaf/0.1/lastName> "Macarthur".
+<http://qldarch.net/rdf/2012-12/resources/people/11> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/11> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/11> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/11> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/11> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/11> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/11> :label "Jon Voller".
+<http://qldarch.net/rdf/2012-12/resources/people/11> rdfs:label "Jon Voller".
+<http://qldarch.net/rdf/2012-12/resources/people/11> <http://xmlns.com/foaf/0.1/firstName> "Jon".
+<http://qldarch.net/rdf/2012-12/resources/people/11> <http://xmlns.com/foaf/0.1/lastName> "Voller".
+<http://qldarch.net/rdf/2012-12/resources/people/12> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/12> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/12> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/12> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :label "Marina Viner".
+<http://qldarch.net/rdf/2012-12/resources/people/12> rdfs:label "Marina Viner".
+<http://qldarch.net/rdf/2012-12/resources/people/12> <http://xmlns.com/foaf/0.1/firstName> "Marina".
+<http://qldarch.net/rdf/2012-12/resources/people/12> <http://xmlns.com/foaf/0.1/lastName> "Viner".
+<http://qldarch.net/rdf/2012-12/resources/people/13> a <http://xmlns.com/foaf/0.1/Person>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/people/13> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/13> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/people/13> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :label "Robert Riddel".
+<http://qldarch.net/rdf/2012-12/resources/people/13> rdfs:label "Robert Riddel".
+<http://qldarch.net/rdf/2012-12/resources/people/13> <http://xmlns.com/foaf/0.1/firstName> "Robert".
+<http://qldarch.net/rdf/2012-12/resources/people/13> <http://xmlns.com/foaf/0.1/lastName> "Riddel".
+<http://qldarch.net/rdf/2012-12/resources/firms/1> a :Firm.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :label "Bligh Jessup Bretnall and Partners".
+<http://qldarch.net/rdf/2012-12/resources/firms/1> rdfs:label "Bligh Jessup Bretnall and Partners".
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :firmName "Bligh Jessup Bretnall and Partners".
+<http://qldarch.net/rdf/2012-12/resources/firms/2> a :Firm.
+<http://qldarch.net/rdf/2012-12/resources/firms/2> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/firms/2> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/firms/2> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/2> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/firms/2> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/2> :label "Hayes & Scott".
+<http://qldarch.net/rdf/2012-12/resources/firms/2> rdfs:label "Hayes & Scott".
+<http://qldarch.net/rdf/2012-12/resources/firms/2> :firmName "Hayes & Scott".
+<http://qldarch.net/rdf/2012-12/resources/firms/3> a :Firm.
+<http://qldarch.net/rdf/2012-12/resources/firms/3> a <http://xmlns.com/foaf/0.1/Agent>.
+<http://qldarch.net/rdf/2012-12/resources/firms/3> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/firms/3> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/3> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/firms/3> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/3> :label "R. Martin Wilson and son Architects".
+<http://qldarch.net/rdf/2012-12/resources/firms/3> rdfs:label "R. Martin Wilson and son Architects".
+<http://qldarch.net/rdf/2012-12/resources/firms/3> :firmName "R. Martin Wilson and son Architects".
+
+#ENDS 46 [msec] TC=1464 TP=4405 BC=0 BP=2616 PM=0 CM=0 FM=0 AM=0
+
