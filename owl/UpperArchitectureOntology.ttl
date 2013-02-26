@@ -252,11 +252,12 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:range foaf:Person .
 
 :location a owl:DatatypeProperty ;
-    :label "Location of Subject" ;
+    :label "Subject Location" ;
     :display true ;
-    :displayPrecedence 140 ;
     :editable false ;
-    rdfs:domain :DigitalObject .
+    :displayPrecedence 50 ;
+    rdfs:domain :DigitalObject ;
+    rdfs:range xsd:string .
 
 :succeededBy a owl:ObjectProperty ;
     :label "Succeded By" ;
@@ -348,7 +349,7 @@ dcterms:title a owl:DatatypeProperty ;
     :label "Title" ;
     :display true ;
     :editable false ;
-    :displayPrecedence 0 ;
+    :displayPrecedence 1 ;
     rdfs:isDefinedBy dcterms:title .
 
 dcterms:description a owl:DatatypeProperty ;
@@ -404,14 +405,6 @@ dcterms:subject a owl:DatatypeProperty ;
     :editable false ;
     rdfs:domain :Interview .
 
-:location a owl:DatatypeProperty ;
-    :label "Location of Subject" ;
-    :display true ;
-    :editable false ;
-    :displayPrecedence 50 ;
-    rdfs:domain :DigitalObject ;
-    rdfs:range xsd:string .
-
 :projectNumber a owl:DatatypeProperty ;
     :label "Project Number" ;
     :display true ;
@@ -425,6 +418,12 @@ dcterms:subject a owl:DatatypeProperty ;
     :display true ;
     :editable false ;
     :displayPrecedence 190 ;
+    rdfs:domain :DigitalObject .
+
+dcterms:format a owl:DatatypeProperty ;
+    :label "Format" ;
+    :display false ;
+    :editable false ;
     rdfs:domain :DigitalObject .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:
