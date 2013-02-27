@@ -591,6 +591,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :associatedFirm :label "Firm".
 :associatedFirm :display true .
 :associatedFirm :editable false .
+:associatedFirm :entailsRelationship :RelatedToRelation.
 :associatedFirm :displayPrecedence 10 .
 :associatedFirm rdfs:label "Firm".
 :sourceFilename a owl:DatatypeProperty.
@@ -885,5 +886,5 @@ skos:narrowerTransitive a rdfs:Resource.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 67 [msec] TC=1513 TP=25119 BC=0 BP=7016 PM=0 CM=0 FM=0 AM=0
+#ENDS 63 [msec] TC=1514 TP=25143 BC=0 BP=7022 PM=0 CM=0 FM=0 AM=0
 

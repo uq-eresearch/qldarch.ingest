@@ -308,6 +308,7 @@ foaf:lastName a owl:DatatypeProperty ;
     :display true ;
     :editable false ;
     :displayPrecedence 10 ;
+    :entailsRelationship :RelatedToRelation ;
     rdfs:domain :Entity ;
     rdfs:range :Firm .
 

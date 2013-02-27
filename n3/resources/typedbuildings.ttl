@@ -99,5 +99,5 @@
 <http://qldarch.net/rdf/2012-12/resources/buildings/21> :buildingTypology <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
 <http://qldarch.net/rdf/2012-12/resources/buildings/56> :buildingTypology <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
 
-#ENDS 3802 [msec] TC=5159 TP=95458 BC=0 BP=26239 PM=0 CM=0 FM=0 AM=0
+#ENDS 3895 [msec] TC=5162 TP=95491 BC=0 BP=26248 PM=0 CM=0 FM=0 AM=0
 

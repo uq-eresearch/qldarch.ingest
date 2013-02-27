@@ -35,5 +35,5 @@
 <http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1795>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :preferredImage <http://qldarch.net/omeka/items/show/1800>.
 
-#ENDS 3785 [msec] TC=5017 TP=94433 BC=0 BP=25801 PM=0 CM=0 FM=0 AM=0
+#ENDS 3820 [msec] TC=5020 TP=94466 BC=0 BP=25810 PM=0 CM=0 FM=0 AM=0
 

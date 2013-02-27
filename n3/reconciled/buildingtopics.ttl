@@ -102,5 +102,5 @@
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Project+Name,Exhibition+Bowl%2C+Brisbane> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/buildings/27>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Project+Name,Department+Store%2C+Arawa%2C+Papua+New+Guinea> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/buildings/25>.
 
-#ENDS 4095 [msec] TC=5162 TP=94419 BC=0 BP=25868 PM=0 CM=0 FM=0 AM=0
+#ENDS 4074 [msec] TC=5165 TP=94452 BC=0 BP=25877 PM=0 CM=0 FM=0 AM=0
 
