@@ -13,14 +13,21 @@
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 
-{ ?A a foaf:Person .
-  ?A foaf:firstName ?FN .
-  ?A foaf:lastName ?LN .
-  ?DO a qldarch:DigitalObject .
-  ?DO dcterms:title ?T .
-  ?DO qaat:preferredImage "Yes"^^xsd:string .
-  (?L ?DT) log:dtlit ?T .
-  ?L string:containsIgnoringCase "Portrait" .
-  ?L string:containsIgnoringCase ?FN .
-  ?L string:containsIgnoringCase ?LN } => { ?A qldarch:preferredImage ?DO } .
+{ ?person a foaf:Person .
+  ?person foaf:firstName ?firstN .
+  ?person foaf:lastName ?lastN .
+  ?d a qldarch:DigitalObject .
+  ?d dcterms:title ?title .
+  ?d qaat:preferredImage "Yes"^^xsd:string .
+  ?title string:containsIgnoringCase "Portrait" .
+  ?title string:containsIgnoringCase ?firstN .
+  ?title string:containsIgnoringCase ?lastN .
+} => { ?person qldarch:preferredImage ?d } .
+
+{ ?firm a foaf:Firm .
+  ?e qaat:reconciledTo ?firm .
+  ?e qaat:contemporaryTo ?d .
+  ?d a qldarch:Portrait .
+  ?d qaat:preferredImage "Yes"^^xsd:string .
+} => { ?firm qldarch:preferredImage ?d } .
 
