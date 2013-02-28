@@ -7,76 +7,114 @@
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 
 <1> a qldarch:Structure ; qldarch:label "445 Upper Edward St, Brisbane CBD" .
-<2> a qldarch:Structure ; qldarch:label "Agricultural College, Dalby" .
-<3> a qldarch:Structure ; qldarch:label "Amoco Service Station, Carina" .
-<4> a qldarch:Structure ; qldarch:label "Amoco Service Station, Kenmore" .
-<5> a qldarch:Structure ; qldarch:label "Amoco Service Station, Moorooka" .
-<6> a qldarch:Structure ; qldarch:label "Amoco Service Station, Salisbury" .
-<7> a qldarch:Structure ; qldarch:label "Amoco Service Station, Stafford" .
-<8> a qldarch:Structure ; qldarch:label "Amoco Service Station, Unknown Location" .
-<9> a qldarch:Structure ; qldarch:label "Amoco Service Station, for James M. Samios, Beaudesert Rd, Acacia Ridge" .
-<10> a qldarch:Structure ; qldarch:label "Amoco, Standard Service Station Signs" .
-<11> a qldarch:Structure ; qldarch:label "Arcade at Gympie for A.H. Leitch & son" .
-<12> a qldarch:Structure ; qldarch:label "B.C.H Southport Bowl" .
-<13> a qldarch:Structure ; qldarch:label "Bligh House, Kenmore" .
-<14> a qldarch:Structure ; qldarch:label "Brisbane Milk Board" .
-<15> a qldarch:Structure ; qldarch:label "Camden Apartments" .
-<16> a qldarch:Structure ; qldarch:label "Caravan Park and Facilities, for T.M. Burke Estates, Peregian" .
-<17> a qldarch:Structure ; qldarch:label "Carramar Flats" .
-<18> a qldarch:Structure ; qldarch:label "Chermside Olympic Swimming Pool" .
-<19> a qldarch:Structure ; qldarch:label "Childcare Centre, Inala" .
-<20> a qldarch:Structure ; qldarch:label "Childcare Centre, Mitchelton" .
-<21> a qldarch:Structure ; qldarch:label "Christ Church, St Lucia" .
-<22> a qldarch:Structure ; qldarch:label "Civic Centre, Gladstone" .
-<23> a qldarch:Structure ; qldarch:label "Commerce Building (Chamberlain), University of Queensland, St Lucia" .
-<24> a qldarch:Structure ; qldarch:label "Cooper House" .
-<25> a qldarch:Structure ; qldarch:label "Department Store, Arawa, Papua New Guinea" .
-<26> a qldarch:Structure ; qldarch:label "Development Study Central Railway Station, Brisbane" .
-<27> a qldarch:Structure ; qldarch:label "Exhibition Bowl, Brisbane" .
-<28> a qldarch:Structure ; qldarch:label "Extensions to Premises Queensland Conference of Seventh-day Adventists" .
-<29> a qldarch:Structure ; qldarch:label "Fire Station, Windsor" .
-<30> a qldarch:Structure ; qldarch:label "First Year Science Building, University of Queensland, St Lucia" .
-<31> a qldarch:Structure ; qldarch:label "General Post Office, Forecourt Development, Brisbane CBD" .
-<32> a qldarch:Structure ; qldarch:label "Gladstone Town Council, Memorial Park" .
-<33> a qldarch:Structure ; qldarch:label "Greenslopes Bowling Centre" .
-<34> a qldarch:Structure ; qldarch:label "Hayes House, St Lucia" .
-<35> a qldarch:Structure ; qldarch:label "Hill Residence, Clayfield" .
-<36> a qldarch:Structure ; qldarch:label "House P.&J. Doherty, Everton park" .
-<37> a qldarch:Structure ; qldarch:label "House for V.L. & C.S. Matchett, Indooroopilly" .
-<38> a qldarch:Structure ; qldarch:label "Illowra St House, for A. Harkin, The Gap" .
-<39> a qldarch:Structure ; qldarch:label "Inala Sports Centre" .
-<40> a qldarch:Structure ; qldarch:label "J. Gould Residence, Aspley" .
-<41> a qldarch:Structure ; qldarch:label "Jacobsen House" .
-<42> a qldarch:Structure ; qldarch:label "James Hardie Office, Newstead" .
-<43> a qldarch:Structure ; qldarch:label "Kahn House" .
-<44> a qldarch:Structure ; qldarch:label "Kenmore Residence, for David Hawkes" .
-<45> a qldarch:Structure ; qldarch:label "Library and Science Block, Brisbane Boys College, Toowong" .
-<46> a qldarch:Structure ; qldarch:label "Milton Residence, for W. Power" .
-<47> a qldarch:Structure ; qldarch:label "Mt Gravatt Teachers College" .
-<48> a qldarch:Structure ; qldarch:label "Mutual Life and Citizens Assurance Company (M.L.C.) Building" .
-<49> a qldarch:Structure ; qldarch:label "New Courts of Law, Brisbane Phase 2, Supreme Court Building" .
-<50> a qldarch:Structure ; qldarch:label "New Courts of Law, Magistrates Court" .
-<51> a qldarch:Structure ; qldarch:label "New Courts of Law" .
-<52> a qldarch:Structure ; qldarch:label "O'Neill House, Ironside St, St Lucia" .
-<53> a qldarch:Structure ; qldarch:label "Pharmacy at Albert St City for R.G. Malouf" .
-<54> a qldarch:Structure ; qldarch:label "Picadilly Arcade, Brisbane CBD" .
-<55> a qldarch:Structure ; qldarch:label "Police Citizens Youth Club Building, Inala" .
-<56> a qldarch:Structure ; qldarch:label "Proposed Development Catholic Church Property, The Gap" .
-<57> a qldarch:Structure ; qldarch:label "Proposed block of shops at Ascot for J.&K. Giorgas" .
-<58> a qldarch:Structure ; qldarch:label "Queensland Agricultural College (University of Queensland), Gatton" .
-<59> a qldarch:Structure ; qldarch:label "Queensland Agricultural College" .
-<60> a qldarch:Structure ; qldarch:label "Residence at Beecroft for Mr.&Mrs. R.J. Bligh" .
-<61> a qldarch:Structure ; qldarch:label "Residence, for Mr & Mrs A. Campbell, Mt Isa" .
-<62> a qldarch:Structure ; qldarch:label "Retail Development, for Westfield, Everton Park" .
-<63> a qldarch:Structure ; qldarch:label "Retirement Village, Hervey Bay" .
-<64> a qldarch:Structure ; qldarch:label "Roma St Redevelopment" .
-<65> a qldarch:Structure ; qldarch:label "Sanitarium Offices, Moorooka" .
-<66> a qldarch:Structure ; qldarch:label "Shopping Centre, Runaway Bay" .
-<67> a qldarch:Structure ; qldarch:label "Shopping Centre, for Poulos Holdings Pty Ltd, Tarragindi" .
-<68> a qldarch:Structure ; qldarch:label "Skirving House" .
-<69> a qldarch:Structure ; qldarch:label "Split Level Cottage, for Ross McCowan, Bribie Island" .
-<70> a qldarch:Structure ; qldarch:label "Topley House" .
-<71> a qldarch:Structure ; qldarch:label "Trickett Gardens Holiday Inn, Surfers Paradise" .
-<72> a qldarch:Structure ; qldarch:label "Wairuna Flats" .
-<73> a qldarch:Structure ; qldarch:label "Watkins Place" .
-<74> a qldarch:Structure ; qldarch:label "Yeronga Park Swimming Pool, Brisbane City Council, Yeronga" .
+<2> a qldarch:Structure ; qldarch:label "ACGS Churchie - Junior School, East Brisbane" .
+<3> a qldarch:Structure ; qldarch:label "ACGS Churchie - Library, East Brisbane" .
+<4> a qldarch:Structure ; qldarch:label "ACGS Churchie, East Brisbane" .
+<5> a qldarch:Structure ; qldarch:label "Agricultural College, Dalby" .
+<6> a qldarch:Structure ; qldarch:label "Amoco Service Station, Carina" .
+<7> a qldarch:Structure ; qldarch:label "Amoco Service Station, Kenmore" .
+<8> a qldarch:Structure ; qldarch:label "Amoco Service Station, Moorooka" .
+<9> a qldarch:Structure ; qldarch:label "Amoco Service Station, Salisbury" .
+<10> a qldarch:Structure ; qldarch:label "Amoco Service Station, Stafford" .
+<11> a qldarch:Structure ; qldarch:label "Amoco Service Station, Unknown Location" .
+<12> a qldarch:Structure ; qldarch:label "Amoco Service Station, for James M. Samios, Beaudesert Rd, Acacia Ridge" .
+<13> a qldarch:Structure ; qldarch:label "Amoco, Standard Service Station Signs" .
+<14> a qldarch:Structure ; qldarch:label "Arcade at Gympie for A.H. Leitch & son" .
+<15> a qldarch:Structure ; qldarch:label "Archbishop's Chapel, Hamilton" .
+<16> a qldarch:Structure ; qldarch:label "B.C.H Southport Bowl" .
+<17> a qldarch:Structure ; qldarch:label "Bell House, St Lucia" .
+<18> a qldarch:Structure ; qldarch:label "Bishop House, Mermaid Beach" .
+<19> a qldarch:Structure ; qldarch:label "Bligh House, Kenmore" .
+<20> a qldarch:Structure ; qldarch:label "Brisbane Milk Board" .
+<21> a qldarch:Structure ; qldarch:label "Bryden House, Miami; Queensland" .
+<22> a qldarch:Structure ; qldarch:label "Camden Apartments" .
+<23> a qldarch:Structure ; qldarch:label "Carapark Motels, Mermaid Beach" .
+<24> a qldarch:Structure ; qldarch:label "Caravan Park and Facilities, for T.M. Burke Estates, Peregian" .
+<25> a qldarch:Structure ; qldarch:label "Carramar Flats" .
+<26> a qldarch:Structure ; qldarch:label "Chermside Olympic Swimming Pool" .
+<27> a qldarch:Structure ; qldarch:label "Childcare Centre, Inala" .
+<28> a qldarch:Structure ; qldarch:label "Childcare Centre, Mitchelton" .
+<29> a qldarch:Structure ; qldarch:label "Christ Church, St Lucia" .
+<30> a qldarch:Structure ; qldarch:label "Civic Centre, Gladstone" .
+<31> a qldarch:Structure ; qldarch:label "Coast House, Surfers Paradise" .
+<32> a qldarch:Structure ; qldarch:label "Commerce Building (Chamberlain), University of Queensland, St Lucia" .
+<33> a qldarch:Structure ; qldarch:label "Commonwealth Bank Building, Brisbane CBD" .
+<34> a qldarch:Structure ; qldarch:label "Cooper House" .
+<35> a qldarch:Structure ; qldarch:label "Critchley House, Toowoomba" .
+<36> a qldarch:Structure ; qldarch:label "Cromwell College, University of Queensland - St Lucia" .
+<37> a qldarch:Structure ; qldarch:label "Curzons; The Walk, Surfers Paradise" .
+<38> a qldarch:Structure ; qldarch:label "Department Store, Arawa, Papua New Guinea" .
+<39> a qldarch:Structure ; qldarch:label "Development Study Central Railway Station, Brisbane" .
+<40> a qldarch:Structure ; qldarch:label "Exhibition Bowl, Brisbane" .
+<41> a qldarch:Structure ; qldarch:label "Extensions to Premises Queensland Conference of Seventh-day Adventists" .
+<42> a qldarch:Structure ; qldarch:label "Fire Station, Windsor" .
+<43> a qldarch:Structure ; qldarch:label "First Year Science Building, University of Queensland, St Lucia" .
+<44> a qldarch:Structure ; qldarch:label "Gardner House, Taringa" .
+<45> a qldarch:Structure ; qldarch:label "General Post Office, Forecourt Development, Brisbane CBD" .
+<46> a qldarch:Structure ; qldarch:label "Gladstone Town Council, Memorial Park" .
+<47> a qldarch:Structure ; qldarch:label "Gow House, Indooroopilly" .
+<48> a qldarch:Structure ; qldarch:label "Green House, Hamilton" .
+<49> a qldarch:Structure ; qldarch:label "Greenslopes Bowling Centre" .
+<50> a qldarch:Structure ; qldarch:label "Harvey Graham Beach House, Surfers Paradise" .
+<51> a qldarch:Structure ; qldarch:label "Hayes House, St Lucia" .
+<52> a qldarch:Structure ; qldarch:label "Hill Residence, Clayfield" .
+<53> a qldarch:Structure ; qldarch:label "Hooker-Rex Display House, Centenary Estates; Jindalee" .
+<54> a qldarch:Structure ; qldarch:label "House P.&J. Doherty, Everton park" .
+<55> a qldarch:Structure ; qldarch:label "House for V.L. & C.S. Matchett, Indooroopilly" .
+<56> a qldarch:Structure ; qldarch:label "Howard Smith Building, Brisbane CBD" .
+<57> a qldarch:Structure ; qldarch:label "Illowra St House, for A. Harkin, The Gap" .
+<58> a qldarch:Structure ; qldarch:label "Inala Sports Centre" .
+<59> a qldarch:Structure ; qldarch:label "J. Gould Residence, Aspley" .
+<60> a qldarch:Structure ; qldarch:label "Jacobi House, Indooroopilly" .
+<61> a qldarch:Structure ; qldarch:label "Jacobsen House" .
+<62> a qldarch:Structure ; qldarch:label "James Hardie Office, Newstead" .
+<63> a qldarch:Structure ; qldarch:label "Kahn House" .
+<64> a qldarch:Structure ; qldarch:label "Kenmore Residence, for David Hawkes" .
+<65> a qldarch:Structure ; qldarch:label "Library and Science Block, Brisbane Boys College, Toowong" .
+<66> a qldarch:Structure ; qldarch:label "MLC Building (former), Brisbane CBD" .
+<67> a qldarch:Structure ; qldarch:label "Milton Residence, for W. Power" .
+<68> a qldarch:Structure ; qldarch:label "Mt Gravatt Teachers College" .
+<69> a qldarch:Structure ; qldarch:label "Mutual Life and Citizens Assurance Company (M.L.C.) Building" .
+<70> a qldarch:Structure ; qldarch:label "New Courts of Law, Brisbane Phase 2, Supreme Court Building" .
+<71> a qldarch:Structure ; qldarch:label "New Courts of Law, Magistrates Court" .
+<72> a qldarch:Structure ; qldarch:label "New Courts of Law" .
+<73> a qldarch:Structure ; qldarch:label "O'Neill House, Ironside St, St Lucia" .
+<74> a qldarch:Structure ; qldarch:label "Parliament House Competition 1979, Canberra" .
+<75> a qldarch:Structure ; qldarch:label "Pfitzenmaier House, Surfers Paradise" .
+<76> a qldarch:Structure ; qldarch:label "Pharmacy at Albert St City for R.G. Malouf" .
+<77> a qldarch:Structure ; qldarch:label "Picadilly Arcade, Brisbane CBD" .
+<78> a qldarch:Structure ; qldarch:label "Police Citizens Youth Club Building, Inala" .
+<79> a qldarch:Structure ; qldarch:label "Prince Charles Hospital, Chermside" .
+<80> a qldarch:Structure ; qldarch:label "Proposed Development Catholic Church Property, The Gap" .
+<81> a qldarch:Structure ; qldarch:label "Proposed block of shops at Ascot for J.&K. Giorgas" .
+<82> a qldarch:Structure ; qldarch:label "Queensland Agricultural College (University of Queensland), Gatton" .
+<83> a qldarch:Structure ; qldarch:label "Queensland Agricultural College" .
+<84> a qldarch:Structure ; qldarch:label "Residence at Beecroft for Mr.&Mrs. R.J. Bligh" .
+<85> a qldarch:Structure ; qldarch:label "Residence, for Mr & Mrs A. Campbell, Mt Isa" .
+<86> a qldarch:Structure ; qldarch:label "Retail Development, for Westfield, Everton Park" .
+<87> a qldarch:Structure ; qldarch:label "Retirement Village, Hervey Bay" .
+<88> a qldarch:Structure ; qldarch:label "Roma St Redevelopment" .
+<89> a qldarch:Structure ; qldarch:label "S.G.I.O Office Building, Brisbane CBD" .
+<90> a qldarch:Structure ; qldarch:label "Sanitarium Offices, Moorooka" .
+<91> a qldarch:Structure ; qldarch:label "Shopping Centre, Runaway Bay" .
+<92> a qldarch:Structure ; qldarch:label "Shopping Centre, for Poulos Holdings Pty Ltd, Tarragindi" .
+<93> a qldarch:Structure ; qldarch:label "Skirving House" .
+<94> a qldarch:Structure ; qldarch:label "Split Level Cottage, for Ross McCowan, Bribie Island" .
+<95> a qldarch:Structure ; qldarch:label "St Hilda's Girls School, Southport - Dormitory Extension" .
+<96> a qldarch:Structure ; qldarch:label "St Hilda's Girls School, Southport - Library" .
+<97> a qldarch:Structure ; qldarch:label "St Hilda's Girls School, Southport - Principal's Residence" .
+<98> a qldarch:Structure ; qldarch:label "St Hilda's Girls School, Southport - Science Block" .
+<99> a qldarch:Structure ; qldarch:label "St Hilda's Girls School, Southport - Specialist Block" .
+<100> a qldarch:Structure ; qldarch:label "St Hilda's Girls School, Southport - TV Production Centre" .
+<101> a qldarch:Structure ; qldarch:label "St Hilda's Girls School, Southport" .
+<102> a qldarch:Structure ; qldarch:label "St Stephen's Cathedral Development, Brisbane CBD" .
+<103> a qldarch:Structure ; qldarch:label "Topley House" .
+<104> a qldarch:Structure ; qldarch:label "Trickett Gardens Holiday Inn, Surfers Paradise" .
+<105> a qldarch:Structure ; qldarch:label "UQ - St Lucia; Commerce Building (Chamberlain)" .
+<106> a qldarch:Structure ; qldarch:label "UQ - St Lucia; St John's College" .
+<107> a qldarch:Structure ; qldarch:label "UQ - St Lucia; Women's College" .
+<108> a qldarch:Structure ; qldarch:label "UQ - St Lucia" .
+<109> a qldarch:Structure ; qldarch:label "Wairuna Flats" .
+<110> a qldarch:Structure ; qldarch:label "Watkins Place" .
+<111> a qldarch:Structure ; qldarch:label "Weiner House, St Lucia" .
+<112> a qldarch:Structure ; qldarch:label "Yeronga Park Swimming Pool, Brisbane City Council, Yeronga" .
