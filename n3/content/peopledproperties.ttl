@@ -40,9 +40,9 @@
 <http://qldarch.net/omeka/items/show/1614> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1987> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1525> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1500> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1617> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1915> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1500> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1653> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1701> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/50> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -65,8 +65,8 @@
 <http://qldarch.net/omeka/items/show/52> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1703> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1917> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1619> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1502> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1619> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1830> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1522> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1582> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -89,8 +89,8 @@
 <http://qldarch.net/omeka/items/show/1542> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1981> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/54> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1919> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1504> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1919> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1580> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1524> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1543> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -98,8 +98,8 @@
 <http://qldarch.net/omeka/items/show/1706> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/67> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1980> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/53> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1503> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/53> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1523> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1581> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/3> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -141,8 +141,8 @@
 <http://qldarch.net/omeka/items/show/2002> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1853> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1709> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1872> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/107> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1872> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/220> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1548> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1672> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -152,8 +152,8 @@
 <http://qldarch.net/omeka/items/show/1729> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/2001> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1852> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1871> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/106> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1871> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1635> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/2005> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1963> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -166,8 +166,8 @@
 <http://qldarch.net/omeka/items/show/1724> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1569> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1851> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/2004> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/105> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/2004> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1655> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1634> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/2023> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -178,8 +178,8 @@
 <http://qldarch.net/omeka/items/show/1694> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1723> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1675> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/2003> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/104> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/2003> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1654> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/2026> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1961> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -206,8 +206,8 @@
 <http://qldarch.net/omeka/items/show/1912> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/102> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1656> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/229> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1494> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/229> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/100> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1690> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1731> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -216,8 +216,8 @@
 <http://qldarch.net/omeka/items/show/201> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1956> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/2008> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1626> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/120> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1626> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/70> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/101> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1935> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -228,11 +228,11 @@
 <http://qldarch.net/omeka/items/show/1752> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/2009> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/90> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1627> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/121> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1627> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1934> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/227> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1492> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/227> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1848> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1692> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1829> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -243,9 +243,9 @@
 <http://qldarch.net/omeka/items/show/1753> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1954> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1775> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1491> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/228> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1933> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1491> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1849> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1734> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1691> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -259,8 +259,8 @@
 <http://qldarch.net/omeka/items/show/225> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1846> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1498> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1932> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/28> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1932> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/93> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/124> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/205> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -269,9 +269,9 @@
 <http://qldarch.net/omeka/items/show/1755> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/226> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1847> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1931> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/29> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1497> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/29> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1931> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/125> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/206> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1959> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -318,8 +318,8 @@
 <http://qldarch.net/omeka/items/show/44> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1798> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1587> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1822> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/25> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1822> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1474> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/78> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/95> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -336,8 +336,8 @@
 <http://qldarch.net/omeka/items/show/96> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1601> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1800> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/208> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/47> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/208> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1795> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1584> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/2040> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -354,8 +354,8 @@
 <http://qldarch.net/omeka/items/show/2045> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1979> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1622> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1827> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1490> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1827> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/73> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1772> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1774> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -378,8 +378,8 @@
 <http://qldarch.net/omeka/items/show/1938> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1825> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1770> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1710> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/71> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1710> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/22> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1791> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1978> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -452,8 +452,8 @@
 <http://qldarch.net/omeka/items/show/1535> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1593> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1904> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1929> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1514> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1929> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/40> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1842> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1607> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -495,8 +495,8 @@
 <http://qldarch.net/omeka/items/show/1900> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1864> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1920> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1883> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/118> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1883> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1950> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1717> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1530> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -602,8 +602,8 @@
 <http://qldarch.net/omeka/items/show/217> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1765> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1968> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1638> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/132> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1638> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/2037> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1947> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1720> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -622,8 +622,8 @@
 <http://qldarch.net/omeka/items/show/1745> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1817> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1680> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1767> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/134> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1767> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1891> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1788> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1941> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -659,8 +659,8 @@
 <http://qldarch.net/omeka/items/show/83> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1571> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/63> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1833> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/14> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1833> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1896> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/33> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1812> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -704,21 +704,21 @@
 <http://qldarch.net/omeka/items/show/10> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1836> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/60> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1613> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1480> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1613> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1949> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1529> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/89> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/2033> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1811> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/36> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1811> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/35> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1760> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1610> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/61> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/2034> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/omeka/items/show/1909> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/37> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/omeka/items/show/1909> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1761> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1611> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
 <http://qldarch.net/omeka/items/show/1838> <http://purl.org/dc/terms/creator> <http://qldarch.net/rdf/2012-12/resources/people/9>.
@@ -755,5 +755,5 @@
 <http://qldarch.net/omeka/items/show/1765> :transcriber <http://qldarch.net/rdf/2012-12/resources/people/12>.
 <http://qldarch.net/omeka/items/show/1767> :transcriber <http://qldarch.net/rdf/2012-12/resources/people/12>.
 
-#ENDS 13475 [msec] TC=7500 TP=133856 BC=0 BP=36758 PM=0 CM=0 FM=0 AM=0
+#ENDS 15401 [msec] TC=7524 TP=148800 BC=0 BP=40503 PM=0 CM=0 FM=0 AM=0
 

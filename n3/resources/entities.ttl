@@ -1126,5 +1126,5 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> rdfs:label "R. Martin Wilson and son Architects".
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :firmName "R. Martin Wilson and son Architects".
 
-#ENDS 59 [msec] TC=1971 TP=5739 BC=0 BP=3415 PM=0 CM=0 FM=0 AM=0
+#ENDS 65 [msec] TC=1995 TP=5873 BC=0 BP=3500 PM=0 CM=0 FM=0 AM=0
 

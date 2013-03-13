@@ -738,5 +738,5 @@
 <http://qldarch.net/omeka/items/show/1681> :depictsBuilding <http://qldarch.net/rdf/2012-12/resources/buildings/38>.
 <http://qldarch.net/omeka/items/show/1682> :depictsBuilding <http://qldarch.net/rdf/2012-12/resources/buildings/38>.
 
-#ENDS 6633 [msec] TC=7483 TP=133788 BC=0 BP=36741 PM=0 CM=0 FM=0 AM=0
+#ENDS 7364 [msec] TC=7507 TP=148732 BC=0 BP=40486 PM=0 CM=0 FM=0 AM=0
 

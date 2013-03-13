@@ -34,5 +34,5 @@
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Hayes+%26+Scott> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/5>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Conrad+%26+Gargett> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/4>.
 
-#ENDS 6500 [msec] TC=6897 TP=130610 BC=0 BP=36037 PM=0 CM=0 FM=0 AM=0
+#ENDS 7307 [msec] TC=6921 TP=145554 BC=0 BP=39782 PM=0 CM=0 FM=0 AM=0
 

@@ -35,7 +35,7 @@
 <http://qldarch.net/rdf/2012-12/resources/people/8> a :Architect.
 <http://qldarch.net/rdf/2012-12/resources/people/11> a :Architect.
 
-#ENDS 6473 [msec] TC=6787 TP=130829 BC=0 BP=36038 PM=0 CM=0 FM=0 AM=0
+#ENDS 7321 [msec] TC=6811 TP=145773 BC=0 BP=39783 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl manual/bios.ttl --query classification/expand-entities-query.n3
@@ -1165,7 +1165,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> rdfs:label "R. Martin Wilson and son Architects".
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :firmName "R. Martin Wilson and son Architects".
 
-#ENDS 59 [msec] TC=1971 TP=5739 BC=0 BP=3415 PM=0 CM=0 FM=0 AM=0
+#ENDS 65 [msec] TC=1995 TP=5873 BC=0 BP=3500 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl omekaexport/latest.ttl resources/architects.ttl resources/entities.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/preferredImage.n3
@@ -1205,7 +1205,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :preferredImage <http://qldarch.net/omeka/items/show/1878>.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> :preferredImage <http://qldarch.net/omeka/items/show/177>.
 
-#ENDS 6583 [msec] TC=6781 TP=130980 BC=0 BP=36039 PM=0 CM=0 FM=0 AM=0
+#ENDS 7319 [msec] TC=6805 TP=145924 BC=0 BP=39784 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/architects.ttl resources/entities.ttl resources/preferredImages.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 inference/preferredImage.n3 inference/relatedTo.n3 --query inference/relatedTo-resources-query.n3 content/associatedFirms.ttl content/buildingtopics.ttl content/cleanlatest.ttl content/peopledproperties.ttl content/relatedTo.ttl
@@ -1991,8 +1991,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1679>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1614>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1525>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1617>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1500>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1617>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1653>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1701>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/50>.
@@ -2008,8 +2008,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1870>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/52>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1703>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1619>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1502>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1619>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1830>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1522>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1582>.
@@ -2034,8 +2034,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/69>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1706>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/67>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/53>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1503>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/53>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1523>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1581>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1544>.
@@ -2070,8 +2070,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/127>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1633>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1709>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1872>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/107>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1872>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/220>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1548>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1672>.
@@ -2079,8 +2079,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1632>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1749>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1729>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1871>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/106>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1871>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1635>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1549>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1879>.
@@ -2112,15 +2112,15 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1725>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/102>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1656>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/229>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1494>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/229>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/100>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1690>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1731>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1750>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/201>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1626>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/120>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1626>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/70>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/101>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1493>.
@@ -2129,10 +2129,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/202>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1752>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/90>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1627>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/121>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/227>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1627>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1492>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/227>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1848>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1692>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1829>.
@@ -2141,8 +2141,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1868>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1628>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1753>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/228>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1491>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/228>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1734>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1691>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1828>.
@@ -2163,8 +2163,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1755>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/226>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1847>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/29>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1497>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/29>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/125>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/206>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1806>.
@@ -2202,8 +2202,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1802>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/44>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1587>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1822>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/25>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1822>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1474>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/78>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/95>.
@@ -2218,8 +2218,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1620>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/96>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1601>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/208>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/47>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/208>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1584>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/27>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/46>.
@@ -2230,8 +2230,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/48>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1517>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1622>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1827>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1490>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1827>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/73>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/20>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/49>.
@@ -2244,8 +2244,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1519>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/99>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1825>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1710>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/71>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1710>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/22>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/72>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1625>.
@@ -2331,8 +2331,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1737>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1684>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1864>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1883>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/118>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1883>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1717>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1530>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/233>.
@@ -2398,8 +2398,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1742>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/112>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/217>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1638>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/132>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1638>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1720>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/113>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/218>.
@@ -2433,8 +2433,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/83>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1571>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/63>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1833>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/14>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1833>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1896>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/33>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1812>.
@@ -2469,12 +2469,12 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/10>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1836>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/60>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1613>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1480>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1613>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1529>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/89>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1811>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/36>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1811>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/35>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1760>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1610>.
@@ -2684,7 +2684,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :relatedTo <http://qldarch.net/omeka/items/show/16>.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :relatedTo <http://qldarch.net/omeka/items/show/17>.
 
-#ENDS 6975 [msec] TC=16660 TP=158637 BC=0 BP=59921 PM=0 CM=0 FM=0 AM=0
+#ENDS 7439 [msec] TC=16684 TP=169836 BC=0 BP=63666 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/entities.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query classification/typologies.n3
@@ -2827,5 +2827,5 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/29> :buildingTypology <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
 <http://qldarch.net/rdf/2012-12/resources/buildings/80> :buildingTypology <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
 
-#ENDS 6628 [msec] TC=7002 TP=132473 BC=0 BP=36660 PM=0 CM=0 FM=0 AM=0
+#ENDS 7371 [msec] TC=7026 TP=147417 BC=0 BP=40405 PM=0 CM=0 FM=0 AM=0
 

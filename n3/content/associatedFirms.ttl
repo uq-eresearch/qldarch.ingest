@@ -728,5 +728,5 @@
 <http://qldarch.net/omeka/items/show/1901> :associatedFirm <http://qldarch.net/rdf/2012-12/resources/firms/4>.
 <http://qldarch.net/omeka/items/show/1902> :associatedFirm <http://qldarch.net/rdf/2012-12/resources/firms/4>.
 
-#ENDS 6690 [msec] TC=7473 TP=133748 BC=0 BP=36731 PM=0 CM=0 FM=0 AM=0
+#ENDS 7514 [msec] TC=7497 TP=148692 BC=0 BP=40476 PM=0 CM=0 FM=0 AM=0
 
