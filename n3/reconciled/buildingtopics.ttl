@@ -140,5 +140,5 @@
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Project+Name,UQ+-+St+Lucia%3B+Women%27s+College> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/buildings/107>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Project+Name,Department+Store%2C+Arawa%2C+Papua+New+Guinea> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/buildings/38>.
 
-#ENDS 7059 [msec] TC=6263 TP=115230 BC=0 BP=31637 PM=0 CM=0 FM=0 AM=0
+#ENDS 7155 [msec] TC=7003 TP=131034 BC=0 BP=36143 PM=0 CM=0 FM=0 AM=0
 

@@ -228,12 +228,30 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :FirmManifestation rdfs:subClassOf :StructureOrAgent.
 :FirmManifestation :label "Firm Manifestation".
 :FirmManifestation rdfs:label "Firm Manifestation".
+:Article a owl:Class.
+:Article a rdfs:Class.
+:Article a rdfs:Resource.
+:Article rdfs:subClassOf :DigitalObject.
+:Article rdfs:subClassOf rdfs:Resource.
+:Article rdfs:subClassOf :DigitalThing.
+:Article :label "Articles".
+:Article :displayPrecedence 3 .
+:Article :toplevel true .
+:Article rdfs:label "Articles".
+:Image a owl:Class.
+:Image a rdfs:Class.
+:Image a rdfs:Resource.
+:Image rdfs:subClassOf :DigitalObject.
+:Image rdfs:subClassOf rdfs:Resource.
+:Image rdfs:subClassOf :DigitalThing.
+:Image :label "Images".
+:Image rdfs:label "Images".
 :Photograph a owl:Class.
 :Photograph a rdfs:Class.
 :Photograph a rdfs:Resource.
-:Photograph rdfs:subClassOf :DigitalObject.
+:Photograph rdfs:subClassOf :Image.
 :Photograph rdfs:subClassOf rdfs:Resource.
-:Photograph rdfs:subClassOf :DigitalThing.
+:Photograph rdfs:subClassOf :DigitalObject.
 :Photograph :label "Photographs".
 :Photograph :displayPrecedence 1 .
 :Photograph :toplevel true .
@@ -243,7 +261,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Portrait a rdfs:Resource.
 :Portrait rdfs:subClassOf :Photograph.
 :Portrait rdfs:subClassOf rdfs:Resource.
-:Portrait rdfs:subClassOf :DigitalObject.
+:Portrait rdfs:subClassOf :Image.
 :Portrait :label "Photographs".
 :Portrait :displayPrecedence 1 .
 :Portrait :toplevel false .
@@ -251,9 +269,9 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :LineDrawing a owl:Class.
 :LineDrawing a rdfs:Class.
 :LineDrawing a rdfs:Resource.
-:LineDrawing rdfs:subClassOf :DigitalObject.
+:LineDrawing rdfs:subClassOf :Image.
 :LineDrawing rdfs:subClassOf rdfs:Resource.
-:LineDrawing rdfs:subClassOf :DigitalThing.
+:LineDrawing rdfs:subClassOf :DigitalObject.
 :LineDrawing :label "Line Drawings".
 :LineDrawing :displayPrecedence 2 .
 :LineDrawing :toplevel true .
@@ -666,6 +684,60 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 <http://purl.org/dc/terms/format> :display false .
 <http://purl.org/dc/terms/format> :editable false .
 <http://purl.org/dc/terms/format> rdfs:label "Format".
+:authors a owl:DatatypeProperty.
+:authors a rdf:Property.
+:authors a rdfs:Resource.
+:authors rdfs:domain :Article.
+:authors :label "Authors".
+:authors :display true .
+:authors :editable false .
+:authors :displayPrecedence 20 .
+:authors rdfs:label "Authors".
+:periodicalTitle a owl:DatatypeProperty.
+:periodicalTitle a rdf:Property.
+:periodicalTitle a rdfs:Resource.
+:periodicalTitle rdfs:domain :Article.
+:periodicalTitle :label "Periodical".
+:periodicalTitle :display true .
+:periodicalTitle :editable false .
+:periodicalTitle :displayPrecedence 31 .
+:periodicalTitle rdfs:label "Periodical".
+:volume a owl:DatatypeProperty.
+:volume a rdf:Property.
+:volume a rdfs:Resource.
+:volume rdfs:domain :Article.
+:volume :label "Volume".
+:volume :display true .
+:volume :editable false .
+:volume :displayPrecedence 32 .
+:volume rdfs:label "Volume".
+:issue a owl:DatatypeProperty.
+:issue a rdf:Property.
+:issue a rdfs:Resource.
+:issue rdfs:domain :Article.
+:issue :label "Issue".
+:issue :display true .
+:issue :editable false .
+:issue :displayPrecedence 33 .
+:issue rdfs:label "Issue".
+:datePublished a owl:DatatypeProperty.
+:datePublished a rdf:Property.
+:datePublished a rdfs:Resource.
+:datePublished rdfs:domain :Article.
+:datePublished :label "Publication Date".
+:datePublished :display true .
+:datePublished :editable false .
+:datePublished :displayPrecedence 34 .
+:datePublished rdfs:label "Publication Date".
+:pages a owl:DatatypeProperty.
+:pages a rdf:Property.
+:pages a rdfs:Resource.
+:pages rdfs:domain :Article.
+:pages :label "Pages".
+:pages :display true .
+:pages :editable false .
+:pages :displayPrecedence 35 .
+:pages rdfs:label "Pages".
 rdf:first a owl:FunctionalProperty.
 rdf:first a rdf:Property.
 rdf:first a rdfs:Resource.
@@ -869,9 +941,14 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 :Firm rdfs:subClassOf :Entity.
 :FirmManifestation rdfs:subClassOf :NonDigitalThing.
 :FirmManifestation rdfs:subClassOf :Entity.
+:Article rdfs:subClassOf :Entity.
+:Image rdfs:subClassOf :Entity.
+:Photograph rdfs:subClassOf :DigitalThing.
 :Photograph rdfs:subClassOf :Entity.
-:Portrait rdfs:subClassOf :DigitalThing.
+:Portrait rdfs:subClassOf :DigitalObject.
 :Portrait rdfs:subClassOf :Entity.
+:Portrait rdfs:subClassOf :DigitalThing.
+:LineDrawing rdfs:subClassOf :DigitalThing.
 :LineDrawing rdfs:subClassOf :Entity.
 :Interview rdfs:subClassOf :Entity.
 :Transcript rdfs:subClassOf :Entity.
@@ -886,5 +963,5 @@ skos:narrowerTransitive a rdfs:Resource.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 63 [msec] TC=1514 TP=25143 BC=0 BP=7022 PM=0 CM=0 FM=0 AM=0
+#ENDS 73 [msec] TC=1645 TP=27250 BC=0 BP=7623 PM=0 CM=0 FM=0 AM=0
 

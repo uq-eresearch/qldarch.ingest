@@ -7159,7 +7159,7 @@ qldarch:externalLocation
     dcterms:identifier "BVN Offsite Archive, Box 6442 - envelope_Bligh Jessup Bretnall Architects"^^xsd:string ;
     dcterms:rights "BVN Architecture"^^xsd:string ;
     dcterms:title "Portraits: Bligh Jessup Bretnall Architects 3 - captioned"^^xsd:string ;
-    qaat:preferredImage "Yes"^^xsd:string ;
+    qaat:preferredImage "No"^^xsd:string ;
     qldarch:location "445 Upper Edward St, Brisbane CBD"^^xsd:string ;
     qldarch:photographer "David McCarthy Photography"^^xsd:string ;
     qldarch:sourceFilename "Bligh Jessup Bretnall_003_names_edited.jpg" ;

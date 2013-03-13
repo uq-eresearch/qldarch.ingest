@@ -1475,5 +1475,5 @@
 <http://qldarch.net/omeka/items/show/1791> :relatedTo <http://qldarch.net/rdf/2012-12/resources/people/5>.
 <http://qldarch.net/omeka/items/show/1787> :relatedTo <http://qldarch.net/rdf/2012-12/resources/people/2>.
 
-#ENDS 8617 [msec] TC=18089 TP=187430 BC=0 BP=55389 PM=0 CM=0 FM=0 AM=0
+#ENDS 8811 [msec] TC=18107 TP=205530 BC=0 BP=59921 PM=0 CM=0 FM=0 AM=0
 

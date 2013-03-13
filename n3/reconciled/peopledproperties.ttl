@@ -42,5 +42,5 @@
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Blair+Wilson> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/2>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Helen+Mills> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/6>.
 
-#ENDS 6437 [msec] TC=6165 TP=114838 BC=0 BP=31539 PM=0 CM=0 FM=0 AM=0
+#ENDS 6523 [msec] TC=6905 TP=130642 BC=0 BP=36045 PM=0 CM=0 FM=0 AM=0
 

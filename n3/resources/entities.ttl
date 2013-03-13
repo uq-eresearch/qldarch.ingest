@@ -1,5 +1,5 @@
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
-#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl --query classification/expand-entities-query.n3
+#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl manual/bios.ttl --query classification/expand-entities-query.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -990,6 +990,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/5> rdfs:label "Graham Bligh".
 <http://qldarch.net/rdf/2012-12/resources/people/5> <http://xmlns.com/foaf/0.1/firstName> "Graham".
 <http://qldarch.net/rdf/2012-12/resources/people/5> <http://xmlns.com/foaf/0.1/lastName> "Bligh".
+<http://qldarch.net/rdf/2012-12/resources/people/5> :summary "Graham W. Bligh was born on the 6th of June 1933, son to architect Arthur W.F. Bligh and Millie Mavis Gaydon. In 1958, he obtained a Bachelor of Architecture degree from the University of Queensland, after which he works for Conrad and Gargett for a couple of months before setting sail to England in 1959, together with his wife Sylvia Pearl Bennett. In London, Graham Bligh worked in the office of Maxwell Fry and Jane Drew, where he was involved in the design of the Pilkington Head Office. In 1960, he returns to Australia and becomes a partner of Bligh, Jessup Bretnall and Partners – an architecture firm set up by his father in 1926 in Toowoomba – where he worked until his retirement from architecture practice in 1999. Notable projects that Graham Bligh worked on at Bligh, Jessup, Bretnall and partners include the Greenslopes Bowling centre in Brisbane, the Amoco Service Stations, the Queensland Agricultural College in Gatton, Watkins Place.".
 <http://qldarch.net/rdf/2012-12/resources/people/6> a <http://xmlns.com/foaf/0.1/Person>.
 <http://qldarch.net/rdf/2012-12/resources/people/6> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/6> a rdfs:Resource.
@@ -1125,5 +1126,5 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> rdfs:label "R. Martin Wilson and son Architects".
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :firmName "R. Martin Wilson and son Architects".
 
-#ENDS 61 [msec] TC=1968 TP=5683 BC=0 BP=3384 PM=0 CM=0 FM=0 AM=0
+#ENDS 59 [msec] TC=1971 TP=5739 BC=0 BP=3415 PM=0 CM=0 FM=0 AM=0
 

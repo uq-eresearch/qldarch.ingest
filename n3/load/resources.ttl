@@ -35,10 +35,10 @@
 <http://qldarch.net/rdf/2012-12/resources/people/8> a :Architect.
 <http://qldarch.net/rdf/2012-12/resources/people/11> a :Architect.
 
-#ENDS 6392 [msec] TC=6047 TP=115025 BC=0 BP=31532 PM=0 CM=0 FM=0 AM=0
+#ENDS 6473 [msec] TC=6787 TP=130829 BC=0 BP=36038 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
-#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl --query classification/expand-entities-query.n3
+#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl manual/bios.ttl --query classification/expand-entities-query.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -1029,6 +1029,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/5> rdfs:label "Graham Bligh".
 <http://qldarch.net/rdf/2012-12/resources/people/5> <http://xmlns.com/foaf/0.1/firstName> "Graham".
 <http://qldarch.net/rdf/2012-12/resources/people/5> <http://xmlns.com/foaf/0.1/lastName> "Bligh".
+<http://qldarch.net/rdf/2012-12/resources/people/5> :summary "Graham W. Bligh was born on the 6th of June 1933, son to architect Arthur W.F. Bligh and Millie Mavis Gaydon. In 1958, he obtained a Bachelor of Architecture degree from the University of Queensland, after which he works for Conrad and Gargett for a couple of months before setting sail to England in 1959, together with his wife Sylvia Pearl Bennett. In London, Graham Bligh worked in the office of Maxwell Fry and Jane Drew, where he was involved in the design of the Pilkington Head Office. In 1960, he returns to Australia and becomes a partner of Bligh, Jessup Bretnall and Partners – an architecture firm set up by his father in 1926 in Toowoomba – where he worked until his retirement from architecture practice in 1999. Notable projects that Graham Bligh worked on at Bligh, Jessup, Bretnall and partners include the Greenslopes Bowling centre in Brisbane, the Amoco Service Stations, the Queensland Agricultural College in Gatton, Watkins Place.".
 <http://qldarch.net/rdf/2012-12/resources/people/6> a <http://xmlns.com/foaf/0.1/Person>.
 <http://qldarch.net/rdf/2012-12/resources/people/6> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/6> a rdfs:Resource.
@@ -1164,10 +1165,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> rdfs:label "R. Martin Wilson and son Architects".
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :firmName "R. Martin Wilson and son Architects".
 
-#ENDS 61 [msec] TC=1968 TP=5683 BC=0 BP=3384 PM=0 CM=0 FM=0 AM=0
+#ENDS 59 [msec] TC=1971 TP=5739 BC=0 BP=3415 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
-#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/architects.ttl resources/entities.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/preferredImage.n3
+#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl omekaexport/latest.ttl resources/architects.ttl resources/entities.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/preferredImage.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -1201,8 +1202,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/7> :preferredImage <http://qldarch.net/omeka/items/show/1794>.
 <http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1795>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :preferredImage <http://qldarch.net/omeka/items/show/1800>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :preferredImage <http://qldarch.net/omeka/items/show/1878>.
+<http://qldarch.net/rdf/2012-12/resources/firms/5> :preferredImage <http://qldarch.net/omeka/items/show/177>.
 
-#ENDS 6338 [msec] TC=6039 TP=115168 BC=0 BP=31531 PM=0 CM=0 FM=0 AM=0
+#ENDS 6583 [msec] TC=6781 TP=130980 BC=0 BP=36039 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/architects.ttl resources/entities.ttl resources/preferredImages.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 inference/preferredImage.n3 inference/relatedTo.n3 --query inference/relatedTo-resources-query.n3 content/associatedFirms.ttl content/buildingtopics.ttl content/cleanlatest.ttl content/peopledproperties.ttl content/relatedTo.ttl
@@ -2681,7 +2684,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :relatedTo <http://qldarch.net/omeka/items/show/16>.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :relatedTo <http://qldarch.net/omeka/items/show/17>.
 
-#ENDS 6719 [msec] TC=16642 TP=145071 BC=0 BP=55389 PM=0 CM=0 FM=0 AM=0
+#ENDS 6975 [msec] TC=16660 TP=158637 BC=0 BP=59921 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/entities.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query classification/typologies.n3
@@ -2824,5 +2827,5 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/29> :buildingTypology <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
 <http://qldarch.net/rdf/2012-12/resources/buildings/80> :buildingTypology <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
 
-#ENDS 6446 [msec] TC=6262 TP=116669 BC=0 BP=32154 PM=0 CM=0 FM=0 AM=0
+#ENDS 6628 [msec] TC=7002 TP=132473 BC=0 BP=36660 PM=0 CM=0 FM=0 AM=0
 

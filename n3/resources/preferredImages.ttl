@@ -1,5 +1,5 @@
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
-#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/architects.ttl resources/entities.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/preferredImage.n3
+#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl omekaexport/latest.ttl resources/architects.ttl resources/entities.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/preferredImage.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -33,6 +33,8 @@
 <http://qldarch.net/rdf/2012-12/resources/people/7> :preferredImage <http://qldarch.net/omeka/items/show/1794>.
 <http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1795>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :preferredImage <http://qldarch.net/omeka/items/show/1800>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :preferredImage <http://qldarch.net/omeka/items/show/1878>.
+<http://qldarch.net/rdf/2012-12/resources/firms/5> :preferredImage <http://qldarch.net/omeka/items/show/177>.
 
-#ENDS 6338 [msec] TC=6039 TP=115168 BC=0 BP=31531 PM=0 CM=0 FM=0 AM=0
+#ENDS 6583 [msec] TC=6781 TP=130980 BC=0 BP=36039 PM=0 CM=0 FM=0 AM=0
 
