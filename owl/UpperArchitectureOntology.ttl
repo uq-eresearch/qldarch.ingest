@@ -120,8 +120,18 @@ foaf:Person a owl:Class ;
     rdfs:subClassOf foaf:Agent ;
     :label "Firm Manifestation" .
 
-:Photograph a owl:Class ;
+:Article a owl:Class ;
     rdfs:subClassOf :DigitalObject ;
+    :displayPrecedence 3 ;
+    :label "Articles" ;
+    :toplevel true .
+
+:Image a owl:Class ;
+    rdfs:subClassOf :DigitalObject ;
+    :label "Images" .
+
+:Photograph a owl:Class ;
+    rdfs:subClassOf :Image ;
     :displayPrecedence 1 ;
     :label "Photographs" ;
     :toplevel true .
@@ -133,7 +143,7 @@ foaf:Person a owl:Class ;
     :toplevel false .
 
 :LineDrawing a owl:Class ;
-    rdfs:subClassOf :DigitalObject ;
+    rdfs:subClassOf :Image ;
     :displayPrecedence 2 ;
     :label "Line Drawings" ;
     :toplevel true .
@@ -426,5 +436,47 @@ dcterms:format a owl:DatatypeProperty ;
     :display false ;
     :editable false ;
     rdfs:domain :DigitalObject .
+
+:authors a owl:DatatypeProperty ;
+    :label "Authors" ;
+    :display true ;
+    :editable false ;
+    :displayPrecedence 20 ;
+    rdfs:domain :Article .
+
+:periodicalTitle a owl:DatatypeProperty ;
+    :label "Periodical" ;
+    :display true ;
+    :editable false ;
+    :displayPrecedence 31 ;
+    rdfs:domain :Article .
+
+:volume a owl:DatatypeProperty ;
+    :label "Volume" ;
+    :display true ;
+    :editable false ;
+    :displayPrecedence 32 ;
+    rdfs:domain :Article .
+
+:issue a owl:DatatypeProperty ;
+    :label "Issue" ;
+    :display true ;
+    :editable false ;
+    :displayPrecedence 33 ;
+    rdfs:domain :Article .
+
+:datePublished a owl:DatatypeProperty ;
+    :label "Publication Date" ;
+    :display true ;
+    :editable false ;
+    :displayPrecedence 34 ;
+    rdfs:domain :Article .
+
+:pages a owl:DatatypeProperty ;
+    :label "Pages" ;
+    :display true ;
+    :editable false ;
+    :displayPrecedence 35 ;
+    rdfs:domain :Article .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:
