@@ -27,7 +27,7 @@
   ?title string:containsIgnoringCase ?lastN .
 } => { ?person qldarch:preferredImage ?d } .
 
-{ ?firm a foaf:Firm .
+{ ?firm a qldarch:Firm .
   ?e qaat:reconciledTo ?firm .
   ?e qaat:contemporaryTo ?d .
   ?st a qaat:SubjectType .
@@ -36,4 +36,3 @@
   ?d a qldarch:Portrait .
   ?d qaat:preferredImage "Yes"^^xsd:string .
 } => { ?firm qldarch:preferredImage ?d } .
-
