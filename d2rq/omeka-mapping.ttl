@@ -47,16 +47,18 @@ map:interviews a d2rq:ClassMap;
 	d2rq:uriPattern "http://qldarch.net/omeka/items/show/@@o_items.id@@";
 	d2rq:class qldarch:Interview;
     d2rq:containsDuplicates "true";
-    d2rq:join "o_item_types.id <= o_items.item_type_id";
-    d2rq:condition "o_item_types.name='Interview'"
+    d2rq:alias "o_item_types as interview_types" ;
+    d2rq:join "interview_types.id <= o_items.item_type_id";
+    d2rq:condition "interview_types.name='Interview'"
     .
 map:transcripts a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "http://qldarch.net/omeka/items/show/@@o_items.id@@";
 	d2rq:class qldarch:Transcript;
     d2rq:containsDuplicates "true";
-    d2rq:join "o_item_types.id <= o_items.item_type_id";
-    d2rq:condition "o_item_types.name='Transcript'"
+    d2rq:alias "o_item_types as transcript_types" ;
+    d2rq:join "transcript_types.id <= o_items.item_type_id";
+    d2rq:condition "transcript_types.name='Transcript'"
     .
 map:sounds a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
@@ -332,6 +334,19 @@ map:externalIdentifier a d2rq:PropertyBridge;
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
     d2rq:condition "o_element_sets.name='Dublin Core'";
     d2rq:condition "o_elements.name='External Identifier'"
+    .
+
+# Direct relationships
+map:hasTranscript a d2rq:PropertyBridge;
+	d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:interviews;
+    d2rq:property qldarch:hasTranscript;
+    d2rq:refersToClassMap map:transcripts;
+    d2rq:join "o_elements.id <= o_element_texts.element_id";
+    d2rq:join "o_items.id <= o_element_texts.record_id";
+    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
+    d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
+    d2rq:condition "o_elements.name='Transcript Item'"
     .
 
 # Controlled Vocabs Metadata

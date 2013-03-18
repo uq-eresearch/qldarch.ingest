@@ -322,6 +322,13 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:domain :Entity ;
     rdfs:range :Firm .
 
+:hasTranscript a owl:ObjectProperty ;
+    :label "Has Transcript" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Interview ;
+    rdfs:range :Transcript .
+
 #
 # Digital Object properties
 #

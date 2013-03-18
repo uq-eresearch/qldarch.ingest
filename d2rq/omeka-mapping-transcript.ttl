@@ -1,0 +1,53 @@
+@prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#> .
+@prefix qaomeka: <http://qldarch.net/omeka/items/show/> .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "com.mysql.jdbc.Driver";
+	d2rq:jdbcDSN "jdbc:mysql://localhost/omeka";
+	d2rq:username "omeka";
+	jdbc:autoReconnect "true";
+	jdbc:zeroDateTimeBehavior "convertToNull";
+	.
+
+# Digital Items
+map:interviews a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "http://qldarch.net/omeka/items/show/@@o_items.id@@";
+	d2rq:class qldarch:Interview;
+    d2rq:containsDuplicates "true";
+    d2rq:alias "o_item_types as interview_types" ;
+    d2rq:join "interview_types.id <= o_items.item_type_id";
+    d2rq:condition "interview_types.name='Interview'"
+    .
+map:transcripts a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "http://qldarch.net/omeka/items/show/@@o_items.id@@";
+	d2rq:class qldarch:Transcript;
+    d2rq:containsDuplicates "true";
+    d2rq:alias "o_item_types as transcript_types" ;
+    d2rq:join "transcript_types.id <= o_items.item_type_id";
+    d2rq:condition "transcript_types.name='Transcript'"
+    .
+
+# Direct relationships
+map:hasTranscript a d2rq:PropertyBridge;
+	d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:interviews;
+    d2rq:property qldarch:hasTranscript;
+    d2rq:refersToClassMap map:transcripts;
+    d2rq:join "o_elements.id <= o_element_texts.element_id";
+    d2rq:join "o_items.id <= o_element_texts.record_id";
+    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
+    d2rq:condition "o_element_sets.name='Item Type Metadata'" ;
+    d2rq:condition "o_elements.name='Transcript Item'"
+    .
