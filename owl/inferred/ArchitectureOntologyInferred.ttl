@@ -612,6 +612,15 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :associatedFirm :entailsRelationship :RelatedToRelation.
 :associatedFirm :displayPrecedence 10 .
 :associatedFirm rdfs:label "Firm".
+:hasTranscript a owl:ObjectProperty.
+:hasTranscript a rdf:Property.
+:hasTranscript a rdfs:Resource.
+:hasTranscript rdfs:domain :Interview.
+:hasTranscript rdfs:range :Transcript.
+:hasTranscript :label "Has Transcript".
+:hasTranscript :display false .
+:hasTranscript :editable false .
+:hasTranscript rdfs:label "Has Transcript".
 :sourceFilename a owl:DatatypeProperty.
 :sourceFilename a rdf:Property.
 :sourceFilename a rdfs:Resource.
@@ -963,5 +972,5 @@ skos:narrowerTransitive a rdfs:Resource.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 73 [msec] TC=1645 TP=27250 BC=0 BP=7623 PM=0 CM=0 FM=0 AM=0
+#ENDS 72 [msec] TC=1659 TP=27489 BC=0 BP=7688 PM=0 CM=0 FM=0 AM=0
 

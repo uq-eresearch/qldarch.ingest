@@ -32,13 +32,13 @@
 # 
 owl:Class rdfs:subClassOf rdfs:Class .
 
-owl:AnnotationProperty rdfs:subClassOf rdf:Property .
+#owl:AnnotationProperty rdfs:subClassOf rdf:Property .
 
-owl:ObjectProperty rdfs:subClassOf rdf:Property .
+#owl:ObjectProperty rdfs:subClassOf rdf:Property .
 
-owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
-    rdfs:domain rdfs:Resource ;
-    rdfs:range rdfs:Literal .
+#owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
+#    rdfs:domain rdfs:Resource ;
+#    rdfs:range rdfs:Literal .
 
 #
 # Annotation Properties
@@ -57,6 +57,11 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 :toplevel a owl:AnnotationProperty .
 :displayPrecedence a owl:AnnotationProperty .
 
+qaat:AuxProperty rdfs:subClassOf rdf:Property .
+
+qaat:AuxDatatypeProperty rdfs:subClassOf owl:DatatypeProperty, qaat:AuxProperty .
+
+qaat:AuxObjectProperty rdfs:subClassOf owl:ObjectProperty, qaat:AuxProperty .
 
 #
 # Controlled Vocabulary Export Classes
@@ -66,7 +71,7 @@ qaat:PseudoEntity a owl:Thing ;
     rdfs:comment "Used as a temporary placeholder for export of controlled vocabularies from omeka." ;
     :label "Pseudo Entity" .
 
-qaat:label a owl:DatatypeProperty ;
+qaat:label a qaat:AuxDatatypeProperty ;
     :label "Concept label" ;
     :display false ;
     :editable false ;
@@ -74,7 +79,7 @@ qaat:label a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:comment "A label for a concept from a controlled vocab" .
 
-qaat:reconciledTo a owl:ObjectProperty ;
+qaat:reconciledTo a qaat:AuxObjectProperty ;
     :label "Reconciled To" ;
     rdfs:domain qaat:PseudoEntity ;
     rdfs:range :Entity .
@@ -108,80 +113,95 @@ qaat:BuildingTypology a qaat:PseudoEntity ;
     :label "Building Typology" .
     
 #
+# Auxillary Datatype Properties.
+#
+
+qaat:transcriptItem a qaat:AuxDatatypeProperty ;
+    :label "Transcript Item" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Interview .
+
+qaat:preferredImage a qaat:AuxDatatypeProperty ;
+    :label "Preferred Image" ;
+    :display false ;
+    :editable false .
+
+#
 # Properties relating to Controlled Vocabularies
 #
 
-qaat:interviewerIn a owl:ObjectProperty ;
+qaat:interviewerIn a qaat:AuxObjectProperty ;
     :label "Interviewer In" ;
     :display false ;
     :editable false ;
     rdfs:domain qaat:Person ;
     rdfs:range :Interview .
 
-qaat:intervieweeIn a owl:ObjectProperty ;
+qaat:intervieweeIn a qaat:AuxObjectProperty ;
     :label "Interviewee In" ;
     :display false ;
     :editable false ;
     rdfs:domain qaat:Person ;
     rdfs:range :Interview .
 
-qaat:transcriberOf a owl:ObjectProperty ;
+qaat:transcriberOf a qaat:AuxObjectProperty ;
     :label "Transcriber Of" ;
     :display false ;
     :editable false ;
     rdfs:domain qaat:Person ;
     rdfs:range :Transcript .
 
-qaat:subjectOf a owl:ObjectProperty ;
+qaat:subjectOf a qaat:AuxObjectProperty ;
     :label "Has Subject" ;
     :display false ;
     :editable false ;
     rdfs:domain qaat:Subject ;
     rdfs:range :DigitalObject .
 
-qaat:contemporaryTo a owl:ObjectProperty ;
+qaat:contemporaryTo a qaat:AuxObjectProperty ;
     :label "Contemporary To" ;
     :display false ;
     :editable false ;
     rdfs:domain qaat:Firm ;
     rdfs:range :DigitalObject .
 
-qaat:typedDrawing a owl:ObjectProperty ;
+qaat:typedDrawing a qaat:AuxObjectProperty ;
     :label "Drawing" ;
     :display false ;
     :editable false ;
     rdfs:domain qaat:DrawingType ;
     rdfs:range :DigitalObject .
 
-qaat:buildingTypologyOf a owl:ObjectProperty ;
+qaat:buildingTypologyOf a qaat:AuxObjectProperty ;
     :label "Building Typology Of" ;
     :display false ;
     :editable false ;
     rdfs:domain qaat:BuildingTypology ;
     rdfs:range :DigitalObject .
 
-qaat:projectNameOf a owl:ObjectProperty ;
+qaat:projectNameOf a qaat:AuxObjectProperty ;
     :label "Project Name Of" ;
     :display false ;
     :editable false ;
     rdfs:domain qaat:ProjectName ;
     rdfs:range :DigitalObject .
 
-qaat:created a owl:ObjectProperty ;
+qaat:created a qaat:AuxObjectProperty ;
     :label "Created" ;
     :display false ;
     :editable false ;
     rdfs:domain qaat:Person ;
     rdfs:range :DigitalObject .
 
-qaat:created a owl:ObjectProperty ;
+qaat:created a qaat:AuxObjectProperty ;
     :label "Created" ;
     :display false ;
     :editable false ;
     rdfs:domain qaat:Person ;
     rdfs:range :DigitalObject .
 
-qaat:subjectTypeOf a owl:ObjectProperty ;
+qaat:subjectTypeOf a qaat:AuxObjectProperty ;
     :label "Subject Type Of" ;
     :display false ;
     :editable false ;
