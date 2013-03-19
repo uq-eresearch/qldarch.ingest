@@ -1,5 +1,5 @@
 #Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
-#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/entities.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query classification/typologies.n3
+#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/entities.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query classification/typologies.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -139,5 +139,5 @@
 <http://qldarch.net/rdf/2012-12/resources/buildings/29> :buildingTypology <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
 <http://qldarch.net/rdf/2012-12/resources/buildings/80> :buildingTypology <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
 
-#ENDS 7371 [msec] TC=7026 TP=147417 BC=0 BP=40405 PM=0 CM=0 FM=0 AM=0
+#ENDS 7353 [msec] TC=7041 TP=147474 BC=0 BP=40424 PM=0 CM=0 FM=0 AM=0
 
