@@ -23,3 +23,8 @@
   ?do ?p ?o .
   _:b1 e:findall ( ?p { ?p a qaat:AuxProperty . } () ) .
 } => { ?do ?p ?o } .
+
+{ ?df a qldarch:DigitalFile .
+  ?df ?p ?o .
+  _:b1 e:findall ( ?p { ?p a qaat:AuxProperty . } () ) .
+} => { ?df ?p ?o } .
