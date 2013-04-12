@@ -18,6 +18,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
 
 #
 # Preliminaries
@@ -76,7 +77,14 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 :DigitalObject a owl:Class ;
     :label "Digital Object" ;
     rdfs:subClassOf :DigitalThing ;
-    rdfs:comment "This will be replaced by a reconciliation with FRBR Work/Expression distinction".
+    rdfs:subClassOf frbr:Expression ;
+    rdfs:comment "This is analagous to a digital expression of an FRBR work. For pragmatic reasons, and due to the fungability of digital forms, any transformation of a work from a non-digital to a digital manifestation is considered to create a new expression. This allows us to capture the concept of a digitized work that can be subsequently transcoded into multiple digital manifestations but remains conceptually a Representation of the same Digital Resource (Expression)" .
+
+:DigitalFile a owl:Class ;
+    :label "File" ;
+    rdfs:subClassOf :DigitalThing ;
+    rdfs:subClassOf frbr:Manifestation ;
+    rdfs:comment "This is analagous to a digital manifestation of an FRBR expression. The medium of a DigitalFile is 'bitstream' syntactically and lexigraphically encoded consistent with a RFC2046 mime-type" .
 
 :StructureOrAgent a owl:Class ;
     :label "Structure or Agent" ;
@@ -329,22 +337,13 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:domain :Interview ;
     rdfs:range :Transcript .
 
-#
-# Digital Object properties
-#
-
-:sourceFilename a owl:DatatypeProperty ;
-    :label "Source Filename" ;
+:hasFile a owl:ObjectProperty ;
+    :label "Has File" ;
+    rdfs:subPropertyOf frbr:embodiment ;
     :display false ;
     :editable false ;
-    rdfs:domain :DigitalObject .
-
-:systemLocation a owl:DatatypeProperty ;
-    :label "System Location" ;
-    :display false ;
-    :editable false ;
-    :displayPrecedence 80 ;
-    rdfs:domain :DigitalObject .
+    rdfs:domain :DigitalObject ;
+    rdfs:range :DigitalFile .
 
 #
 # Integration of adopted Dublin Core properties
@@ -485,5 +484,40 @@ dcterms:format a owl:DatatypeProperty ;
     :editable false ;
     :displayPrecedence 35 ;
     rdfs:domain :Article .
+
+#
+# Datatype properties for DigitalFiles
+#
+
+:sourceFilename a owl:DatatypeProperty ;
+    :label "Source Filename" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+:systemLocation a owl:DatatypeProperty ;
+    :label "System Location" ;
+    :display false ;
+    :editable false ;
+    :displayPrecedence 80 ;
+    rdfs:domain :DigitalObject .
+
+:mimeType a owl:DatatypeProperty ;
+    :label "Mime Type" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+:basicMimeType a owl:DatatypeProperty ;
+    :label "Basic Mime Type" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
+
+:fileSize a owl:DatatypeProperty ;
+    :label "File Size" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :DigitalObject .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:
