@@ -1,4 +1,4 @@
-#Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
+#Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/architects.ttl resources/entities.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query pseudoentities/typologies.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
@@ -14,6 +14,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -27,14 +28,14 @@
 @prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#>.
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
 
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Dwellings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/2>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Transport+infrastructure> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/8>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Health+care+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/5>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Government+buildings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/4>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Educational+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/3>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/1>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Dwellings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/2>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Educational+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/3>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Government+buildings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/4>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Health+care+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/5>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Recreation+and+sports+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/6>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Religious+buildings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Transport+infrastructure> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/8>.
 
-#ENDS 7380 [msec] TC=6820 TP=145981 BC=0 BP=39803 PM=0 CM=0 FM=0 AM=0
+#ENDS 19.763 [sec] TC=15928 TP=287369 BC=0 BP=76897 PM=0 CM=0 FM=0 AM=0
 

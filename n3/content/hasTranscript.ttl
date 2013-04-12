@@ -1,4 +1,4 @@
-#Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
+#Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/AuxilaryArchitectureOntology.ttl ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl manual/bios.ttl --query classification/expand_hasTranscript.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
@@ -14,6 +14,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -27,13 +28,13 @@
 @prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#>.
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
 
-<http://qldarch.net/omeka/items/show/8> :hasTranscript <http://qldarch.net/omeka/items/show/1764>.
-<http://qldarch.net/omeka/items/show/1775> :hasTranscript <http://qldarch.net/omeka/items/show/1774>.
-<http://qldarch.net/omeka/items/show/1773> :hasTranscript <http://qldarch.net/omeka/items/show/1772>.
-<http://qldarch.net/omeka/items/show/1771> :hasTranscript <http://qldarch.net/omeka/items/show/1770>.
 <http://qldarch.net/omeka/items/show/1763> :hasTranscript <http://qldarch.net/omeka/items/show/1762>.
 <http://qldarch.net/omeka/items/show/1766> :hasTranscript <http://qldarch.net/omeka/items/show/1765>.
 <http://qldarch.net/omeka/items/show/1769> :hasTranscript <http://qldarch.net/omeka/items/show/1767>.
+<http://qldarch.net/omeka/items/show/1771> :hasTranscript <http://qldarch.net/omeka/items/show/1770>.
+<http://qldarch.net/omeka/items/show/1773> :hasTranscript <http://qldarch.net/omeka/items/show/1772>.
+<http://qldarch.net/omeka/items/show/1775> :hasTranscript <http://qldarch.net/omeka/items/show/1774>.
+<http://qldarch.net/omeka/items/show/8> :hasTranscript <http://qldarch.net/omeka/items/show/1764>.
 
-#ENDS 130 [msec] TC=4590 TP=43073 BC=0 BP=16388 PM=0 CM=0 FM=0 AM=0
+#ENDS 2.349 [sec] TC=13543 TP=91323 BC=0 BP=34638 PM=0 CM=0 FM=0 AM=0
 

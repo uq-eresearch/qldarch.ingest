@@ -1,4 +1,4 @@
-#Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
+#Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope ReificationsArchitectureOntology.ttl UpperArchitectureOntology.ttl ControlledArchitectureVocabularies.ttl rules/rdfs-rules.n3 rules/skos-rules.n3 --query queries/ExtractOntology.n3
 
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
@@ -13,6 +13,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
@@ -147,11 +148,22 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :DigitalObject a rdfs:Resource.
 :DigitalObject a rdfs:Class.
 :DigitalObject rdfs:subClassOf :DigitalThing.
+:DigitalObject rdfs:subClassOf frbr:Expression.
 :DigitalObject rdfs:subClassOf rdfs:Resource.
 :DigitalObject rdfs:subClassOf :Entity.
 :DigitalObject :label "Digital Object".
-:DigitalObject rdfs:comment "This will be replaced by a reconciliation with FRBR Work/Expression distinction".
+:DigitalObject rdfs:comment "This is analagous to a digital expression of an FRBR work. For pragmatic reasons, and due to the fungability of digital forms, any transformation of a work from a non-digital to a digital manifestation is considered to create a new expression. This allows us to capture the concept of a digitized work that can be subsequently transcoded into multiple digital manifestations but remains conceptually a Representation of the same Digital Resource (Expression)".
 :DigitalObject rdfs:label "Digital Object".
+:DigitalFile a owl:Class.
+:DigitalFile a rdfs:Resource.
+:DigitalFile a rdfs:Class.
+:DigitalFile rdfs:subClassOf :DigitalThing.
+:DigitalFile rdfs:subClassOf frbr:Manifestation.
+:DigitalFile rdfs:subClassOf rdfs:Resource.
+:DigitalFile rdfs:subClassOf :Entity.
+:DigitalFile :label "File".
+:DigitalFile rdfs:comment "This is analagous to a digital manifestation of an FRBR expression. The medium of a DigitalFile is 'bitstream' syntactically and lexigraphically encoded consistent with a RFC2046 mime-type".
+:DigitalFile rdfs:label "File".
 :StructureOrAgent a owl:Class.
 :StructureOrAgent a rdfs:Class.
 :StructureOrAgent a rdfs:Resource.
@@ -234,6 +246,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Article rdfs:subClassOf :DigitalObject.
 :Article rdfs:subClassOf rdfs:Resource.
 :Article rdfs:subClassOf :DigitalThing.
+:Article rdfs:subClassOf frbr:Expression.
 :Article :label "Articles".
 :Article :displayPrecedence 3 .
 :Article :toplevel true .
@@ -244,6 +257,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Image rdfs:subClassOf :DigitalObject.
 :Image rdfs:subClassOf rdfs:Resource.
 :Image rdfs:subClassOf :DigitalThing.
+:Image rdfs:subClassOf frbr:Expression.
 :Image :label "Images".
 :Image rdfs:label "Images".
 :Photograph a owl:Class.
@@ -282,6 +296,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Interview rdfs:subClassOf :DigitalObject.
 :Interview rdfs:subClassOf rdfs:Resource.
 :Interview rdfs:subClassOf :DigitalThing.
+:Interview rdfs:subClassOf frbr:Expression.
 :Interview :label "Interviews".
 :Interview :displayPrecedence 0 .
 :Interview :toplevel true .
@@ -292,6 +307,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Transcript rdfs:subClassOf :DigitalObject.
 :Transcript rdfs:subClassOf rdfs:Resource.
 :Transcript rdfs:subClassOf :DigitalThing.
+:Transcript rdfs:subClassOf frbr:Expression.
 :Transcript :label "Transcripts".
 :Transcript :toplevel false .
 :Transcript rdfs:label "Transcripts".
@@ -621,23 +637,16 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :hasTranscript :display false .
 :hasTranscript :editable false .
 :hasTranscript rdfs:label "Has Transcript".
-:sourceFilename a owl:DatatypeProperty.
-:sourceFilename a rdf:Property.
-:sourceFilename a rdfs:Resource.
-:sourceFilename rdfs:domain :DigitalObject.
-:sourceFilename :label "Source Filename".
-:sourceFilename :display false .
-:sourceFilename :editable false .
-:sourceFilename rdfs:label "Source Filename".
-:systemLocation a owl:DatatypeProperty.
-:systemLocation a rdf:Property.
-:systemLocation a rdfs:Resource.
-:systemLocation rdfs:domain :DigitalObject.
-:systemLocation :label "System Location".
-:systemLocation :display false .
-:systemLocation :editable false .
-:systemLocation :displayPrecedence 80 .
-:systemLocation rdfs:label "System Location".
+:hasFile a owl:ObjectProperty.
+:hasFile a rdf:Property.
+:hasFile a rdfs:Resource.
+:hasFile rdfs:domain :DigitalObject.
+:hasFile rdfs:range :DigitalFile.
+:hasFile :label "Has File".
+:hasFile rdfs:subPropertyOf frbr:embodiment.
+:hasFile :display false .
+:hasFile :editable false .
+:hasFile rdfs:label "Has File".
 <http://purl.org/dc/terms/rights> a owl:DatatypeProperty.
 <http://purl.org/dc/terms/rights> a rdfs:Resource.
 <http://purl.org/dc/terms/rights> a rdf:Property.
@@ -747,6 +756,47 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :pages :editable false .
 :pages :displayPrecedence 35 .
 :pages rdfs:label "Pages".
+:sourceFilename a owl:DatatypeProperty.
+:sourceFilename a rdf:Property.
+:sourceFilename a rdfs:Resource.
+:sourceFilename rdfs:domain :DigitalObject.
+:sourceFilename :label "Source Filename".
+:sourceFilename :display false .
+:sourceFilename :editable false .
+:sourceFilename rdfs:label "Source Filename".
+:systemLocation a owl:DatatypeProperty.
+:systemLocation a rdf:Property.
+:systemLocation a rdfs:Resource.
+:systemLocation rdfs:domain :DigitalObject.
+:systemLocation :label "System Location".
+:systemLocation :display false .
+:systemLocation :editable false .
+:systemLocation :displayPrecedence 80 .
+:systemLocation rdfs:label "System Location".
+:mimeType a owl:DatatypeProperty.
+:mimeType a rdf:Property.
+:mimeType a rdfs:Resource.
+:mimeType rdfs:domain :DigitalObject.
+:mimeType :label "Mime Type".
+:mimeType :display false .
+:mimeType :editable false .
+:mimeType rdfs:label "Mime Type".
+:basicMimeType a owl:DatatypeProperty.
+:basicMimeType a rdf:Property.
+:basicMimeType a rdfs:Resource.
+:basicMimeType rdfs:domain :DigitalObject.
+:basicMimeType :label "Basic Mime Type".
+:basicMimeType :display false .
+:basicMimeType :editable false .
+:basicMimeType rdfs:label "Basic Mime Type".
+:fileSize a owl:DatatypeProperty.
+:fileSize a rdf:Property.
+:fileSize a rdfs:Resource.
+:fileSize rdfs:domain :DigitalObject.
+:fileSize :label "File Size".
+:fileSize :display false .
+:fileSize :editable false .
+:fileSize rdfs:label "File Size".
 rdf:first a owl:FunctionalProperty.
 rdf:first a rdf:Property.
 rdf:first a rdfs:Resource.
@@ -810,6 +860,8 @@ rdf:value rdfs:range rdfs:Resource.
 <http://purl.org/dc/terms/subject> rdfs:isDefinedBy <http://purl.org/dc/terms/subject>.
 <http://purl.org/dc/terms/subject> rdfs:label "Subject".
 <http://purl.org/dc/terms/subject> rdfs:seeAlso <http://purl.org/dc/terms/subject>.
+frbr:embodiment a rdf:Property.
+frbr:embodiment a rdfs:Resource.
 <http://purl.org/dc/terms/identifier> a owl:DatatypeProperty.
 <http://purl.org/dc/terms/identifier> a rdfs:Resource.
 <http://purl.org/dc/terms/identifier> a rdf:Property.
@@ -953,11 +1005,14 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 :Article rdfs:subClassOf :Entity.
 :Image rdfs:subClassOf :Entity.
 :Photograph rdfs:subClassOf :DigitalThing.
+:Photograph rdfs:subClassOf frbr:Expression.
 :Photograph rdfs:subClassOf :Entity.
 :Portrait rdfs:subClassOf :DigitalObject.
 :Portrait rdfs:subClassOf :Entity.
 :Portrait rdfs:subClassOf :DigitalThing.
+:Portrait rdfs:subClassOf frbr:Expression.
 :LineDrawing rdfs:subClassOf :DigitalThing.
+:LineDrawing rdfs:subClassOf frbr:Expression.
 :LineDrawing rdfs:subClassOf :Entity.
 :Interview rdfs:subClassOf :Entity.
 :Transcript rdfs:subClassOf :Entity.
@@ -972,5 +1027,5 @@ skos:narrowerTransitive a rdfs:Resource.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 72 [msec] TC=1659 TP=27489 BC=0 BP=7688 PM=0 CM=0 FM=0 AM=0
+#ENDS 0.176 [sec] TC=1757 TP=29115 BC=0 BP=8148 PM=0 CM=0 FM=0 AM=0
 

@@ -1,4 +1,4 @@
-#Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
+#Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl manual/bios.ttl --query classification/expand-entities-query.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
@@ -14,6 +14,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -1126,5 +1127,5 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> rdfs:label "R. Martin Wilson and son Architects".
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :firmName "R. Martin Wilson and son Architects".
 
-#ENDS 65 [msec] TC=2003 TP=5903 BC=0 BP=3521 PM=0 CM=0 FM=0 AM=0
+#ENDS 0.192 [sec] TC=2046 TP=6070 BC=0 BP=3620 PM=0 CM=0 FM=0 AM=0
 

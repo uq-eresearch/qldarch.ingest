@@ -1,4 +1,4 @@
-#Processed by Id: euler.yap 5990 2013-02-13 20:32:53Z josd
+#Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/entities.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query pseudoentities/people.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
@@ -14,6 +14,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -27,20 +28,22 @@
 @prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#>.
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
 
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Creator,James+Birrell> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/8>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Creator,John+Macarthur> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/10>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Blair+Wilson> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/2>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Ducan+McPhee> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/4>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Graham+Bligh> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/5>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Helen+Mills> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/6>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Ian+Charlton> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/7>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,James+Birrell> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/8>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Jon+Voller> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/11>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewer,Andrew+Wilson> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/1>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewer,Deborah+van+der+Plaat> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/3>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewer,Janina+Gosseye> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/9>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewer,John+Macarthur> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/10>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewer,Robert+Riddel> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/13>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Transcriber,Marina+Viner> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/12>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Ducan+McPhee> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/4>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Creator,Janina+Gosseye> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewer,Andrew+Wilson> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/1>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewer,Janina+Gosseye> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/9>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Ian+Charlton> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/7>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewer,John+Macarthur> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/10>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,James+Birrell> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/8>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Graham+Bligh> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/5>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewer,Deborah+van+der+Plaat> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/3>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Jon+Voller> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/11>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Blair+Wilson> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/2>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Interviewee,Helen+Mills> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/people/6>.
 
-#ENDS 7340 [msec] TC=6944 TP=145643 BC=0 BP=39809 PM=0 CM=0 FM=0 AM=0
+#ENDS 19.443 [sec] TC=16054 TP=287039 BC=0 BP=76905 PM=0 CM=0 FM=0 AM=0
 
