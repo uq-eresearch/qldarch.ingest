@@ -98,6 +98,12 @@ map:lineDrawings a d2rq:ClassMap;
     d2rq:join "o_item_types.id <= o_items.item_type_id";
     d2rq:condition "o_item_types.name='Line Drawing'"
     .
+map:files a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "http://qldarch.net/omeka/files/show/@@o_files.id@@";
+	d2rq:class qldarch:DigitalFile;
+    d2rq:containsDuplicates "true"
+    .
 
 # Controlled Vocabulary Instances
 map:pseudoEntities a d2rq:ClassMap;
@@ -245,20 +251,48 @@ map:dateSubmitted a d2rq:PropertyBridge;
     d2rq:datatype xsd:date;
     d2rq:column "o_items.modified"
     .
-map:originalFilename a d2rq:PropertyBridge;
+
+# File metadata
+map:hasFile a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
     d2rq:belongsToClassMap map:digitalObjects;
+    d2rq:property qldarch:hasFile;
+    d2rq:refersToClassMap map:files;
+    d2rq:join "o_items.id <= o_files.item_id"
+    .
+map:sourceFilename a d2rq:PropertyBridge;
+	d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:files;
     d2rq:property qldarch:sourceFilename;
     d2rq:column "o_files.original_filename";
-    d2rq:join "o_items.id <= o_files.item_id"
     .
 map:systemLocation a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
-    d2rq:belongsToClassMap map:digitalObjects;
+    d2rq:belongsToClassMap map:files;
     d2rq:property qldarch:systemLocation;
     d2rq:datatype xsd:string;
     d2rq:column "o_files.archive_filename";
-    d2rq:join "o_items.id <= o_files.item_id"
+    .
+map:mimeType a d2rq:PropertyBridge;
+	d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:files;
+    d2rq:property qldarch:hasMimeType;
+    d2rq:datatype xsd:string;
+    d2rq:column "o_files.mime_os";
+    .
+map:basicMimeType a d2rq:PropertyBridge;
+	d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:files;
+    d2rq:property qldarch:basicMimeType;
+    d2rq:datatype xsd:string;
+    d2rq:column "o_files.mime_browser";
+    .
+map:hasFileSize a d2rq:PropertyBridge;
+	d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:files;
+    d2rq:property qldarch:hasFileSize;
+    d2rq:datatype xsd:integer;
+    d2rq:column "o_files.size";
     .
 
 # Dublin Core Metadata
