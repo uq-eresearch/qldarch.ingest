@@ -345,6 +345,11 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:domain :DigitalObject ;
     rdfs:range :DigitalFile .
 
+frbr:embodiment a owl:ObjectProperty ; 
+    :label "Embodiment Of" ;
+    :display false ;
+    :editable false ;
+    rdfs:isDefinedBy frbr:embodiment .
 #
 # Integration of adopted Dublin Core properties
 #

@@ -860,8 +860,15 @@ rdf:value rdfs:range rdfs:Resource.
 <http://purl.org/dc/terms/subject> rdfs:isDefinedBy <http://purl.org/dc/terms/subject>.
 <http://purl.org/dc/terms/subject> rdfs:label "Subject".
 <http://purl.org/dc/terms/subject> rdfs:seeAlso <http://purl.org/dc/terms/subject>.
-frbr:embodiment a rdf:Property.
+frbr:embodiment a owl:ObjectProperty.
 frbr:embodiment a rdfs:Resource.
+frbr:embodiment a rdf:Property.
+frbr:embodiment :label "Embodiment Of".
+frbr:embodiment :display false .
+frbr:embodiment :editable false .
+frbr:embodiment rdfs:isDefinedBy frbr:embodiment.
+frbr:embodiment rdfs:label "Embodiment Of".
+frbr:embodiment rdfs:seeAlso frbr:embodiment.
 <http://purl.org/dc/terms/identifier> a owl:DatatypeProperty.
 <http://purl.org/dc/terms/identifier> a rdfs:Resource.
 <http://purl.org/dc/terms/identifier> a rdf:Property.
@@ -1027,5 +1034,5 @@ skos:narrowerTransitive a rdfs:Resource.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 0.176 [sec] TC=1757 TP=29115 BC=0 BP=8148 PM=0 CM=0 FM=0 AM=0
+#ENDS 0.172 [sec] TC=1768 TP=29303 BC=0 BP=8200 PM=0 CM=0 FM=0 AM=0
 
