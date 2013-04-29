@@ -13,7 +13,6 @@
 
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
-@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 # Note: The e:findall finds all ?p such-that { ?p rdf:type qaat:AuxProperty . } and is true iff
