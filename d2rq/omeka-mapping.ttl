@@ -10,6 +10,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#> .
 @prefix qaomeka: <http://qldarch.net/omeka/items/show/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 
 map:database a d2rq:Database;
 	d2rq:jdbcDriver "com.mysql.jdbc.Driver";
@@ -668,4 +669,33 @@ map:pageNumbers a d2rq:PropertyBridge;
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
     d2rq:condition "o_element_sets.name='Item Type Metadata'";
     d2rq:condition "o_elements.name='Pages'"
+    .
+
+#
+# Geographic metadata
+#
+
+map:latitude a d2rq:PropertyBridge;
+	d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:digitalObjects;
+    d2rq:property qaat:latitude;
+    d2rq:datatype xsd:string;
+    d2rq:column "o_element_texts.text";
+    d2rq:join "o_elements.id <= o_element_texts.element_id";
+    d2rq:join "o_items.id <= o_element_texts.record_id";
+    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
+    d2rq:condition "o_element_sets.name='Item Type Metadata'";
+    d2rq:condition "o_elements.name='Latitude'"
+    .
+map:longitude a d2rq:PropertyBridge;
+	d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:digitalObjects;
+    d2rq:property qaat:longitude;
+    d2rq:datatype xsd:string;
+    d2rq:column "o_element_texts.text";
+    d2rq:join "o_elements.id <= o_element_texts.element_id";
+    d2rq:join "o_items.id <= o_element_texts.record_id";
+    d2rq:join "o_element_sets.id <= o_elements.element_set_id";
+    d2rq:condition "o_element_sets.name='Item Type Metadata'";
+    d2rq:condition "o_elements.name='Longitude'"
     .
