@@ -176,6 +176,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Structure a rdfs:Class.
 :Structure a rdfs:Resource.
 :Structure rdfs:subClassOf :StructureOrAgent.
+:Structure rdfs:subClassOf geo:SpatialThing.
 :Structure rdfs:subClassOf rdfs:Resource.
 :Structure rdfs:subClassOf :NonDigitalThing.
 :Structure :label "Structures".
@@ -200,8 +201,10 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :NonDigitalThing.
 <http://xmlns.com/foaf/0.1/Agent> :label "Agent".
 <http://xmlns.com/foaf/0.1/Agent> rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Agent>.
+<http://xmlns.com/foaf/0.1/Agent> rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/Agent>.
 <http://xmlns.com/foaf/0.1/Agent> rdfs:label "Agent".
 <http://xmlns.com/foaf/0.1/Agent> rdfs:seeAlso <http://http://xmlns.com/foaf/spec/#term_Agent>.
+<http://xmlns.com/foaf/0.1/Agent> rdfs:seeAlso <http://xmlns.com/foaf/0.1/Agent>.
 <http://xmlns.com/foaf/0.1/Person> a owl:Class.
 <http://xmlns.com/foaf/0.1/Person> a rdfs:Resource.
 <http://xmlns.com/foaf/0.1/Person> a rdfs:Class.
@@ -210,8 +213,10 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 <http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :StructureOrAgent.
 <http://xmlns.com/foaf/0.1/Person> :label "Person".
 <http://xmlns.com/foaf/0.1/Person> rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Person>.
+<http://xmlns.com/foaf/0.1/Person> rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/Person>.
 <http://xmlns.com/foaf/0.1/Person> rdfs:label "Person".
 <http://xmlns.com/foaf/0.1/Person> rdfs:seeAlso <http://http://xmlns.com/foaf/spec/#term_Person>.
+<http://xmlns.com/foaf/0.1/Person> rdfs:seeAlso <http://xmlns.com/foaf/0.1/Person>.
 :Architect a owl:Class.
 :Architect a rdfs:Class.
 :Architect a rdfs:Resource.
@@ -336,6 +341,15 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :TopicConcept :label "Topic".
 :TopicConcept :toplevel false .
 :TopicConcept rdfs:label "Topic".
+geo:SpatialThing a owl:Class.
+geo:SpatialThing a rdfs:Resource.
+geo:SpatialThing a rdfs:Class.
+geo:SpatialThing rdfs:subClassOf rdfs:Resource.
+geo:SpatialThing :label "Spatial Thing".
+geo:SpatialThing :toplevel false .
+geo:SpatialThing rdfs:isDefinedBy geo:SpatialThing.
+geo:SpatialThing rdfs:label "Spatial Thing".
+geo:SpatialThing rdfs:seeAlso geo:SpatialThing.
 rdf:type a owl:DatatypeProperty.
 rdf:type a rdf:Property.
 rdf:type a rdfs:Resource.
@@ -551,16 +565,6 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :transcriber :entailsRelationship :RelatedToRelation.
 :transcriber :displayPrecedence 130 .
 :transcriber rdfs:label "Transcriber".
-:location a owl:DatatypeProperty.
-:location a rdf:Property.
-:location a rdfs:Resource.
-:location rdfs:domain :DigitalObject.
-:location rdfs:range xsd:string.
-:location :label "Subject Location".
-:location :display true .
-:location :editable false .
-:location :displayPrecedence 50 .
-:location rdfs:label "Subject Location".
 :succeededBy a owl:ObjectProperty.
 :succeededBy a rdf:Property.
 :succeededBy a rdfs:Resource.
@@ -701,7 +705,9 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 <http://purl.org/dc/terms/format> :label "Format".
 <http://purl.org/dc/terms/format> :display false .
 <http://purl.org/dc/terms/format> :editable false .
+<http://purl.org/dc/terms/format> rdfs:isDefinedBy <http://purl.org/dc/terms/format>.
 <http://purl.org/dc/terms/format> rdfs:label "Format".
+<http://purl.org/dc/terms/format> rdfs:seeAlso <http://purl.org/dc/terms/format>.
 :authors a owl:DatatypeProperty.
 :authors a rdf:Property.
 :authors a rdfs:Resource.
@@ -797,6 +803,26 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :fileSize :display false .
 :fileSize :editable false .
 :fileSize rdfs:label "File Size".
+geo:lat a owl:DatatypeProperty.
+geo:lat a rdf:Property.
+geo:lat a rdfs:Resource.
+geo:lat rdfs:domain geo:SpatialThing.
+geo:lat :label "Latitude".
+geo:lat :display true .
+geo:lat :editable false .
+geo:lat rdfs:isDefinedBy geo:lat.
+geo:lat rdfs:label "Latitude".
+geo:lat rdfs:seeAlso geo:lat.
+geo:long a owl:DatatypeProperty.
+geo:long a rdf:Property.
+geo:long a rdfs:Resource.
+geo:long rdfs:domain geo:SpatialThing.
+geo:long :label "Longitude".
+geo:long :display true .
+geo:long :editable false .
+geo:long rdfs:isDefinedBy geo:long.
+geo:long rdfs:label "Longitude".
+geo:long rdfs:seeAlso geo:long.
 rdf:first a owl:FunctionalProperty.
 rdf:first a rdf:Property.
 rdf:first a rdfs:Resource.
@@ -841,6 +867,15 @@ rdf:value a rdf:Property.
 rdf:value a rdfs:Resource.
 rdf:value rdfs:domain rdfs:Resource.
 rdf:value rdfs:range rdfs:Resource.
+:location a owl:DatatypeProperty.
+:location a rdf:Property.
+:location a rdfs:Resource.
+:location rdfs:range xsd:string.
+:location :label "Location".
+:location :display true .
+:location :editable false .
+:location :displayPrecedence 50 .
+:location rdfs:label "Location".
 :identifier a owl:DatatypeProperty.
 :identifier a rdf:Property.
 :identifier a rdfs:Resource.
@@ -1034,5 +1069,5 @@ skos:narrowerTransitive a rdfs:Resource.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 0.172 [sec] TC=1768 TP=29303 BC=0 BP=8200 PM=0 CM=0 FM=0 AM=0
+#ENDS 0.183 [sec] TC=1825 TP=30224 BC=0 BP=8454 PM=0 CM=0 FM=0 AM=0
 

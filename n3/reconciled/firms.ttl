@@ -24,16 +24,23 @@
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 @prefix qaomeka: <http://qldarch.net/omeka/items/show/>.
-@prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#>.
 @prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#>.
+@prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#>.
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
 
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/1>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Geoffrey+Pie> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/5>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,James+Birrell%2C+UQ+Architect> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/9>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Conrad+%26+Gargett> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/4>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Conrad+%26+Gargett+%26+Partners+%281966-1970s%29> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/2>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,R.+Martin+Wilson+and+son+Architects> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/13>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,James+Birrell+%26+Partners> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/7>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Conrad+%26+Gargett+%281945-1965%29> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/3>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Hayes+%26+Scott> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/5>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,R.+Martin+Wilson+and+son+Architects> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/6>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Jim+Birrell%2C+BCC+Architect> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/11>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Conrad+%26+Gargett+%26+Partners+%281966-1970s%29> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/2>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,James+Birrell%2C+BCC+Architect> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/8>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Hayes+%26+Scott> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/6>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,James+Birrell> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/10>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Bligh+Jessup+Bretnall+and+Partners> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/1>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Contemporary+Firm,Mervyn+Rylance> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/firms/12>.
 
-#ENDS 19.623 [sec] TC=16044 TP=286999 BC=0 BP=76895 PM=0 CM=0 FM=0 AM=0
+#ENDS 26.535 [sec] TC=17487 TP=315735 BC=0 BP=84769 PM=0 CM=0 FM=0 AM=0
 

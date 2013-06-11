@@ -11,5 +11,12 @@
 <2> a qldarch:Firm ; qldarch:firmName "Conrad & Gargett & Partners (1966-1970s)" ; qldarch:label "Conrad & Gargett & Partners (1966-1970s)" .
 <3> a qldarch:Firm ; qldarch:firmName "Conrad & Gargett (1945-1965)" ; qldarch:label "Conrad & Gargett (1945-1965)" .
 <4> a qldarch:Firm ; qldarch:firmName "Conrad & Gargett" ; qldarch:label "Conrad & Gargett" .
-<5> a qldarch:Firm ; qldarch:firmName "Hayes & Scott" ; qldarch:label "Hayes & Scott" .
-<6> a qldarch:Firm ; qldarch:firmName "R. Martin Wilson and son Architects" ; qldarch:label "R. Martin Wilson and son Architects" .
+<5> a qldarch:Firm ; qldarch:firmName "Geoffrey Pie" ; qldarch:label "Geoffrey Pie" .
+<6> a qldarch:Firm ; qldarch:firmName "Hayes & Scott" ; qldarch:label "Hayes & Scott" .
+<7> a qldarch:Firm ; qldarch:firmName "James Birrell & Partners" ; qldarch:label "James Birrell & Partners" .
+<8> a qldarch:Firm ; qldarch:firmName "James Birrell, BCC Architect" ; qldarch:label "James Birrell, BCC Architect" .
+<9> a qldarch:Firm ; qldarch:firmName "James Birrell, UQ Architect" ; qldarch:label "James Birrell, UQ Architect" .
+<10> a qldarch:Firm ; qldarch:firmName "James Birrell" ; qldarch:label "James Birrell" .
+<11> a qldarch:Firm ; qldarch:firmName "Jim Birrell, BCC Architect" ; qldarch:label "Jim Birrell, BCC Architect" .
+<12> a qldarch:Firm ; qldarch:firmName "Mervyn Rylance" ; qldarch:label "Mervyn Rylance" .
+<13> a qldarch:Firm ; qldarch:firmName "R. Martin Wilson and son Architects" ; qldarch:label "R. Martin Wilson and son Architects" .

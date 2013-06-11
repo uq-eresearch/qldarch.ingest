@@ -208,4 +208,18 @@ qaat:subjectTypeOf a qaat:AuxObjectProperty ;
     rdfs:domain qaat:Portrait ;
     rdfs:range :DigitalObject .
 
+#
+# Geographic metadata.
+#
+
+qaat:latitude a qaat:AuxDatatypeProperty ;
+    :label "Associated Latitude" ;
+    :display false ;
+    :editable false .
+
+qaat:longitude a qaat:AuxDatatypeProperty ;
+    :label "Associated Longitude" ;
+    :display false ;
+    :editable false .
+
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:

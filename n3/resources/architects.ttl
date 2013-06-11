@@ -24,8 +24,8 @@
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 @prefix qaomeka: <http://qldarch.net/omeka/items/show/>.
-@prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#>.
 @prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#>.
+@prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#>.
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
 
 <http://qldarch.net/rdf/2012-12/resources/people/2> a :Architect.
@@ -36,5 +36,5 @@
 <http://qldarch.net/rdf/2012-12/resources/people/8> a :Architect.
 <http://qldarch.net/rdf/2012-12/resources/people/11> a :Architect.
 
-#ENDS 19.741 [sec] TC=15934 TP=287218 BC=0 BP=76896 PM=0 CM=0 FM=0 AM=0
+#ENDS 27.157 [sec] TC=17339 TP=315988 BC=0 BP=84763 PM=0 CM=0 FM=0 AM=0
 

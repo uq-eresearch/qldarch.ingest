@@ -24,18 +24,18 @@
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 @prefix qaomeka: <http://qldarch.net/omeka/items/show/>.
-@prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#>.
 @prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#>.
+@prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#>.
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
 
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/1>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Dwellings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/2>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Educational+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/3>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Government+buildings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/4>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Health+care+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/5>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Recreation+and+sports+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/6>.
-<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Religious+buildings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
 <http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Transport+infrastructure> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/8>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Religious+buildings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/7>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Health+care+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/5>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Educational+facilities> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/3>.
+<http://qldarch.net/ns/omeka/2012-11/pseudoentity#Building+Typology,Commercial+buildings> qaat:reconciledTo <http://qldarch.net/rdf/2012-12/resources/typologies/1>.
 
-#ENDS 19.763 [sec] TC=15928 TP=287369 BC=0 BP=76897 PM=0 CM=0 FM=0 AM=0
+#ENDS 26.524 [sec] TC=17333 TP=316139 BC=0 BP=84764 PM=0 CM=0 FM=0 AM=0
 

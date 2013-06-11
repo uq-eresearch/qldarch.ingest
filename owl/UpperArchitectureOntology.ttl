@@ -92,6 +92,7 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 
 :Structure a owl:Class ;
     rdfs:subClassOf :StructureOrAgent ;
+    rdfs:subClassOf geo:SpatialThing ;
     :displayPrecedence 2 ;
     :label "Structures" ;
     :toplevel true .
@@ -105,12 +106,14 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 foaf:Agent a owl:Class ;
     :label "Agent" ;
     rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Agent> ;
-    rdfs:subClassOf :StructureOrAgent .
+    rdfs:subClassOf :StructureOrAgent ;
+    rdfs:isDefinedBy foaf:Agent .
 
 foaf:Person a owl:Class ;
     :label "Person" ;
     rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Person> ;
-    rdfs:subClassOf foaf:Agent .
+    rdfs:subClassOf foaf:Agent ;
+    rdfs:isDefinedBy foaf:Person .
 
 :Architect a owl:Class ;
     rdfs:subClassOf foaf:Person ;
@@ -180,6 +183,11 @@ foaf:Person a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     :label "Topic" ;
     :toplevel false .
+
+geo:SpatialThing a owl:Class ;
+    :label "Spatial Thing" ;
+    :toplevel false ;
+    rdfs:isDefinedBy geo:SpatialThing .
 
 #
 # External Ontology Properties
@@ -270,11 +278,11 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:range foaf:Person .
 
 :location a owl:DatatypeProperty ;
-    :label "Subject Location" ;
+    :label "Location" ;
     :display true ;
     :editable false ;
     :displayPrecedence 50 ;
-    rdfs:domain :DigitalObject ;
+#    rdfs:domain :DigitalObject ;
     rdfs:range xsd:string .
 
 :succeededBy a owl:ObjectProperty ;
@@ -446,7 +454,8 @@ dcterms:format a owl:DatatypeProperty ;
     :label "Format" ;
     :display false ;
     :editable false ;
-    rdfs:domain :DigitalObject .
+    rdfs:domain :DigitalObject ;
+    rdfs:isDefinedBy dcterms:format .
 
 :authors a owl:DatatypeProperty ;
     :label "Authors" ;
@@ -524,5 +533,23 @@ dcterms:format a owl:DatatypeProperty ;
     :display false ;
     :editable false ;
     rdfs:domain :DigitalObject .
+
+#
+# Geographic Terms
+#
+
+geo:lat a owl:DatatypeProperty ;
+    :label "Latitude" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain geo:SpatialThing ;
+    rdfs:isDefinedBy geo:lat .
+
+geo:long a owl:DatatypeProperty ;
+    :label "Longitude" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain geo:SpatialThing ;
+    rdfs:isDefinedBy geo:long .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:
