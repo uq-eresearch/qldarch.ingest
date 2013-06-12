@@ -23,3 +23,16 @@
   ?do qldarch:depictsBuilding ?building .
 } => { ?building qldarch:buildingTypology ?type } .
 
+{ ?e a qaat:BuildingTypology .
+  ?e qaat:reconciledTo ?type .
+  ?e qaat:definiteMapIcon ?dicon .
+  ?type a qldarch:BuildingTypology .
+} => { ?type qldarch:definiteMapIcon ?dicon } .
+
+{ ?e a qaat:BuildingTypology .
+  ?e qaat:reconciledTo ?type .
+  ?e qaat:indefiniteMapIcon ?dicon .
+  ?type a qldarch:BuildingTypology .
+} => { ?type qldarch:indefiniteMapIcon ?dicon } .
+
+

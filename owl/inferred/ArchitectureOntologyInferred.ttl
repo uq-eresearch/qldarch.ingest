@@ -823,6 +823,24 @@ geo:long :editable false .
 geo:long rdfs:isDefinedBy geo:long.
 geo:long rdfs:label "Longitude".
 geo:long rdfs:seeAlso geo:long.
+:indefiniteMapIcon a owl:DatatypeProperty.
+:indefiniteMapIcon a rdfs:Resource.
+:indefiniteMapIcon a rdf:Property.
+:indefiniteMapIcon rdfs:domain :BuildingTypology.
+:indefiniteMapIcon :label "Primary Map Icon".
+:indefiniteMapIcon rdfs:comment "An icon to be used to indicate the presence of an entity on a map".
+:indefiniteMapIcon :display false .
+:indefiniteMapIcon :editable false .
+:indefiniteMapIcon rdfs:label "Primary Map Icon".
+:definiteMapIcon a owl:DatatypeProperty.
+:definiteMapIcon a rdfs:Resource.
+:definiteMapIcon a rdf:Property.
+:definiteMapIcon rdfs:domain :BuildingTypology.
+:definiteMapIcon :label "Secondary Map Icon".
+:definiteMapIcon rdfs:comment "An icon to be used to indicate a specifically identified entity on a map".
+:definiteMapIcon :display false .
+:definiteMapIcon :editable false .
+:definiteMapIcon rdfs:label "Secondary Map Icon".
 rdf:first a owl:FunctionalProperty.
 rdf:first a rdf:Property.
 rdf:first a rdfs:Resource.
@@ -1069,5 +1087,5 @@ skos:narrowerTransitive a rdfs:Resource.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 0.183 [sec] TC=1825 TP=30224 BC=0 BP=8454 PM=0 CM=0 FM=0 AM=0
+#ENDS 0.182 [sec] TC=1857 TP=30788 BC=0 BP=8608 PM=0 CM=0 FM=0 AM=0
 

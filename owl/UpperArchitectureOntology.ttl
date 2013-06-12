@@ -552,4 +552,18 @@ geo:long a owl:DatatypeProperty ;
     rdfs:domain geo:SpatialThing ;
     rdfs:isDefinedBy geo:long .
 
+:indefiniteMapIcon a owl:DatatypeProperty ;
+    :label "Primary Map Icon" ;
+    :display false ;
+    :editable false ;
+    rdfs:comment "An icon to be used to indicate the presence of an entity on a map" ;
+    rdfs:domain :BuildingTypology .
+
+:definiteMapIcon a owl:DatatypeProperty ;
+    :label "Secondary Map Icon" ;
+    :display false ;
+    :editable false ;
+    rdfs:comment "An icon to be used to indicate a specifically identified entity on a map" ;
+    rdfs:domain :BuildingTypology .
+
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:

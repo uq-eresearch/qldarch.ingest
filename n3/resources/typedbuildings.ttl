@@ -1,5 +1,5 @@
 #Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
-#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/entities.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query classification/typologies.n3
+#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/architects.ttl resources/entities.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 static/typologyicons.ttl reconciled/buildingtopics.ttl reconciled/firms.ttl reconciled/peopledproperties.ttl reconciled/typedbuildings.ttl --query classification/typologies.n3
 
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -170,6 +170,22 @@
 <http://qldarch.net/rdf/2012-12/resources/buildings/13> :buildingTypology <http://qldarch.net/rdf/2012-12/resources/typologies/1>.
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> :buildingTypology <http://qldarch.net/rdf/2012-12/resources/typologies/1>.
 <http://qldarch.net/rdf/2012-12/resources/buildings/89> :buildingTypology <http://qldarch.net/rdf/2012-12/resources/typologies/1>.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> :definiteMapIcon "img/mapicons/commercial_buildings_white_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> :definiteMapIcon "img/mapicons/dwellings_white_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> :definiteMapIcon "img/mapicons/educational_facilities_white_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> :definiteMapIcon "img/mapicons/government_buildings_white_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> :definiteMapIcon "img/mapicons/healthcare_white_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> :definiteMapIcon "img/mapicons/recreation_sport_facilities_white_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> :definiteMapIcon "img/mapicons/religious_buildings_white_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> :definiteMapIcon "img/mapicons/transport_infrastructure_white_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> :indefiniteMapIcon "img/mapicons/commercial_buildings_black_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> :indefiniteMapIcon "img/mapicons/dwellings_black_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> :indefiniteMapIcon "img/mapicons/educational_facilities_black_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> :indefiniteMapIcon "img/mapicons/government_buildings_black_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> :indefiniteMapIcon "img/mapicons/healthcare_black_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> :indefiniteMapIcon "img/mapicons/recreation_sport_facilities_black_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> :indefiniteMapIcon "img/mapicons/religious_buildings_black_19x27.png".
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> :indefiniteMapIcon "img/mapicons/transport_infrastructure_black_19x27.png".
 
-#ENDS 26.614 [sec] TC=17616 TP=318449 BC=0 BP=85678 PM=0 CM=0 FM=0 AM=0
+#ENDS 27.087 [sec] TC=17467 TP=240449 BC=0 BP=85564 PM=0 CM=0 FM=0 AM=0
 

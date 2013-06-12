@@ -20,3 +20,8 @@
   ?label str:equalIgnoringCase ?typelabel .
 } => { ?e qaat:reconciledTo ?type } .
 
+{ ?a a qldarch:BuildingTypology .
+} => { ?a a qldarch:BuildingTypology } .
+
+{ ?a a qaat:BuildingTypology .
+} => { ?a a qaat:BuildingTypology } .

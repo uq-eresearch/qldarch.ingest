@@ -2356,5 +2356,5 @@
 <http://qldarch.net/rdf/2012-12/resources/firms/13> :relatedTo <http://qldarch.net/rdf/2012-12/resources/buildings/17>.
 <http://qldarch.net/rdf/2012-12/resources/firms/13> :relatedTo <http://qldarch.net/rdf/2012-12/resources/buildings/49>.
 
-#ENDS 33.600 [sec] TC=26400 TP=451895 BC=0 BP=121255 PM=0 CM=0 FM=0 AM=0
+#ENDS 34.207 [sec] TC=26406 TP=452089 BC=0 BP=121305 PM=0 CM=0 FM=0 AM=0
 

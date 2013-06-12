@@ -1,0 +1,134 @@
+#Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
+#eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl content/associatedFirms.ttl content/buildingtopics.ttl content/hasTranscript.ttl content/peopledproperties.ttl resources/architects.ttl resources/buildingFirm.ttl resources/entities.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/infer_building_location.n3
+
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
+@prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcam: <http://purl.org/dc/dcam/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix str: <http://www.w3.org/2000/10/swap/string#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix func: <http://www.w3.org/2007/rif-builtin-function#>.
+@prefix var: <http://localhost/var#>.
+@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+@prefix n3: <http://www.w3.org/2004/06/rei#>.
+@prefix qaomeka: <http://qldarch.net/omeka/items/show/>.
+@prefix qape: <http://qldarch.net/ns/omeka/2012-11/pseudoentity#>.
+@prefix map: <http://qldarch.net/ns/d2rq/omeka-mapping#>.
+@prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
+
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> :location "Cnr Mowbray Terrace & Oaklands Parade, East Brisbane".
+<http://qldarch.net/rdf/2012-12/resources/buildings/142> :location "136 Wickham Tce, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> :location "Cnr Mowbray Terrace & Oaklands Parade, East Brisbane".
+<http://qldarch.net/rdf/2012-12/resources/buildings/31> :location "23 Aspen St, Inala".
+<http://qldarch.net/rdf/2012-12/resources/buildings/39> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/90> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/43> :location "Cnr Walcott St and Carmody Rd, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/129> :location "24 Trickett St, Surfers Paradise".
+<http://qldarch.net/rdf/2012-12/resources/buildings/11> :location "Moorooka".
+<http://qldarch.net/rdf/2012-12/resources/buildings/8> :location "Moorooka".
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> :location "445 upper Edward St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> :location "125 The Esplanade, St Lucia, Brisbane, Queensland".
+<http://qldarch.net/rdf/2012-12/resources/buildings/83> :location "239 George Street, Brisbane, Queensland".
+<http://qldarch.net/rdf/2012-12/resources/buildings/135> :location "Cnr Sir William Macrgregor Dr & Upland Rd, University of Queensland, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> :location "14 Piper St, Peregian Beach".
+<http://qldarch.net/rdf/2012-12/resources/buildings/124> :location "Gore St, Albion".
+<http://qldarch.net/rdf/2012-12/resources/buildings/91> :location "Northcliffe Tce, Surfers Paradise".
+<http://qldarch.net/rdf/2012-12/resources/buildings/136> :location "College Rd, University of Queensland; St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> :location "Peregian Beach, Sunshine Coast".
+<http://qldarch.net/rdf/2012-12/resources/buildings/71> :location "39 Blackstone Street, Indooroopilly".
+<http://qldarch.net/rdf/2012-12/resources/buildings/133> :location "College Rd, University of Queensland; St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/34> :location "100 Goondoon St, Gladstone".
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> :location "125 The Esplanade, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/44> :location "Surfers Paradise".
+<http://qldarch.net/rdf/2012-12/resources/buildings/67> :location "78-80 Eagle St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/93> :location "340 Queen St, Brisbane CDB".
+<http://qldarch.net/rdf/2012-12/resources/buildings/74> :location "62 Commercial Rd, Newstead".
+<http://qldarch.net/rdf/2012-12/resources/buildings/111> :location "951 Ipswich Rd, Moorooka".
+<http://qldarch.net/rdf/2012-12/resources/buildings/40> :location "Chermside".
+<http://qldarch.net/rdf/2012-12/resources/buildings/108> :location "Emma Miller Place, Intersection of Roma, Edward and Ann Streets, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/69> :location "Cnr Serviceton Ave Sycamore St, Inala".
+<http://qldarch.net/rdf/2012-12/resources/buildings/33> :location "3 Baty St, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/58> :location "3 Chatsworth Rd, Greenslopes".
+<http://qldarch.net/rdf/2012-12/resources/buildings/64> :location "6 Jindalee St, Jindalee".
+<http://qldarch.net/rdf/2012-12/resources/buildings/36> :location "61 Frederick St, Surfers Paradise".
+<http://qldarch.net/rdf/2012-12/resources/buildings/103> :location "223 Maundrell Tce, Aspley".
+<http://qldarch.net/rdf/2012-12/resources/buildings/102> :location "20A Old Burleigh Rd, Surfers Paradise".
+<http://qldarch.net/rdf/2012-12/resources/buildings/30> :location "Chermside".
+<http://qldarch.net/rdf/2012-12/resources/buildings/22> :location "Cnr Wickham St & Constance St, Fortitude Valley".
+<http://qldarch.net/rdf/2012-12/resources/buildings/110> :location "Cnr Turbot and Albert St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/110> :location "Nerang St, Southport".
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> :location "445 Upper Edward St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/117> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/132> :location "Chancellors Pl, University of Queensland; St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/100> :location "Gatton, Queensland".
+<http://qldarch.net/rdf/2012-12/resources/buildings/80> :location "Cnr Bury St & Currie St, Nambour".
+<http://qldarch.net/rdf/2012-12/resources/buildings/14> :location "Cnr Ipswich Rd & Waldheim St, Annerley".
+<http://qldarch.net/rdf/2012-12/resources/buildings/73> :location "James Cook Dr, Douglas".
+<http://qldarch.net/rdf/2012-12/resources/buildings/51> :location "7 Fosberry St, Windsor".
+<http://qldarch.net/rdf/2012-12/resources/buildings/24> :location "Brakes Cres, Miami; QLD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/48> :location "Wickham Tce, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/18> :location "65 Upland Road, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/19> :location "67 Albatross Avenue, Mermaid Beach".
+<http://qldarch.net/rdf/2012-12/resources/buildings/116> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/16> :location "39 Eldernell Tce, Hamilton".
+<http://qldarch.net/rdf/2012-12/resources/buildings/134> :location "Staff House Rd, University of Queensland; St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/123> :location "Elizabeth St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/42> :location "47 Wooldridge Street, Toowoomba".
+<http://qldarch.net/rdf/2012-12/resources/buildings/94> :location "Cnr Albany Creek Rd & Bronson St, Bridgeman Downs".
+<http://qldarch.net/rdf/2012-12/resources/buildings/95> :location "3437 Mt Tabor Rd, Caroline Crossing".
+<http://qldarch.net/rdf/2012-12/resources/buildings/63> :location "Clayfield, Brisbane, Queensland".
+<http://qldarch.net/rdf/2012-12/resources/buildings/131> :location "Cnr Keyhole Rd & Services Rd, University of Queensland, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/35> :location "Mt Cootha".
+<http://qldarch.net/rdf/2012-12/resources/buildings/29> :location "400 Gregory Tce, Spring Hill".
+<http://qldarch.net/rdf/2012-12/resources/buildings/140> :location "Edward Street, Brisbane, Queensland".
+<http://qldarch.net/rdf/2012-12/resources/buildings/37> :location "Cnr Westaway Parade & Watson St, Currimundi".
+<http://qldarch.net/rdf/2012-12/resources/buildings/5> :location "463 Bunya Highway, Dalby".
+<http://qldarch.net/rdf/2012-12/resources/buildings/112> :location "Cnr Morala Av and Lae Pl, Runaway Bay, Gold Coast".
+<http://qldarch.net/rdf/2012-12/resources/buildings/56> :location "3 Bougainvillea Ave, Indooroopilly".
+<http://qldarch.net/rdf/2012-12/resources/buildings/125> :location "23 Camp Mountain Road, Samford Village".
+<http://qldarch.net/rdf/2012-12/resources/buildings/141> :location "23 The Esplanade, St Lucia".
+<http://qldarch.net/rdf/2012-12/resources/buildings/60> :location "Cnr Genoa St & Gold Coast Highway, Surfers Paradise".
+<http://qldarch.net/rdf/2012-12/resources/buildings/57> :location "35 Markwell Street, Hamilton".
+<http://qldarch.net/rdf/2012-12/resources/buildings/119> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/47> :location "136 James St, New Farm".
+<http://qldarch.net/rdf/2012-12/resources/buildings/53> :location "61 Swann Rd, Taringa".
+<http://qldarch.net/rdf/2012-12/resources/buildings/136> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/137> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/110> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/20> :location "Karabil St, Kenmore".
+<http://qldarch.net/rdf/2012-12/resources/buildings/21> :location "Newmarket Rd, Brisbane".
+<http://qldarch.net/rdf/2012-12/resources/buildings/107> :location "Cnr Exeter and Tavistock St, Hervey Bay".
+<http://qldarch.net/rdf/2012-12/resources/buildings/138> :location "University of Papua New Guinea, Waigani Rd Port Moresby".
+<http://qldarch.net/rdf/2012-12/resources/buildings/127> :location "580 Coronation Dr, Toowong".
+<http://qldarch.net/rdf/2012-12/resources/buildings/118> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/121> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/82> :location "Mount Gravatt, Brisbane, Queensland".
+<http://qldarch.net/rdf/2012-12/resources/buildings/122> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/120> :location "71-89 Adelaide St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/32> :location "115-121 Blackwood St, Mitchelton".
+<http://qldarch.net/rdf/2012-12/resources/buildings/45> :location "Arawa, Papua New Guinea".
+<http://qldarch.net/rdf/2012-12/resources/buildings/3> :location "Rode Road, Chermside".
+<http://qldarch.net/rdf/2012-12/resources/buildings/126> :location "Cnr Booth St & Coronation Dr, Toowong".
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> :location "Rode Road, Chermside".
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> :location "Rode Road, Chermside".
+<http://qldarch.net/rdf/2012-12/resources/buildings/97> :location "Bowen Bridge Rd, Herston".
+<http://qldarch.net/rdf/2012-12/resources/buildings/97> :location "Rode Road, Chermside".
+<http://qldarch.net/rdf/2012-12/resources/buildings/79> :location "Cnr Adelaide & Edward St, Brisbane CBD".
+<http://qldarch.net/rdf/2012-12/resources/buildings/96> :location "Arawa, Papua New Guinea".
+<http://qldarch.net/rdf/2012-12/resources/buildings/88> :location "Cnr Musgrave St & Douglas St, Port Moresby - Papua New Guinea".
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> :location "Karabil St, Kenmore".
+
+#ENDS 16.259 [sec] TC=15505 TP=157289 BC=0 BP=86608 PM=0 CM=0 FM=0 AM=0
+

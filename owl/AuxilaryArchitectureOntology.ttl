@@ -222,4 +222,14 @@ qaat:longitude a qaat:AuxDatatypeProperty ;
     :display false ;
     :editable false .
 
+qaat:definiteMapIcon a qaat:AuxDatatypeProperty ;
+    :label "Definite Map Icon" ;
+    :display false ;
+    :editable true .
+
+qaat:indefiniteMapIcon a qaat:AuxDatatypeProperty ;
+    :label "Indefinite Map Icon" ;
+    :display false ;
+    :editable true .
+
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:

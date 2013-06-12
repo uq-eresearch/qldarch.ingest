@@ -1,0 +1,40 @@
+@base <http://qldarch.net/ns/ingest/2013-06/auxterms#> .
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
+
+<1> a qaat:BuildingTypology ;
+  qaat:label "Commercial buildings" ;
+  qaat:definiteMapIcon "img/mapicons/commercial_buildings_white_19x27.png" ;
+  qaat:indefiniteMapIcon "img/mapicons/commercial_buildings_black_19x27.png" .
+<2> a qaat:BuildingTypology ;
+  qaat:label "Dwellings" ;
+  qaat:definiteMapIcon "img/mapicons/dwellings_white_19x27.png" ;
+  qaat:indefiniteMapIcon "img/mapicons/dwellings_black_19x27.png" .
+<3> a qaat:BuildingTypology ;
+  qaat:label "Educational facilities" ;
+  qaat:definiteMapIcon "img/mapicons/educational_facilities_white_19x27.png" ;
+  qaat:indefiniteMapIcon "img/mapicons/educational_facilities_black_19x27.png" .
+<4> a qaat:BuildingTypology ;
+  qaat:label "Government buildings" ;
+  qaat:definiteMapIcon "img/mapicons/government_buildings_white_19x27.png" ;
+  qaat:indefiniteMapIcon "img/mapicons/government_buildings_black_19x27.png" .
+<5> a qaat:BuildingTypology ;
+  qaat:label "Health care facilities" ;
+  qaat:definiteMapIcon "img/mapicons/healthcare_white_19x27.png" ;
+  qaat:indefiniteMapIcon "img/mapicons/healthcare_black_19x27.png" .
+<6> a qaat:BuildingTypology ;
+  qaat:label "Recreation and sports facilities" ;
+  qaat:definiteMapIcon "img/mapicons/recreation_sport_facilities_white_19x27.png" ;
+  qaat:indefiniteMapIcon "img/mapicons/recreation_sport_facilities_black_19x27.png" .
+<7> a qaat:BuildingTypology ;
+  qaat:label "Religious buildings" ;
+  qaat:definiteMapIcon "img/mapicons/religious_buildings_white_19x27.png" ;
+  qaat:indefiniteMapIcon "img/mapicons/religious_buildings_black_19x27.png" .
+<8> a qaat:BuildingTypology ;
+  qaat:label "Transport infrastructure" ;
+  qaat:definiteMapIcon "img/mapicons/transport_infrastructure_white_19x27.png" ;
+  qaat:indefiniteMapIcon "img/mapicons/transport_infrastructure_black_19x27.png" .
