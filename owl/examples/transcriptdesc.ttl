@@ -1,5 +1,6 @@
 #
-# Ontology for an Oral History of Architecture
+# Example file for considering transcript entity relationship gathering
+#
 # (c) eResearch Laboratory, School of ITEE, The University of Queensland
 # Licensed MIT
 #
@@ -34,7 +35,10 @@ qaitems:1772 a :Transcript ;
     dcterms:title "Duncan McPhee interview transcript" .
 
 #
-# 
+# Entity gathering.
 #
 
-
+qaitems:1773#00:46:32 a :UtteranceRecording ;
+    :containedIn qaitems:1773 ;
+    :
+    
