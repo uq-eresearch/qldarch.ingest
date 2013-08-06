@@ -19,6 +19,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 #
 # Preliminaries
@@ -565,5 +566,107 @@ geo:long a owl:DatatypeProperty ;
     :editable false ;
     rdfs:comment "An icon to be used to indicate a specifically identified entity on a map" ;
     rdfs:domain :BuildingTypology .
+
+#
+# CRM Terms
+#
+
+:Utterance a owl:Class ;
+    rdfs:subClassOf :DigitalObject ;
+    :label "Utterance" ;
+    :toplevel false .
+
+:UtteranceRecording a owl:Class ;
+    rdfs:subClassOf :Utterance ;
+    :label "Utterance Recording" ;
+    :toplevel false .
+
+:UtteranceTranscript a owl:Class ;
+    rdfs:subClassOf :Utterance ;
+    :label "Utterance Transcript" ;
+    :toplevel false .
+
+:contains a owl:ObjectProperty ;
+    rdfs:subPropertyOf crm:P106_is_composed_of ;
+    rdfs:subPropertyOf dcterms:hasPart ;
+    rdfs:subPropertyOf frbr:part ;
+    :label "Contains" ;
+    :display false ;
+    :editable false .
+
+:containedIn a owl:ObjectProperty ;
+    rdfs:subPropertyOf crm:P106i_is_forms_part_of ;
+    rdfs:subPropertyOf dcterms:isPartOf ;
+    rdfs:subPropertyOf frbr:partOf ;
+    :label "Contained In" ;
+    :display false ;
+    :editable false .
+    
+:references a owl:ObjectProperty ;
+    rdfs:subPropertyOf crm:P67_refers_to ;
+    :label "References" ;
+    :display true ;
+    :editable false ;
+    owl:inverseOf :referencedBy ;
+    rdfs:domain :DigitalObject ;
+    rdfs:range :Entity ;
+    :entailsRelationship :ReferenceRelation .
+
+:referencedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf crm:P67i_is_referred_to_by ;
+    :label "Referenced By" ;
+    :display true ;
+    :editable false ;
+    owl:inverseOf :references ;
+    rdfs:domain :Entity ;
+    rdfs:range :DigitalObject .
+
+#
+# Imports from other ontologies
+#
+
+crm:P106_is_composed_of a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs> ;
+    :display false ;
+    :editable false .
+
+crm:P106i_forms_part_of a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs> .
+
+frbr:part rdf:type owl:ObjectProperty ;
+    rdfs:label "part"@en ;
+    rdfs:isDefinedBy frbr:part ;
+    :display false ;
+    :editable false .
+
+frbr:partOf rdf:type owl:ObjectProperty ;
+    rdfs:label "part of"@en ;
+    rdfs:isDefinedBy frbr:partOf ;
+    :display false ;
+    :editable false .
+
+dcterms:hasPart a owl:ObjectProperty ;
+    rdfs:isDefinedBy dcterms:hasPart;
+    rdfs:label "Has Part" ;
+    :display false ;
+    :editable false ;
+    rdfs:comment "Inferred from sub-properties only" .
+
+dcterms:isPartOf a owl:ObjectProperty ;
+    rdfs:isDefinedBy dcterms:isPartOf;
+    rdfs:label "Is Part Of" ;
+    :display false ;
+    :editable false ;
+    rdfs:comment "Inferred from sub-properties only" .
+
+crm:P67_refers_to a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs> ;
+    :display false ;
+    :editable false .
+
+crm:P67i_is_referred_to_by a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs> ;
+    :display false ;
+    :editable false .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:

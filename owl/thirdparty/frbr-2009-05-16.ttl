@@ -1,0 +1,1978 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix ns0: <http://purl.org/vocab/frbr/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ns1: <http://iandavis.com/id/> .
+@prefix ns2: <http://bruce.darcus.name/about#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix msg0: <http://web.resource.org/cc/> .
+@prefix ns3: <http://www.isi.edu/~pan/damltime/time-entry.owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+
+<http://vocab.org/frbr/core.turtle> rdf:type foaf:Document ,
+                                             dctype:Text ;
+                                    foaf:primaryTopic ns0:core ;
+                                    dct:hasFormat <http://vocab.org/frbr/core.rdf> ,
+                                                  <http://vocab.org/frbr/core.html> ,
+                                                  <http://vocab.org/frbr/core.json> ;
+                                    foaf:topic ns0:core .
+
+<http://vocab.org/frbr/core.rdf> rdf:type dctype:Text ,
+                                          foaf:Document ;
+                                 dc:format "application/rdf+xml" ;
+                                 rdfs:label "RDF/XML" .
+
+<http://vocab.org/frbr/core.html> rdf:type dctype:Text ,
+                                           foaf:Document ;
+                                  dc:format "text/html" ;
+                                  rdfs:label "HTML" .
+
+<http://vocab.org/frbr/core.json> rdf:type dctype:Text ,
+                                           foaf:Document ;
+                                  dc:format "application/json" ;
+                                  rdfs:label "JSON" .
+
+ns0:core rdf:type owl:Ontology ;
+         dc:date "2009-05-16" ;
+         dc:title "Expression of Core FRBR Concepts in RDF"@en ;
+         rdfs:comment """
+      This vocabulary is an expression in RDF of the concepts and relations described in the
+      IFLA report on the Functional Requirements for Bibliographic Records (FRBR). 
+    """@en ,
+                      """
+      This vocabulary is a work in progress, it includes RDF classes for the group 1, 2 and 3 entities
+      described by the FRBR report and properties corresponding to the core relationships between
+      those entities. It does not yet describe attributes of the entities. Where possible, appropriate 
+      relationships with other vocabularies are included in order to place this vocabulary in the 
+      context of existing RDF work.
+    """@en ;
+         dc:identifier "http://purl.org/vocab/frbr/frbr-core-20051014" ;
+         dct:isVersionOf <http://purl.org/vocab/frbr/core#> ;
+         dc:creator ns1:me ,
+                    _:mor52008eac81948 ;
+         dc:contributor ns2:me ;
+         dc:rights "Copyright © 2005 Richard Newman and Ian Davis" ;
+         dct:replaces ns0:frbr-core-20050809 ;
+         vann:preferredNamespaceUri "http://purl.org/vocab/frbr/core#" ;
+         vann:preferredNamespacePrefix "frbr" ;
+         skos:example <file:///var/www/vocab.org/www/htdocs/frbr/frbr-example-film-20050809.html> ;
+         dct:issued "2005-07-15" ;
+         skos:historyNote _:mor52008eac819ce ;
+         skos:changeNote _:mor52008eac81a2b .
+
+ns1:me rdf:type foaf:Person ;
+       foaf:name "Ian Davis" .
+
+_:mor52008eac81948 rdf:type foaf:Person ;
+                   foaf:name "Richard Newman" .
+
+ns2:me rdf:type foaf:Person ;
+       foaf:name "Bruce D'Arcus" .
+
+_:mor52008eac819ce rdfs:label "Added type hierarchy"@en ;
+                   dc:date "2005-10-14" ;
+                   dc:creator ns1:me .
+
+_:mor52008eac81a2b rdfs:label "Various minor tidying tasks"@en ;
+                   dc:date "2009-05-16" ;
+                   dc:creator ns1:me .
+
+<file:///var/www/vocab.org/www/htdocs/frbr/> rdf:type msg0:Work ;
+                                             msg0:license <http://creativecommons.org/licenses/by/2.0/uk/> .
+
+<http://creativecommons.org/licenses/by/2.0/uk/> rdf:type msg0:License ;
+                                                 msg0:permits msg0:Reproduction ,
+                                                              msg0:Distribution ,
+                                                              msg0:DerivativeWorks ;
+                                                 msg0:requires msg0:Notice ,
+                                                               msg0:Attribution .
+
+dc:format rdf:type owl:ObjectProperty .
+
+dct:hasFormat rdf:type owl:ObjectProperty .
+
+dct:isVersionOf rdf:type owl:AnnotationProperty .
+
+dct:replaces rdf:type owl:AnnotationProperty .
+
+dc:type rdf:type owl:AnnotationProperty .
+
+dc:rights rdf:type owl:DatatypeProperty .
+
+dc:date rdf:type owl:DatatypeProperty .
+
+dc:identifier rdf:type owl:DatatypeProperty .
+
+dc:contributor rdf:type owl:DatatypeProperty .
+
+dc:title rdf:type owl:DatatypeProperty .
+
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+vann:changes rdf:type owl:AnnotationProperty .
+
+rdf:value rdf:type owl:DatatypeProperty .
+
+ns3:Event rdf:type owl:Class .
+
+geo:SpatialThing rdf:type owl:Class .
+
+<http://xmlns.com/wordnet/1.6/Work~2> rdf:type owl:Class .
+
+dct:IMT rdf:type owl:Class .
+
+skos:Concept rdf:type owl:Class .
+
+dctype:Text rdf:type owl:Class .
+
+msg0:License rdf:type owl:Class .
+
+msg0:Permission rdf:type owl:Class .
+
+msg0:Requirement rdf:type owl:Class .
+
+msg0:permits rdf:type owl:ObjectProperty .
+
+msg0:requires rdf:type owl:ObjectProperty .
+
+msg0:license rdf:type owl:AnnotationProperty .
+
+msg0:Reproduction rdf:type msg0:Permission .
+
+msg0:Distribution rdf:type msg0:Permission .
+
+msg0:Notice rdf:type msg0:Requirement .
+
+msg0:Attribution rdf:type msg0:Requirement .
+
+msg0:DerivativeWorks rdf:type msg0:Permission .
+
+frbr:Endeavour rdf:type owl:Class ;
+               rdfs:label "endeavour"@en ;
+               skos:definition "Any of the products of artistic or creative endeavour."@en ;
+               rdfs:comment "This class represents any one of the FRBR group one entities."@en ;
+               rdfs:isDefinedBy ns0:core ;
+               owl:disjointWith frbr:ResponsibleEntity ,
+                                frbr:Subject ;
+               owl:equivalentClass _:mor52008eac81b0a ;
+               dct:issued "2005-07-15" ;
+               skos:changeNote _:mor52008eac81ca9 ,
+                               _:mor52008eac81d08 ,
+                               _:mor52008eac81d64 .
+
+_:mor52008eac81b0a rdf:type owl:Class ;
+                   rdfs:label "the union of all expressions, items, manifestations and works"@en ;
+                   owl:unionOf _:mor52008eac81b5d .
+
+_:mor52008eac81b5d rdf:first frbr:Expression ;
+                   rdf:rest _:mor52008eac81baa .
+
+frbr:Expression rdf:type owl:Class ;
+                rdfs:label "expression"@en ;
+                skos:definition "A realization of a single work usually in a physical form."@en ;
+                rdfs:comment "This class corresponds to the FRBR group one entity 'Expression'."@en ;
+                rdfs:isDefinedBy ns0:core ;
+                rdfs:subClassOf frbr:Endeavour ;
+                owl:disjointWith frbr:Work ,
+                                 frbr:Item ,
+                                 frbr:Manifestation ;
+                dct:issued "2005-07-15" ;
+                skos:changeNote _:mor52008eac81f9d ,
+                                _:mor52008eac81ff6 ,
+                                _:mor52008eac82051 .
+
+_:mor52008eac81baa rdf:first frbr:Item ;
+                   rdf:rest _:mor52008eac81bfb .
+
+frbr:Item rdf:type owl:Class ;
+          rdfs:label "item"@en ;
+          skos:definition "An exemplar of a single manifestation."@en ;
+          rdfs:comment "This class corresponds to the FRBR group one entity 'Item'."@en ;
+          rdfs:isDefinedBy ns0:core ;
+          rdfs:subClassOf frbr:Endeavour ;
+          owl:disjointWith frbr:Work ,
+                           frbr:Expression ,
+                           frbr:Manifestation ;
+          dct:issued "2005-07-15" ;
+          skos:changeNote _:mor52008eac8221f ,
+                          _:mor52008eac822d1 ,
+                          _:mor52008eac8232e ;
+          skos:historyNote _:mor52008eac8227a ,
+                           _:mor52008eac82387 .
+
+_:mor52008eac81bfb rdf:first frbr:Manifestation ;
+                   rdf:rest _:mor52008eac81c4c .
+
+frbr:Manifestation rdf:type owl:Class ;
+                   rdfs:label "manifestation"@en ;
+                   skos:definition "The physical embodiment of one or more expressions."@en ;
+                   rdfs:comment "This class corresponds to the FRBR group one entity 'Manifestation'."@en ;
+                   rdfs:isDefinedBy ns0:core ;
+                   rdfs:subClassOf frbr:Endeavour ;
+                   owl:disjointWith frbr:Work ,
+                                    frbr:Expression ,
+                                    frbr:Item ;
+                   dct:issued "2005-07-15" ;
+                   skos:changeNote _:mor52008eac820e5 ,
+                                   _:mor52008eac82140 ,
+                                   _:mor52008eac8219c .
+
+_:mor52008eac81c4c rdf:first frbr:Work ;
+                   rdf:rest rdf:nil .
+
+frbr:Work rdf:type owl:Class ;
+          rdfs:label "work"@en ;
+          skos:definition "An abstract notion of an artistic or intellectual creation."@en ;
+          rdfs:comment "This class corresponds to the FRBR group one entity 'Work'."@en ;
+          rdfs:isDefinedBy ns0:core ;
+          rdfs:subClassOf frbr:Endeavour ,
+                          <http://xmlns.com/wordnet/1.6/Work~2> ;
+          owl:disjointWith frbr:Expression ,
+                           frbr:Manifestation ,
+                           frbr:Item ;
+          dct:issued "2005-07-15" ;
+          skos:changeNote _:mor52008eac81dfb ,
+                          _:mor52008eac81e55 ,
+                          _:mor52008eac81f06 ;
+          skos:historyNote _:mor52008eac81eae .
+
+_:mor52008eac81ca9 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac81d08 rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac81d64 rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac81dfb rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac81e55 rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac81eae rdf:value "Made subclass of wordnet:Work~2" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac81f06 rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac81f9d rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac81ff6 rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82051 rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac820e5 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82140 rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8219c rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8221f rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8227a rdf:value "Made subclass of geo:SpatialThing" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac822d1 rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8232e rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82387 rdf:value "Removed subclass of geo:SpatialThing" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:ResponsibleEntity rdf:type owl:Class ;
+                       rdfs:label "responsible entity"@en ;
+                       skos:definition "One responsible for the creation, production, distribution or maintenance of artistic or creative content."@en ;
+                       rdfs:comment "This class represents any of the FRBR group two entities."@en ;
+                       rdfs:isDefinedBy ns0:core ;
+                       owl:disjointWith frbr:Endeavour ,
+                                        frbr:Subject ;
+                       owl:equivalentClass _:mor52008eac82406 ;
+                       dct:issued "2005-07-15" ;
+                       skos:changeNote _:mor52008eac82503 ,
+                                       _:mor52008eac8255c ,
+                                       _:mor52008eac825b5 .
+
+_:mor52008eac82406 rdf:type owl:Class ;
+                   rdfs:label "the union of all people and corporate bodies"@en ;
+                   owl:unionOf _:mor52008eac82458 .
+
+_:mor52008eac82458 rdf:first frbr:CorporateBody ;
+                   rdf:rest _:mor52008eac824a8 .
+
+frbr:CorporateBody rdf:type owl:Class ;
+                   rdfs:label "corporate body"@en ;
+                   skos:definition "An organization or group of individuals and/or other organizations."@en ;
+                   rdfs:comment "This class corresponds to the FRBR group two entity 'Corporate Body'."@en ;
+                   rdfs:isDefinedBy ns0:core ;
+                   rdfs:subClassOf frbr:ResponsibleEntity ;
+                   owl:equivalentClass _:mor52008eac82779 ;
+                   dct:issued "2005-07-15" ;
+                   skos:changeNote _:mor52008eac82874 ,
+                                   _:mor52008eac828ce ,
+                                   _:mor52008eac82925 .
+
+_:mor52008eac824a8 rdf:first foaf:Person ;
+                   rdf:rest rdf:nil .
+
+foaf:Person rdf:type owl:Class ;
+            rdfs:subClassOf frbr:ResponsibleEntity .
+
+_:mor52008eac82503 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8255c rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac825b5 rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:Person rdf:type owl:Class ;
+            rdfs:label "person"@en ;
+            skos:definition "A living or dead individual."@en ;
+            rdfs:comment "This class corresponds to the FRBR group two entity 'Person'."@en ;
+            rdfs:isDefinedBy ns0:core ;
+            owl:disjointWith frbr:Endeavour ,
+                             frbr:Subject ;
+            owl:equivalentClass foaf:Person ;
+            dct:issued "2005-08-08" ;
+            skos:changeNote _:mor52008eac82642 ,
+                            _:mor52008eac8269d ,
+                            _:mor52008eac826f6 .
+
+_:mor52008eac82642 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8269d rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac826f6 rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82779 rdf:type owl:Class ;
+                   rdfs:label "the union of all organizations and groups"@en ;
+                   owl:unionOf _:mor52008eac827c8 .
+
+_:mor52008eac827c8 rdf:first foaf:Organization ;
+                   rdf:rest _:mor52008eac82818 .
+
+foaf:Organization rdf:type owl:Class ;
+                  rdfs:subClassOf frbr:CorporateBody .
+
+_:mor52008eac82818 rdf:first foaf:Group ;
+                   rdf:rest rdf:nil .
+
+foaf:Group rdf:type owl:Class ;
+           rdfs:subClassOf frbr:CorporateBody .
+
+_:mor52008eac82874 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac828ce rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82925 rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:Subject rdf:type owl:Class ;
+             rdfs:label "subject"@en ;
+             skos:definition "Something that may serve as the subject of a work."@en ;
+             rdfs:comment "This class represents any of the FRBR group three entities."@en ;
+             rdfs:isDefinedBy ns0:core ;
+             owl:disjointWith frbr:ResponsibleEntity ,
+                              frbr:Endeavour ;
+             owl:equivalentClass _:mor52008eac829a8 ;
+             dct:issued "2005-07-15" ;
+             skos:changeNote _:mor52008eac82b51 ,
+                             _:mor52008eac82baa ,
+                             _:mor52008eac82c04 .
+
+_:mor52008eac829a8 rdf:type owl:Class ;
+                   rdfs:label "the union of all events, objects, places and concepts"@en ;
+                   owl:unionOf _:mor52008eac82a01 .
+
+_:mor52008eac82a01 rdf:first frbr:Event ;
+                   rdf:rest _:mor52008eac82a50 .
+
+frbr:Event rdf:type owl:Class ;
+           rdfs:label "event"@en ;
+           skos:definition "An action or occurrence."@en ;
+           rdfs:comment "This class corresponds to the FRBR group three entity 'Event'."@en ;
+           rdfs:isDefinedBy ns0:core ;
+           rdfs:subClassOf frbr:Subject ,
+                           ns3:Event ;
+           owl:disjointWith frbr:Place ,
+                            frbr:Object ,
+                            frbr:Concept ;
+           dct:issued "2005-07-15" ;
+           skos:changeNote _:mor52008eac82fdc ,
+                           _:mor52008eac83093 ;
+           skos:historyNote _:mor52008eac83036 .
+
+_:mor52008eac82a50 rdf:first frbr:Object ;
+                   rdf:rest _:mor52008eac82aa0 .
+
+frbr:Object rdf:type owl:Class ;
+            rdfs:label "object"@en ;
+            skos:definition "A tangible or material thing."@en ;
+            rdfs:comment "This class corresponds to the FRBR group three entity 'Object'."@en ;
+            rdfs:isDefinedBy ns0:core ;
+            rdfs:subClassOf frbr:Subject ,
+                            geo:SpatialThing ;
+            owl:disjointWith frbr:Event ,
+                             frbr:Place ,
+                             frbr:Concept ;
+            dct:issued "2005-07-15" ;
+            skos:changeNote _:mor52008eac82e3a ,
+                            _:mor52008eac82e92 ,
+                            _:mor52008eac82f44 ;
+            skos:historyNote _:mor52008eac82eeb .
+
+_:mor52008eac82aa0 rdf:first frbr:Place ;
+                   rdf:rest _:mor52008eac82af4 .
+
+frbr:Place rdf:type owl:Class ;
+           rdfs:label "place"@en ;
+           skos:definition "A location."@en ;
+           rdfs:comment "This class corresponds to the FRBR group three entity 'Place'."@en ;
+           rdfs:isDefinedBy ns0:core ;
+           rdfs:subClassOf frbr:Subject ,
+                           geo:SpatialThing ;
+           owl:disjointWith frbr:Event ,
+                            frbr:Object ,
+                            frbr:Concept ;
+           dct:issued "2005-07-15" ;
+           skos:changeNote _:mor52008eac83122 ,
+                           _:mor52008eac83179 ,
+                           _:mor52008eac83221 ;
+           skos:historyNote _:mor52008eac831c7 .
+
+_:mor52008eac82af4 rdf:first frbr:Concept ;
+                   rdf:rest rdf:nil .
+
+frbr:Concept rdf:type owl:Class ;
+             rdfs:label "concept"@en ;
+             skos:definition "An abstract idea or notion."@en ;
+             rdfs:comment "This class corresponds to the FRBR group three entity 'Concept'."@en ;
+             rdfs:isDefinedBy ns0:core ;
+             rdfs:subClassOf frbr:Subject ,
+                             skos:Concept ;
+             owl:disjointWith frbr:Object ,
+                              frbr:Event ,
+                              frbr:Place ;
+             dct:issued "2005-07-15" ;
+             skos:changeNote _:mor52008eac82c9b ,
+                             _:mor52008eac82cf5 ,
+                             _:mor52008eac82da5 ;
+             skos:historyNote _:mor52008eac82d4e .
+
+_:mor52008eac82b51 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82baa rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82c04 rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82c9b rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82cf5 rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82d4e rdf:value "Made subclass of skos:Concept" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82da5 rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82e3a rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82e92 rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82eeb rdf:value "Made subclass of geo:SpatialThing" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82f44 rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac82fdc rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac83036 rdf:value "Made subclass of owltime:Event" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac83093 rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac83122 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac83179 rdf:value "Added comment" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac831c7 rdf:value "Made subclass of geo:SpatialThing" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac83221 rdf:value "Extracted definition from existing comment" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:ClassicalWork rdf:type owl:Class ;
+                   rdfs:label "classical work"@en ;
+                   rdfs:isDefinedBy ns0:core ;
+                   rdfs:subClassOf frbr:Work ;
+                   dct:issued "2005-10-14" .
+
+frbr:LegalWork rdf:type owl:Class ;
+               rdfs:label "legal work"@en ;
+               rdfs:isDefinedBy ns0:core ;
+               rdfs:subClassOf frbr:Work ;
+               dct:issued "2005-10-14" .
+
+frbr:LiteraryWork rdf:type owl:Class ;
+                  rdfs:label "literary work"@en ;
+                  rdfs:isDefinedBy ns0:core ;
+                  rdfs:subClassOf frbr:Work ;
+                  dct:issued "2005-10-14" .
+
+frbr:ScholarlyWork rdf:type owl:Class ;
+                   rdfs:label "scholarly work"@en ;
+                   rdfs:isDefinedBy ns0:core ;
+                   rdfs:subClassOf frbr:Work ;
+                   dct:issued "2005-10-14" .
+
+frbr:Text rdf:type owl:Class ;
+          rdfs:label "text"@en ;
+          rdfs:isDefinedBy ns0:core ;
+          rdfs:subClassOf frbr:Expression ;
+          dct:issued "2005-10-14" .
+
+frbr:Image rdf:type owl:Class ;
+           rdfs:label "image"@en ;
+           rdfs:isDefinedBy ns0:core ;
+           rdfs:subClassOf frbr:Expression ;
+           dct:issued "2005-10-14" .
+
+frbr:Sound rdf:type owl:Class ;
+           rdfs:label "sound"@en ;
+           rdfs:isDefinedBy ns0:core ;
+           rdfs:subClassOf frbr:Expression ;
+           dct:issued "2005-10-14" .
+
+frbr:MovingImage rdf:type owl:Class ;
+                 rdfs:label "moving image"@en ;
+                 rdfs:isDefinedBy ns0:core ;
+                 rdfs:subClassOf frbr:Expression ;
+                 dct:issued "2005-10-14" .
+
+frbr:Data rdf:type owl:Class ;
+          rdfs:label "data"@en ;
+          rdfs:isDefinedBy ns0:core ;
+          rdfs:subClassOf frbr:Expression ;
+          dct:issued "2005-10-14" .
+
+frbr:Performance rdf:type owl:Class ;
+                 rdfs:label "performance"@en ;
+                 rdfs:isDefinedBy ns0:core ;
+                 rdfs:subClassOf frbr:Expression ;
+                 dct:issued "2005-10-14" .
+
+frbr:relatedEndeavour rdf:type owl:ObjectProperty ;
+                      rdfs:label "related endeavour"@en ;
+                      skos:definition "Another endeavour that is related in some way to an endeavour."@en ;
+                      rdfs:isDefinedBy ns0:core ;
+                      rdfs:domain frbr:Endeavour ;
+                      rdfs:range frbr:Endeavour ;
+                      dct:issued "2005-07-15" ;
+                      skos:changeNote _:mor52008eac8331c ,
+                                      _:mor52008eac83378 .
+
+_:mor52008eac8331c rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac83378 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:realization rdf:type owl:ObjectProperty ;
+                 rdfs:label "realization"@en ;
+                 skos:definition "An expression that is an intellectual or artistic realization of a work."@en ;
+                 rdfs:isDefinedBy ns0:core ;
+                 rdfs:domain frbr:Work ;
+                 rdfs:range frbr:Expression ;
+                 owl:inverseOf frbr:realizationOf ;
+                 rdfs:subPropertyOf frbr:relatedEndeavour ;
+                 dct:issued "2005-07-15" ;
+                 skos:changeNote _:mor52008eac83403 ,
+                                 _:mor52008eac8345b .
+
+_:mor52008eac83403 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8345b rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:realizationOf rdf:type owl:ObjectProperty ;
+                   rdfs:label "realization of"@en ;
+                   rdfs:isDefinedBy ns0:core ;
+                   skos:definition "The work that has been realized by an expression."@en ;
+                   rdfs:domain frbr:Expression ;
+                   rdfs:range frbr:Work ;
+                   owl:inverseOf frbr:realization ;
+                   rdfs:subPropertyOf frbr:relatedEndeavour ;
+                   dct:issued "2005-07-15" ;
+                   skos:changeNote _:mor52008eac834e2 ,
+                                   _:mor52008eac8353b .
+
+_:mor52008eac834e2 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8353b rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:embodiment rdf:type owl:ObjectProperty ;
+                rdfs:label "embodiment"@en ;
+                skos:definition "A manifestation that embodies an expression."@en ;
+                rdfs:isDefinedBy ns0:core ;
+                rdfs:domain frbr:Expression ;
+                rdfs:range frbr:Manifestation ;
+                owl:inverseOf frbr:embodimentOf ;
+                rdfs:subPropertyOf frbr:relatedEndeavour ;
+                dct:issued "2005-07-15" ;
+                skos:changeNote _:mor52008eac835c4 ,
+                                _:mor52008eac8361e .
+
+_:mor52008eac835c4 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8361e rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:embodimentOf rdf:type owl:ObjectProperty ;
+                  rdfs:label "embodiment of"@en ;
+                  rdfs:isDefinedBy ns0:core ;
+                  skos:definition "An expression that is embodied by a manifestation."@en ;
+                  rdfs:domain frbr:Manifestation ;
+                  rdfs:range frbr:Expression ;
+                  owl:inverseOf frbr:embodiment ;
+                  rdfs:subPropertyOf frbr:relatedEndeavour ;
+                  dct:issued "2005-07-15" ;
+                  skos:changeNote _:mor52008eac836a3 ,
+                                  _:mor52008eac83705 .
+
+_:mor52008eac836a3 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac83705 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:exemplar rdf:type owl:ObjectProperty ;
+              rdfs:label "exemplar"@en ;
+              skos:definition "An item that is an exemplar of a manifestation."@en ;
+              rdfs:isDefinedBy ns0:core ;
+              rdfs:domain frbr:Manifestation ;
+              rdfs:range frbr:Item ;
+              owl:inverseOf frbr:exemplarOf ;
+              rdfs:subPropertyOf frbr:relatedEndeavour ;
+              dct:issued "2005-07-15" ;
+              skos:changeNote _:mor52008eac8378e ,
+                              _:mor52008eac837e6 .
+
+_:mor52008eac8378e rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac837e6 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:exemplarOf rdf:type owl:ObjectProperty ;
+                rdfs:label "exemplar of"@en ;
+                skos:definition "The manifestation that is exemplified by a item."@en ;
+                rdfs:isDefinedBy ns0:core ;
+                rdfs:domain frbr:Item ;
+                rdfs:range frbr:Manifestation ;
+                owl:inverseOf frbr:exemplar ;
+                rdfs:subPropertyOf frbr:relatedEndeavour ;
+                dct:issued "2005-07-15" ;
+                skos:changeNote _:mor52008eac83875 ,
+                                _:mor52008eac838cd .
+
+_:mor52008eac83875 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac838cd rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:reproduction rdf:type owl:ObjectProperty ;
+                  rdfs:label "reproduction"@en ;
+                  skos:definition "A reproduction of a manifestation or item."@en ;
+                  rdfs:isDefinedBy ns0:core ;
+                  owl:inverseOf frbr:reproductionOf ;
+                  rdfs:subPropertyOf frbr:relatedEndeavour ;
+                  rdfs:domain _:mor52008eac83952 ;
+                  rdfs:range _:mor52008eac83a49 ;
+                  dct:issued "2005-07-15" ;
+                  skos:changeNote _:mor52008eac83b43 ,
+                                  _:mor52008eac83b9e ;
+                  skos:historyNote _:mor52008eac83bf5 .
+
+_:mor52008eac83952 rdf:type owl:Class ;
+                   rdfs:label "a manifestation or an item"@en ;
+                   owl:unionOf _:mor52008eac839a5 .
+
+_:mor52008eac839a5 rdf:first frbr:Manifestation ;
+                   rdf:rest _:mor52008eac839f6 .
+
+_:mor52008eac839f6 rdf:first frbr:Item ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac83a49 rdf:type owl:Class ;
+                   rdfs:label "a manifestation or an item"@en ;
+                   owl:unionOf _:mor52008eac83a9a .
+
+_:mor52008eac83a9a rdf:first frbr:Manifestation ;
+                   rdf:rest _:mor52008eac83aeb .
+
+_:mor52008eac83aeb rdf:first frbr:Item ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac83b43 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac83b9e rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac83bf5 rdf:value "Added domain and range of Manifestation or Item" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:reproductionOf rdf:type owl:ObjectProperty ;
+                    rdfs:label "reproduction of"@en ;
+                    skos:definition "A manifestation or item that is reproduced."@en ;
+                    rdfs:isDefinedBy ns0:core ;
+                    owl:inverseOf frbr:reproduction ;
+                    rdfs:subPropertyOf frbr:relatedEndeavour ;
+                    rdfs:domain _:mor52008eac83c6d ;
+                    rdfs:range _:mor52008eac83d65 ;
+                    dct:issued "2005-07-15" ;
+                    skos:changeNote _:mor52008eac83e61 ,
+                                    _:mor52008eac83eba ;
+                    skos:historyNote _:mor52008eac83f14 .
+
+_:mor52008eac83c6d rdf:type owl:Class ;
+                   rdfs:label "a manifestation or an item"@en ;
+                   owl:unionOf _:mor52008eac83cbe .
+
+_:mor52008eac83cbe rdf:first frbr:Manifestation ;
+                   rdf:rest _:mor52008eac83d0e .
+
+_:mor52008eac83d0e rdf:first frbr:Item ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac83d65 rdf:type owl:Class ;
+                   rdfs:label "a manifestation or an item"@en ;
+                   owl:unionOf _:mor52008eac83db7 .
+
+_:mor52008eac83db7 rdf:first frbr:Manifestation ;
+                   rdf:rest _:mor52008eac83e05 .
+
+_:mor52008eac83e05 rdf:first frbr:Item ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac83e61 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac83eba rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac83f14 rdf:value "Added domain and range of Manifestation or Item" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:successor rdf:type owl:ObjectProperty ;
+               rdfs:label "successor"@en ;
+               skos:definition "A successor to a work or expression."@en ;
+               rdfs:isDefinedBy ns0:core ;
+               owl:inverseOf frbr:successorOf ;
+               rdfs:subPropertyOf frbr:relatedEndeavour ;
+               rdfs:domain _:mor52008eac83f8c ;
+               rdfs:range _:mor52008eac8407a ;
+               dct:issued "2005-07-15" ;
+               skos:changeNote _:mor52008eac8416e ,
+                               _:mor52008eac841c7 ;
+               skos:historyNote _:mor52008eac84220 .
+
+_:mor52008eac83f8c rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac83fd6 .
+
+_:mor52008eac83fd6 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac84023 .
+
+_:mor52008eac84023 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac8407a rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac840c4 .
+
+_:mor52008eac840c4 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac84111 .
+
+_:mor52008eac84111 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac8416e rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac841c7 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac84220 rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:successorOf rdf:type owl:ObjectProperty ;
+                 rdfs:label "successor of"@en ;
+                 skos:definition "A work or expression that is succeeded."@en ;
+                 rdfs:isDefinedBy ns0:core ;
+                 owl:inverseOf frbr:successor ;
+                 rdfs:domain _:mor52008eac8429b ;
+                 rdfs:range _:mor52008eac8438b ;
+                 rdfs:subPropertyOf frbr:relatedEndeavour ;
+                 dct:issued "2005-07-15" ;
+                 skos:changeNote _:mor52008eac84484 ,
+                                 _:mor52008eac844dc ;
+                 skos:historyNote _:mor52008eac84535 .
+
+_:mor52008eac8429b rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac842e6 .
+
+_:mor52008eac842e6 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac84333 .
+
+_:mor52008eac84333 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac8438b rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac843d3 .
+
+_:mor52008eac843d3 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac84423 .
+
+_:mor52008eac84423 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac84484 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac844dc rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac84535 rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:supplement rdf:type owl:ObjectProperty ;
+                rdfs:label "supplement"@en ;
+                skos:definition "A supplement to a work or expression."@en ;
+                rdfs:isDefinedBy ns0:core ;
+                owl:inverseOf frbr:supplementOf ;
+                rdfs:subPropertyOf frbr:relatedEndeavour ;
+                rdfs:domain _:mor52008eac845b0 ;
+                rdfs:range _:mor52008eac846b3 ;
+                dct:issued "2005-07-15" ;
+                skos:changeNote _:mor52008eac847a6 ,
+                                _:mor52008eac847fe ;
+                skos:historyNote _:mor52008eac84857 .
+
+_:mor52008eac845b0 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac845fb .
+
+_:mor52008eac845fb rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac84648 .
+
+_:mor52008eac84648 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac846b3 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac846fd .
+
+_:mor52008eac846fd rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac8474a .
+
+_:mor52008eac8474a rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac847a6 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac847fe rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac84857 rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:supplementOf rdf:type owl:ObjectProperty ;
+                  rdfs:label "supplement of"@en ;
+                  skos:definition "A work or expression that is supplemented."@en ;
+                  rdfs:isDefinedBy ns0:core ;
+                  owl:inverseOf frbr:supplement ;
+                  rdfs:subPropertyOf frbr:relatedEndeavour ;
+                  rdfs:domain _:mor52008eac848cf ;
+                  rdfs:range _:mor52008eac849bc ;
+                  dct:issued "2005-07-15" ;
+                  skos:changeNote _:mor52008eac84ab4 ,
+                                  _:mor52008eac84b0d ;
+                  skos:historyNote _:mor52008eac84b6b .
+
+_:mor52008eac848cf rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac84919 .
+
+_:mor52008eac84919 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac84966 .
+
+_:mor52008eac84966 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac849bc rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac84a06 .
+
+_:mor52008eac84a06 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac84a52 .
+
+_:mor52008eac84a52 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac84ab4 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac84b0d rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac84b6b rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:complement rdf:type owl:ObjectProperty ;
+                rdfs:label "complement"@en ;
+                skos:definition "A complement to a work or expression."@en ;
+                rdfs:isDefinedBy ns0:core ;
+                owl:inverseOf frbr:complementOf ;
+                rdfs:subPropertyOf frbr:relatedEndeavour ;
+                rdfs:domain _:mor52008eac84be2 ;
+                rdfs:range _:mor52008eac84ccf ;
+                dct:issued "2005-07-15" ;
+                skos:changeNote _:mor52008eac84dc2 ,
+                                _:mor52008eac84e1c ;
+                skos:historyNote _:mor52008eac84e78 .
+
+_:mor52008eac84be2 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac84c2c .
+
+_:mor52008eac84c2c rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac84c7c .
+
+_:mor52008eac84c7c rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac84ccf rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac84d19 .
+
+_:mor52008eac84d19 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac84d67 .
+
+_:mor52008eac84d67 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac84dc2 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac84e1c rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac84e78 rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:complementOf rdf:type owl:ObjectProperty ;
+                  rdfs:label "complement of"@en ;
+                  skos:definition "A work or expression that is complemented."@en ;
+                  rdfs:isDefinedBy ns0:core ;
+                  owl:inverseOf frbr:complement ;
+                  rdfs:subPropertyOf frbr:relatedEndeavour ;
+                  rdfs:domain _:mor52008eac84eef ;
+                  rdfs:range _:mor52008eac84fdb ;
+                  dct:issued "2005-07-15" ;
+                  skos:changeNote _:mor52008eac850ce ,
+                                  _:mor52008eac85126 ;
+                  skos:historyNote _:mor52008eac8517f .
+
+_:mor52008eac84eef rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac84f38 .
+
+_:mor52008eac84f38 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac84f88 .
+
+_:mor52008eac84f88 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac84fdb rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac85025 .
+
+_:mor52008eac85025 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac85072 .
+
+_:mor52008eac85072 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac850ce rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac85126 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8517f rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:summarization rdf:type owl:ObjectProperty ;
+                   rdfs:label "summarization"@en ;
+                   skos:definition "A summarization of a work or expression."@en ;
+                   rdfs:isDefinedBy ns0:core ;
+                   owl:inverseOf frbr:summarizationOf ;
+                   rdfs:subPropertyOf frbr:relatedEndeavour ;
+                   rdfs:domain _:mor52008eac851f6 ;
+                   rdfs:range _:mor52008eac852e3 ;
+                   dct:issued "2005-07-15" ;
+                   skos:changeNote _:mor52008eac853d8 ,
+                                   _:mor52008eac85430 ;
+                   skos:historyNote _:mor52008eac8548e .
+
+_:mor52008eac851f6 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac85240 .
+
+_:mor52008eac85240 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac85290 .
+
+_:mor52008eac85290 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac852e3 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac8532f .
+
+_:mor52008eac8532f rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac8537c .
+
+_:mor52008eac8537c rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac853d8 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac85430 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8548e rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:summarizationOf rdf:type owl:ObjectProperty ;
+                     rdfs:label "summarization of"@en ;
+                     skos:definition "A work or expression that is summarized."@en ;
+                     rdfs:isDefinedBy ns0:core ;
+                     owl:inverseOf frbr:summarization ;
+                     rdfs:subPropertyOf frbr:relatedEndeavour ;
+                     rdfs:domain _:mor52008eac85504 ;
+                     rdfs:range _:mor52008eac855f1 ;
+                     dct:issued "2005-07-15" ;
+                     skos:changeNote _:mor52008eac856e5 ,
+                                     _:mor52008eac8573d ;
+                     skos:historyNote _:mor52008eac85796 .
+
+_:mor52008eac85504 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac8554e .
+
+_:mor52008eac8554e rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac8559e .
+
+_:mor52008eac8559e rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac855f1 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac8563c .
+
+_:mor52008eac8563c rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac8568c .
+
+_:mor52008eac8568c rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac856e5 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8573d rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac85796 rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:adaption rdf:type owl:ObjectProperty ;
+              rdfs:label "adaption"@en ;
+              skos:definition "An adaption of a work or expression."@en ;
+              rdfs:isDefinedBy ns0:core ;
+              owl:inverseOf frbr:adaptionOf ;
+              rdfs:subPropertyOf frbr:relatedEndeavour ;
+              rdfs:domain _:mor52008eac8580e ;
+              rdfs:range _:mor52008eac858fb ;
+              dct:issued "2005-07-15" ;
+              skos:changeNote _:mor52008eac85a00 ,
+                              _:mor52008eac85a58 ;
+              skos:historyNote _:mor52008eac85ab2 .
+
+_:mor52008eac8580e rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac85858 .
+
+_:mor52008eac85858 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac858a8 .
+
+_:mor52008eac858a8 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac858fb rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac85944 .
+
+_:mor52008eac85944 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac859a2 .
+
+_:mor52008eac859a2 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac85a00 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac85a58 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac85ab2 rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:adaptionOf rdf:type owl:ObjectProperty ;
+                rdfs:label "adaption of"@en ;
+                skos:definition "A work or expression that is adapted."@en ;
+                rdfs:isDefinedBy ns0:core ;
+                owl:inverseOf frbr:adaption ;
+                rdfs:subPropertyOf frbr:relatedEndeavour ;
+                rdfs:domain _:mor52008eac85b29 ;
+                rdfs:range _:mor52008eac85c16 ;
+                dct:issued "2005-07-15" ;
+                skos:changeNote _:mor52008eac85d09 ,
+                                _:mor52008eac85d68 ;
+                skos:historyNote _:mor52008eac85dc5 .
+
+_:mor52008eac85b29 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac85b73 .
+
+_:mor52008eac85b73 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac85bc0 .
+
+_:mor52008eac85bc0 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac85c16 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac85c60 .
+
+_:mor52008eac85c60 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac85cad .
+
+_:mor52008eac85cad rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac85d09 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac85d68 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac85dc5 rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:transformation rdf:type owl:ObjectProperty ;
+                    rdfs:label "transformation"@en ;
+                    skos:definition "A transformation of a work or expression."@en ;
+                    rdfs:isDefinedBy ns0:core ;
+                    owl:inverseOf frbr:transformationOf ;
+                    rdfs:subPropertyOf frbr:relatedEndeavour ;
+                    rdfs:domain _:mor52008eac85e3d ;
+                    rdfs:range _:mor52008eac85f2d ;
+                    dct:issued "2005-07-15" ;
+                    skos:changeNote _:mor52008eac86020 ,
+                                    _:mor52008eac86078 ;
+                    skos:historyNote _:mor52008eac860d1 .
+
+_:mor52008eac85e3d rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac85e88 .
+
+_:mor52008eac85e88 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac85ed6 .
+
+_:mor52008eac85ed6 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac85f2d rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac85f76 .
+
+_:mor52008eac85f76 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac85fc3 .
+
+_:mor52008eac85fc3 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac86020 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86078 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac860d1 rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:transformationOf rdf:type owl:ObjectProperty ;
+                      rdfs:label "transformation of"@en ;
+                      skos:definition "A work or expression that is transformed."@en ;
+                      rdfs:isDefinedBy ns0:core ;
+                      owl:inverseOf frbr:transformation ;
+                      rdfs:subPropertyOf frbr:relatedEndeavour ;
+                      rdfs:domain _:mor52008eac86147 ;
+                      rdfs:range _:mor52008eac86236 ;
+                      dct:issued "2005-07-15" ;
+                      skos:changeNote _:mor52008eac8632b ,
+                                      _:mor52008eac86383 ;
+                      skos:historyNote _:mor52008eac863dc .
+
+_:mor52008eac86147 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac86191 .
+
+_:mor52008eac86191 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac861df .
+
+_:mor52008eac861df rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac86236 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac86280 .
+
+_:mor52008eac86280 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac862ce .
+
+_:mor52008eac862ce rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac8632b rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86383 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac863dc rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:imitation rdf:type owl:ObjectProperty ;
+               rdfs:label "imitation"@en ;
+               skos:definition "An imitation of a work or expression."@en ;
+               rdfs:isDefinedBy ns0:core ;
+               owl:inverseOf frbr:imitationOf ;
+               rdfs:subPropertyOf frbr:relatedEndeavour ;
+               rdfs:domain _:mor52008eac86453 ;
+               rdfs:range _:mor52008eac86544 ;
+               dct:issued "2005-07-15" ;
+               skos:changeNote _:mor52008eac86641 ,
+                               _:mor52008eac86699 ;
+               skos:historyNote _:mor52008eac866f3 .
+
+_:mor52008eac86453 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac864a1 .
+
+_:mor52008eac864a1 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac864ee .
+
+_:mor52008eac864ee rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac86544 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac86590 .
+
+_:mor52008eac86590 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac865df .
+
+_:mor52008eac865df rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac86641 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86699 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac866f3 rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:imitationOf rdf:type owl:ObjectProperty ;
+                 rdfs:label "imitation of"@en ;
+                 skos:definition "A work or expression that is imitated."@en ;
+                 rdfs:isDefinedBy ns0:core ;
+                 owl:inverseOf frbr:imitation ;
+                 rdfs:subPropertyOf frbr:relatedEndeavour ;
+                 rdfs:domain _:mor52008eac8676a ;
+                 rdfs:range _:mor52008eac86858 ;
+                 dct:issued "2005-07-15" ;
+                 skos:changeNote _:mor52008eac8694c ,
+                                 _:mor52008eac869a3 ;
+                 skos:historyNote _:mor52008eac869fc .
+
+_:mor52008eac8676a rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac867b4 .
+
+_:mor52008eac867b4 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac86801 .
+
+_:mor52008eac86801 rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac86858 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac868a2 .
+
+_:mor52008eac868a2 rdf:first frbr:Work ;
+                   rdf:rest _:mor52008eac868ef .
+
+_:mor52008eac868ef rdf:first frbr:Expression ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac8694c rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac869a3 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac869fc rdf:value "Added domain and range of Work or Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:abridgement rdf:type owl:ObjectProperty ;
+                 rdfs:label "abridgement"@en ;
+                 skos:definition "An abridgment of an expression."@en ;
+                 rdfs:isDefinedBy ns0:core ;
+                 owl:inverseOf frbr:abridgementOf ;
+                 rdfs:subPropertyOf frbr:relatedEndeavour ;
+                 rdfs:domain frbr:Expression ;
+                 rdfs:range frbr:Expression ;
+                 dct:issued "2005-07-15" ;
+                 skos:changeNote _:mor52008eac86a82 ,
+                                 _:mor52008eac86ada ;
+                 skos:historyNote _:mor52008eac86b34 .
+
+_:mor52008eac86a82 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86ada rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86b34 rdf:value "Added domain and range of Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:abridgementOf rdf:type owl:ObjectProperty ;
+                   rdfs:label "abridgement of"@en ;
+                   skos:definition "An expression that is abridged."@en ;
+                   rdfs:isDefinedBy ns0:core ;
+                   owl:inverseOf frbr:abridgement ;
+                   rdfs:subPropertyOf frbr:relatedEndeavour ;
+                   rdfs:domain frbr:Expression ;
+                   rdfs:range frbr:Expression ;
+                   dct:issued "2005-07-15" ;
+                   skos:changeNote _:mor52008eac86bba ,
+                                   _:mor52008eac86c15 ;
+                   skos:historyNote _:mor52008eac86c6c .
+
+_:mor52008eac86bba rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86c15 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86c6c rdf:value "Added domain and range of Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:revision rdf:type owl:ObjectProperty ;
+              rdfs:label "revision"@en ;
+              skos:definition "A revision of an expression."@en ;
+              rdfs:isDefinedBy ns0:core ;
+              owl:inverseOf frbr:revisionOf ;
+              rdfs:subPropertyOf frbr:relatedEndeavour ;
+              rdfs:domain frbr:Expression ;
+              rdfs:range frbr:Expression ;
+              dct:issued "2005-07-15" ;
+              skos:changeNote _:mor52008eac86cf0 ,
+                              _:mor52008eac86d4d ;
+              skos:historyNote _:mor52008eac86da7 .
+
+_:mor52008eac86cf0 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86d4d rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86da7 rdf:value "Added domain and range of Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:revisionOf rdf:type owl:ObjectProperty ;
+                rdfs:label "revision of"@en ;
+                skos:definition "An expression that is revised."@en ;
+                rdfs:isDefinedBy ns0:core ;
+                owl:inverseOf frbr:revision ;
+                rdfs:domain frbr:Expression ;
+                rdfs:range frbr:Expression ;
+                rdfs:subPropertyOf frbr:relatedEndeavour ;
+                dct:issued "2005-07-15" ;
+                skos:changeNote _:mor52008eac86e31 ,
+                                _:mor52008eac86e89 ;
+                skos:historyNote _:mor52008eac86ee2 .
+
+_:mor52008eac86e31 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86e89 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86ee2 rdf:value "Added domain and range of Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:translation rdf:type owl:ObjectProperty ;
+                 rdfs:label "translation"@en ;
+                 skos:definition "A translation of an expression."@en ;
+                 rdfs:isDefinedBy ns0:core ;
+                 owl:inverseOf frbr:translationOf ;
+                 rdfs:subPropertyOf frbr:relatedEndeavour ;
+                 rdfs:domain frbr:Expression ;
+                 rdfs:range frbr:Expression ;
+                 dct:issued "2005-07-15" ;
+                 skos:changeNote _:mor52008eac86f6a ,
+                                 _:mor52008eac86fc2 ;
+                 skos:historyNote _:mor52008eac8701c .
+
+_:mor52008eac86f6a rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac86fc2 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8701c rdf:value "Added domain and range of Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:translationOf rdf:type owl:ObjectProperty ;
+                   rdfs:label "translation of"@en ;
+                   skos:definition "An expression that is translated."@en ;
+                   rdfs:isDefinedBy ns0:core ;
+                   owl:inverseOf frbr:translation ;
+                   rdfs:subPropertyOf frbr:relatedEndeavour ;
+                   rdfs:domain frbr:Expression ;
+                   rdfs:range frbr:Expression ;
+                   dct:issued "2005-07-15" ;
+                   skos:changeNote _:mor52008eac8709f ,
+                                   _:mor52008eac870fa ;
+                   skos:historyNote _:mor52008eac87151 .
+
+_:mor52008eac8709f rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac870fa rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac87151 rdf:value "Added domain and range of Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:arrangement rdf:type owl:ObjectProperty ;
+                 rdfs:label "arrangement"@en ;
+                 skos:definition "An arrangement of an expression."@en ;
+                 rdfs:isDefinedBy ns0:core ;
+                 owl:inverseOf frbr:arrangementOf ;
+                 rdfs:subPropertyOf frbr:relatedEndeavour ;
+                 rdfs:domain frbr:Expression ;
+                 rdfs:range frbr:Expression ;
+                 dct:issued "2005-07-15" ;
+                 skos:changeNote _:mor52008eac871d7 ,
+                                 _:mor52008eac87234 ;
+                 skos:historyNote _:mor52008eac8728e .
+
+_:mor52008eac871d7 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac87234 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8728e rdf:value "Added domain and range of Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:arrangementOf rdf:type owl:ObjectProperty ;
+                   rdfs:label "arrangement of"@en ;
+                   skos:definition "An expression that is arranged."@en ;
+                   rdfs:isDefinedBy ns0:core ;
+                   owl:inverseOf frbr:arrangement ;
+                   rdfs:subPropertyOf frbr:relatedEndeavour ;
+                   rdfs:domain frbr:Expression ;
+                   rdfs:range frbr:Expression ;
+                   dct:issued "2005-07-15" ;
+                   skos:changeNote _:mor52008eac87317 ,
+                                   _:mor52008eac87374 ;
+                   skos:historyNote _:mor52008eac873ce .
+
+_:mor52008eac87317 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac87374 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac873ce rdf:value "Added domain and range of Expression" ;
+                   dc:date "2005-08-10" ;
+                   dc:creator "Ian Davis" .
+
+frbr:alternate rdf:type owl:ObjectProperty ;
+               rdfs:label "alternate"@en ;
+               skos:definition "An alternative to a manifestation."@en ;
+               rdfs:isDefinedBy ns0:core ;
+               rdfs:domain frbr:Manifestation ;
+               rdfs:range frbr:Manifestation ;
+               rdfs:subPropertyOf frbr:relatedEndeavour ;
+               owl:inverseOf frbr:alternateOf ;
+               dct:issued "2005-08-10" .
+
+frbr:alternateOf rdf:type owl:ObjectProperty ;
+                 rdfs:label "alternate of"@en ;
+                 skos:definition "A manifestation that is alternated."@en ;
+                 rdfs:isDefinedBy ns0:core ;
+                 rdfs:domain frbr:Manifestation ;
+                 rdfs:range frbr:Manifestation ;
+                 rdfs:subPropertyOf frbr:relatedEndeavour ;
+                 owl:inverseOf frbr:alternate ;
+                 dct:issued "2005-08-10" .
+
+frbr:reconfiguration rdf:type owl:ObjectProperty ;
+                     rdfs:label "reconfiguration"@en ;
+                     skos:definition "A recongifuration of an item."@en ;
+                     rdfs:isDefinedBy ns0:core ;
+                     rdfs:domain frbr:Item ;
+                     rdfs:range frbr:Item ;
+                     rdfs:subPropertyOf frbr:relatedEndeavour ;
+                     owl:inverseOf frbr:reconfigurationOf ;
+                     dct:issued "2005-08-10" .
+
+frbr:reconfigurationOf rdf:type owl:ObjectProperty ;
+                       rdfs:label "reconfiguration of"@en ;
+                       skos:definition "An item that is reconfigured."@en ;
+                       rdfs:isDefinedBy ns0:core ;
+                       rdfs:domain frbr:Item ;
+                       rdfs:range frbr:Item ;
+                       rdfs:subPropertyOf frbr:relatedEndeavour ;
+                       owl:inverseOf frbr:reconfiguration ;
+                       dct:issued "2005-08-10" .
+
+frbr:part rdf:type owl:ObjectProperty ;
+          rdfs:label "part"@en ;
+          skos:definition "A part of an endeavour."@en ;
+          rdfs:isDefinedBy ns0:core ;
+          owl:inverseOf frbr:partOf ;
+          rdfs:subPropertyOf frbr:relatedEndeavour ;
+          dct:issued "2005-07-15" ;
+          skos:changeNote _:mor52008eac87505 ,
+                          _:mor52008eac87538 .
+
+_:mor52008eac87505 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac87538 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:partOf rdf:type owl:ObjectProperty ;
+            rdfs:label "part of"@en ;
+            skos:definition "An endeavour incorporating an endeavour."@en ;
+            rdfs:isDefinedBy ns0:core ;
+            owl:inverseOf frbr:part ;
+            rdfs:subPropertyOf frbr:relatedEndeavour ;
+            dct:issued "2005-07-15" ;
+            skos:changeNote _:mor52008eac875b6 ,
+                            _:mor52008eac87611 .
+
+_:mor52008eac875b6 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac87611 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:responsibleEntity rdf:type owl:ObjectProperty ;
+                       rdfs:label "responsible entity"@en ;
+                       skos:definition "An entity in some way responsible for an endeavour."@en ;
+                       rdfs:isDefinedBy ns0:core ;
+                       rdfs:domain frbr:Endeavour ;
+                       rdfs:range frbr:ResponsibleEntity ;
+                       owl:inverseOf frbr:responsibleEntityOf ;
+                       dct:issued "2005-07-15" ;
+                       skos:changeNote _:mor52008eac87693 ,
+                                       _:mor52008eac876eb .
+
+_:mor52008eac87693 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac876eb rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:responsibleEntityOf rdf:type owl:ObjectProperty ;
+                         rdfs:label "responsible entity of"@en ;
+                         skos:definition "An endeavour that is the responsibility of an entity."@en ;
+                         rdfs:isDefinedBy ns0:core ;
+                         rdfs:domain frbr:ResponsibleEntity ;
+                         rdfs:range frbr:Endeavour ;
+                         owl:inverseOf frbr:responsibleEntity ;
+                         dct:issued "2005-07-15" ;
+                         skos:changeNote _:mor52008eac8776e ,
+                                         _:mor52008eac877c7 .
+
+_:mor52008eac8776e rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac877c7 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:creator rdf:type owl:ObjectProperty ;
+             rdfs:label "creator"@en ;
+             skos:definition "An entity in some way responsible for the creation of a work."@en ;
+             rdfs:isDefinedBy ns0:core ;
+             rdfs:domain frbr:Work ;
+             rdfs:range frbr:ResponsibleEntity ;
+             rdfs:subPropertyOf frbr:responsibleEntity ;
+             owl:inverseOf frbr:creatorOf ;
+             dct:issued "2005-07-15" ;
+             skos:changeNote _:mor52008eac87854 ,
+                             _:mor52008eac878ae .
+
+_:mor52008eac87854 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac878ae rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:creatorOf rdf:type owl:ObjectProperty ;
+               rdfs:label "creator of"@en ;
+               skos:definition "A work that was in some way created by of an entity."@en ;
+               rdfs:isDefinedBy ns0:core ;
+               rdfs:domain frbr:ResponsibleEntity ;
+               rdfs:range frbr:Work ;
+               rdfs:subPropertyOf frbr:responsibleEntityOf ;
+               owl:inverseOf frbr:creator ;
+               dct:issued "2005-07-15" ;
+               skos:changeNote _:mor52008eac87935 ,
+                               _:mor52008eac8799b .
+
+_:mor52008eac87935 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac8799b rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:realizer rdf:type owl:ObjectProperty ;
+              rdfs:label "realizer"@en ;
+              skos:definition "An entity in some way responsible for realizing an expression."@en ;
+              rdfs:isDefinedBy ns0:core ;
+              rdfs:domain frbr:Expression ;
+              rdfs:range frbr:ResponsibleEntity ;
+              rdfs:subPropertyOf frbr:responsibleEntity ;
+              owl:inverseOf frbr:realizerOf ;
+              dct:issued "2005-07-15" ;
+              skos:changeNote _:mor52008eac87a24 ,
+                              _:mor52008eac87a7d .
+
+_:mor52008eac87a24 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac87a7d rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:realizerOf rdf:type owl:ObjectProperty ;
+                rdfs:label "realizer of"@en ;
+                skos:definition "An expression that was in some way realized by an entity."@en ;
+                rdfs:isDefinedBy ns0:core ;
+                rdfs:domain frbr:ResponsibleEntity ;
+                rdfs:range frbr:Expression ;
+                rdfs:subPropertyOf frbr:responsibleEntityOf ;
+                owl:inverseOf frbr:realizer ;
+                dct:issued "2005-07-15" ;
+                skos:changeNote _:mor52008eac87b04 ,
+                                _:mor52008eac87b5c .
+
+_:mor52008eac87b04 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac87b5c rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:producer rdf:type owl:ObjectProperty ;
+              rdfs:label "producer"@en ;
+              skos:definition "An entity in some way responsible for producing a manifestation."@en ;
+              rdfs:isDefinedBy ns0:core ;
+              rdfs:domain frbr:Manifestation ;
+              rdfs:range frbr:ResponsibleEntity ;
+              rdfs:subPropertyOf frbr:responsibleEntity ;
+              owl:inverseOf frbr:producerOf ;
+              dct:issued "2005-07-15" ;
+              skos:changeNote _:mor52008eac87be6 ,
+                              _:mor52008eac87c3e .
+
+_:mor52008eac87be6 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac87c3e rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:producerOf rdf:type owl:ObjectProperty ;
+                rdfs:label "producer of"@en ;
+                skos:definition "A manifestation that was in some way produced an entity."@en ;
+                rdfs:isDefinedBy ns0:core ;
+                rdfs:domain frbr:ResponsibleEntity ;
+                rdfs:range frbr:Manifestation ;
+                rdfs:subPropertyOf frbr:responsibleEntityOf ;
+                owl:inverseOf frbr:producer ;
+                dct:issued "2005-07-15" ;
+                skos:changeNote _:mor52008eac87ccd ,
+                                _:mor52008eac87d4c .
+
+_:mor52008eac87ccd rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac87d4c rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:owner rdf:type owl:ObjectProperty ;
+           rdfs:label "owner"@en ;
+           skos:definition "An entity that owns an item."@en ;
+           rdfs:isDefinedBy ns0:core ;
+           rdfs:domain frbr:Item ;
+           rdfs:range frbr:ResponsibleEntity ;
+           rdfs:subPropertyOf frbr:responsibleEntity ;
+           owl:inverseOf frbr:ownerOf ;
+           dct:issued "2005-07-15" ;
+           skos:changeNote _:mor52008eac87de8 ,
+                           _:mor52008eac87e43 .
+
+_:mor52008eac87de8 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac87e43 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:ownerOf rdf:type owl:ObjectProperty ;
+             rdfs:label "owner of"@en ;
+             skos:definition "An item that is in some way owned an entity."@en ;
+             rdfs:isDefinedBy ns0:core ;
+             rdfs:domain frbr:ResponsibleEntity ;
+             rdfs:range frbr:Item ;
+             rdfs:subPropertyOf frbr:responsibleEntityOf ;
+             owl:inverseOf frbr:owner ;
+             dct:issued "2005-07-15" ;
+             skos:changeNote _:mor52008eac87eca ,
+                             _:mor52008eac87f26 .
+
+_:mor52008eac87eca rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac87f26 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .
+
+frbr:subject rdf:type owl:ObjectProperty ;
+             rdfs:label "subject"@en ;
+             skos:definition "The subject of a work."@en ;
+             rdfs:isDefinedBy ns0:core ;
+             rdfs:domain frbr:Work ;
+             rdfs:range _:mor52008eac87f99 ;
+             dct:issued "2005-07-15" ;
+             skos:changeNote _:mor52008eac880d3 ,
+                             _:mor52008eac88134 .
+
+_:mor52008eac87f99 rdf:type owl:Class ;
+                   owl:unionOf _:mor52008eac87fe5 .
+
+_:mor52008eac87fe5 rdf:first frbr:Endeavour ;
+                   rdf:rest _:mor52008eac88037 .
+
+_:mor52008eac88037 rdf:first frbr:ResponsibleEntity ;
+                   rdf:rest _:mor52008eac88086 .
+
+_:mor52008eac88086 rdf:first frbr:Subject ;
+                   rdf:rest rdf:nil .
+
+_:mor52008eac880d3 rdf:value "Added isDefinedBy property referring to FRBR core namespace" ;
+                   dc:date "2005-08-08" ;
+                   dc:creator "Ian Davis" .
+
+_:mor52008eac88134 rdf:value "Added definition" ;
+                   dc:date "2005-08-09" ;
+                   dc:creator "Ian Davis" .

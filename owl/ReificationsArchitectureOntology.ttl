@@ -71,9 +71,16 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 :EmploymentRelation a owl:Class ;
     rdfs:subClassOf :Relationship ; 
     rdfs:subClassOf :RelatedToRelation .
+
 #
 # Reification properties.
 #
+
+:hasRelationship a owl:ObjectProperty ;
+    :label "Has Relationship" ;
+    rdfs:range :Relationship ;
+    :display false;
+    :editable false .
 
 :entailsRelationship a owl:AnnotationProperty ;
     :label "Entails Relationship" ;
@@ -136,6 +143,8 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     :label "Employed By" ;
     :display true ;
     :editable false ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Agent ;
     :entailsRelationship :EmploymentRelation .
 
 :taughtBy a owl:ObjectProperty ;
@@ -158,8 +167,8 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     :label "Partner Of" ;
     :display true ;
     :editable false ;
-    rdfs:domain :Firm ;
-    rdfs:range foaf:Person ;
+    rdfs:domain foaf:Person ;
+    rdfs:range :Firm ;
     :entailsRelationship :EmploymentRelation .
 
 :relatedTo a owl:ObjectProperty ;
@@ -167,6 +176,7 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     :label "Related To" ;
     :display false ;
     :editable false .
+
 # NOTE: relatedTo does not entail a reified relationship, as then it would be evidence of itself.
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:
