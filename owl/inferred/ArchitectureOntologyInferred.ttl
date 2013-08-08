@@ -936,7 +936,7 @@ frbr:embodiment rdfs:seeAlso frbr:embodiment.
 <http://purl.org/dc/terms/created> a rdfs:Resource.
 <http://purl.org/dc/terms/created> a rdf:Property.
 <http://purl.org/dc/terms/created> :label "Date Created".
-<http://purl.org/dc/terms/created> :display true .
+<http://purl.org/dc/terms/created> :display false .
 <http://purl.org/dc/terms/created> :editable false .
 <http://purl.org/dc/terms/created> :displayPrecedence 60 .
 <http://purl.org/dc/terms/created> rdfs:isDefinedBy <http://purl.org/dc/terms/created>.
@@ -1087,5 +1087,5 @@ skos:narrowerTransitive a rdfs:Resource.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 0.182 [sec] TC=1857 TP=30788 BC=0 BP=8608 PM=0 CM=0 FM=0 AM=0
+#ENDS 0.185 [sec] TC=1857 TP=30788 BC=0 BP=8608 PM=0 CM=0 FM=0 AM=0
 
