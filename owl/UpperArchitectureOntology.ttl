@@ -364,7 +364,7 @@ frbr:embodiment a owl:ObjectProperty ;
 
 dcterms:created a owl:DatatypeProperty ;
     :label "Date Created" ;
-    :display true ;
+    :display false ;
     :editable false ;
     :displayPrecedence 60 ;
     rdfs:isDefinedBy dcterms:created .
