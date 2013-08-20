@@ -48,6 +48,7 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 
 :label a owl:AnnotationProperty ;
     a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "Preferred label" ;
     rdfs:subPropertyOf rdfs:label ;
     rdfs:comment "The preferred label for a thing" .
@@ -59,6 +60,9 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 :toplevel a owl:AnnotationProperty .
 :displayPrecedence a owl:AnnotationProperty .
 
+:SummaryProperty a owl:Class ;
+    :label "Summarizing Property" ;
+    rdfs:comment "This is used to identify which proprties should be included in a entity summary" .
 
 #
 # External Classes
@@ -209,16 +213,19 @@ rdfs:label a owl:DatatypeProperty ;
 
 rdf:type a owl:DatatypeProperty ;
     :label "Type" ;
+    a :SummaryProperty ;
     rdfs:comment "The type of a thing" ;
     :display false ;
     :editable false .
 
 foaf:firstName a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "First Name" ;
     :display true ;
     :editable true .
 
 foaf:lastName a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "Last Name" ;
     :display true ;
     :editable true .
@@ -229,11 +236,13 @@ foaf:lastName a owl:DatatypeProperty ;
     :editable true .
 
 :firmName a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "Firm Name" ;
     :display true ;
     :editable true .
 
 :preferredImage a owl:ObjectProperty ;
+    a :SummaryProperty ;
     :label "Preferred Image" ;
     :display false ;
     :editable true ;
@@ -249,6 +258,7 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:domain :DigitalObject .
 
 :interviewer a owl:ObjectProperty ;
+    a :SummaryProperty ;
     :label "Interviewer" ;
     :display true ;
     :editable false ;
@@ -259,6 +269,7 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:range foaf:Person .
 
 :interviewee a owl:ObjectProperty ;
+    a :SummaryProperty ;
     :label "Interviewee" ;
     :display true ;
     :editable false ;
@@ -269,6 +280,7 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:range foaf:Person .
 
 :transcriber a owl:ObjectProperty ;
+    a :SummaryProperty ;
     :label "Transcriber" ;
     :display true ;
     :editable false ;
@@ -323,6 +335,7 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:domain :Photograph .
 
 :drawingType a owl:ObjectProperty ;
+    a :SummaryProperty ;
     :label "Drawing Type" ;
     :display true ;
     :editable false ;
@@ -340,6 +353,7 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:range :Firm .
 
 :hasTranscript a owl:ObjectProperty ;
+    a :SummaryProperty ;
     :label "Has Transcript" ;
     :display false ;
     :editable false ;
@@ -347,6 +361,7 @@ foaf:lastName a owl:DatatypeProperty ;
     rdfs:range :Transcript .
 
 :hasFile a owl:ObjectProperty ;
+    a :SummaryProperty ;
     :label "Has File" ;
     rdfs:subPropertyOf frbr:embodiment ;
     :display false ;
@@ -377,6 +392,7 @@ dcterms:creator a owl:ObjectProperty ;
     rdfs:isDefinedBy dcterms:creator .
 
 dcterms:title a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "Title" ;
     :display true ;
     :editable false ;
@@ -400,6 +416,7 @@ dcterms:rights a owl:DatatypeProperty ;
     rdfs:comment "Currently a plain text statement of IP status of the work. If required can model this further" .
 
 dcterms:identifier a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "External Identifier" ;
     :display true ;
     :editable false ;
@@ -425,18 +442,21 @@ dcterms:subject a owl:DatatypeProperty ;
 # 
 
 :externalLocation a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "External Location" ;
     :display false ;
     :editable false ;
     rdfs:domain :DigitalObject .
 
 :transcriptLocation a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "Transcript Location" ;
     :display false ;
     :editable false ;
     rdfs:domain :Interview .
 
 :projectNumber a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "Project Number" ;
     :display true ;
     :editable false ;
@@ -511,6 +531,7 @@ dcterms:format a owl:DatatypeProperty ;
     rdfs:domain :DigitalObject .
 
 :systemLocation a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "System Location" ;
     :display false ;
     :editable false ;
@@ -524,6 +545,7 @@ dcterms:format a owl:DatatypeProperty ;
     rdfs:domain :DigitalObject .
 
 :basicMimeType a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "Basic Mime Type" ;
     :display false ;
     :editable false ;
@@ -540,6 +562,7 @@ dcterms:format a owl:DatatypeProperty ;
 #
 
 geo:lat a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "Latitude" ;
     :display true ;
     :editable false ;
@@ -547,6 +570,7 @@ geo:lat a owl:DatatypeProperty ;
     rdfs:isDefinedBy geo:lat .
 
 geo:long a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "Longitude" ;
     :display true ;
     :editable false ;
@@ -554,6 +578,7 @@ geo:long a owl:DatatypeProperty ;
     rdfs:isDefinedBy geo:long .
 
 :indefiniteMapIcon a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "Primary Map Icon" ;
     :display false ;
     :editable false ;
@@ -561,6 +586,7 @@ geo:long a owl:DatatypeProperty ;
     rdfs:domain :BuildingTypology .
 
 :definiteMapIcon a owl:DatatypeProperty ;
+    a :SummaryProperty ;
     :label "Secondary Map Icon" ;
     :display false ;
     :editable false ;
@@ -668,5 +694,20 @@ crm:P67i_is_referred_to_by a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs> ;
     :display false ;
     :editable false .
+
+:Software a owl:Class ;
+    rdfs:subClassOf foaf:Agent ;
+    :label "Software Agent" ;
+    :toplevel false .
+
+:Role a owl:Class ;
+    rdfs:subClassOf :Entity .
+
+:hasRole a owl:ObjectProperty ;
+    :display true ;
+    :editable false ;
+    :label "Has Role" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range :Role .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:

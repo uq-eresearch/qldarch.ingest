@@ -56,21 +56,39 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 :toplevel a owl:AnnotationProperty .
 :displayPrecedence a owl:AnnotationProperty .
 
+:relationshipDataProperty owl:subClassOf owl:DatatypeProperty ;
+    :label "Relationship Detail" ;
+    :display false ;
+    :editable false .
+
+:relationshipObjectProperty owl:subClassOf owl:ObjectProperty ;
+    :label "Relationship Detail" ;
+    :display false ;
+    :editable false .
+
+:evidentiaryDataProperty owl:subClassOf owl:DatatypeProperty ;
+    :label "Evidentiary Detail" ;
+    :display false ;
+    :editable false .
+
+:evidentiaryObjectProperty owl:subClassOf owl:ObjectProperty ;
+    :label "Evidentiary Detail" ;
+    :display false ;
+    :editable false .
 
 :Relationship a owl:Class ;
     rdfs:subClassOf rdf:Statement .
 
-:Evidence a owl:Class ;
-    rdfs:subClassOf rdf:Statement .
+:Evidence a owl:Class .
 
 :RelatedToRelation a owl:Class ;
     rdfs:subClassOf :Relationship ;
     :label "Related To" ;
     :impliesRelationship :relatedTo .
 
-:EmploymentRelation a owl:Class ;
-    rdfs:subClassOf :Relationship ; 
-    rdfs:subClassOf :RelatedToRelation .
+:relProperty a owl:Class ;
+    rdfs:subClassOf owl:ObjectProperty ;
+    rdfs:comment "Used to identify reifiable properties within the ontology" .
 
 #
 # Reification properties.
@@ -92,54 +110,54 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:domain :Relationship ;
     rdfs:range owl:ObjectProperty .
 
-:subject rdfs:subPropertyOf rdf:subject ;
-    :label "Subject" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :Evidence .
-
-:predicate rdfs:subPropertyOf rdf:predicate ;
-    :label "Predicate" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :Evidence .
-
-:object rdfs:subPropertyOf rdf:object ;
-    :label "Object" ;
-    :display false ;
-    :editable false ;
-    rdfs:domain :Evidence .
-
 :evidence a owl:ObjectProperty ;
-    :label "Evidence" ;
+    :label "Evidenced by" ;
     :display false ;
     :editable false ;
     rdfs:domain :Relationship ;
     rdfs:range :Evidence .
 
-#
-# Extra properties of reified relationships.
-#
-
-:startDate a owl:DatatypeProperty ;
-    :label "Start Date" ;
-    :display true ;
-    :editable false ;
-    rdfs:domain :Relationship ;
-    rdfs:range xsd:date .
-
-:endDate a owl:DatatypeProperty ;
-    :label "End Date" ;
-    :display true ;
-    :editable false ;
-    rdfs:domain :Relationship ;
-    rdfs:range xsd:date .
 
 #
-# Reified types.
+# Reification types.
 #
 
-:employedBy a owl:ObjectProperty ;
+:EmploymentRelation a owl:Class ;
+    :label "Employment" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :
+    :impliesRelationship :employedBy .
+
+:TaughtByRelation a owl:Class ;
+    :label "Taught By" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :taughtBy .
+
+:MentoredByRelation a owl:Class ;
+    :label "Mentored By" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :mentoredBy .
+
+:PartnerOfRelation a owl:Class ;
+    :label "Partner Of" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :partnerOf .
+
+:DesignedByRelation a owl:Class ;
+    :label "Designed" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :designedBy .
+
+#
+# Reified properties.
+#
+
+:employedBy a :relProperty ;
     :label "Employed By" ;
     :display true ;
     :editable false ;
@@ -147,36 +165,101 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:range foaf:Agent ;
     :entailsRelationship :EmploymentRelation .
 
-:taughtBy a owl:ObjectProperty ;
+:taughtBy a :relProperty ;
     :label "Taught By" ;
     :display true ;
     :editable false ;
     rdfs:domain foaf:Person ;
     rdfs:range foaf:Person ;
-    :entailsRelationship :RelatedToRelation .
+    :entailsRelationship :TaughtByRelation .
 
-:mentoredBy a owl:ObjectProperty ;
+:mentoredBy a :relProperty ;
     :label "Mentored By" ;
     :display true ;
     :editable false ;
     rdfs:domain foaf:Person ;
     rdfs:range foaf:Person ;
-    :entailsRelationship :RelatedToRelation .
+    :entailsRelationship :MentoredByRelation .
 
-:partnerOf a owl:ObjectProperty ;
+:partnerOf a :relProperty ;
     :label "Partner Of" ;
     :display true ;
     :editable false ;
     rdfs:domain foaf:Person ;
     rdfs:range :Firm ;
-    :entailsRelationship :EmploymentRelation .
+    :entailsRelationship :PartnerOfRelation .
 
-:relatedTo a owl:ObjectProperty ;
+:designedBy a :relProperty ;
+    :label "Designed By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Structure ;
+    rdfs:range foaf:Agent ;
+    :entailsRelationship :DesignedByRelation .
+
+:relatedTo a :relProperty ;
     a owl:SymmetricProperty ;
     :label "Related To" ;
     :display false ;
     :editable false .
 
 # NOTE: relatedTo does not entail a reified relationship, as then it would be evidence of itself.
+
+#
+# Extra properties of reified relationships.
+#
+
+:startDate a :relationshipDataProperty ;
+    :label "Start Date" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Relationship ;
+    rdfs:range xsd:date .
+
+:endDate a :relationshipDataProperty ;
+    :label "End Date" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :Relationship ;
+    rdfs:range xsd:date .
+
+#
+# Extra properties of evidence
+#
+
+:assertedBy a :evidentiaryObjectProperty ;
+    :label "Asserted By" ;
+    :display true;
+    :editable false ;
+    rdfs:domain :Evidence ;
+    rdfs:range :User .
+
+:assertedBy a :evidentiaryObjectProperty ;
+    :label "Asserted By" ;
+    :display true;
+    :editable false ;
+    rdfs:domain :Evidence ;
+    rdfs:range :User .
+
+:documentedBy a :evidentiaryObjectProperty ;
+    :label "Documented By" ;
+    :display true;
+    :editable false ;
+    rdfs:domain :Evidence ;
+    rdfs:range :DigitalObject .
+
+:assertedOn a :evidentiaryDataProperty ;
+    :label "Asserted On" ;
+    :display true;
+    :editable false ;
+    rdfs:domain :Evidence ;
+    rdfs:range xsd:date .
+
+:justification a :evidentiaryDataProperty ;
+    :label "Justification" ;
+    :display true;
+    :editable false ;
+    rdfs:domain :Evidence ;
+    rdfs:range xsd:string .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:

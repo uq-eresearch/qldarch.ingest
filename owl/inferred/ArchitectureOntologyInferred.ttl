@@ -1087,5 +1087,5 @@ skos:narrowerTransitive a rdfs:Resource.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 0.182 [sec] TC=1857 TP=30788 BC=0 BP=8608 PM=0 CM=0 FM=0 AM=0
+#ENDS 0.181 [sec] TC=1857 TP=30788 BC=0 BP=8608 PM=0 CM=0 FM=0 AM=0
 
