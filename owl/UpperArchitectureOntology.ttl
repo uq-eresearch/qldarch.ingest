@@ -34,8 +34,6 @@
 # 
 owl:Class rdfs:subClassOf rdfs:Class .
 
-owl:AnnotationProperty rdfs:subClassOf rdf:Property .
-
 owl:ObjectProperty rdfs:subClassOf rdf:Property .
 
 owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
@@ -43,25 +41,34 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:range rdfs:Literal .
 
 #
-# Annotation Properties
+# Application oriented Properties
 #
 
-:label a owl:AnnotationProperty ;
-    a owl:DatatypeProperty ;
+:label a owl:DatatypeProperty ;
     a :SummaryProperty ;
     :label "Preferred label" ;
     rdfs:subPropertyOf rdfs:label ;
     rdfs:comment "The preferred label for a thing" .
 
-:display a owl:AnnotationProperty .
-:editable a owl:AnnotationProperty .
-:shortName a owl:AnnotationProperty .
-:reifiedAs a owl:AnnotationProperty .
-:toplevel a owl:AnnotationProperty .
-:displayPrecedence a owl:AnnotationProperty .
+:display a owl:DatatypeProperty ;
+    rdfs:comment "Used to indicate if a property should be displayed when displaying an instance" .
+
+:editable a owl:DatatypeProperty ;
+    rdfs:comment "Used to indicate if a property should be editable directly via the interface" .
+
+:toplevel a owl:DatatypeProperty ;
+    rdfs:domain owl:Class ;
+    rdfs:comment "Used to indicate class should be displayed when displaying an instance" .
+
+:displayPrecedence a owl:DatatypeProperty ;
+    rdfs:comment "Used to indicate the relative order the subject should be displayed in (smaller-first)" .
+
+:requiredToCreate a owl:ObjectProperty ;
+    rdfs:domain owl:Class ;
+    rdfs:range rdf:Property ;
+    rdfs:comment "Used to indicate that a property must be specified when creating an instance of this class" .
 
 :SummaryProperty a owl:Class ;
-    :label "Summarizing Property" ;
     rdfs:comment "This is used to identify which proprties should be included in a entity summary" .
 
 #
@@ -100,10 +107,13 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:subClassOf geo:SpatialThing ;
     :displayPrecedence 2 ;
     :label "Structures" ;
-    :toplevel true .
+    :toplevel true ;
+    :requiredToCreate :label ;
+    :requiredToCreate :buildingTypology .
 
 :BuildingTypology a owl:Class ;
     rdfs:subClassOf :NonDigitalThing ;
+    rdfs:subClassOf skos:Concept ;
     :displayPrecedence 3 ;
     :label "Building Typologies" ;
     :toplevel true .
@@ -124,17 +134,21 @@ foaf:Person a owl:Class ;
     rdfs:subClassOf foaf:Person ;
     :displayPrecedence 0 ;
     :label "Architects" ;
-    :toplevel true .
+    :toplevel true ;
+    :requiredToCreate foaf:firstName ;
+    :requiredToCreate foaf:lastName .
 
 :Firm a owl:Class ;
     rdfs:subClassOf foaf:Agent ;
     :displayPrecedence 1 ;
     :label "Firms" ;
-    :toplevel true .
+    :toplevel true ;
+    :requiredToCreate :firmName .
 
 :FirmManifestation a owl:Class ;
     rdfs:subClassOf foaf:Agent ;
-    :label "Firm Manifestation" .
+    :label "Firm Manifestation" ;
+    :requiredToCreate :tradingName .
 
 :Article a owl:Class ;
     rdfs:subClassOf :DigitalObject ;
@@ -222,24 +236,42 @@ foaf:firstName a owl:DatatypeProperty ;
     a :SummaryProperty ;
     :label "First Name" ;
     :display true ;
-    :editable true .
+    :editable true ;
+    rdfs:domain foaf:Person .
 
 foaf:lastName a owl:DatatypeProperty ;
     a :SummaryProperty ;
     :label "Last Name" ;
     :display true ;
-    :editable true .
+    :editable true ;
+    rdfs:domain foaf:Person .
 
-:summary a owl:DatatypeProperty ;
+:birthYear a owl:DatatypeProperty ;
+    a :SummaryProperty ;
+    :label "Born in Year" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain foaf:Person .
+
+:shortBio a owl:DatatypeProperty ;
     :label "Short Biography" ;
     :display false ;
-    :editable true .
+    :editable true ;
+    rdfs:domain foaf:Agent .
+
+:tradingName a owl:DatatypeProperty ;
+    a :SummaryProperty ;
+    :label "Traded As" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain :FirmManifestation .
 
 :firmName a owl:DatatypeProperty ;
     a :SummaryProperty ;
     :label "Firm Name" ;
     :display true ;
-    :editable true .
+    :editable true ;
+    rdfs:domain :Firm .
 
 :preferredImage a owl:ObjectProperty ;
     a :SummaryProperty ;
@@ -296,6 +328,14 @@ foaf:lastName a owl:DatatypeProperty ;
     :editable false ;
     :displayPrecedence 50 ;
 #    rdfs:domain :DigitalObject ;
+    rdfs:range xsd:string .
+
+:locatedAt a owl:DatatypeProperty ;
+    :label "Location" ;
+    :display true ;
+    :editable false ;
+    :displayPrecedence 50 ;
+    rdfs:domain geo:SpatialThing ;
     rdfs:range xsd:string .
 
 :succeededBy a owl:ObjectProperty ;
@@ -434,8 +474,7 @@ dcterms:subject a owl:DatatypeProperty ;
     :label "System Identifier" ;
     rdfs:subPropertyOf dcterms:identifier ;
     :display false ;
-    :editable false ;
-    :shortName "uri" .
+    :editable false .
 
 #
 # Datatype properties of Digital Objects as exported from Omeka
