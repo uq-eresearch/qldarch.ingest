@@ -50,6 +50,20 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:subPropertyOf rdfs:label ;
     rdfs:comment "The preferred label for a thing" .
 
+:plural a owl:DatatypeProperty ;
+    a :SummaryProperty ;
+    :display true ;
+    :editable true ;
+    rdfs:subPropertyOf :label ;
+    rdfs:comment "The plural form of the preferred label for a thing" .
+
+:singular a owl:DatatypeProperty ;
+    a :SummaryProperty ;
+    :display true ;
+    :editable true ;
+#    rdfs:subPropertyOf :label ;  # NOTE: This should be restored asap.
+    rdfs:comment "The singular form of the preferred label for a thing" .
+
 :display a owl:DatatypeProperty ;
     rdfs:comment "Used to indicate if a property should be displayed when displaying an instance" .
 
@@ -106,6 +120,7 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:subClassOf :StructureOrAgent ;
     rdfs:subClassOf geo:SpatialThing ;
     :displayPrecedence 2 ;
+    :editable true ;
     :label "Structures" ;
     :toplevel true ;
     :requiredToCreate :label ;
@@ -134,6 +149,7 @@ foaf:Person a owl:Class ;
     rdfs:subClassOf foaf:Person ;
     :displayPrecedence 0 ;
     :label "Architects" ;
+    :editable true ;
     :toplevel true ;
     :requiredToCreate foaf:firstName ;
     :requiredToCreate foaf:lastName .
@@ -141,6 +157,7 @@ foaf:Person a owl:Class ;
 :Firm a owl:Class ;
     rdfs:subClassOf foaf:Agent ;
     :displayPrecedence 1 ;
+    :editable true ;
     :label "Firms" ;
     :toplevel true ;
     :requiredToCreate :firmName .
@@ -225,7 +242,7 @@ rdfs:label a owl:DatatypeProperty ;
     :editable true ;
     rdfs:comment "A label for a thing" .
 
-rdf:type a owl:DatatypeProperty ;
+rdf:type a owl:ObjectProperty ;
     :label "Type" ;
     a :SummaryProperty ;
     rdfs:comment "The type of a thing" ;
