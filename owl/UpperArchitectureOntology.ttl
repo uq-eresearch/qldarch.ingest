@@ -163,7 +163,7 @@ foaf:Person a owl:Class ;
     :displayPrecedence 1 ;
     :editable true ;
     :plural "Firms" ;
-    :singular "Firms" ;
+    :singular "Firm" ;
     :toplevel true ;
     :requiredToCreate :firmName .
 
