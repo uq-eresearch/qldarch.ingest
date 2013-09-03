@@ -126,7 +126,6 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     :label "Employment" ;
     rdfs:subClassOf :Relationship ; 
     rdfs:subClassOf :RelatedToRelation ;
-    :
     :impliesRelationship :employedBy .
 
 :TaughtByRelation a owl:Class ;
@@ -234,13 +233,6 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:domain :Evidence ;
     rdfs:range :User .
 
-:assertedBy a :evidentiaryObjectProperty ;
-    :label "Asserted By" ;
-    :display true;
-    :editable false ;
-    rdfs:domain :Evidence ;
-    rdfs:range :User .
-
 :documentedBy a :evidentiaryObjectProperty ;
     :label "Documented By" ;
     :display true;
@@ -248,8 +240,8 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:domain :Evidence ;
     rdfs:range :DigitalObject .
 
-:assertedOn a :evidentiaryDataProperty ;
-    :label "Asserted On" ;
+:assertionDate a :evidentiaryDataProperty ;
+    :label "Date Asserted" ;
     :display true;
     :editable false ;
     rdfs:domain :Evidence ;
