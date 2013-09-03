@@ -121,7 +121,8 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:subClassOf geo:SpatialThing ;
     :displayPrecedence 2 ;
     :editable true ;
-    :label "Structures" ;
+    :plural "Structures" ;
+    :singular "Structure" ;
     :toplevel true ;
     :requiredToCreate :label ;
     :requiredToCreate :buildingTypology .
@@ -130,11 +131,13 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:subClassOf :NonDigitalThing ;
     rdfs:subClassOf skos:Concept ;
     :displayPrecedence 3 ;
-    :label "Building Typologies" ;
+    :plural "Building Typologies" ;
+    :singular "Building Typologie" ;
     :toplevel true .
 
 foaf:Agent a owl:Class ;
-    :label "Agent" ;
+    :singular "Agent" ;
+    :plural "Agents" ;
     rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Agent> ;
     rdfs:subClassOf :StructureOrAgent ;
     rdfs:isDefinedBy foaf:Agent .
@@ -148,7 +151,8 @@ foaf:Person a owl:Class ;
 :Architect a owl:Class ;
     rdfs:subClassOf foaf:Person ;
     :displayPrecedence 0 ;
-    :label "Architects" ;
+    :plural "Architects" ;
+    :singular "Architect" ;
     :editable true ;
     :toplevel true ;
     :requiredToCreate foaf:firstName ;
@@ -158,13 +162,15 @@ foaf:Person a owl:Class ;
     rdfs:subClassOf foaf:Agent ;
     :displayPrecedence 1 ;
     :editable true ;
-    :label "Firms" ;
+    :plural "Firms" ;
+    :singular "Firms" ;
     :toplevel true ;
     :requiredToCreate :firmName .
 
 :FirmManifestation a owl:Class ;
     rdfs:subClassOf foaf:Agent ;
-    :label "Firm Manifestation" ;
+    :plural "Firm Manifestations" ;
+    :singular "Firm Manifestation" ;
     :requiredToCreate :tradingName .
 
 :Article a owl:Class ;
