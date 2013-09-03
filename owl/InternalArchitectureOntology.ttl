@@ -1,0 +1,51 @@
+#
+# Ontology for an Oral History of Architecture
+# (c) eResearch Laboratory, School of ITEE, The University of Queensland
+# Licensed Apache 2.0
+#
+
+@base <http://qldarch.net/ns/rdf/2013-08/internal#> .
+
+@prefix : <http://qldarch.net/ns/rdf/2013-08/internal#> .
+@prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
+@prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
+@prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+#
+# Preliminaries
+#
+
+<http://qldarch.net/ns/rdf/2013-08/internal#> a owl:Ontology .
+
+:usesPrefix a owl:DatatypeProperty ;
+    qldarch:label "Uses Well-Known Prefix" ,
+    rdfs:comment "Associates prefix URI with an @prefix string" .
+
+<http://qldarch.net/ns/rdf/2013-08/internal#> :usesPrefix "qaint" .
+<http://qldarch.net/ns/rdf/2012-06/terms#> :usesPrefix "qldarch" .
+<http://qldarch.net/ns/omeka/2012-11/auxterms#> :usesPrefix "qaat" .
+<http://qldarch.net/ns/skos/2013-02/vocab#> :usesPrefix "qavocab" .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#> :usesPrefix "rdf" .
+<http://www.w3.org/2000/01/rdf-schema#> :usesPrefix "rdfs" .
+<http://www.w3.org/2002/07/owl#> :usesPrefix "owl" .
+<http://www.w3.org/2001/XMLSchema#> :usesPrefix "xsd" .
+<http://purl.org/dc/terms/> :usesPrefix "dcterms" .
+<http://purl.org/dc/dcam/> :usesPrefix "dcam" .
+<http://xmlns.com/foaf/0.1/> :usesPrefix "foaf" .
+<http://www.w3.org/2004/02/skos/core#> :usesPrefix "skos" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> :usesPrefix "geo" .
+<http://purl.org/vocab/frbr/core#> :usesPrefix "frbr" .
+<http://www.cidoc-crm.org/cidoc-crm/> :usesPrefix "crm" .
+<http:> :usesPrefix "http" .
+
