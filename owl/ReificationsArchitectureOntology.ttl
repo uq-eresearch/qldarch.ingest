@@ -56,30 +56,37 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 :toplevel a owl:AnnotationProperty .
 :displayPrecedence a owl:AnnotationProperty .
 
-:relationshipDataProperty owl:subClassOf owl:DatatypeProperty ;
+:relationshipDataProperty rdfs:subClassOf owl:DatatypeProperty ;
     :label "Relationship Detail" ;
     :display false ;
     :editable false .
 
-:relationshipObjectProperty owl:subClassOf owl:ObjectProperty ;
+:relationshipObjectProperty rdfs:subClassOf owl:ObjectProperty ;
     :label "Relationship Detail" ;
     :display false ;
     :editable false .
 
-:evidentiaryDataProperty owl:subClassOf owl:DatatypeProperty ;
+:evidentiaryDataProperty rdfs:subClassOf owl:DatatypeProperty ;
     :label "Evidentiary Detail" ;
     :display false ;
     :editable false .
 
-:evidentiaryObjectProperty owl:subClassOf owl:ObjectProperty ;
+:evidentiaryObjectProperty rdfs:subClassOf owl:ObjectProperty ;
     :label "Evidentiary Detail" ;
     :display false ;
     :editable false .
 
 :Relationship a owl:Class ;
-    rdfs:subClassOf rdf:Statement .
+    :editable false ;
+    :toplevel false ;
+    :plural "Relationships" ;
+    :singular "Relationship" .
 
-:Evidence a owl:Class .
+:Evidence a owl:Class ;
+    :editable false ;
+    :toplevel false ;
+    :plural "Evidence" ;
+    :singular "Evidence" .
 
 :RelatedToRelation a owl:Class ;
     rdfs:subClassOf :Relationship ;
@@ -93,6 +100,36 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 #
 # Reification properties.
 #
+
+:subject a owl:ObjectProperty ;
+    a :SummaryProperty ;
+    :label "subject" ;
+    rdfs:domain :Relationship ;
+    rdfs:range :Entity .
+
+:predicate a owl:ObjectProperty ;
+    a :SummaryProperty ;
+    :label "predicate" ;
+    rdfs:domain :Relationship ;
+    rdfs:range rdf:Property .
+
+:object a owl:ObjectProperty ;
+    a :SummaryProperty ;
+    :label "object" ;
+    rdfs:domain :Relationship ;
+    rdfs:range :Entity .
+
+:regionStart a owl:DatatypeProperty ;
+    a :SummaryProperty ;
+    :label "Starts At Time" ;
+    rdfs:domain :Relationship ;
+    rdfs:range xsd:decimal .
+
+:regionEnd a owl:DatatypeProperty ;
+    a :SummaryProperty ;
+    :label "Ends At Time" ;
+    rdfs:domain :Relationship ;
+    rdfs:range xsd:decimal .
 
 :hasRelationship a owl:ObjectProperty ;
     :label "Has Relationship" ;
@@ -118,9 +155,16 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:range :Evidence .
 
 
+
 #
 # Reification types.
 #
+
+:ReferenceRelation a owl:Class ;
+    :label "Reference" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :references .
 
 :EmploymentRelation a owl:Class ;
     :label "Employment" ;
