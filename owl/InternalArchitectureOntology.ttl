@@ -29,7 +29,7 @@
 <http://qldarch.net/ns/rdf/2013-08/internal#> a owl:Ontology .
 
 :usesPrefix a owl:DatatypeProperty ;
-    qldarch:label "Uses Well-Known Prefix" ,
+    qldarch:label "Uses Well-Known Prefix" ;
     rdfs:comment "Associates prefix URI with an @prefix string" .
 
 <http://qldarch.net/ns/rdf/2013-08/internal#> :usesPrefix "qaint" .
@@ -47,5 +47,3 @@
 <http://www.w3.org/2003/01/geo/wgs84_pos#> :usesPrefix "geo" .
 <http://purl.org/vocab/frbr/core#> :usesPrefix "frbr" .
 <http://www.cidoc-crm.org/cidoc-crm/> :usesPrefix "crm" .
-<http:> :usesPrefix "http" .
-
