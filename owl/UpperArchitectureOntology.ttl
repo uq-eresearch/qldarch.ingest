@@ -72,6 +72,7 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 
 :toplevel a owl:DatatypeProperty ;
     rdfs:domain owl:Class ;
+    rdfs:range xsd:boolean ;
     rdfs:comment "Used to indicate class should be displayed when displaying an instance" .
 
 :displayPrecedence a owl:DatatypeProperty ;
