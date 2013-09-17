@@ -54,6 +54,8 @@ rdf:nil a rdf:List.
 
 {?C a rdfs:Class} => {?C rdfs:subClassOf rdfs:Resource}.
 
+{?C a rdfs:Class} => {?C rdfs:subClassOf ?C}.
+
 {?A rdfs:subClassOf ?B. ?S a ?A} => {?S a ?B}.
 
 {?B rdfs:subClassOf ?C. ?A rdfs:subClassOf ?B} => {?A rdfs:subClassOf ?C}.
