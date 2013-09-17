@@ -284,6 +284,18 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:domain :Evidence ;
     rdfs:range :DigitalObject .
 
+:timeFrom a owl:DatatypeProperty ;
+    a :SummaryProperty ;
+    :label "From Time" ;
+    rdfs:domain :Evidence ;
+    rdfs:range xsd:decimal .
+
+:timeTo a owl:DatatypeProperty ;
+    a :SummaryProperty ;
+    :label "To Time" ;
+    rdfs:domain :Evidence ;
+    rdfs:range xsd:decimal .
+
 :assertionDate a :evidentiaryDataProperty ;
     :label "Date Asserted" ;
     :display true;
