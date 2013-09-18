@@ -97,22 +97,34 @@ qavocab:Plan skos:broader qavocab:LineDrawing.
 qavocab:Plan skos:altLabel "Plan".
 qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Relationship a owl:Class.
-:Relationship a rdfs:Class.
 :Relationship a rdfs:Resource.
-:Relationship rdfs:subClassOf rdf:Statement.
+:Relationship a rdfs:Class.
 :Relationship rdfs:subClassOf rdfs:Resource.
+:Relationship rdfs:subClassOf :Relationship.
+:Relationship :label "Relationships".
+:Relationship :editable false .
+:Relationship :toplevel false .
+:Relationship :plural "Relationships".
+:Relationship :singular "Relationship".
+:Relationship rdfs:label "Relationships".
 :Evidence a owl:Class.
 :Evidence a rdfs:Resource.
 :Evidence a rdfs:Class.
 :Evidence rdfs:subClassOf rdfs:Resource.
+:Evidence rdfs:subClassOf :Evidence.
+:Evidence :label "Evidence".
+:Evidence :editable false .
+:Evidence :toplevel false .
+:Evidence :plural "Evidence".
+:Evidence :singular "Evidence".
+:Evidence rdfs:label "Evidence".
 :RelatedToRelation a owl:Class.
 :RelatedToRelation a :Relationship.
 :RelatedToRelation a rdfs:Class.
 :RelatedToRelation a rdfs:Resource.
-:RelatedToRelation a rdf:Statement.
 :RelatedToRelation rdfs:subClassOf :Relationship.
 :RelatedToRelation rdfs:subClassOf rdfs:Resource.
-:RelatedToRelation rdfs:subClassOf rdf:Statement.
+:RelatedToRelation rdfs:subClassOf :RelatedToRelation.
 :RelatedToRelation :label "Related To".
 :RelatedToRelation :impliesRelationship :relatedTo.
 :RelatedToRelation rdfs:label "Related To".
@@ -121,17 +133,28 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :relProperty a rdfs:Class.
 :relProperty rdfs:subClassOf owl:ObjectProperty.
 :relProperty rdfs:subClassOf rdfs:Resource.
+:relProperty rdfs:subClassOf :relProperty.
 :relProperty rdfs:subClassOf rdf:Property.
 :relProperty rdfs:comment "Used to identify reifiable properties within the ontology".
+:ReferenceRelation a owl:Class.
+:ReferenceRelation a :Relationship.
+:ReferenceRelation a rdfs:Class.
+:ReferenceRelation a rdfs:Resource.
+:ReferenceRelation rdfs:subClassOf :Relationship.
+:ReferenceRelation rdfs:subClassOf :RelatedToRelation.
+:ReferenceRelation rdfs:subClassOf rdfs:Resource.
+:ReferenceRelation rdfs:subClassOf :ReferenceRelation.
+:ReferenceRelation :label "Reference".
+:ReferenceRelation :impliesRelationship :references.
+:ReferenceRelation rdfs:label "Reference".
 :EmploymentRelation a owl:Class.
 :EmploymentRelation a :Relationship.
 :EmploymentRelation a rdfs:Class.
 :EmploymentRelation a rdfs:Resource.
-:EmploymentRelation a rdf:Statement.
 :EmploymentRelation rdfs:subClassOf :Relationship.
 :EmploymentRelation rdfs:subClassOf :RelatedToRelation.
 :EmploymentRelation rdfs:subClassOf rdfs:Resource.
-:EmploymentRelation rdfs:subClassOf rdf:Statement.
+:EmploymentRelation rdfs:subClassOf :EmploymentRelation.
 :EmploymentRelation :label "Employment".
 :EmploymentRelation :impliesRelationship :employedBy.
 :EmploymentRelation rdfs:label "Employment".
@@ -139,11 +162,10 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :TaughtByRelation a :Relationship.
 :TaughtByRelation a rdfs:Class.
 :TaughtByRelation a rdfs:Resource.
-:TaughtByRelation a rdf:Statement.
 :TaughtByRelation rdfs:subClassOf :Relationship.
 :TaughtByRelation rdfs:subClassOf :RelatedToRelation.
 :TaughtByRelation rdfs:subClassOf rdfs:Resource.
-:TaughtByRelation rdfs:subClassOf rdf:Statement.
+:TaughtByRelation rdfs:subClassOf :TaughtByRelation.
 :TaughtByRelation :label "Taught By".
 :TaughtByRelation :impliesRelationship :taughtBy.
 :TaughtByRelation rdfs:label "Taught By".
@@ -151,11 +173,10 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :MentoredByRelation a :Relationship.
 :MentoredByRelation a rdfs:Class.
 :MentoredByRelation a rdfs:Resource.
-:MentoredByRelation a rdf:Statement.
 :MentoredByRelation rdfs:subClassOf :Relationship.
 :MentoredByRelation rdfs:subClassOf :RelatedToRelation.
 :MentoredByRelation rdfs:subClassOf rdfs:Resource.
-:MentoredByRelation rdfs:subClassOf rdf:Statement.
+:MentoredByRelation rdfs:subClassOf :MentoredByRelation.
 :MentoredByRelation :label "Mentored By".
 :MentoredByRelation :impliesRelationship :mentoredBy.
 :MentoredByRelation rdfs:label "Mentored By".
@@ -163,11 +184,10 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :PartnerOfRelation a :Relationship.
 :PartnerOfRelation a rdfs:Class.
 :PartnerOfRelation a rdfs:Resource.
-:PartnerOfRelation a rdf:Statement.
 :PartnerOfRelation rdfs:subClassOf :Relationship.
 :PartnerOfRelation rdfs:subClassOf :RelatedToRelation.
 :PartnerOfRelation rdfs:subClassOf rdfs:Resource.
-:PartnerOfRelation rdfs:subClassOf rdf:Statement.
+:PartnerOfRelation rdfs:subClassOf :PartnerOfRelation.
 :PartnerOfRelation :label "Partner Of".
 :PartnerOfRelation :impliesRelationship :partnerOf.
 :PartnerOfRelation rdfs:label "Partner Of".
@@ -175,11 +195,10 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :DesignedByRelation a :Relationship.
 :DesignedByRelation a rdfs:Class.
 :DesignedByRelation a rdfs:Resource.
-:DesignedByRelation a rdf:Statement.
 :DesignedByRelation rdfs:subClassOf :Relationship.
 :DesignedByRelation rdfs:subClassOf :RelatedToRelation.
 :DesignedByRelation rdfs:subClassOf rdfs:Resource.
-:DesignedByRelation rdfs:subClassOf rdf:Statement.
+:DesignedByRelation rdfs:subClassOf :DesignedByRelation.
 :DesignedByRelation :label "Designed".
 :DesignedByRelation :impliesRelationship :designedBy.
 :DesignedByRelation rdfs:label "Designed".
@@ -187,17 +206,20 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :SummaryProperty a rdfs:Resource.
 :SummaryProperty a rdfs:Class.
 :SummaryProperty rdfs:subClassOf rdfs:Resource.
+:SummaryProperty rdfs:subClassOf :SummaryProperty.
 :SummaryProperty rdfs:comment "This is used to identify which proprties should be included in a entity summary".
 :Entity a owl:Class.
 :Entity a rdfs:Resource.
 :Entity a rdfs:Class.
 :Entity rdfs:subClassOf rdfs:Resource.
+:Entity rdfs:subClassOf :Entity.
 :Entity rdfs:comment "Top for concepts related by this vocabularly".
 :NonDigitalThing a owl:Class.
 :NonDigitalThing a rdfs:Class.
 :NonDigitalThing a rdfs:Resource.
 :NonDigitalThing rdfs:subClassOf :Entity.
 :NonDigitalThing rdfs:subClassOf rdfs:Resource.
+:NonDigitalThing rdfs:subClassOf :NonDigitalThing.
 :NonDigitalThing :label "Non-Digital Thing".
 :NonDigitalThing rdfs:label "Non-Digital Thing".
 :DigitalThing a owl:Class.
@@ -205,6 +227,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :DigitalThing a rdfs:Resource.
 :DigitalThing rdfs:subClassOf :Entity.
 :DigitalThing rdfs:subClassOf rdfs:Resource.
+:DigitalThing rdfs:subClassOf :DigitalThing.
 :DigitalThing :label "Digital Thing".
 :DigitalThing rdfs:label "Digital Thing".
 :DigitalObject a owl:Class.
@@ -213,6 +236,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :DigitalObject rdfs:subClassOf :DigitalThing.
 :DigitalObject rdfs:subClassOf frbr:Expression.
 :DigitalObject rdfs:subClassOf rdfs:Resource.
+:DigitalObject rdfs:subClassOf :DigitalObject.
 :DigitalObject rdfs:subClassOf :Entity.
 :DigitalObject :label "Digital Object".
 :DigitalObject rdfs:comment "This is analagous to a digital expression of an FRBR work. For pragmatic reasons, and due to the fungability of digital forms, any transformation of a work from a non-digital to a digital manifestation is considered to create a new expression. This allows us to capture the concept of a digitized work that can be subsequently transcoded into multiple digital manifestations but remains conceptually a Representation of the same Digital Resource (Expression)".
@@ -223,6 +247,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :DigitalFile rdfs:subClassOf :DigitalThing.
 :DigitalFile rdfs:subClassOf frbr:Manifestation.
 :DigitalFile rdfs:subClassOf rdfs:Resource.
+:DigitalFile rdfs:subClassOf :DigitalFile.
 :DigitalFile rdfs:subClassOf :Entity.
 :DigitalFile :label "File".
 :DigitalFile rdfs:comment "This is analagous to a digital manifestation of an FRBR expression. The medium of a DigitalFile is 'bitstream' syntactically and lexigraphically encoded consistent with a RFC2046 mime-type".
@@ -232,6 +257,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :StructureOrAgent a rdfs:Resource.
 :StructureOrAgent rdfs:subClassOf :NonDigitalThing.
 :StructureOrAgent rdfs:subClassOf rdfs:Resource.
+:StructureOrAgent rdfs:subClassOf :StructureOrAgent.
 :StructureOrAgent rdfs:subClassOf :Entity.
 :StructureOrAgent :label "Structure or Agent".
 :StructureOrAgent rdfs:label "Structure or Agent".
@@ -241,13 +267,14 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Structure rdfs:subClassOf :StructureOrAgent.
 :Structure rdfs:subClassOf geo:SpatialThing.
 :Structure rdfs:subClassOf rdfs:Resource.
+:Structure rdfs:subClassOf :Structure.
 :Structure rdfs:subClassOf :NonDigitalThing.
 :Structure :label "Structures".
 :Structure :editable true .
-:Structure :displayPrecedence 2 .
+:Structure :toplevel true .
 :Structure :plural "Structures".
 :Structure :singular "Structure".
-:Structure :toplevel true .
+:Structure :displayPrecedence 2 .
 :Structure :requiredToCreate :label.
 :Structure :requiredToCreate :buildingTypology.
 :Structure rdfs:label "Structures".
@@ -257,18 +284,20 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :BuildingTypology rdfs:subClassOf :NonDigitalThing.
 :BuildingTypology rdfs:subClassOf skos:Concept.
 :BuildingTypology rdfs:subClassOf rdfs:Resource.
+:BuildingTypology rdfs:subClassOf :BuildingTypology.
 :BuildingTypology rdfs:subClassOf :Entity.
 :BuildingTypology :label "Building Typologies".
-:BuildingTypology :displayPrecedence 3 .
+:BuildingTypology :toplevel true .
 :BuildingTypology :plural "Building Typologies".
 :BuildingTypology :singular "Building Typologie".
-:BuildingTypology :toplevel true .
+:BuildingTypology :displayPrecedence 3 .
 :BuildingTypology rdfs:label "Building Typologies".
 <http://xmlns.com/foaf/0.1/Agent> a owl:Class.
 <http://xmlns.com/foaf/0.1/Agent> a rdfs:Resource.
 <http://xmlns.com/foaf/0.1/Agent> a rdfs:Class.
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :StructureOrAgent.
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf rdfs:Resource.
+<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :NonDigitalThing.
 <http://xmlns.com/foaf/0.1/Agent> :label "Agents".
 <http://xmlns.com/foaf/0.1/Agent> :plural "Agents".
@@ -283,6 +312,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 <http://xmlns.com/foaf/0.1/Person> a rdfs:Class.
 <http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
 <http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf rdfs:Resource.
+<http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person>.
 <http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :StructureOrAgent.
 <http://xmlns.com/foaf/0.1/Person> :label "Person".
 <http://xmlns.com/foaf/0.1/Person> rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Person>.
@@ -295,13 +325,14 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Architect a rdfs:Resource.
 :Architect rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person>.
 :Architect rdfs:subClassOf rdfs:Resource.
+:Architect rdfs:subClassOf :Architect.
 :Architect rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
 :Architect :label "Architects".
 :Architect :editable true .
-:Architect :displayPrecedence 0 .
+:Architect :toplevel true .
 :Architect :plural "Architects".
 :Architect :singular "Architect".
-:Architect :toplevel true .
+:Architect :displayPrecedence 0 .
 :Architect :requiredToCreate <http://xmlns.com/foaf/0.1/firstName>.
 :Architect :requiredToCreate <http://xmlns.com/foaf/0.1/lastName>.
 :Architect rdfs:label "Architects".
@@ -310,13 +341,14 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Firm a rdfs:Resource.
 :Firm rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
 :Firm rdfs:subClassOf rdfs:Resource.
+:Firm rdfs:subClassOf :Firm.
 :Firm rdfs:subClassOf :StructureOrAgent.
 :Firm :label "Firms".
 :Firm :editable true .
-:Firm :displayPrecedence 1 .
-:Firm :plural "Firms".
-:Firm :singular "Firms".
 :Firm :toplevel true .
+:Firm :plural "Firms".
+:Firm :singular "Firm".
+:Firm :displayPrecedence 1 .
 :Firm :requiredToCreate :firmName.
 :Firm rdfs:label "Firms".
 :FirmManifestation a owl:Class.
@@ -324,6 +356,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :FirmManifestation a rdfs:Resource.
 :FirmManifestation rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
 :FirmManifestation rdfs:subClassOf rdfs:Resource.
+:FirmManifestation rdfs:subClassOf :FirmManifestation.
 :FirmManifestation rdfs:subClassOf :StructureOrAgent.
 :FirmManifestation :label "Firm Manifestations".
 :FirmManifestation :plural "Firm Manifestations".
@@ -335,17 +368,19 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Article a rdfs:Resource.
 :Article rdfs:subClassOf :DigitalObject.
 :Article rdfs:subClassOf rdfs:Resource.
+:Article rdfs:subClassOf :Article.
 :Article rdfs:subClassOf :DigitalThing.
 :Article rdfs:subClassOf frbr:Expression.
 :Article :label "Articles".
-:Article :displayPrecedence 3 .
 :Article :toplevel true .
+:Article :displayPrecedence 3 .
 :Article rdfs:label "Articles".
 :Image a owl:Class.
 :Image a rdfs:Class.
 :Image a rdfs:Resource.
 :Image rdfs:subClassOf :DigitalObject.
 :Image rdfs:subClassOf rdfs:Resource.
+:Image rdfs:subClassOf :Image.
 :Image rdfs:subClassOf :DigitalThing.
 :Image rdfs:subClassOf frbr:Expression.
 :Image :label "Images".
@@ -355,47 +390,52 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Photograph a rdfs:Resource.
 :Photograph rdfs:subClassOf :Image.
 :Photograph rdfs:subClassOf rdfs:Resource.
+:Photograph rdfs:subClassOf :Photograph.
 :Photograph rdfs:subClassOf :DigitalObject.
 :Photograph :label "Photographs".
-:Photograph :displayPrecedence 1 .
 :Photograph :toplevel true .
+:Photograph :displayPrecedence 1 .
 :Photograph rdfs:label "Photographs".
 :Portrait a owl:Class.
 :Portrait a rdfs:Class.
 :Portrait a rdfs:Resource.
 :Portrait rdfs:subClassOf :Photograph.
 :Portrait rdfs:subClassOf rdfs:Resource.
+:Portrait rdfs:subClassOf :Portrait.
 :Portrait rdfs:subClassOf :Image.
 :Portrait :label "Photographs".
-:Portrait :displayPrecedence 1 .
 :Portrait :toplevel false .
+:Portrait :displayPrecedence 1 .
 :Portrait rdfs:label "Photographs".
 :LineDrawing a owl:Class.
 :LineDrawing a rdfs:Class.
 :LineDrawing a rdfs:Resource.
 :LineDrawing rdfs:subClassOf :Image.
 :LineDrawing rdfs:subClassOf rdfs:Resource.
+:LineDrawing rdfs:subClassOf :LineDrawing.
 :LineDrawing rdfs:subClassOf :DigitalObject.
 :LineDrawing :label "Line Drawings".
-:LineDrawing :displayPrecedence 2 .
 :LineDrawing :toplevel true .
+:LineDrawing :displayPrecedence 2 .
 :LineDrawing rdfs:label "Line Drawings".
 :Interview a owl:Class.
 :Interview a rdfs:Class.
 :Interview a rdfs:Resource.
 :Interview rdfs:subClassOf :DigitalObject.
 :Interview rdfs:subClassOf rdfs:Resource.
+:Interview rdfs:subClassOf :Interview.
 :Interview rdfs:subClassOf :DigitalThing.
 :Interview rdfs:subClassOf frbr:Expression.
 :Interview :label "Interviews".
-:Interview :displayPrecedence 0 .
 :Interview :toplevel true .
+:Interview :displayPrecedence 0 .
 :Interview rdfs:label "Interviews".
 :Transcript a owl:Class.
 :Transcript a rdfs:Class.
 :Transcript a rdfs:Resource.
 :Transcript rdfs:subClassOf :DigitalObject.
 :Transcript rdfs:subClassOf rdfs:Resource.
+:Transcript rdfs:subClassOf :Transcript.
 :Transcript rdfs:subClassOf :DigitalThing.
 :Transcript rdfs:subClassOf frbr:Expression.
 :Transcript :label "Transcripts".
@@ -406,6 +446,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Format a rdfs:Resource.
 :Format rdfs:subClassOf :DigitalThing.
 :Format rdfs:subClassOf rdfs:Resource.
+:Format rdfs:subClassOf :Format.
 :Format rdfs:subClassOf :Entity.
 :Format :label "Format".
 :Format rdfs:label "Format".
@@ -414,6 +455,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :DrawingType a rdfs:Resource.
 :DrawingType rdfs:subClassOf :DigitalThing.
 :DrawingType rdfs:subClassOf rdfs:Resource.
+:DrawingType rdfs:subClassOf :DrawingType.
 :DrawingType rdfs:subClassOf :Entity.
 :DrawingType :label "Drawing Type".
 :DrawingType rdfs:label "Drawing Type".
@@ -423,6 +465,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :TopicConcept rdfs:subClassOf :Entity.
 :TopicConcept rdfs:subClassOf skos:Concept.
 :TopicConcept rdfs:subClassOf rdfs:Resource.
+:TopicConcept rdfs:subClassOf :TopicConcept.
 :TopicConcept :label "Topic".
 :TopicConcept :toplevel false .
 :TopicConcept rdfs:label "Topic".
@@ -430,6 +473,7 @@ geo:SpatialThing a owl:Class.
 geo:SpatialThing a rdfs:Resource.
 geo:SpatialThing a rdfs:Class.
 geo:SpatialThing rdfs:subClassOf rdfs:Resource.
+geo:SpatialThing rdfs:subClassOf geo:SpatialThing.
 geo:SpatialThing :label "Spatial Thing".
 geo:SpatialThing :toplevel false .
 geo:SpatialThing rdfs:isDefinedBy geo:SpatialThing.
@@ -440,6 +484,7 @@ geo:SpatialThing rdfs:seeAlso geo:SpatialThing.
 :Utterance a rdfs:Resource.
 :Utterance rdfs:subClassOf :DigitalObject.
 :Utterance rdfs:subClassOf rdfs:Resource.
+:Utterance rdfs:subClassOf :Utterance.
 :Utterance rdfs:subClassOf :DigitalThing.
 :Utterance rdfs:subClassOf frbr:Expression.
 :Utterance :label "Utterance".
@@ -450,6 +495,7 @@ geo:SpatialThing rdfs:seeAlso geo:SpatialThing.
 :UtteranceRecording a rdfs:Resource.
 :UtteranceRecording rdfs:subClassOf :Utterance.
 :UtteranceRecording rdfs:subClassOf rdfs:Resource.
+:UtteranceRecording rdfs:subClassOf :UtteranceRecording.
 :UtteranceRecording rdfs:subClassOf :DigitalObject.
 :UtteranceRecording :label "Utterance Recording".
 :UtteranceRecording :toplevel false .
@@ -459,6 +505,7 @@ geo:SpatialThing rdfs:seeAlso geo:SpatialThing.
 :UtteranceTranscript a rdfs:Resource.
 :UtteranceTranscript rdfs:subClassOf :Utterance.
 :UtteranceTranscript rdfs:subClassOf rdfs:Resource.
+:UtteranceTranscript rdfs:subClassOf :UtteranceTranscript.
 :UtteranceTranscript rdfs:subClassOf :DigitalObject.
 :UtteranceTranscript :label "Utterance Transcript".
 :UtteranceTranscript :toplevel false .
@@ -468,6 +515,7 @@ geo:SpatialThing rdfs:seeAlso geo:SpatialThing.
 :Software a rdfs:Resource.
 :Software rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
 :Software rdfs:subClassOf rdfs:Resource.
+:Software rdfs:subClassOf :Software.
 :Software rdfs:subClassOf :StructureOrAgent.
 :Software :label "Software Agent".
 :Software :toplevel false .
@@ -477,6 +525,7 @@ geo:SpatialThing rdfs:seeAlso geo:SpatialThing.
 :Role a rdfs:Resource.
 :Role rdfs:subClassOf :Entity.
 :Role rdfs:subClassOf rdfs:Resource.
+:Role rdfs:subClassOf :Role.
 rdf:type a owl:ObjectProperty.
 rdf:type a :SummaryProperty.
 rdf:type a rdf:Property.
@@ -517,8 +566,6 @@ rdfs:comment a rdf:Property.
 rdfs:comment a rdfs:Resource.
 rdfs:comment rdfs:domain rdfs:Resource.
 rdfs:comment rdfs:range rdfs:Literal.
-owl:subClassOf a rdf:Property.
-owl:subClassOf a rdfs:Resource.
 :display a owl:AnnotationProperty.
 :display a owl:DatatypeProperty.
 :display a rdf:Property.
@@ -529,6 +576,29 @@ owl:subClassOf a rdfs:Resource.
 :editable a rdf:Property.
 :editable a rdfs:Resource.
 :editable rdfs:comment "Used to indicate if a property should be editable directly via the interface".
+:toplevel a owl:AnnotationProperty.
+:toplevel a owl:DatatypeProperty.
+:toplevel a rdf:Property.
+:toplevel a rdfs:Resource.
+:toplevel rdfs:domain owl:Class.
+:toplevel rdfs:range xsd:boolean.
+:toplevel rdfs:comment "Used to indicate class should be displayed when displaying an instance".
+:plural a owl:DatatypeProperty.
+:plural a :SummaryProperty.
+:plural a rdf:Property.
+:plural a rdfs:Resource.
+:plural rdfs:subPropertyOf :label.
+:plural rdfs:subPropertyOf rdfs:label.
+:plural rdfs:comment "The plural form of the preferred label for a thing".
+:plural :display true .
+:plural :editable true .
+:singular a owl:DatatypeProperty.
+:singular a :SummaryProperty.
+:singular a rdf:Property.
+:singular a rdfs:Resource.
+:singular rdfs:comment "The singular form of the preferred label for a thing".
+:singular :display true .
+:singular :editable true .
 :impliesRelationship a owl:AnnotationProperty.
 :impliesRelationship a rdf:Property.
 :impliesRelationship a rdfs:Resource.
@@ -548,28 +618,6 @@ owl:subClassOf a rdfs:Resource.
 :displayPrecedence a rdf:Property.
 :displayPrecedence a rdfs:Resource.
 :displayPrecedence rdfs:comment "Used to indicate the relative order the subject should be displayed in (smaller-first)".
-:plural a owl:DatatypeProperty.
-:plural a :SummaryProperty.
-:plural a rdf:Property.
-:plural a rdfs:Resource.
-:plural rdfs:subPropertyOf :label.
-:plural rdfs:subPropertyOf rdfs:label.
-:plural rdfs:comment "The plural form of the preferred label for a thing".
-:plural :display true .
-:plural :editable true .
-:singular a owl:DatatypeProperty.
-:singular a :SummaryProperty.
-:singular a rdf:Property.
-:singular a rdfs:Resource.
-:singular rdfs:comment "The singular form of the preferred label for a thing".
-:singular :display true .
-:singular :editable true .
-:toplevel a owl:AnnotationProperty.
-:toplevel a owl:DatatypeProperty.
-:toplevel a rdf:Property.
-:toplevel a rdfs:Resource.
-:toplevel rdfs:domain owl:Class.
-:toplevel rdfs:comment "Used to indicate class should be displayed when displaying an instance".
 :requiredToCreate a owl:ObjectProperty.
 :requiredToCreate a rdf:Property.
 :requiredToCreate a rdfs:Resource.
@@ -606,8 +654,49 @@ owl:DatatypeProperty a rdfs:Class.
 owl:DatatypeProperty a rdfs:Resource.
 owl:DatatypeProperty rdfs:subClassOf rdf:Property.
 owl:DatatypeProperty rdfs:subClassOf rdfs:Resource.
+owl:DatatypeProperty rdfs:subClassOf owl:DatatypeProperty.
 owl:DatatypeProperty rdfs:domain rdfs:Resource.
 owl:DatatypeProperty rdfs:range rdfs:Literal.
+:subject a owl:ObjectProperty.
+:subject a :SummaryProperty.
+:subject a rdf:Property.
+:subject a rdfs:Resource.
+:subject rdfs:domain :Relationship.
+:subject rdfs:range :Entity.
+:subject :label "subject".
+:subject rdfs:label "subject".
+:predicate a owl:ObjectProperty.
+:predicate a :SummaryProperty.
+:predicate a rdf:Property.
+:predicate a rdfs:Resource.
+:predicate rdfs:domain :Relationship.
+:predicate rdfs:range rdf:Property.
+:predicate :label "predicate".
+:predicate rdfs:label "predicate".
+:object a owl:ObjectProperty.
+:object a :SummaryProperty.
+:object a rdf:Property.
+:object a rdfs:Resource.
+:object rdfs:domain :Relationship.
+:object rdfs:range :Entity.
+:object :label "object".
+:object rdfs:label "object".
+:regionStart a owl:DatatypeProperty.
+:regionStart a :SummaryProperty.
+:regionStart a rdf:Property.
+:regionStart a rdfs:Resource.
+:regionStart rdfs:domain :Relationship.
+:regionStart rdfs:range xsd:decimal.
+:regionStart :label "Starts At Time".
+:regionStart rdfs:label "Starts At Time".
+:regionEnd a owl:DatatypeProperty.
+:regionEnd a :SummaryProperty.
+:regionEnd a rdf:Property.
+:regionEnd a rdfs:Resource.
+:regionEnd rdfs:domain :Relationship.
+:regionEnd rdfs:range xsd:decimal.
+:regionEnd :label "Ends At Time".
+:regionEnd rdfs:label "Ends At Time".
 :evidence a owl:ObjectProperty.
 :evidence a rdf:Property.
 :evidence a rdfs:Resource.
@@ -675,6 +764,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :startDate a :relationshipDataProperty.
 :startDate a rdf:Property.
 :startDate a rdfs:Resource.
+:startDate a owl:DatatypeProperty.
 :startDate rdfs:domain :Relationship.
 :startDate rdfs:range xsd:date.
 :startDate :label "Start Date".
@@ -684,6 +774,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :endDate a :relationshipDataProperty.
 :endDate a rdf:Property.
 :endDate a rdfs:Resource.
+:endDate a owl:DatatypeProperty.
 :endDate rdfs:domain :Relationship.
 :endDate rdfs:range xsd:date.
 :endDate :label "End Date".
@@ -693,6 +784,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :assertedBy a :evidentiaryObjectProperty.
 :assertedBy a rdf:Property.
 :assertedBy a rdfs:Resource.
+:assertedBy a owl:ObjectProperty.
 :assertedBy rdfs:domain :Evidence.
 :assertedBy rdfs:range :User.
 :assertedBy :label "Asserted By".
@@ -702,15 +794,33 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :documentedBy a :evidentiaryObjectProperty.
 :documentedBy a rdf:Property.
 :documentedBy a rdfs:Resource.
+:documentedBy a owl:ObjectProperty.
 :documentedBy rdfs:domain :Evidence.
 :documentedBy rdfs:range :DigitalObject.
 :documentedBy :label "Documented By".
 :documentedBy :display true .
 :documentedBy :editable false .
 :documentedBy rdfs:label "Documented By".
+:timeFrom a owl:DatatypeProperty.
+:timeFrom a :SummaryProperty.
+:timeFrom a rdf:Property.
+:timeFrom a rdfs:Resource.
+:timeFrom rdfs:domain :Evidence.
+:timeFrom rdfs:range xsd:decimal.
+:timeFrom :label "From Time".
+:timeFrom rdfs:label "From Time".
+:timeTo a owl:DatatypeProperty.
+:timeTo a :SummaryProperty.
+:timeTo a rdf:Property.
+:timeTo a rdfs:Resource.
+:timeTo rdfs:domain :Evidence.
+:timeTo rdfs:range xsd:decimal.
+:timeTo :label "To Time".
+:timeTo rdfs:label "To Time".
 :assertionDate a :evidentiaryDataProperty.
 :assertionDate a rdf:Property.
 :assertionDate a rdfs:Resource.
+:assertionDate a owl:DatatypeProperty.
 :assertionDate rdfs:domain :Evidence.
 :assertionDate rdfs:range xsd:date.
 :assertionDate :label "Date Asserted".
@@ -720,6 +830,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :justification a :evidentiaryDataProperty.
 :justification a rdf:Property.
 :justification a rdfs:Resource.
+:justification a owl:DatatypeProperty.
 :justification rdfs:domain :Evidence.
 :justification rdfs:range xsd:string.
 :justification :label "Justification".
@@ -1461,5 +1572,5 @@ skos:narrowerTransitive a rdfs:Resource.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 0.227 [sec] TC=2470 TP=41916 BC=0 BP=11633 PM=0 CM=0 FM=0 AM=0
+#ENDS 0.256 [sec] TC=2707 TP=49486 BC=0 BP=13741 PM=0 CM=0 FM=0 AM=0
 
