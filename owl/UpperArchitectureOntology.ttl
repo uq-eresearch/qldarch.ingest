@@ -113,9 +113,13 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:subClassOf frbr:Manifestation ;
     rdfs:comment "This is analagous to a digital manifestation of an FRBR expression. The medium of a DigitalFile is 'bitstream' syntactically and lexigraphically encoded consistent with a RFC2046 mime-type" .
 
+:StructureOrAgentOrTopic a owl:Class ;
+    :label "Structure or Agent or Topic" ;
+    rdfs:subClassOf :NonDigitalThing .
+
 :StructureOrAgent a owl:Class ;
     :label "Structure or Agent" ;
-    rdfs:subClassOf :NonDigitalThing .
+    rdfs:subClassOf :StructureOrAgentOrTopic .
 
 :Structure a owl:Class ;
     rdfs:subClassOf :StructureOrAgent ;
@@ -174,6 +178,15 @@ foaf:Person a owl:Class ;
     :singular "Firm Manifestation" ;
     :requiredToCreate :tradingName .
 
+:EducationalInstitution a owl:Class ;
+    rdfs:subClassOf foaf:Agent ;
+    :displayPrecedence 10 ;
+    :editable true ;
+    :plural "Firms" ;
+    :singular "Firm" ;
+    :toplevel false ;
+    :requiredToCreate foaf:name .
+
 :Article a owl:Class ;
     rdfs:subClassOf :DigitalObject ;
     :displayPrecedence 3 ;
@@ -221,10 +234,12 @@ foaf:Person a owl:Class ;
     :label "Drawing Type" ;
     rdfs:subClassOf :DigitalThing .
 
-:TopicConcept a owl:Class ;
+:Topic a owl:Class ;
     rdfs:subClassOf :Entity ;
     rdfs:subClassOf skos:Concept ;
     :label "Topic" ;
+    :editable true ;
+    :requiredToCreate :label ;
     :toplevel false .
 
 geo:SpatialThing a owl:Class ;
@@ -255,6 +270,14 @@ rdf:type a owl:ObjectProperty ;
     rdfs:comment "The type of a thing" ;
     :display false ;
     :editable false .
+
+foaf:name a owl:DatatypeProperty ;
+    a :SummaryProperty ;
+    :label "Name" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain foaf:Agent ;
+    rdfs:rnage xsd:string .
 
 foaf:firstName a owl:DatatypeProperty ;
     a :SummaryProperty ;
@@ -438,6 +461,7 @@ frbr:embodiment a owl:ObjectProperty ;
     :display false ;
     :editable false ;
     rdfs:isDefinedBy frbr:embodiment .
+
 #
 # Integration of adopted Dublin Core properties
 #

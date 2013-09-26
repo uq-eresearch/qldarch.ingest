@@ -44,18 +44,6 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 # Annotation Properties
 #
 
-:label a owl:AnnotationProperty ;
-    a owl:DatatypeProperty ;
-    :label "Preferred label" ;
-    rdfs:subPropertyOf rdfs:label ;
-    rdfs:comment "The preferred label for a thing" .
-
-:display a owl:AnnotationProperty .
-:editable a owl:AnnotationProperty .
-:shortName a owl:AnnotationProperty .
-:toplevel a owl:AnnotationProperty .
-:displayPrecedence a owl:AnnotationProperty .
-
 :relationshipDataProperty rdfs:subClassOf owl:DatatypeProperty ;
     :label "Relationship Detail" ;
     :display false ;
@@ -196,6 +184,12 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:subClassOf :RelatedToRelation ;
     :impliesRelationship :designedBy .
 
+:StudiedAtRelation a owl:Class ;
+    :label "Studied At" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :studiedAt .
+
 #
 # Reified properties.
 #
@@ -240,13 +234,88 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:range foaf:Agent ;
     :entailsRelationship :DesignedByRelation .
 
+:studiedAt a :relProperty ;
+    :label "Studied At" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range :EducationalInstitution ;
+    :entailsRelationship :StudiedAtRelation .
+
+# Need to create entities from here.
+
+:workedWith a :relProperty ;
+    :label "Worked With" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    :entailsRelationship :WorkedWithRelation .
+
+:workedOn a :relProperty ;
+    :label "Worked On" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain :Architect ;
+    rdfs:range :Structure ;
+    :entailsRelationship :WorkedOnRelation .
+
+:clientOf a :relProperty ;
+    :label "Client Of" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range :Architect ;
+    :entailsRelationship :ClientOfRelation .
+
+:knew a owl:ObjectProperty ;
+    :label "Knew" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person .
+
+:knewSocially a :relProperty ;
+    rdfs:subPropertyOf :knew ;
+    :label "Knew Socially" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    :entailsRelationship :KnewSociallyRelation .
+
+:knewProfessionally a :relProperty ;
+    rdfs:subPropertyOf :knew ;
+    :label "Knew Professionally" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    :entailsRelationship :KnewProfessionallyRelation .
+
+:influencedBy a :relProperty ;
+    :label "Influenced By" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain :Architect ;
+    rdfs:range :StructureOrAgentOrTopic ;
+    :entailsRelationship :InfluencedBy .
+
+:collaboratedWith a :relProperty ;
+    :label "Collaborated With" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain :Architect ;
+    rdfs:range foaf:Person ;
+    :entailsRelationship :InfluencedBy .
+
+# NOTE: relatedTo does not entail a reified relationship, as then it would be evidence of itself.
+
 :relatedTo a :relProperty ;
     a owl:SymmetricProperty ;
     :label "Related To" ;
     :display false ;
     :editable false .
-
-# NOTE: relatedTo does not entail a reified relationship, as then it would be evidence of itself.
 
 #
 # Extra properties of reified relationships.
