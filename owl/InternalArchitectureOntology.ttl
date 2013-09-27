@@ -35,6 +35,7 @@
 <http://qldarch.net/ns/rdf/2013-08/internal#> :usesPrefix "qaint" .
 <http://qldarch.net/ns/rdf/2012-06/terms#> :usesPrefix "qldarch" .
 <http://qldarch.net/ns/omeka/2012-11/auxterms#> :usesPrefix "qaat" .
+<http://qldarch.net/omeka/items/show/> :usesPrefix "qaomeka" .
 <http://qldarch.net/ns/skos/2013-02/vocab#> :usesPrefix "qavocab" .
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#> :usesPrefix "rdf" .
 <http://www.w3.org/2000/01/rdf-schema#> :usesPrefix "rdfs" .
