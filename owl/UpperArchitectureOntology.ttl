@@ -90,9 +90,27 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 # External Classes
 #
 
+:Evincible a owl:Class ;
+    :editable false ;
+    :toplevel false ;
+    :label "Evincible Thing" ;
+    rdfs:comment "Top for Percian 'Firsts' and 'Thirds' related by this vocabularly" .
+
 :Entity a owl:Class ;
-    rdfs:comment "Top for concepts related by this vocabularly" .
+    rdfs:subClassOf :Evincible ;
+    :editable false ;
+    :toplevel false ;
+    :label "Entity" ;
+    rdfs:comment "Top for Percian 'Firsts' related by this vocabularly" .
     
+:Relationship a owl:Class ;
+    rdfs:subClassOf :Evincible ;
+    :editable false ;
+    :toplevel false ;
+    :plural "Relationships" ;
+    :singular "Relationship" ;
+    rdfs:comment "Top for Percian 'Thirds' related by this vocabularly" .
+
 :NonDigitalThing a owl:Class ;
     :label "Non-Digital Thing" ;
     rdfs:subClassOf :Entity .
@@ -149,12 +167,14 @@ foaf:Agent a owl:Class ;
 
 foaf:Person a owl:Class ;
     :label "Person" ;
+    :suppressEditable :label ;
     rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Person> ;
     rdfs:subClassOf foaf:Agent ;
     rdfs:isDefinedBy foaf:Person .
 
 :Architect a owl:Class ;
     rdfs:subClassOf foaf:Person ;
+    :suppressEditable :label ;
     :displayPrecedence 0 ;
     :plural "Architects" ;
     :singular "Architect" ;
@@ -261,7 +281,7 @@ geo:SpatialThing a owl:Class ;
 rdfs:label a owl:DatatypeProperty ;
     :label "Label" ;
     :display false ;
-    :editable true ;
+    :editable false ;
     rdfs:comment "A label for a thing" .
 
 rdf:type a owl:ObjectProperty ;
@@ -284,6 +304,7 @@ foaf:firstName a owl:DatatypeProperty ;
     :label "First Name" ;
     :display true ;
     :editable true ;
+    :displayPrecedence 8 ;
     rdfs:domain foaf:Person .
 
 foaf:lastName a owl:DatatypeProperty ;
@@ -291,6 +312,7 @@ foaf:lastName a owl:DatatypeProperty ;
     :label "Last Name" ;
     :display true ;
     :editable true ;
+    :displayPrecedence 9 ;
     rdfs:domain foaf:Person .
 
 :birthYear a owl:DatatypeProperty ;
@@ -298,12 +320,14 @@ foaf:lastName a owl:DatatypeProperty ;
     :label "Born in Year" ;
     :display true ;
     :editable true ;
+    :displayPrecedence 50 ;
     rdfs:domain foaf:Person .
 
 :shortBio a owl:DatatypeProperty ;
     :label "Short Biography" ;
     :display false ;
     :editable true ;
+    :displayPrecedence 100 ;
     rdfs:domain foaf:Agent .
 
 :tradingName a owl:DatatypeProperty ;
