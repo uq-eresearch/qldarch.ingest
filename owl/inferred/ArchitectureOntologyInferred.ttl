@@ -96,17 +96,6 @@ qavocab:Plan skos:inScheme qavocab:DrawingTypes.
 qavocab:Plan skos:broader qavocab:LineDrawing.
 qavocab:Plan skos:altLabel "Plan".
 qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
-:Relationship a owl:Class.
-:Relationship a rdfs:Resource.
-:Relationship a rdfs:Class.
-:Relationship rdfs:subClassOf rdfs:Resource.
-:Relationship rdfs:subClassOf :Relationship.
-:Relationship :label "Relationships".
-:Relationship :editable false .
-:Relationship :toplevel false .
-:Relationship :plural "Relationships".
-:Relationship :singular "Relationship".
-:Relationship rdfs:label "Relationships".
 :Evidence a owl:Class.
 :Evidence a rdfs:Resource.
 :Evidence a rdfs:Class.
@@ -122,9 +111,11 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :RelatedToRelation a :Relationship.
 :RelatedToRelation a rdfs:Class.
 :RelatedToRelation a rdfs:Resource.
+:RelatedToRelation a :Evincible.
 :RelatedToRelation rdfs:subClassOf :Relationship.
 :RelatedToRelation rdfs:subClassOf rdfs:Resource.
 :RelatedToRelation rdfs:subClassOf :RelatedToRelation.
+:RelatedToRelation rdfs:subClassOf :Evincible.
 :RelatedToRelation :label "Related To".
 :RelatedToRelation :impliesRelationship :relatedTo.
 :RelatedToRelation rdfs:label "Related To".
@@ -140,10 +131,12 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :ReferenceRelation a :Relationship.
 :ReferenceRelation a rdfs:Class.
 :ReferenceRelation a rdfs:Resource.
+:ReferenceRelation a :Evincible.
 :ReferenceRelation rdfs:subClassOf :Relationship.
 :ReferenceRelation rdfs:subClassOf :RelatedToRelation.
 :ReferenceRelation rdfs:subClassOf rdfs:Resource.
 :ReferenceRelation rdfs:subClassOf :ReferenceRelation.
+:ReferenceRelation rdfs:subClassOf :Evincible.
 :ReferenceRelation :label "Reference".
 :ReferenceRelation :impliesRelationship :references.
 :ReferenceRelation rdfs:label "Reference".
@@ -151,10 +144,12 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :EmploymentRelation a :Relationship.
 :EmploymentRelation a rdfs:Class.
 :EmploymentRelation a rdfs:Resource.
+:EmploymentRelation a :Evincible.
 :EmploymentRelation rdfs:subClassOf :Relationship.
 :EmploymentRelation rdfs:subClassOf :RelatedToRelation.
 :EmploymentRelation rdfs:subClassOf rdfs:Resource.
 :EmploymentRelation rdfs:subClassOf :EmploymentRelation.
+:EmploymentRelation rdfs:subClassOf :Evincible.
 :EmploymentRelation :label "Employment".
 :EmploymentRelation :impliesRelationship :employedBy.
 :EmploymentRelation rdfs:label "Employment".
@@ -162,10 +157,12 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :TaughtByRelation a :Relationship.
 :TaughtByRelation a rdfs:Class.
 :TaughtByRelation a rdfs:Resource.
+:TaughtByRelation a :Evincible.
 :TaughtByRelation rdfs:subClassOf :Relationship.
 :TaughtByRelation rdfs:subClassOf :RelatedToRelation.
 :TaughtByRelation rdfs:subClassOf rdfs:Resource.
 :TaughtByRelation rdfs:subClassOf :TaughtByRelation.
+:TaughtByRelation rdfs:subClassOf :Evincible.
 :TaughtByRelation :label "Taught By".
 :TaughtByRelation :impliesRelationship :taughtBy.
 :TaughtByRelation rdfs:label "Taught By".
@@ -173,10 +170,12 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :MentoredByRelation a :Relationship.
 :MentoredByRelation a rdfs:Class.
 :MentoredByRelation a rdfs:Resource.
+:MentoredByRelation a :Evincible.
 :MentoredByRelation rdfs:subClassOf :Relationship.
 :MentoredByRelation rdfs:subClassOf :RelatedToRelation.
 :MentoredByRelation rdfs:subClassOf rdfs:Resource.
 :MentoredByRelation rdfs:subClassOf :MentoredByRelation.
+:MentoredByRelation rdfs:subClassOf :Evincible.
 :MentoredByRelation :label "Mentored By".
 :MentoredByRelation :impliesRelationship :mentoredBy.
 :MentoredByRelation rdfs:label "Mentored By".
@@ -184,10 +183,12 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :PartnerOfRelation a :Relationship.
 :PartnerOfRelation a rdfs:Class.
 :PartnerOfRelation a rdfs:Resource.
+:PartnerOfRelation a :Evincible.
 :PartnerOfRelation rdfs:subClassOf :Relationship.
 :PartnerOfRelation rdfs:subClassOf :RelatedToRelation.
 :PartnerOfRelation rdfs:subClassOf rdfs:Resource.
 :PartnerOfRelation rdfs:subClassOf :PartnerOfRelation.
+:PartnerOfRelation rdfs:subClassOf :Evincible.
 :PartnerOfRelation :label "Partner Of".
 :PartnerOfRelation :impliesRelationship :partnerOf.
 :PartnerOfRelation rdfs:label "Partner Of".
@@ -195,10 +196,12 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :DesignedByRelation a :Relationship.
 :DesignedByRelation a rdfs:Class.
 :DesignedByRelation a rdfs:Resource.
+:DesignedByRelation a :Evincible.
 :DesignedByRelation rdfs:subClassOf :Relationship.
 :DesignedByRelation rdfs:subClassOf :RelatedToRelation.
 :DesignedByRelation rdfs:subClassOf rdfs:Resource.
 :DesignedByRelation rdfs:subClassOf :DesignedByRelation.
+:DesignedByRelation rdfs:subClassOf :Evincible.
 :DesignedByRelation :label "Designed".
 :DesignedByRelation :impliesRelationship :designedBy.
 :DesignedByRelation rdfs:label "Designed".
@@ -208,18 +211,47 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :SummaryProperty rdfs:subClassOf rdfs:Resource.
 :SummaryProperty rdfs:subClassOf :SummaryProperty.
 :SummaryProperty rdfs:comment "This is used to identify which proprties should be included in a entity summary".
+:Evincible a owl:Class.
+:Evincible a rdfs:Resource.
+:Evincible a rdfs:Class.
+:Evincible rdfs:subClassOf rdfs:Resource.
+:Evincible rdfs:subClassOf :Evincible.
+:Evincible :label "Evincible Thing".
+:Evincible rdfs:comment "Top for Percian 'Firsts' and 'Thirds' related by this vocabularly".
+:Evincible :editable false .
+:Evincible :toplevel false .
+:Evincible rdfs:label "Evincible Thing".
 :Entity a owl:Class.
 :Entity a rdfs:Resource.
 :Entity a rdfs:Class.
+:Entity rdfs:subClassOf :Evincible.
 :Entity rdfs:subClassOf rdfs:Resource.
 :Entity rdfs:subClassOf :Entity.
-:Entity rdfs:comment "Top for concepts related by this vocabularly".
+:Entity :label "Entity".
+:Entity rdfs:comment "Top for Percian 'Firsts' related by this vocabularly".
+:Entity :editable false .
+:Entity :toplevel false .
+:Entity rdfs:label "Entity".
+:Relationship a owl:Class.
+:Relationship a rdfs:Resource.
+:Relationship a rdfs:Class.
+:Relationship rdfs:subClassOf :Evincible.
+:Relationship rdfs:subClassOf rdfs:Resource.
+:Relationship rdfs:subClassOf :Relationship.
+:Relationship :label "Relationships".
+:Relationship rdfs:comment "Top for Percian 'Thirds' related by this vocabularly".
+:Relationship :editable false .
+:Relationship :toplevel false .
+:Relationship :plural "Relationships".
+:Relationship :singular "Relationship".
+:Relationship rdfs:label "Relationships".
 :NonDigitalThing a owl:Class.
 :NonDigitalThing a rdfs:Class.
 :NonDigitalThing a rdfs:Resource.
 :NonDigitalThing rdfs:subClassOf :Entity.
 :NonDigitalThing rdfs:subClassOf rdfs:Resource.
 :NonDigitalThing rdfs:subClassOf :NonDigitalThing.
+:NonDigitalThing rdfs:subClassOf :Evincible.
 :NonDigitalThing :label "Non-Digital Thing".
 :NonDigitalThing rdfs:label "Non-Digital Thing".
 :DigitalThing a owl:Class.
@@ -228,6 +260,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :DigitalThing rdfs:subClassOf :Entity.
 :DigitalThing rdfs:subClassOf rdfs:Resource.
 :DigitalThing rdfs:subClassOf :DigitalThing.
+:DigitalThing rdfs:subClassOf :Evincible.
 :DigitalThing :label "Digital Thing".
 :DigitalThing rdfs:label "Digital Thing".
 :DigitalObject a owl:Class.
@@ -317,6 +350,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 <http://xmlns.com/foaf/0.1/Person> :label "Person".
 <http://xmlns.com/foaf/0.1/Person> rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Person>.
 <http://xmlns.com/foaf/0.1/Person> rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/Person>.
+<http://xmlns.com/foaf/0.1/Person> :suppressEditable :label.
 <http://xmlns.com/foaf/0.1/Person> rdfs:label "Person".
 <http://xmlns.com/foaf/0.1/Person> rdfs:seeAlso <http://http://xmlns.com/foaf/spec/#term_Person>.
 <http://xmlns.com/foaf/0.1/Person> rdfs:seeAlso <http://xmlns.com/foaf/0.1/Person>.
@@ -335,6 +369,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Architect :displayPrecedence 0 .
 :Architect :requiredToCreate <http://xmlns.com/foaf/0.1/firstName>.
 :Architect :requiredToCreate <http://xmlns.com/foaf/0.1/lastName>.
+:Architect :suppressEditable :label.
 :Architect rdfs:label "Architects".
 :Firm a owl:Class.
 :Firm a rdfs:Class.
@@ -466,6 +501,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :TopicConcept rdfs:subClassOf skos:Concept.
 :TopicConcept rdfs:subClassOf rdfs:Resource.
 :TopicConcept rdfs:subClassOf :TopicConcept.
+:TopicConcept rdfs:subClassOf :Evincible.
 :TopicConcept :label "Topic".
 :TopicConcept :toplevel false .
 :TopicConcept rdfs:label "Topic".
@@ -526,6 +562,7 @@ geo:SpatialThing rdfs:seeAlso geo:SpatialThing.
 :Role rdfs:subClassOf :Entity.
 :Role rdfs:subClassOf rdfs:Resource.
 :Role rdfs:subClassOf :Role.
+:Role rdfs:subClassOf :Evincible.
 rdf:type a owl:ObjectProperty.
 rdf:type a :SummaryProperty.
 rdf:type a rdf:Property.
@@ -629,6 +666,8 @@ rdfs:isDefinedBy a rdfs:Resource.
 rdfs:isDefinedBy rdfs:domain rdfs:Resource.
 rdfs:isDefinedBy rdfs:range rdfs:Resource.
 rdfs:isDefinedBy rdfs:subPropertyOf rdfs:seeAlso.
+:suppressEditable a rdf:Property.
+:suppressEditable a rdfs:Resource.
 owl:inverseOf a rdf:Property.
 owl:inverseOf a rdfs:Resource.
 rdfs:label a owl:DatatypeProperty.
@@ -639,7 +678,7 @@ rdfs:label rdfs:range rdfs:Literal.
 rdfs:label :label "Label".
 rdfs:label rdfs:comment "A label for a thing".
 rdfs:label :display false .
-rdfs:label :editable true .
+rdfs:label :editable false .
 rdfs:label rdfs:label "Label".
 skos:hasTopConcept a rdf:Property.
 skos:hasTopConcept a rdfs:Resource.
@@ -700,7 +739,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :evidence a owl:ObjectProperty.
 :evidence a rdf:Property.
 :evidence a rdfs:Resource.
-:evidence rdfs:domain :Relationship.
+:evidence rdfs:domain :Evincible.
 :evidence rdfs:range :Evidence.
 :evidence :label "Evidenced by".
 :evidence :display false .
@@ -845,6 +884,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 <http://xmlns.com/foaf/0.1/firstName> :label "First Name".
 <http://xmlns.com/foaf/0.1/firstName> :display true .
 <http://xmlns.com/foaf/0.1/firstName> :editable true .
+<http://xmlns.com/foaf/0.1/firstName> :displayPrecedence 8 .
 <http://xmlns.com/foaf/0.1/firstName> rdfs:label "First Name".
 <http://xmlns.com/foaf/0.1/lastName> a owl:DatatypeProperty.
 <http://xmlns.com/foaf/0.1/lastName> a :SummaryProperty.
@@ -854,6 +894,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 <http://xmlns.com/foaf/0.1/lastName> :label "Last Name".
 <http://xmlns.com/foaf/0.1/lastName> :display true .
 <http://xmlns.com/foaf/0.1/lastName> :editable true .
+<http://xmlns.com/foaf/0.1/lastName> :displayPrecedence 9 .
 <http://xmlns.com/foaf/0.1/lastName> rdfs:label "Last Name".
 :birthYear a owl:DatatypeProperty.
 :birthYear a :SummaryProperty.
@@ -863,6 +904,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :birthYear :label "Born in Year".
 :birthYear :display true .
 :birthYear :editable true .
+:birthYear :displayPrecedence 50 .
 :birthYear rdfs:label "Born in Year".
 :shortBio a owl:DatatypeProperty.
 :shortBio a rdf:Property.
@@ -871,6 +913,7 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :shortBio :label "Short Biography".
 :shortBio :display false .
 :shortBio :editable true .
+:shortBio :displayPrecedence 100 .
 :shortBio rdfs:label "Short Biography".
 :tradingName a owl:DatatypeProperty.
 :tradingName a :SummaryProperty.
@@ -1512,36 +1555,54 @@ frbr:partOf rdfs:seeAlso frbr:partOf.
 <http://purl.org/dc/terms/description> rdfs:label "Description".
 <http://purl.org/dc/terms/description> rdfs:seeAlso <http://purl.org/dc/terms/description>.
 qavocab:LineDrawing a :Entity.
+qavocab:LineDrawing a :Evincible.
 qavocab:LineDrawing skos:semanticRelation qavocab:Perspective.
 qavocab:LineDrawing skos:semanticRelation qavocab:Section.
 qavocab:LineDrawing skos:semanticRelation qavocab:Sketch.
 qavocab:LineDrawing skos:semanticRelation qavocab:Elevation.
 qavocab:LineDrawing skos:semanticRelation qavocab:Plan.
 qavocab:Perspective a :Entity.
+qavocab:Perspective a :Evincible.
 qavocab:Perspective skos:semanticRelation qavocab:LineDrawing.
 qavocab:Section a :Entity.
+qavocab:Section a :Evincible.
 qavocab:Section skos:semanticRelation qavocab:LineDrawing.
 qavocab:Sketch a :Entity.
+qavocab:Sketch a :Evincible.
 qavocab:Sketch skos:semanticRelation qavocab:LineDrawing.
 qavocab:Elevation a :Entity.
+qavocab:Elevation a :Evincible.
 qavocab:Elevation skos:semanticRelation qavocab:LineDrawing.
 qavocab:Plan a :Entity.
+qavocab:Plan a :Evincible.
 qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
+:DigitalObject rdfs:subClassOf :Evincible.
+:DigitalFile rdfs:subClassOf :Evincible.
+:StructureOrAgent rdfs:subClassOf :Evincible.
 :Structure rdfs:subClassOf :Entity.
+:Structure rdfs:subClassOf :Evincible.
+:BuildingTypology rdfs:subClassOf :Evincible.
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :Entity.
+<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :Evincible.
 <http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :NonDigitalThing.
+<http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :Evincible.
 <http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :Entity.
 :Architect rdfs:subClassOf :StructureOrAgent.
 :Architect rdfs:subClassOf :Entity.
 :Architect rdfs:subClassOf :NonDigitalThing.
 :Firm rdfs:subClassOf :NonDigitalThing.
+:Firm rdfs:subClassOf :Evincible.
 :Firm rdfs:subClassOf :Entity.
 :FirmManifestation rdfs:subClassOf :NonDigitalThing.
+:FirmManifestation rdfs:subClassOf :Evincible.
 :FirmManifestation rdfs:subClassOf :Entity.
 :Article rdfs:subClassOf :Entity.
+:Article rdfs:subClassOf :Evincible.
 :Image rdfs:subClassOf :Entity.
+:Image rdfs:subClassOf :Evincible.
 :Photograph rdfs:subClassOf :DigitalThing.
 :Photograph rdfs:subClassOf frbr:Expression.
+:Photograph rdfs:subClassOf :Evincible.
 :Photograph rdfs:subClassOf :Entity.
 :Portrait rdfs:subClassOf :DigitalObject.
 :Portrait rdfs:subClassOf :Entity.
@@ -1549,17 +1610,26 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 :Portrait rdfs:subClassOf frbr:Expression.
 :LineDrawing rdfs:subClassOf :DigitalThing.
 :LineDrawing rdfs:subClassOf frbr:Expression.
+:LineDrawing rdfs:subClassOf :Evincible.
 :LineDrawing rdfs:subClassOf :Entity.
 :Interview rdfs:subClassOf :Entity.
+:Interview rdfs:subClassOf :Evincible.
 :Transcript rdfs:subClassOf :Entity.
+:Transcript rdfs:subClassOf :Evincible.
+:Format rdfs:subClassOf :Evincible.
+:DrawingType rdfs:subClassOf :Evincible.
 :Utterance rdfs:subClassOf :Entity.
+:Utterance rdfs:subClassOf :Evincible.
 :UtteranceRecording rdfs:subClassOf :DigitalThing.
 :UtteranceRecording rdfs:subClassOf frbr:Expression.
+:UtteranceRecording rdfs:subClassOf :Evincible.
 :UtteranceRecording rdfs:subClassOf :Entity.
 :UtteranceTranscript rdfs:subClassOf :DigitalThing.
 :UtteranceTranscript rdfs:subClassOf frbr:Expression.
+:UtteranceTranscript rdfs:subClassOf :Evincible.
 :UtteranceTranscript rdfs:subClassOf :Entity.
 :Software rdfs:subClassOf :NonDigitalThing.
+:Software rdfs:subClassOf :Evincible.
 :Software rdfs:subClassOf :Entity.
 skos:topConceptOf a rdf:Property.
 skos:topConceptOf a rdfs:Resource.
@@ -1569,8 +1639,10 @@ skos:broaderTransitive a rdf:Property.
 skos:broaderTransitive a rdfs:Resource.
 skos:narrowerTransitive a rdf:Property.
 skos:narrowerTransitive a rdfs:Resource.
+:Architect rdfs:subClassOf :Evincible.
+:Portrait rdfs:subClassOf :Evincible.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 0.256 [sec] TC=2707 TP=49486 BC=0 BP=13741 PM=0 CM=0 FM=0 AM=0
+#ENDS 0.247 [sec] TC=2844 TP=51642 BC=0 BP=14484 PM=0 CM=0 FM=0 AM=0
 

@@ -76,12 +76,6 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     :display false ;
     :editable false .
 
-:Relationship a owl:Class ;
-    :editable false ;
-    :toplevel false ;
-    :plural "Relationships" ;
-    :singular "Relationship" .
-
 :Evidence a owl:Class ;
     :editable false ;
     :toplevel false ;
@@ -151,10 +145,8 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     :label "Evidenced by" ;
     :display false ;
     :editable false ;
-    rdfs:domain :Relationship ;
+    rdfs:domain :Evincible ;
     rdfs:range :Evidence .
-
-
 
 #
 # Reification types.
