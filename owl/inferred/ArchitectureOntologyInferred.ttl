@@ -205,6 +205,110 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :DesignedByRelation :label "Designed".
 :DesignedByRelation :impliesRelationship :designedBy.
 :DesignedByRelation rdfs:label "Designed".
+:StudiedAtRelation a owl:Class.
+:StudiedAtRelation a :Relationship.
+:StudiedAtRelation a rdfs:Class.
+:StudiedAtRelation a rdfs:Resource.
+:StudiedAtRelation a :Evincible.
+:StudiedAtRelation rdfs:subClassOf :Relationship.
+:StudiedAtRelation rdfs:subClassOf :RelatedToRelation.
+:StudiedAtRelation rdfs:subClassOf rdfs:Resource.
+:StudiedAtRelation rdfs:subClassOf :StudiedAtRelation.
+:StudiedAtRelation rdfs:subClassOf :Evincible.
+:StudiedAtRelation :label "Studied At".
+:StudiedAtRelation :impliesRelationship :studiedAt.
+:StudiedAtRelation rdfs:label "Studied At".
+:WorkedWithRelation a owl:Class.
+:WorkedWithRelation a :Relationship.
+:WorkedWithRelation a rdfs:Class.
+:WorkedWithRelation a rdfs:Resource.
+:WorkedWithRelation a :Evincible.
+:WorkedWithRelation rdfs:subClassOf :Relationship.
+:WorkedWithRelation rdfs:subClassOf :RelatedToRelation.
+:WorkedWithRelation rdfs:subClassOf rdfs:Resource.
+:WorkedWithRelation rdfs:subClassOf :WorkedWithRelation.
+:WorkedWithRelation rdfs:subClassOf :Evincible.
+:WorkedWithRelation :label "Worked With".
+:WorkedWithRelation :impliesRelationship :workedWith.
+:WorkedWithRelation rdfs:label "Worked With".
+:WorkedOnRelation a owl:Class.
+:WorkedOnRelation a :Relationship.
+:WorkedOnRelation a rdfs:Class.
+:WorkedOnRelation a rdfs:Resource.
+:WorkedOnRelation a :Evincible.
+:WorkedOnRelation rdfs:subClassOf :Relationship.
+:WorkedOnRelation rdfs:subClassOf :RelatedToRelation.
+:WorkedOnRelation rdfs:subClassOf rdfs:Resource.
+:WorkedOnRelation rdfs:subClassOf :WorkedOnRelation.
+:WorkedOnRelation rdfs:subClassOf :Evincible.
+:WorkedOnRelation :label "Worked On".
+:WorkedOnRelation :impliesRelationship :workedOn.
+:WorkedOnRelation rdfs:label "Worked On".
+:ClientOfRelation a owl:Class.
+:ClientOfRelation a :Relationship.
+:ClientOfRelation a rdfs:Class.
+:ClientOfRelation a rdfs:Resource.
+:ClientOfRelation a :Evincible.
+:ClientOfRelation rdfs:subClassOf :Relationship.
+:ClientOfRelation rdfs:subClassOf :RelatedToRelation.
+:ClientOfRelation rdfs:subClassOf rdfs:Resource.
+:ClientOfRelation rdfs:subClassOf :ClientOfRelation.
+:ClientOfRelation rdfs:subClassOf :Evincible.
+:ClientOfRelation :label "Client Of".
+:ClientOfRelation :impliesRelationship :clientOf.
+:ClientOfRelation rdfs:label "Client Of".
+:KnewSociallyRelation a owl:Class.
+:KnewSociallyRelation a :Relationship.
+:KnewSociallyRelation a rdfs:Class.
+:KnewSociallyRelation a rdfs:Resource.
+:KnewSociallyRelation a :Evincible.
+:KnewSociallyRelation rdfs:subClassOf :Relationship.
+:KnewSociallyRelation rdfs:subClassOf :RelatedToRelation.
+:KnewSociallyRelation rdfs:subClassOf rdfs:Resource.
+:KnewSociallyRelation rdfs:subClassOf :KnewSociallyRelation.
+:KnewSociallyRelation rdfs:subClassOf :Evincible.
+:KnewSociallyRelation :label "Knew Socially".
+:KnewSociallyRelation :impliesRelationship :knewSocially.
+:KnewSociallyRelation rdfs:label "Knew Socially".
+:KnewProfessionallyRelation a owl:Class.
+:KnewProfessionallyRelation a :Relationship.
+:KnewProfessionallyRelation a rdfs:Class.
+:KnewProfessionallyRelation a rdfs:Resource.
+:KnewProfessionallyRelation a :Evincible.
+:KnewProfessionallyRelation rdfs:subClassOf :Relationship.
+:KnewProfessionallyRelation rdfs:subClassOf :RelatedToRelation.
+:KnewProfessionallyRelation rdfs:subClassOf rdfs:Resource.
+:KnewProfessionallyRelation rdfs:subClassOf :KnewProfessionallyRelation.
+:KnewProfessionallyRelation rdfs:subClassOf :Evincible.
+:KnewProfessionallyRelation :label "Knew Professionally".
+:KnewProfessionallyRelation :impliesRelationship :knewProfessionally.
+:KnewProfessionallyRelation rdfs:label "Knew Professionally".
+:InfluencedByRelation a owl:Class.
+:InfluencedByRelation a :Relationship.
+:InfluencedByRelation a rdfs:Class.
+:InfluencedByRelation a rdfs:Resource.
+:InfluencedByRelation a :Evincible.
+:InfluencedByRelation rdfs:subClassOf :Relationship.
+:InfluencedByRelation rdfs:subClassOf :RelatedToRelation.
+:InfluencedByRelation rdfs:subClassOf rdfs:Resource.
+:InfluencedByRelation rdfs:subClassOf :InfluencedByRelation.
+:InfluencedByRelation rdfs:subClassOf :Evincible.
+:InfluencedByRelation :label "Influenced By".
+:InfluencedByRelation :impliesRelationship :influencedBy.
+:InfluencedByRelation rdfs:label "Influenced By".
+:CollaboratedWith a owl:Class.
+:CollaboratedWith a :Relationship.
+:CollaboratedWith a rdfs:Class.
+:CollaboratedWith a rdfs:Resource.
+:CollaboratedWith a :Evincible.
+:CollaboratedWith rdfs:subClassOf :Relationship.
+:CollaboratedWith rdfs:subClassOf :RelatedToRelation.
+:CollaboratedWith rdfs:subClassOf rdfs:Resource.
+:CollaboratedWith rdfs:subClassOf :CollaboratedWith.
+:CollaboratedWith rdfs:subClassOf :Evincible.
+:CollaboratedWith :label "Collaborated With".
+:CollaboratedWith :impliesRelationship :collaboratedWith.
+:CollaboratedWith rdfs:label "Collaborated With".
 :SummaryProperty a owl:Class.
 :SummaryProperty a rdfs:Resource.
 :SummaryProperty a rdfs:Class.
@@ -217,9 +321,9 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Evincible rdfs:subClassOf rdfs:Resource.
 :Evincible rdfs:subClassOf :Evincible.
 :Evincible :label "Evincible Thing".
-:Evincible rdfs:comment "Top for Percian 'Firsts' and 'Thirds' related by this vocabularly".
 :Evincible :editable false .
 :Evincible :toplevel false .
+:Evincible rdfs:comment "Top for Percian 'Firsts' and 'Thirds' related by this vocabularly".
 :Evincible rdfs:label "Evincible Thing".
 :Entity a owl:Class.
 :Entity a rdfs:Resource.
@@ -228,9 +332,9 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Entity rdfs:subClassOf rdfs:Resource.
 :Entity rdfs:subClassOf :Entity.
 :Entity :label "Entity".
-:Entity rdfs:comment "Top for Percian 'Firsts' related by this vocabularly".
 :Entity :editable false .
 :Entity :toplevel false .
+:Entity rdfs:comment "Top for Percian 'Firsts' related by this vocabularly".
 :Entity rdfs:label "Entity".
 :Relationship a owl:Class.
 :Relationship a rdfs:Resource.
@@ -239,11 +343,11 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Relationship rdfs:subClassOf rdfs:Resource.
 :Relationship rdfs:subClassOf :Relationship.
 :Relationship :label "Relationships".
-:Relationship rdfs:comment "Top for Percian 'Thirds' related by this vocabularly".
 :Relationship :editable false .
 :Relationship :toplevel false .
 :Relationship :plural "Relationships".
 :Relationship :singular "Relationship".
+:Relationship rdfs:comment "Top for Percian 'Thirds' related by this vocabularly".
 :Relationship rdfs:label "Relationships".
 :NonDigitalThing a owl:Class.
 :NonDigitalThing a rdfs:Class.
@@ -285,13 +389,22 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :DigitalFile :label "File".
 :DigitalFile rdfs:comment "This is analagous to a digital manifestation of an FRBR expression. The medium of a DigitalFile is 'bitstream' syntactically and lexigraphically encoded consistent with a RFC2046 mime-type".
 :DigitalFile rdfs:label "File".
+:StructureOrAgentOrTopic a owl:Class.
+:StructureOrAgentOrTopic a rdfs:Class.
+:StructureOrAgentOrTopic a rdfs:Resource.
+:StructureOrAgentOrTopic rdfs:subClassOf :NonDigitalThing.
+:StructureOrAgentOrTopic rdfs:subClassOf rdfs:Resource.
+:StructureOrAgentOrTopic rdfs:subClassOf :StructureOrAgentOrTopic.
+:StructureOrAgentOrTopic rdfs:subClassOf :Entity.
+:StructureOrAgentOrTopic :label "Structure or Agent or Topic".
+:StructureOrAgentOrTopic rdfs:label "Structure or Agent or Topic".
 :StructureOrAgent a owl:Class.
 :StructureOrAgent a rdfs:Class.
 :StructureOrAgent a rdfs:Resource.
-:StructureOrAgent rdfs:subClassOf :NonDigitalThing.
+:StructureOrAgent rdfs:subClassOf :StructureOrAgentOrTopic.
 :StructureOrAgent rdfs:subClassOf rdfs:Resource.
 :StructureOrAgent rdfs:subClassOf :StructureOrAgent.
-:StructureOrAgent rdfs:subClassOf :Entity.
+:StructureOrAgent rdfs:subClassOf :NonDigitalThing.
 :StructureOrAgent :label "Structure or Agent".
 :StructureOrAgent rdfs:label "Structure or Agent".
 :Structure a owl:Class.
@@ -301,7 +414,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :Structure rdfs:subClassOf geo:SpatialThing.
 :Structure rdfs:subClassOf rdfs:Resource.
 :Structure rdfs:subClassOf :Structure.
-:Structure rdfs:subClassOf :NonDigitalThing.
+:Structure rdfs:subClassOf :StructureOrAgentOrTopic.
 :Structure :label "Structures".
 :Structure :editable true .
 :Structure :toplevel true .
@@ -331,7 +444,7 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :StructureOrAgent.
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf rdfs:Resource.
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
-<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :NonDigitalThing.
+<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :StructureOrAgentOrTopic.
 <http://xmlns.com/foaf/0.1/Agent> :label "Agents".
 <http://xmlns.com/foaf/0.1/Agent> :plural "Agents".
 <http://xmlns.com/foaf/0.1/Agent> :singular "Agent".
@@ -398,6 +511,21 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :FirmManifestation :singular "Firm Manifestation".
 :FirmManifestation :requiredToCreate :tradingName.
 :FirmManifestation rdfs:label "Firm Manifestations".
+:EducationalInstitution a owl:Class.
+:EducationalInstitution a rdfs:Class.
+:EducationalInstitution a rdfs:Resource.
+:EducationalInstitution rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
+:EducationalInstitution rdfs:subClassOf rdfs:Resource.
+:EducationalInstitution rdfs:subClassOf :EducationalInstitution.
+:EducationalInstitution rdfs:subClassOf :StructureOrAgent.
+:EducationalInstitution :label "Educational Insitutions".
+:EducationalInstitution :editable true .
+:EducationalInstitution :toplevel false .
+:EducationalInstitution :plural "Educational Insitutions".
+:EducationalInstitution :singular "Educational Institution".
+:EducationalInstitution :displayPrecedence 10 .
+:EducationalInstitution :requiredToCreate <http://xmlns.com/foaf/0.1/name>.
+:EducationalInstitution rdfs:label "Educational Insitutions".
 :Article a owl:Class.
 :Article a rdfs:Class.
 :Article a rdfs:Resource.
@@ -494,17 +622,19 @@ qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
 :DrawingType rdfs:subClassOf :Entity.
 :DrawingType :label "Drawing Type".
 :DrawingType rdfs:label "Drawing Type".
-:TopicConcept a owl:Class.
-:TopicConcept a rdfs:Class.
-:TopicConcept a rdfs:Resource.
-:TopicConcept rdfs:subClassOf :Entity.
-:TopicConcept rdfs:subClassOf skos:Concept.
-:TopicConcept rdfs:subClassOf rdfs:Resource.
-:TopicConcept rdfs:subClassOf :TopicConcept.
-:TopicConcept rdfs:subClassOf :Evincible.
-:TopicConcept :label "Topic".
-:TopicConcept :toplevel false .
-:TopicConcept rdfs:label "Topic".
+:Topic a owl:Class.
+:Topic a rdfs:Class.
+:Topic a rdfs:Resource.
+:Topic rdfs:subClassOf :Entity.
+:Topic rdfs:subClassOf skos:Concept.
+:Topic rdfs:subClassOf rdfs:Resource.
+:Topic rdfs:subClassOf :Topic.
+:Topic rdfs:subClassOf :Evincible.
+:Topic :label "Topic".
+:Topic :editable true .
+:Topic :toplevel false .
+:Topic :requiredToCreate :label.
+:Topic rdfs:label "Topic".
 geo:SpatialThing a owl:Class.
 geo:SpatialThing a rdfs:Resource.
 geo:SpatialThing a rdfs:Class.
@@ -570,9 +700,9 @@ rdf:type a rdfs:Resource.
 rdf:type rdfs:domain rdfs:Resource.
 rdf:type rdfs:range rdfs:Class.
 rdf:type :label "Type".
-rdf:type rdfs:comment "The type of a thing".
 rdf:type :display false .
 rdf:type :editable false .
+rdf:type rdfs:comment "The type of a thing".
 rdf:type rdfs:label "Type".
 rdfs:subClassOf a rdf:Property.
 rdfs:subClassOf a rdfs:Resource.
@@ -586,34 +716,22 @@ rdfs:range a rdf:Property.
 rdfs:range a rdfs:Resource.
 rdfs:range rdfs:domain rdf:Property.
 rdfs:range rdfs:range rdfs:Class.
-:label a owl:AnnotationProperty.
 :label a owl:DatatypeProperty.
 :label a :SummaryProperty.
 :label a rdf:Property.
 :label a rdfs:Resource.
 :label :label "Preferred label".
-:label rdfs:subPropertyOf rdfs:label.
 :label rdfs:comment "The preferred label for a thing".
+:label rdfs:subPropertyOf rdfs:label.
 :label rdfs:label "Preferred label".
-rdfs:subPropertyOf a rdf:Property.
-rdfs:subPropertyOf a rdfs:Resource.
-rdfs:subPropertyOf rdfs:domain rdf:Property.
-rdfs:subPropertyOf rdfs:range rdf:Property.
-rdfs:comment a rdf:Property.
-rdfs:comment a rdfs:Resource.
-rdfs:comment rdfs:domain rdfs:Resource.
-rdfs:comment rdfs:range rdfs:Literal.
-:display a owl:AnnotationProperty.
 :display a owl:DatatypeProperty.
 :display a rdf:Property.
 :display a rdfs:Resource.
 :display rdfs:comment "Used to indicate if a property should be displayed when displaying an instance".
-:editable a owl:AnnotationProperty.
 :editable a owl:DatatypeProperty.
 :editable a rdf:Property.
 :editable a rdfs:Resource.
 :editable rdfs:comment "Used to indicate if a property should be editable directly via the interface".
-:toplevel a owl:AnnotationProperty.
 :toplevel a owl:DatatypeProperty.
 :toplevel a rdf:Property.
 :toplevel a rdfs:Resource.
@@ -624,18 +742,18 @@ rdfs:comment rdfs:range rdfs:Literal.
 :plural a :SummaryProperty.
 :plural a rdf:Property.
 :plural a rdfs:Resource.
-:plural rdfs:subPropertyOf :label.
-:plural rdfs:subPropertyOf rdfs:label.
-:plural rdfs:comment "The plural form of the preferred label for a thing".
 :plural :display true .
 :plural :editable true .
+:plural rdfs:comment "The plural form of the preferred label for a thing".
+:plural rdfs:subPropertyOf :label.
+:plural rdfs:subPropertyOf rdfs:label.
 :singular a owl:DatatypeProperty.
 :singular a :SummaryProperty.
 :singular a rdf:Property.
 :singular a rdfs:Resource.
-:singular rdfs:comment "The singular form of the preferred label for a thing".
 :singular :display true .
 :singular :editable true .
+:singular rdfs:comment "The singular form of the preferred label for a thing".
 :impliesRelationship a owl:AnnotationProperty.
 :impliesRelationship a rdf:Property.
 :impliesRelationship a rdfs:Resource.
@@ -643,6 +761,10 @@ rdfs:comment rdfs:range rdfs:Literal.
 :impliesRelationship rdfs:range owl:ObjectProperty.
 :impliesRelationship :label "Implies Relationship".
 :impliesRelationship rdfs:label "Implies Relationship".
+rdfs:comment a rdf:Property.
+rdfs:comment a rdfs:Resource.
+rdfs:comment rdfs:domain rdfs:Resource.
+rdfs:comment rdfs:range rdfs:Literal.
 :entailsRelationship a owl:AnnotationProperty.
 :entailsRelationship a rdf:Property.
 :entailsRelationship a rdfs:Resource.
@@ -650,7 +772,10 @@ rdfs:comment rdfs:range rdfs:Literal.
 :entailsRelationship rdfs:range :Relationship.
 :entailsRelationship :label "Entails Relationship".
 :entailsRelationship rdfs:label "Entails Relationship".
-:displayPrecedence a owl:AnnotationProperty.
+rdfs:subPropertyOf a rdf:Property.
+rdfs:subPropertyOf a rdfs:Resource.
+rdfs:subPropertyOf rdfs:domain rdf:Property.
+rdfs:subPropertyOf rdfs:range rdf:Property.
 :displayPrecedence a owl:DatatypeProperty.
 :displayPrecedence a rdf:Property.
 :displayPrecedence a rdfs:Resource.
@@ -668,6 +793,8 @@ rdfs:isDefinedBy rdfs:range rdfs:Resource.
 rdfs:isDefinedBy rdfs:subPropertyOf rdfs:seeAlso.
 :suppressEditable a rdf:Property.
 :suppressEditable a rdfs:Resource.
+rdfs:rnage a rdf:Property.
+rdfs:rnage a rdfs:Resource.
 owl:inverseOf a rdf:Property.
 owl:inverseOf a rdfs:Resource.
 rdfs:label a owl:DatatypeProperty.
@@ -676,9 +803,9 @@ rdfs:label a rdfs:Resource.
 rdfs:label rdfs:domain rdfs:Resource.
 rdfs:label rdfs:range rdfs:Literal.
 rdfs:label :label "Label".
-rdfs:label rdfs:comment "A label for a thing".
 rdfs:label :display false .
 rdfs:label :editable false .
+rdfs:label rdfs:comment "A label for a thing".
 rdfs:label rdfs:label "Label".
 skos:hasTopConcept a rdf:Property.
 skos:hasTopConcept a rdfs:Resource.
@@ -800,6 +927,105 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :designedBy :editable false .
 :designedBy :entailsRelationship :DesignedByRelation.
 :designedBy rdfs:label "Designed By".
+:studiedAt a :relProperty.
+:studiedAt a owl:ObjectProperty.
+:studiedAt a rdf:Property.
+:studiedAt a rdfs:Resource.
+:studiedAt rdfs:domain <http://xmlns.com/foaf/0.1/Agent>.
+:studiedAt rdfs:range :EducationalInstitution.
+:studiedAt :label "Studied At".
+:studiedAt :display true .
+:studiedAt :editable false .
+:studiedAt :entailsRelationship :StudiedAtRelation.
+:studiedAt rdfs:label "Studied At".
+:workedWith a :relProperty.
+:workedWith a owl:ObjectProperty.
+:workedWith a rdf:Property.
+:workedWith a rdfs:Resource.
+:workedWith rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:workedWith rdfs:range <http://xmlns.com/foaf/0.1/Person>.
+:workedWith :label "Worked With".
+:workedWith :display true .
+:workedWith :editable true .
+:workedWith :entailsRelationship :WorkedWithRelation.
+:workedWith rdfs:label "Worked With".
+:workedOn a :relProperty.
+:workedOn a owl:ObjectProperty.
+:workedOn a rdf:Property.
+:workedOn a rdfs:Resource.
+:workedOn rdfs:domain :Architect.
+:workedOn rdfs:range :Structure.
+:workedOn :label "Worked On".
+:workedOn :display true .
+:workedOn :editable true .
+:workedOn :entailsRelationship :WorkedOnRelation.
+:workedOn rdfs:label "Worked On".
+:clientOf a :relProperty.
+:clientOf a owl:ObjectProperty.
+:clientOf a rdf:Property.
+:clientOf a rdfs:Resource.
+:clientOf rdfs:domain <http://xmlns.com/foaf/0.1/Agent>.
+:clientOf rdfs:range :Architect.
+:clientOf :label "Client Of".
+:clientOf :display true .
+:clientOf :editable true .
+:clientOf :entailsRelationship :ClientOfRelation.
+:clientOf rdfs:label "Client Of".
+:knew a owl:ObjectProperty.
+:knew a rdf:Property.
+:knew a rdfs:Resource.
+:knew rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:knew rdfs:range <http://xmlns.com/foaf/0.1/Person>.
+:knew :label "Knew".
+:knew :display true .
+:knew :editable true .
+:knew rdfs:label "Knew".
+:knewSocially a :relProperty.
+:knewSocially a owl:ObjectProperty.
+:knewSocially a rdf:Property.
+:knewSocially a rdfs:Resource.
+:knewSocially rdfs:domain <http://xmlns.com/foaf/0.1/Agent>.
+:knewSocially rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
+:knewSocially :label "Knew Socially".
+:knewSocially :display true .
+:knewSocially :editable true .
+:knewSocially :entailsRelationship :KnewSociallyRelation.
+:knewSocially rdfs:subPropertyOf :knew.
+:knewSocially rdfs:label "Knew Socially".
+:knewProfessionally a :relProperty.
+:knewProfessionally a owl:ObjectProperty.
+:knewProfessionally a rdf:Property.
+:knewProfessionally a rdfs:Resource.
+:knewProfessionally rdfs:domain <http://xmlns.com/foaf/0.1/Agent>.
+:knewProfessionally rdfs:range <http://xmlns.com/foaf/0.1/Agent>.
+:knewProfessionally :label "Knew Professionally".
+:knewProfessionally :display true .
+:knewProfessionally :editable true .
+:knewProfessionally :entailsRelationship :KnewProfessionallyRelation.
+:knewProfessionally rdfs:subPropertyOf :knew.
+:knewProfessionally rdfs:label "Knew Professionally".
+:influencedBy a :relProperty.
+:influencedBy a owl:ObjectProperty.
+:influencedBy a rdf:Property.
+:influencedBy a rdfs:Resource.
+:influencedBy rdfs:domain :Architect.
+:influencedBy rdfs:range :StructureOrAgentOrTopic.
+:influencedBy :label "Influenced By".
+:influencedBy :display true .
+:influencedBy :editable true .
+:influencedBy :entailsRelationship :InfluencedBy.
+:influencedBy rdfs:label "Influenced By".
+:collaboratedWith a :relProperty.
+:collaboratedWith a owl:ObjectProperty.
+:collaboratedWith a rdf:Property.
+:collaboratedWith a rdfs:Resource.
+:collaboratedWith rdfs:domain :Architect.
+:collaboratedWith rdfs:range <http://xmlns.com/foaf/0.1/Person>.
+:collaboratedWith :label "Collaborated With".
+:collaboratedWith :display true .
+:collaboratedWith :editable true .
+:collaboratedWith :entailsRelationship :InfluencedBy.
+:collaboratedWith rdfs:label "Collaborated With".
 :startDate a :relationshipDataProperty.
 :startDate a rdf:Property.
 :startDate a rdfs:Resource.
@@ -876,6 +1102,16 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :justification :display true .
 :justification :editable false .
 :justification rdfs:label "Justification".
+<http://xmlns.com/foaf/0.1/name> a owl:DatatypeProperty.
+<http://xmlns.com/foaf/0.1/name> a :SummaryProperty.
+<http://xmlns.com/foaf/0.1/name> a rdf:Property.
+<http://xmlns.com/foaf/0.1/name> a rdfs:Resource.
+<http://xmlns.com/foaf/0.1/name> rdfs:domain <http://xmlns.com/foaf/0.1/Agent>.
+<http://xmlns.com/foaf/0.1/name> :label "Name".
+<http://xmlns.com/foaf/0.1/name> :display true .
+<http://xmlns.com/foaf/0.1/name> :editable true .
+<http://xmlns.com/foaf/0.1/name> rdfs:rnage xsd:string.
+<http://xmlns.com/foaf/0.1/name> rdfs:label "Name".
 <http://xmlns.com/foaf/0.1/firstName> a owl:DatatypeProperty.
 <http://xmlns.com/foaf/0.1/firstName> a :SummaryProperty.
 <http://xmlns.com/foaf/0.1/firstName> a rdf:Property.
@@ -938,10 +1174,10 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :depictsBuilding a rdfs:Resource.
 :depictsBuilding rdfs:domain :DigitalObject.
 :depictsBuilding :label "Depicts".
-:depictsBuilding rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
 :depictsBuilding :display true .
 :depictsBuilding :editable false .
 :depictsBuilding :entailsRelationship :RelatedToRelation.
+:depictsBuilding rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
 :depictsBuilding :displayPrecedence 20 .
 :depictsBuilding rdfs:label "Depicts".
 :interviewer a owl:ObjectProperty.
@@ -951,10 +1187,10 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :interviewer rdfs:domain :Interview.
 :interviewer rdfs:range <http://xmlns.com/foaf/0.1/Person>.
 :interviewer :label "Interviewer".
-:interviewer rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
 :interviewer :display true .
 :interviewer :editable false .
 :interviewer :entailsRelationship :RelatedToRelation.
+:interviewer rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
 :interviewer :displayPrecedence 110 .
 :interviewer rdfs:label "Interviewer".
 :interviewee a owl:ObjectProperty.
@@ -964,10 +1200,10 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :interviewee rdfs:domain :Interview.
 :interviewee rdfs:range <http://xmlns.com/foaf/0.1/Person>.
 :interviewee :label "Interviewee".
-:interviewee rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
 :interviewee :display true .
 :interviewee :editable false .
 :interviewee :entailsRelationship :RelatedToRelation.
+:interviewee rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
 :interviewee :displayPrecedence 120 .
 :interviewee rdfs:label "Interviewee".
 :transcriber a owl:ObjectProperty.
@@ -977,10 +1213,10 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :transcriber rdfs:domain :Transcript.
 :transcriber rdfs:range <http://xmlns.com/foaf/0.1/Person>.
 :transcriber :label "Transcriber".
-:transcriber rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
 :transcriber :display true .
 :transcriber :editable false .
 :transcriber :entailsRelationship :RelatedToRelation.
+:transcriber rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
 :transcriber :displayPrecedence 130 .
 :transcriber rdfs:label "Transcriber".
 :locatedAt a owl:DatatypeProperty.
@@ -1078,18 +1314,18 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :hasFile rdfs:domain :DigitalObject.
 :hasFile rdfs:range :DigitalFile.
 :hasFile :label "Has File".
-:hasFile rdfs:subPropertyOf frbr:embodiment.
 :hasFile :display false .
 :hasFile :editable false .
+:hasFile rdfs:subPropertyOf frbr:embodiment.
 :hasFile rdfs:label "Has File".
 <http://purl.org/dc/terms/rights> a owl:DatatypeProperty.
 <http://purl.org/dc/terms/rights> a rdfs:Resource.
 <http://purl.org/dc/terms/rights> a rdf:Property.
 <http://purl.org/dc/terms/rights> rdfs:domain :DigitalObject.
 <http://purl.org/dc/terms/rights> :label "Rights".
-<http://purl.org/dc/terms/rights> rdfs:comment "Currently a plain text statement of IP status of the work. If required can model this further".
 <http://purl.org/dc/terms/rights> :display true .
 <http://purl.org/dc/terms/rights> :editable false .
+<http://purl.org/dc/terms/rights> rdfs:comment "Currently a plain text statement of IP status of the work. If required can model this further".
 <http://purl.org/dc/terms/rights> :displayPrecedence 90 .
 <http://purl.org/dc/terms/rights> rdfs:isDefinedBy <http://purl.org/dc/terms/rights>.
 <http://purl.org/dc/terms/rights> rdfs:label "Rights".
@@ -1127,9 +1363,9 @@ owl:DatatypeProperty rdfs:range rdfs:Literal.
 :dateOriginalCreation a rdfs:Resource.
 :dateOriginalCreation rdfs:domain :DigitalObject.
 :dateOriginalCreation :label "Original Creation Date".
-:dateOriginalCreation rdfs:subPropertyOf <http://purl.org/dc/terms/created>.
 :dateOriginalCreation :display true .
 :dateOriginalCreation :editable false .
+:dateOriginalCreation rdfs:subPropertyOf <http://purl.org/dc/terms/created>.
 :dateOriginalCreation :displayPrecedence 190 .
 :dateOriginalCreation rdfs:label "Original Creation Date".
 <http://purl.org/dc/terms/format> a owl:DatatypeProperty.
@@ -1267,9 +1503,9 @@ geo:long rdfs:seeAlso geo:long.
 :indefiniteMapIcon a rdf:Property.
 :indefiniteMapIcon rdfs:domain :BuildingTypology.
 :indefiniteMapIcon :label "Primary Map Icon".
-:indefiniteMapIcon rdfs:comment "An icon to be used to indicate the presence of an entity on a map".
 :indefiniteMapIcon :display false .
 :indefiniteMapIcon :editable false .
+:indefiniteMapIcon rdfs:comment "An icon to be used to indicate the presence of an entity on a map".
 :indefiniteMapIcon rdfs:label "Primary Map Icon".
 :definiteMapIcon a owl:DatatypeProperty.
 :definiteMapIcon a :SummaryProperty.
@@ -1277,9 +1513,9 @@ geo:long rdfs:seeAlso geo:long.
 :definiteMapIcon a rdf:Property.
 :definiteMapIcon rdfs:domain :BuildingTypology.
 :definiteMapIcon :label "Secondary Map Icon".
-:definiteMapIcon rdfs:comment "An icon to be used to indicate a specifically identified entity on a map".
 :definiteMapIcon :display false .
 :definiteMapIcon :editable false .
+:definiteMapIcon rdfs:comment "An icon to be used to indicate a specifically identified entity on a map".
 :definiteMapIcon rdfs:label "Secondary Map Icon".
 :references a owl:ObjectProperty.
 :references a rdf:Property.
@@ -1287,10 +1523,10 @@ geo:long rdfs:seeAlso geo:long.
 :references rdfs:domain :DigitalObject.
 :references rdfs:range :Entity.
 :references :label "References".
-:references rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to>.
 :references :display true .
 :references :editable false .
 :references :entailsRelationship :ReferenceRelation.
+:references rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to>.
 :references owl:inverseOf :referencedBy.
 :references rdfs:label "References".
 :referencedBy a owl:ObjectProperty.
@@ -1299,9 +1535,9 @@ geo:long rdfs:seeAlso geo:long.
 :referencedBy rdfs:domain :Entity.
 :referencedBy rdfs:range :DigitalObject.
 :referencedBy :label "Referenced By".
-:referencedBy rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by>.
 :referencedBy :display true .
 :referencedBy :editable false .
+:referencedBy rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by>.
 :referencedBy owl:inverseOf :references.
 :referencedBy rdfs:label "Referenced By".
 :hasRole a owl:ObjectProperty.
@@ -1368,29 +1604,29 @@ rdf:value rdfs:range rdfs:Resource.
 :identifier a rdf:Property.
 :identifier a rdfs:Resource.
 :identifier :label "System Identifier".
-:identifier rdfs:subPropertyOf <http://purl.org/dc/terms/identifier>.
 :identifier :display false .
 :identifier :editable false .
+:identifier rdfs:subPropertyOf <http://purl.org/dc/terms/identifier>.
 :identifier rdfs:label "System Identifier".
 :contains a owl:ObjectProperty.
 :contains a rdf:Property.
 :contains a rdfs:Resource.
 :contains :label "Contains".
+:contains :display false .
+:contains :editable false .
 :contains rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P106_is_composed_of>.
 :contains rdfs:subPropertyOf <http://purl.org/dc/terms/hasPart>.
 :contains rdfs:subPropertyOf frbr:part.
-:contains :display false .
-:contains :editable false .
 :contains rdfs:label "Contains".
 :containedIn a owl:ObjectProperty.
 :containedIn a rdf:Property.
 :containedIn a rdfs:Resource.
 :containedIn :label "Contained In".
+:containedIn :display false .
+:containedIn :editable false .
 :containedIn rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P106i_is_forms_part_of>.
 :containedIn rdfs:subPropertyOf <http://purl.org/dc/terms/isPartOf>.
 :containedIn rdfs:subPropertyOf frbr:partOf.
-:containedIn :display false .
-:containedIn :editable false .
 :containedIn rdfs:label "Contained In".
 <http://purl.org/dc/terms/subject> a owl:DatatypeProperty.
 <http://purl.org/dc/terms/subject> a rdfs:Resource.
@@ -1442,9 +1678,9 @@ frbr:embodiment rdfs:seeAlso frbr:embodiment.
 <http://purl.org/dc/terms/hasPart> a owl:ObjectProperty.
 <http://purl.org/dc/terms/hasPart> a rdfs:Resource.
 <http://purl.org/dc/terms/hasPart> a rdf:Property.
-<http://purl.org/dc/terms/hasPart> rdfs:comment "Inferred from sub-properties only".
 <http://purl.org/dc/terms/hasPart> :display false .
 <http://purl.org/dc/terms/hasPart> :editable false .
+<http://purl.org/dc/terms/hasPart> rdfs:comment "Inferred from sub-properties only".
 <http://purl.org/dc/terms/hasPart> rdfs:isDefinedBy <http://purl.org/dc/terms/hasPart>.
 <http://purl.org/dc/terms/hasPart> rdfs:label "Has Part".
 <http://purl.org/dc/terms/hasPart> rdfs:seeAlso <http://purl.org/dc/terms/hasPart>.
@@ -1461,9 +1697,9 @@ frbr:part rdfs:seeAlso frbr:part.
 <http://purl.org/dc/terms/isPartOf> a owl:ObjectProperty.
 <http://purl.org/dc/terms/isPartOf> a rdfs:Resource.
 <http://purl.org/dc/terms/isPartOf> a rdf:Property.
-<http://purl.org/dc/terms/isPartOf> rdfs:comment "Inferred from sub-properties only".
 <http://purl.org/dc/terms/isPartOf> :display false .
 <http://purl.org/dc/terms/isPartOf> :editable false .
+<http://purl.org/dc/terms/isPartOf> rdfs:comment "Inferred from sub-properties only".
 <http://purl.org/dc/terms/isPartOf> rdfs:isDefinedBy <http://purl.org/dc/terms/isPartOf>.
 <http://purl.org/dc/terms/isPartOf> rdfs:label "Is Part Of".
 <http://purl.org/dc/terms/isPartOf> rdfs:seeAlso <http://purl.org/dc/terms/isPartOf>.
@@ -1489,9 +1725,6 @@ frbr:partOf rdfs:seeAlso frbr:partOf.
 <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> :editable false .
 <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> rdfs:isDefinedBy <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs>.
 <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> rdfs:seeAlso <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs>.
-:shortName a owl:AnnotationProperty.
-:shortName a rdfs:Resource.
-:shortName a rdf:Property.
 :preferredImage a owl:ObjectProperty.
 :preferredImage a :SummaryProperty.
 :preferredImage a rdfs:Resource.
@@ -1528,9 +1761,9 @@ frbr:partOf rdfs:seeAlso frbr:partOf.
 :prefLabel a rdfs:Resource.
 :prefLabel a rdf:Property.
 :prefLabel :label "Known as".
-:prefLabel rdfs:comment "A preferred label for a thing".
 :prefLabel :display true .
 :prefLabel :editable true .
+:prefLabel rdfs:comment "A preferred label for a thing".
 :prefLabel :displayPrecedence 100 .
 :prefLabel rdfs:label "Known as".
 <http://purl.org/dc/terms/title> a owl:DatatypeProperty.
@@ -1578,24 +1811,31 @@ qavocab:Plan a :Evincible.
 qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 :DigitalObject rdfs:subClassOf :Evincible.
 :DigitalFile rdfs:subClassOf :Evincible.
+:StructureOrAgentOrTopic rdfs:subClassOf :Evincible.
+:StructureOrAgent rdfs:subClassOf :Entity.
 :StructureOrAgent rdfs:subClassOf :Evincible.
-:Structure rdfs:subClassOf :Entity.
+:Structure rdfs:subClassOf :NonDigitalThing.
 :Structure rdfs:subClassOf :Evincible.
+:Structure rdfs:subClassOf :Entity.
 :BuildingTypology rdfs:subClassOf :Evincible.
-<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :Entity.
+<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :NonDigitalThing.
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :Evincible.
-<http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :NonDigitalThing.
-<http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :Evincible.
+<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf :Entity.
+<http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :StructureOrAgentOrTopic.
 <http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :Entity.
+<http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :NonDigitalThing.
 :Architect rdfs:subClassOf :StructureOrAgent.
-:Architect rdfs:subClassOf :Entity.
 :Architect rdfs:subClassOf :NonDigitalThing.
-:Firm rdfs:subClassOf :NonDigitalThing.
-:Firm rdfs:subClassOf :Evincible.
+:Architect rdfs:subClassOf :StructureOrAgentOrTopic.
+:Firm rdfs:subClassOf :StructureOrAgentOrTopic.
 :Firm rdfs:subClassOf :Entity.
-:FirmManifestation rdfs:subClassOf :NonDigitalThing.
-:FirmManifestation rdfs:subClassOf :Evincible.
+:Firm rdfs:subClassOf :NonDigitalThing.
+:FirmManifestation rdfs:subClassOf :StructureOrAgentOrTopic.
 :FirmManifestation rdfs:subClassOf :Entity.
+:FirmManifestation rdfs:subClassOf :NonDigitalThing.
+:EducationalInstitution rdfs:subClassOf :StructureOrAgentOrTopic.
+:EducationalInstitution rdfs:subClassOf :Entity.
+:EducationalInstitution rdfs:subClassOf :NonDigitalThing.
 :Article rdfs:subClassOf :Entity.
 :Article rdfs:subClassOf :Evincible.
 :Image rdfs:subClassOf :Entity.
@@ -1628,9 +1868,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 :UtteranceTranscript rdfs:subClassOf frbr:Expression.
 :UtteranceTranscript rdfs:subClassOf :Evincible.
 :UtteranceTranscript rdfs:subClassOf :Entity.
-:Software rdfs:subClassOf :NonDigitalThing.
-:Software rdfs:subClassOf :Evincible.
+:Software rdfs:subClassOf :StructureOrAgentOrTopic.
 :Software rdfs:subClassOf :Entity.
+:Software rdfs:subClassOf :NonDigitalThing.
 skos:topConceptOf a rdf:Property.
 skos:topConceptOf a rdfs:Resource.
 skos:narrower a rdf:Property.
@@ -1639,10 +1879,16 @@ skos:broaderTransitive a rdf:Property.
 skos:broaderTransitive a rdfs:Resource.
 skos:narrowerTransitive a rdf:Property.
 skos:narrowerTransitive a rdfs:Resource.
+<http://xmlns.com/foaf/0.1/Person> rdfs:subClassOf :Evincible.
+:Architect rdfs:subClassOf :Entity.
 :Architect rdfs:subClassOf :Evincible.
+:Firm rdfs:subClassOf :Evincible.
+:FirmManifestation rdfs:subClassOf :Evincible.
+:EducationalInstitution rdfs:subClassOf :Evincible.
 :Portrait rdfs:subClassOf :Evincible.
+:Software rdfs:subClassOf :Evincible.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
 
-#ENDS 0.247 [sec] TC=2844 TP=51642 BC=0 BP=14484 PM=0 CM=0 FM=0 AM=0
+#ENDS 0.295 [sec] TC=3246 TP=58774 BC=0 BP=16501 PM=0 CM=0 FM=0 AM=0
 
