@@ -182,6 +182,48 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:subClassOf :RelatedToRelation ;
     :impliesRelationship :studiedAt .
 
+:WorkedWithRelation a owl:Class ;
+    :label "Worked With" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :workedWith .
+
+:WorkedOnRelation a owl:Class ;
+    :label "Worked On" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :workedOn .
+
+:ClientOfRelation a owl:Class ;
+    :label "Client Of" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :clientOf .
+
+:KnewSociallyRelation a owl:Class ;
+    :label "Knew Socially" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :knewSocially .
+
+:KnewProfessionallyRelation a owl:Class ;
+    :label "Knew Professionally" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :knewProfessionally .
+
+:InfluencedByRelation a owl:Class ;
+    :label "Influenced By" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :influencedBy .
+
+:CollaboratedWith a owl:Class ;
+    :label "Collaborated With" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :collaboratedWith .
+
 #
 # Reified properties.
 #
@@ -233,8 +275,6 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:domain foaf:Agent ;
     rdfs:range :EducationalInstitution ;
     :entailsRelationship :StudiedAtRelation .
-
-# Need to create entities from here.
 
 :workedWith a :relProperty ;
     :label "Worked With" ;
