@@ -40,6 +40,9 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:domain rdfs:Resource ;
     rdfs:range rdfs:Literal .
 
+:SummaryProperty rdfs:subClassOf rdf:Property ;
+    rdfs:comment "This is used to identify which proprties should be included in a entity summary" .
+
 #
 # Application oriented Properties
 #
@@ -82,9 +85,6 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:domain owl:Class ;
     rdfs:range rdf:Property ;
     rdfs:comment "Used to indicate that a property must be specified when creating an instance of this class" .
-
-:SummaryProperty a owl:Class ;
-    rdfs:comment "This is used to identify which proprties should be included in a entity summary" .
 
 #
 # External Classes
