@@ -19,3 +19,21 @@
   ( ?dostr ".*/([0-9]*)$" ) str:scrape ?item .
   ( "http://qldarch.net/omeka/admin/items/show/" ?item "\n" ) str:concatenation ?output .
 } => { "a" log:outputString ?output } .
+
+{
+    uqid:uqamuys uqperm:canRead http://uq.edu.au/rdf/permmisions/employeedata .
+}
+
+SELECT FROM .... WHERE {
+    uqid:uqamuys uqperm:canRead http://www.uq.edu.au/employeedata .
+}
+
+{ { } }
+
+{ }
+
+rowCount() == 0 false; == 1 true.
+
+ASK
+
+

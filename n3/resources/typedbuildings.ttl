@@ -187,5 +187,5 @@
 <http://qldarch.net/rdf/2012-12/resources/typologies/7> :indefiniteMapIcon "img/mapicons/religious_buildings_black_19x27.png".
 <http://qldarch.net/rdf/2012-12/resources/typologies/8> :indefiniteMapIcon "img/mapicons/transport_infrastructure_black_19x27.png".
 
-#ENDS 27.087 [sec] TC=17467 TP=240449 BC=0 BP=85564 PM=0 CM=0 FM=0 AM=0
+#ENDS 31.908 [sec] TC=19510 TP=269828 BC=0 BP=95807 PM=0 CM=0 FM=0 AM=0
 

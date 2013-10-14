@@ -162,8 +162,7 @@
 <http://qldarch.net/rdf/2012-12/resources/buildings/102> geo:long "153.432241".
 <http://qldarch.net/rdf/2012-12/resources/buildings/22> geo:long "153.035758".
 <http://qldarch.net/rdf/2012-12/resources/buildings/33> geo:long "152.9978".
-<http://qldarch.net/rdf/2012-12/resources/buildings/110> geo:long "53.023511".
-<http://qldarch.net/rdf/2012-12/resources/buildings/110> geo:long "153.409283".
+<http://qldarch.net/rdf/2012-12/resources/buildings/110> geo:long "153.023511".
 <http://qldarch.net/rdf/2012-12/resources/buildings/117> geo:long "153.408".
 <http://qldarch.net/rdf/2012-12/resources/buildings/86> geo:long "153.021998".
 <http://qldarch.net/rdf/2012-12/resources/buildings/132> geo:long "153.01130176".
@@ -203,7 +202,6 @@
 <http://qldarch.net/rdf/2012-12/resources/buildings/47> geo:long "153.045731".
 <http://qldarch.net/rdf/2012-12/resources/buildings/53> geo:long "152.980105".
 <http://qldarch.net/rdf/2012-12/resources/buildings/137> geo:long "153.013276".
-<http://qldarch.net/rdf/2012-12/resources/buildings/110> geo:long "153.023511".
 <http://qldarch.net/rdf/2012-12/resources/buildings/20> geo:long "152.946306".
 <http://qldarch.net/rdf/2012-12/resources/buildings/107> geo:long "152.866012".
 <http://qldarch.net/rdf/2012-12/resources/buildings/138> geo:long "147.17024446".
@@ -222,5 +220,5 @@
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> geo:long "147.14930714".
 <http://qldarch.net/rdf/2012-12/resources/buildings/2> geo:long "153.051127".
 
-#ENDS 27.379 [sec] TC=17524 TP=321847 BC=0 BP=86572 PM=0 CM=0 FM=0 AM=0
+#ENDS 32.044 [sec] TC=19565 TP=361469 BC=0 BP=96815 PM=0 CM=0 FM=0 AM=0
 

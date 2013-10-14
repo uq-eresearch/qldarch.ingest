@@ -23,6 +23,18 @@
 # Drawing Type vocabulary
 #
 
+qavocab:Genders a skos:ConceptScheme .
+
+qavocab:Male a skos:Concept ;
+    a qldarch:Gender ;
+    skos:inScheme qavocab:Genders ;
+    qldarch:label "Male" .
+
+qavocab:Female a skos:Concept ;
+    a qldarch:Gender ;
+    skos:inScheme qavocab:Genders ;
+    qldarch:label "Female" .
+
 qavocab:DrawingTypes a skos:ConceptScheme ;
     skos:hasTopConcept qavocab:LineDrawing .
 

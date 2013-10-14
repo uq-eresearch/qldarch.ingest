@@ -19667,5 +19667,5 @@ _:sk8727 rdf:object <http://qldarch.net/rdf/2012-12/resources/people/12>.
 <http://qldarch.net/omeka/items/show/1765> :relatedTo <http://qldarch.net/rdf/2012-12/resources/people/12>.
 <http://qldarch.net/omeka/items/show/1767> :relatedTo <http://qldarch.net/rdf/2012-12/resources/people/12>.
 
-#ENDS 50.901 [sec] TC=44504 TP=731521 BC=0 BP=175495 PM=0 CM=0 FM=0 AM=0
+#ENDS 58.531 [sec] TC=46547 TP=797432 BC=0 BP=191551 PM=0 CM=0 FM=0 AM=0
 

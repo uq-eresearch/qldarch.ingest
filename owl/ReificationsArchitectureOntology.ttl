@@ -64,7 +64,14 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     :display false ;
     :editable false .
 
+:Provenance a owl:Class ;
+    :editable false ;
+    :toplevel false ;
+    :plural "Provenace" ;
+    :singular "Provenace" .
+
 :Evidence a owl:Class ;
+    rdfs:subClassOf :Provenance ;
     :editable false ;
     :toplevel false ;
     :plural "Evidence" ;
@@ -130,11 +137,20 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     rdfs:range owl:ObjectProperty .
 
 :evidence a owl:ObjectProperty ;
+    rdfs:subPropertyOf :provenance ;
     :label "Evidenced by" ;
     :display false ;
     :editable false ;
     rdfs:domain :Evincible ;
     rdfs:range :Evidence .
+
+:provenance a owl:ObjectProperty ;
+    :label "Provenance" ;
+    :display false ;
+    :editable false ;
+    rdfs:comment "Not sure what the domain should be as I need this to be a very generic property" ;
+    rdfs:domain rdfs:Class ;
+    rdfs:range :Provenance .
 
 #
 # Reification types.
@@ -312,8 +328,8 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     :label "Knew Socially" ;
     :display true ;
     :editable true ;
-    rdfs:domain foaf:Agent ;
-    rdfs:range foaf:Agent ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
     :entailsRelationship :KnewSociallyRelation .
 
 :knewProfessionally a :relProperty ;
@@ -321,8 +337,8 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
     :label "Knew Professionally" ;
     :display true ;
     :editable true ;
-    rdfs:domain foaf:Agent ;
-    rdfs:range foaf:Agent ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
     :entailsRelationship :KnewProfessionallyRelation .
 
 :influencedBy a :relProperty ;
@@ -356,17 +372,24 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 :startDate a :relationshipDataProperty ;
     :label "Start Date" ;
     :display true ;
-    :editable false ;
+    :editable true ;
     rdfs:domain :Relationship ;
     rdfs:range xsd:date .
 
 :endDate a :relationshipDataProperty ;
     :label "End Date" ;
     :display true ;
-    :editable false ;
+    :editable true ;
     rdfs:domain :Relationship ;
     rdfs:range xsd:date .
+# should replace these with qadt:circa as this is the sum-type one-of(date,gYear,gYearMonth)
 
+:textualNote a :relationshipDataProperty ;
+    :label "Note" ;
+    :display true ; 
+    :editable true ;
+    rdfs:domain :Evincible ;
+    rdfs:range xsd:string .
 #
 # Extra properties of evidence
 #

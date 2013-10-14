@@ -36,5 +36,5 @@
 <http://qldarch.net/omeka/items/show/1766> :hasTranscript <http://qldarch.net/omeka/items/show/1765>.
 <http://qldarch.net/omeka/items/show/1769> :hasTranscript <http://qldarch.net/omeka/items/show/1767>.
 
-#ENDS 2.542 [sec] TC=14322 TP=95740 BC=0 BP=36306 PM=0 CM=0 FM=0 AM=0
+#ENDS 2.878 [sec] TC=16365 TP=107674 BC=0 BP=40734 PM=0 CM=0 FM=0 AM=0
 

@@ -36,5 +36,5 @@
 <http://qldarch.net/rdf/2012-12/resources/people/8> a :Architect.
 <http://qldarch.net/rdf/2012-12/resources/people/11> a :Architect.
 
-#ENDS 26.169 [sec] TC=17487 TP=315834 BC=0 BP=84797 PM=0 CM=0 FM=0 AM=0
+#ENDS 31.063 [sec] TC=19530 TP=355456 BC=0 BP=95040 PM=0 CM=0 FM=0 AM=0
 

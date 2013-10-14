@@ -176,5 +176,5 @@
 <http://qldarch.net/rdf/2012-12/resources/buildings/49> :associatedFirm <http://qldarch.net/rdf/2012-12/resources/firms/13>.
 <http://qldarch.net/rdf/2012-12/resources/buildings/16> :associatedFirm <http://qldarch.net/rdf/2012-12/resources/firms/3>.
 
-#ENDS 16.041 [sec] TC=15551 TP=157643 BC=0 BP=86785 PM=0 CM=0 FM=0 AM=0
+#ENDS 18.243 [sec] TC=17594 TP=176779 BC=0 BP=97028 PM=0 CM=0 FM=0 AM=0
 

@@ -1022,5 +1022,5 @@
 <http://qldarch.net/omeka/items/show/2147> :associatedFirm <http://qldarch.net/rdf/2012-12/resources/firms/12>.
 <http://qldarch.net/omeka/items/show/2148> :associatedFirm <http://qldarch.net/rdf/2012-12/resources/firms/12>.
 
-#ENDS 26.867 [sec] TC=18324 TP=320273 BC=0 BP=85799 PM=0 CM=0 FM=0 AM=0
+#ENDS 32.004 [sec] TC=20367 TP=359895 BC=0 BP=96042 PM=0 CM=0 FM=0 AM=0
 

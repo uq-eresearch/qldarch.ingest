@@ -130,5 +130,5 @@
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> :location "Cnr Musgrave St & Douglas St, Port Moresby - Papua New Guinea".
 <http://qldarch.net/rdf/2012-12/resources/buildings/1> :location "Karabil St, Kenmore".
 
-#ENDS 16.259 [sec] TC=15505 TP=157289 BC=0 BP=86608 PM=0 CM=0 FM=0 AM=0
+#ENDS 18.114 [sec] TC=17548 TP=176425 BC=0 BP=96851 PM=0 CM=0 FM=0 AM=0
 

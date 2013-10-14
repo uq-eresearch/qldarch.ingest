@@ -69,5 +69,5 @@
 <http://qldarch.net/ns/ingest/2013-06/7> a qaat:BuildingTypology.
 <http://qldarch.net/ns/ingest/2013-06/8> a qaat:BuildingTypology.
 
-#ENDS 28.172 [sec] TC=17544 TP=316117 BC=0 BP=84878 PM=0 CM=0 FM=0 AM=0
+#ENDS 33.291 [sec] TC=19587 TP=355739 BC=0 BP=95121 PM=0 CM=0 FM=0 AM=0
 

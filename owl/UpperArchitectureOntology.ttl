@@ -246,13 +246,9 @@ foaf:Person a owl:Class ;
     :label "Transcripts" ;
     :toplevel false .
 
-:Format a owl:Class ;
-    :label "Format" ;
-    rdfs:subClassOf :DigitalThing .
-
 :DrawingType a owl:Class ; 
     :label "Drawing Type" ;
-    rdfs:subClassOf :DigitalThing .
+    rdfs:subClassOf skos:Concept .
 
 :Topic a owl:Class ;
     rdfs:subClassOf :Entity ;
@@ -266,6 +262,10 @@ geo:SpatialThing a owl:Class ;
     :label "Spatial Thing" ;
     :toplevel false ;
     rdfs:isDefinedBy geo:SpatialThing .
+
+:Gender a owl:Class ; 
+    :label "Gender" ;
+    rdfs:subClassOf skos:Concept .
 
 #
 # External Ontology Properties
@@ -297,7 +297,7 @@ foaf:name a owl:DatatypeProperty ;
     :display true ;
     :editable true ;
     rdfs:domain foaf:Agent ;
-    rdfs:rnage xsd:string .
+    rdfs:range xsd:string .
 
 foaf:firstName a owl:DatatypeProperty ;
     a :SummaryProperty ;
@@ -305,7 +305,8 @@ foaf:firstName a owl:DatatypeProperty ;
     :display true ;
     :editable true ;
     :displayPrecedence 8 ;
-    rdfs:domain foaf:Person .
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:string .
 
 foaf:lastName a owl:DatatypeProperty ;
     a :SummaryProperty ;
@@ -313,7 +314,17 @@ foaf:lastName a owl:DatatypeProperty ;
     :display true ;
     :editable true ;
     :displayPrecedence 9 ;
-    rdfs:domain foaf:Person .
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:string .
+
+foaf:gender a owl:ObjectProperty ;
+    a :SummaryProperty ;
+    :label "Gender" ;
+    :display true ;
+    :editable true ;
+    :displayPrecedence 60 ;
+    rdfs:domain foaf:Person ;
+    rdfs:range :Gender .
 
 :birthYear a owl:DatatypeProperty ;
     a :SummaryProperty ;
@@ -637,9 +648,10 @@ dcterms:format a owl:DatatypeProperty ;
 
 :sourceFilename a owl:DatatypeProperty ;
     :label "Source Filename" ;
-    :display false ;
+    :display true ;
     :editable false ;
-    rdfs:domain :DigitalObject .
+    rdfs:domain :DigitalFile ;
+    rdfs:range xsd:string .
 
 :systemLocation a owl:DatatypeProperty ;
     a :SummaryProperty ;
@@ -647,26 +659,51 @@ dcterms:format a owl:DatatypeProperty ;
     :display false ;
     :editable false ;
     :displayPrecedence 80 ;
-    rdfs:domain :DigitalObject .
+    rdfs:domain :DigitalFile ;
+    rdfs:range xsd:string .
 
 :mimeType a owl:DatatypeProperty ;
     :label "Mime Type" ;
     :display false ;
     :editable false ;
-    rdfs:domain :DigitalObject .
+    rdfs:domain :DigitalFile ;
+    rdfs:range xsd:string .
 
 :basicMimeType a owl:DatatypeProperty ;
     a :SummaryProperty ;
     :label "Basic Mime Type" ;
-    :display false ;
+    :display true ;
     :editable false ;
-    rdfs:domain :DigitalObject .
+    rdfs:domain :DigitalFile ;
+    rdfs:range xsd:string .
 
 :fileSize a owl:DatatypeProperty ;
     :label "File Size" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :DigitalFile ;
+    rdfs:range xsd:integer .
+
+:uploadedBy a owl:DatatypeProperty ;
+    :label "Uploaded By" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :DigitalFile ;
+    rdfs:range foaf:Person .
+
+:dateUploaded a owl:DatatypeProperty ;
+    :label "Uploaded On" ;
+    :display true ;
+    :editable false ;
+    rdfs:domain :DigitalFile ;
+    rdfs:range xsd:date .
+
+:managedFile a owl:DatatypeProperty ;
+    :label "Managed File" ;
     :display false ;
     :editable false ;
-    rdfs:domain :DigitalObject .
+    rdfs:domain :DigitalFile ;
+    rdfs:range xsd:boolean .
 
 #
 # Geographic Terms

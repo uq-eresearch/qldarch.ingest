@@ -946,5 +946,5 @@
 <http://qldarch.net/omeka/items/show/1765> :transcriber <http://qldarch.net/rdf/2012-12/resources/people/12>.
 <http://qldarch.net/omeka/items/show/1767> :transcriber <http://qldarch.net/rdf/2012-12/resources/people/12>.
 
-#ENDS 54.826 [sec] TC=18248 TP=319969 BC=0 BP=85723 PM=0 CM=0 FM=0 AM=0
+#ENDS 63.681 [sec] TC=20291 TP=359591 BC=0 BP=95966 PM=0 CM=0 FM=0 AM=0
 
