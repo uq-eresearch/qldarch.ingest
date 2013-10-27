@@ -1321,7 +1321,10 @@ qaat:AuxObjectProperty rdfs:subClassOf owl:ObjectProperty, qaat:AuxProperty .
 # Controlled Vocabulary Export Classes
 #
 
-qaat:PseudoEntity a owl:Thing ;
+qaat:AuxClass a owl:Class .
+
+qaat:PseudoEntity a owl:Class ;
+    rdfs:subClassOf qaat:AuxClass ;
     rdfs:comment "Used as a temporary placeholder for export of controlled vocabularies from omeka." ;
     :label "Pseudo Entity" .
 
@@ -1336,31 +1339,38 @@ qaat:reconciledTo a qaat:AuxObjectProperty ;
     rdfs:domain qaat:PseudoEntity ;
     rdfs:range :Entity .
 
-qaat:Person a qaat:PseudoEntity ;
+qaat:Person a owl:Class ;
+    rdfs:subClassOf qaat:PseudoEntity ;
     rdfs:comment "A person identified within Omeka" ;
     :label "Person" .
 
-qaat:Format a qaat:PseudoEntity ;
+qaat:Format a owl:Class ;
+    rdfs:subClassOf qaat:PseudoEntity ;
     rdfs:comment "A format identified within Omeka" ;
     :label "Format" .
     
-qaat:Subject a qaat:PseudoEntity ;
+qaat:Subject a owl:Class ;
+    rdfs:subClassOf qaat:PseudoEntity ;
     rdfs:comment "A subject identified within Omeka" ;
     :label "Subject" .
     
-qaat:DrawingType a qaat:PseudoEntity ;
+qaat:DrawingType a owl:Class ;
+    rdfs:subClassOf qaat:PseudoEntity ;
     rdfs:comment "A drawing-type identified within Omeka" ;
     :label "Drawing Type" .
     
-qaat:ProjectName a qaat:PseudoEntity ;
+qaat:ProjectName a owl:Class ;
+    rdfs:subClassOf qaat:PseudoEntity ;
     rdfs:comment "A project name identified within Omeka" ;
     :label "Project Name" .
     
-qaat:Firm a qaat:PseudoEntity ;
+qaat:Firm a owl:Class ;
+    rdfs:subClassOf qaat:PseudoEntity ;
     rdfs:comment "A firm identified within Omeka" ;
     :label "Firm" .
     
-qaat:BuildingTypology a qaat:PseudoEntity ;
+qaat:BuildingTypology a owl:Class ;
+    rdfs:subClassOf qaat:PseudoEntity ;
     rdfs:comment "A building typology identified within Omeka" ;
     :label "Building Typology" .
     
