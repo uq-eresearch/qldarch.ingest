@@ -41,6 +41,11 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 :SummaryProperty rdfs:subClassOf rdf:Property ;
     rdfs:comment "This is used to identify which proprties should be included in a entity summary" .
 
+# Note: in the case where an instance belongs to multiple type hierarchies, this property 
+#  may not be singular
+:directSubClassOf rdfs:subPropertyOf rdfs:subClassOf ;
+    rdfs:comment "Entailed property, indicating this is a most derived known type" .
+
 ##
 ## INTERNAL ONTOLOGY
 ##
@@ -321,8 +326,14 @@ rdfs:label a owl:DatatypeProperty ;
 
 rdf:type a owl:ObjectProperty ;
     :label "Type" ;
-    a :SummaryProperty ;
     rdfs:comment "The type of a thing" ;
+    :display false ;
+    :editable false .
+
+:directType a owl:ObjectProperty ;
+    a :SummaryProperty ;
+    :label "Direct Type" ;
+    rdfs:subClassOf rdf:type ;
     :display false ;
     :editable false .
 
@@ -385,6 +396,7 @@ foaf:gender a owl:ObjectProperty ;
 
 :firmName a owl:DatatypeProperty ;
     a :SummaryProperty ;
+    rdfs:subPropertyOf :label ;
     :label "Firm Name" ;
     :display true ;
     :editable true ;
@@ -1230,7 +1242,9 @@ crm:P67i_is_referred_to_by a owl:ObjectProperty ;
     a owl:SymmetricProperty ;
     :label "Related To" ;
     :display false ;
-    :editable false .
+    :editable false ;
+    rdfs:domain :Entity ;
+    rdfs:range :Entity .
 
 #
 # Extra properties of reified relationships.
