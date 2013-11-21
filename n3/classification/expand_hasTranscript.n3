@@ -35,3 +35,26 @@
 } => {
     ?interview qldarch:hasTranscript ?itemUri .
 } .
+
+{
+    ?transcript a qldarch:Transcript ;
+        qaat:transcribedItem ?item .
+    ( ?lit ?dt ) log:dtlit ?item .
+    ( ?lit "http://qldarch.net/omeka/admin/items/show/(.*)" ) string:scrape ?itemNumber .
+    ( "http://qldarch.net/omeka/items/show/" ?itemNumber ) string:concatenation ?itemUriString .
+    ?itemUri log:uri ?itemUriString.
+    ?itemUri a qldarch:Interview .
+} => {
+    ?itemUri qldarch:hasTranscript ?transcript .
+} .
+
+{
+    ?transcript a qldarch:Transcript ;
+        qaat:transcriptItem ?item .
+    ( ?lit ?dt ) log:dtlit ?item .
+    ?lit string:matches "http://qldarch.net/omeka/items/show/(.*)" .
+    ?itemUri log:uri ?lit.
+    ?itemUri a qldarch:Interview .
+} => {
+    ?itemUri qldarch:hasTranscript ?transcript .
+} .

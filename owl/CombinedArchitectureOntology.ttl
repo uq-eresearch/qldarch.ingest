@@ -56,7 +56,19 @@ owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
 # Internal Ontology to allow prefixes to be queried.
 #
 
-qaint:usesPrefix a owl:DatatypeProperty ;
+qaint:InternalProperty rdfs:subClassOf rdf:Property .
+
+qaint:InternalDatatypeProperty rdfs:subClassOf owl:DatatypeProperty, qaint:InternalProperty .
+
+qaint:InternalObjectProperty rdfs:subClassOf owl:ObjectProperty, qaint:InternalProperty .
+
+#
+# Controlled Vocabulary Export Classes
+#
+
+qaint:InternalClass a owl:Class .
+
+qaint:usesPrefix a qaint:InternalDatatypeProperty ;
     qldarch:label "Uses Well-Known Prefix" ;
     rdfs:comment "Associates prefix URI with an @prefix string" .
 
@@ -1397,6 +1409,12 @@ qaat:transcriptItem a qaat:AuxDatatypeProperty ;
     :display false ;
     :editable false ;
     rdfs:domain :Interview .
+
+qaat:transcribedItem a qaat:AuxDatatypeProperty ;
+    :label "Transcribed Item" ;
+    :display false ;
+    :editable false ;
+    rdfs:domain :Transcript .
 
 qaat:preferredImage a qaat:AuxDatatypeProperty ;
     :label "Preferred Image" ;
