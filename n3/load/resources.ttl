@@ -8,6 +8,7 @@
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
+@prefix qaint: <http://qldarch.net/ns/rdf/2013-08/internal#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dcam: <http://purl.org/dc/dcam/>.
@@ -15,6 +16,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -35,8 +37,9 @@
 <http://qldarch.net/rdf/2012-12/resources/people/7> a :Architect.
 <http://qldarch.net/rdf/2012-12/resources/people/8> a :Architect.
 <http://qldarch.net/rdf/2012-12/resources/people/11> a :Architect.
+<http://qldarch.net/rdf/2012-12/resources/people/13> a :Architect.
 
-#ENDS 31.063 [sec] TC=19530 TP=355456 BC=0 BP=95040 PM=0 CM=0 FM=0 AM=0
+#ENDS 36.734 [sec] TC=24554 TP=522991 BC=0 BP=143813 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl content/associatedFirms.ttl content/buildingtopics.ttl content/hasTranscript.ttl content/peopledproperties.ttl resources/architects.ttl resources/entities.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/infer_building_firm.n3
@@ -48,6 +51,7 @@
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
+@prefix qaint: <http://qldarch.net/ns/rdf/2013-08/internal#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dcam: <http://purl.org/dc/dcam/>.
@@ -55,6 +59,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -216,7 +221,7 @@
 <http://qldarch.net/rdf/2012-12/resources/buildings/49> :associatedFirm <http://qldarch.net/rdf/2012-12/resources/firms/13>.
 <http://qldarch.net/rdf/2012-12/resources/buildings/16> :associatedFirm <http://qldarch.net/rdf/2012-12/resources/firms/3>.
 
-#ENDS 18.243 [sec] TC=17594 TP=176779 BC=0 BP=97028 PM=0 CM=0 FM=0 AM=0
+#ENDS 22.966 [sec] TC=22498 TP=247568 BC=0 BP=145796 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl content/associatedFirms.ttl content/buildingtopics.ttl content/hasTranscript.ttl content/peopledproperties.ttl resources/architects.ttl resources/buildingFirm.ttl resources/entities.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/infer_building_location.n3
@@ -228,6 +233,7 @@
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
+@prefix qaint: <http://qldarch.net/ns/rdf/2013-08/internal#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dcam: <http://purl.org/dc/dcam/>.
@@ -235,6 +241,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -350,7 +357,7 @@
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> :location "Cnr Musgrave St & Douglas St, Port Moresby - Papua New Guinea".
 <http://qldarch.net/rdf/2012-12/resources/buildings/1> :location "Karabil St, Kenmore".
 
-#ENDS 18.114 [sec] TC=17548 TP=176425 BC=0 BP=96851 PM=0 CM=0 FM=0 AM=0
+#ENDS 22.918 [sec] TC=22452 TP=247214 BC=0 BP=145619 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl manual/bios.ttl --query classification/expand-entities-query.n3
@@ -362,6 +369,7 @@
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
+@prefix qaint: <http://qldarch.net/ns/rdf/2013-08/internal#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dcam: <http://purl.org/dc/dcam/>.
@@ -369,6 +377,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -379,143 +388,13 @@
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#>.
 
-qavocab:LineDrawing a skos:Concept.
-qavocab:LineDrawing a :DrawingType.
-qavocab:LineDrawing a rdfs:Resource.
-qavocab:LineDrawing a :DigitalThing.
-qavocab:LineDrawing a :Entity.
-qavocab:LineDrawing :label "Line Drawing".
-qavocab:LineDrawing skos:inScheme qavocab:DrawingTypes.
-qavocab:LineDrawing rdfs:label "Line Drawing".
-qavocab:LineDrawing skos:topConceptOf qavocab:DrawingTypes.
-qavocab:LineDrawing skos:narrower qavocab:Perspective.
-qavocab:LineDrawing skos:narrower qavocab:Section.
-qavocab:LineDrawing skos:narrower qavocab:Sketch.
-qavocab:LineDrawing skos:narrower qavocab:Elevation.
-qavocab:LineDrawing skos:narrower qavocab:Plan.
-qavocab:LineDrawing skos:narrowerTransitive qavocab:Perspective.
-qavocab:LineDrawing skos:narrowerTransitive qavocab:Section.
-qavocab:LineDrawing skos:narrowerTransitive qavocab:Sketch.
-qavocab:LineDrawing skos:narrowerTransitive qavocab:Elevation.
-qavocab:LineDrawing skos:narrowerTransitive qavocab:Plan.
-qavocab:LineDrawing skos:semanticRelation qavocab:Perspective.
-qavocab:LineDrawing skos:semanticRelation qavocab:Section.
-qavocab:LineDrawing skos:semanticRelation qavocab:Sketch.
-qavocab:LineDrawing skos:semanticRelation qavocab:Elevation.
-qavocab:LineDrawing skos:semanticRelation qavocab:Plan.
-qavocab:Perspective a skos:Concept.
-qavocab:Perspective a :DrawingType.
-qavocab:Perspective a rdfs:Resource.
-qavocab:Perspective a :DigitalThing.
-qavocab:Perspective a :Entity.
-qavocab:Perspective :label "Perspective".
-qavocab:Perspective skos:inScheme qavocab:DrawingTypes.
-qavocab:Perspective rdfs:label "Perspective".
-qavocab:Perspective skos:broader qavocab:LineDrawing.
-qavocab:Perspective skos:altLabel "Perspective".
-qavocab:Perspective skos:broaderTransitive qavocab:LineDrawing.
-qavocab:Perspective skos:semanticRelation qavocab:LineDrawing.
-qavocab:Section a skos:Concept.
-qavocab:Section a :DrawingType.
-qavocab:Section a rdfs:Resource.
-qavocab:Section a :DigitalThing.
-qavocab:Section a :Entity.
-qavocab:Section :label "Section".
-qavocab:Section skos:inScheme qavocab:DrawingTypes.
-qavocab:Section rdfs:label "Section".
-qavocab:Section skos:broader qavocab:LineDrawing.
-qavocab:Section skos:altLabel "Section".
-qavocab:Section skos:broaderTransitive qavocab:LineDrawing.
-qavocab:Section skos:semanticRelation qavocab:LineDrawing.
-qavocab:Sketch a skos:Concept.
-qavocab:Sketch a :DrawingType.
-qavocab:Sketch a rdfs:Resource.
-qavocab:Sketch a :DigitalThing.
-qavocab:Sketch a :Entity.
-qavocab:Sketch :label "Sketch".
-qavocab:Sketch skos:inScheme qavocab:DrawingTypes.
-qavocab:Sketch rdfs:label "Sketch".
-qavocab:Sketch skos:broader qavocab:LineDrawing.
-qavocab:Sketch skos:altLabel "Sketch".
-qavocab:Sketch skos:broaderTransitive qavocab:LineDrawing.
-qavocab:Sketch skos:semanticRelation qavocab:LineDrawing.
-qavocab:Elevation a skos:Concept.
-qavocab:Elevation a :DrawingType.
-qavocab:Elevation a rdfs:Resource.
-qavocab:Elevation a :DigitalThing.
-qavocab:Elevation a :Entity.
-qavocab:Elevation :label "Elevation".
-qavocab:Elevation skos:inScheme qavocab:DrawingTypes.
-qavocab:Elevation rdfs:label "Elevation".
-qavocab:Elevation skos:broader qavocab:LineDrawing.
-qavocab:Elevation skos:altLabel "Elevation".
-qavocab:Elevation skos:broaderTransitive qavocab:LineDrawing.
-qavocab:Elevation skos:semanticRelation qavocab:LineDrawing.
-qavocab:Plan a skos:Concept.
-qavocab:Plan a :DrawingType.
-qavocab:Plan a rdfs:Resource.
-qavocab:Plan a :DigitalThing.
-qavocab:Plan a :Entity.
-qavocab:Plan :label "Plan".
-qavocab:Plan skos:inScheme qavocab:DrawingTypes.
-qavocab:Plan rdfs:label "Plan".
-qavocab:Plan skos:broader qavocab:LineDrawing.
-qavocab:Plan skos:altLabel "Plan".
-qavocab:Plan skos:broaderTransitive qavocab:LineDrawing.
-qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
-<http://qldarch.net/rdf/2012-12/resources/typologies/1> a :BuildingTypology.
-<http://qldarch.net/rdf/2012-12/resources/typologies/1> a :NonDigitalThing.
-<http://qldarch.net/rdf/2012-12/resources/typologies/1> a rdfs:Resource.
-<http://qldarch.net/rdf/2012-12/resources/typologies/1> a :Entity.
-<http://qldarch.net/rdf/2012-12/resources/typologies/1> :label "Commercial buildings".
-<http://qldarch.net/rdf/2012-12/resources/typologies/1> rdfs:label "Commercial buildings".
-<http://qldarch.net/rdf/2012-12/resources/typologies/2> a :BuildingTypology.
-<http://qldarch.net/rdf/2012-12/resources/typologies/2> a :NonDigitalThing.
-<http://qldarch.net/rdf/2012-12/resources/typologies/2> a rdfs:Resource.
-<http://qldarch.net/rdf/2012-12/resources/typologies/2> a :Entity.
-<http://qldarch.net/rdf/2012-12/resources/typologies/2> :label "Dwellings".
-<http://qldarch.net/rdf/2012-12/resources/typologies/2> rdfs:label "Dwellings".
-<http://qldarch.net/rdf/2012-12/resources/typologies/3> a :BuildingTypology.
-<http://qldarch.net/rdf/2012-12/resources/typologies/3> a :NonDigitalThing.
-<http://qldarch.net/rdf/2012-12/resources/typologies/3> a rdfs:Resource.
-<http://qldarch.net/rdf/2012-12/resources/typologies/3> a :Entity.
-<http://qldarch.net/rdf/2012-12/resources/typologies/3> :label "Educational facilities".
-<http://qldarch.net/rdf/2012-12/resources/typologies/3> rdfs:label "Educational facilities".
-<http://qldarch.net/rdf/2012-12/resources/typologies/4> a :BuildingTypology.
-<http://qldarch.net/rdf/2012-12/resources/typologies/4> a :NonDigitalThing.
-<http://qldarch.net/rdf/2012-12/resources/typologies/4> a rdfs:Resource.
-<http://qldarch.net/rdf/2012-12/resources/typologies/4> a :Entity.
-<http://qldarch.net/rdf/2012-12/resources/typologies/4> :label "Government buildings".
-<http://qldarch.net/rdf/2012-12/resources/typologies/4> rdfs:label "Government buildings".
-<http://qldarch.net/rdf/2012-12/resources/typologies/5> a :BuildingTypology.
-<http://qldarch.net/rdf/2012-12/resources/typologies/5> a :NonDigitalThing.
-<http://qldarch.net/rdf/2012-12/resources/typologies/5> a rdfs:Resource.
-<http://qldarch.net/rdf/2012-12/resources/typologies/5> a :Entity.
-<http://qldarch.net/rdf/2012-12/resources/typologies/5> :label "Health care facilities".
-<http://qldarch.net/rdf/2012-12/resources/typologies/5> rdfs:label "Health care facilities".
-<http://qldarch.net/rdf/2012-12/resources/typologies/6> a :BuildingTypology.
-<http://qldarch.net/rdf/2012-12/resources/typologies/6> a :NonDigitalThing.
-<http://qldarch.net/rdf/2012-12/resources/typologies/6> a rdfs:Resource.
-<http://qldarch.net/rdf/2012-12/resources/typologies/6> a :Entity.
-<http://qldarch.net/rdf/2012-12/resources/typologies/6> :label "Recreation and sports facilities".
-<http://qldarch.net/rdf/2012-12/resources/typologies/6> rdfs:label "Recreation and sports facilities".
-<http://qldarch.net/rdf/2012-12/resources/typologies/7> a :BuildingTypology.
-<http://qldarch.net/rdf/2012-12/resources/typologies/7> a :NonDigitalThing.
-<http://qldarch.net/rdf/2012-12/resources/typologies/7> a rdfs:Resource.
-<http://qldarch.net/rdf/2012-12/resources/typologies/7> a :Entity.
-<http://qldarch.net/rdf/2012-12/resources/typologies/7> :label "Religious buildings".
-<http://qldarch.net/rdf/2012-12/resources/typologies/7> rdfs:label "Religious buildings".
-<http://qldarch.net/rdf/2012-12/resources/typologies/8> a :BuildingTypology.
-<http://qldarch.net/rdf/2012-12/resources/typologies/8> a :NonDigitalThing.
-<http://qldarch.net/rdf/2012-12/resources/typologies/8> a rdfs:Resource.
-<http://qldarch.net/rdf/2012-12/resources/typologies/8> a :Entity.
-<http://qldarch.net/rdf/2012-12/resources/typologies/8> :label "Transport infrastructure".
-<http://qldarch.net/rdf/2012-12/resources/typologies/8> rdfs:label "Transport infrastructure".
 <http://qldarch.net/rdf/2012-12/resources/buildings/1> a :Structure.
 <http://qldarch.net/rdf/2012-12/resources/buildings/1> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/1> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/1> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/1> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/1> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/1> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/1> :label "445 Upper Edward St, Brisbane CBD".
 <http://qldarch.net/rdf/2012-12/resources/buildings/1> rdfs:label "445 Upper Edward St, Brisbane CBD".
@@ -523,7 +402,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/2> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/2> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/2> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/2> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/2> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/2> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/2> :label "ACGS Churchie - Junior School, East Brisbane".
 <http://qldarch.net/rdf/2012-12/resources/buildings/2> rdfs:label "ACGS Churchie - Junior School, East Brisbane".
@@ -531,7 +412,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/3> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/3> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/3> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/3> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/3> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/3> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/3> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/3> :label "ACGS Churchie - Library, East Brisbane".
 <http://qldarch.net/rdf/2012-12/resources/buildings/3> rdfs:label "ACGS Churchie - Library, East Brisbane".
@@ -539,7 +422,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/4> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/4> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/4> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/4> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/4> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/4> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/4> :label "ACGS Churchie, East Brisbane".
 <http://qldarch.net/rdf/2012-12/resources/buildings/4> rdfs:label "ACGS Churchie, East Brisbane".
@@ -547,7 +432,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/5> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/5> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/5> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/5> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/5> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/5> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/5> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/5> :label "Agricultural College, Dalby".
 <http://qldarch.net/rdf/2012-12/resources/buildings/5> rdfs:label "Agricultural College, Dalby".
@@ -555,7 +442,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/6> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/6> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/6> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/6> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/6> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/6> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/6> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/6> :label "Amoco Service Station, Carina".
 <http://qldarch.net/rdf/2012-12/resources/buildings/6> rdfs:label "Amoco Service Station, Carina".
@@ -563,7 +452,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/7> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/7> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/7> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/7> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/7> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/7> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/7> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/7> :label "Amoco Service Station, Kenmore".
 <http://qldarch.net/rdf/2012-12/resources/buildings/7> rdfs:label "Amoco Service Station, Kenmore".
@@ -571,7 +462,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/8> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/8> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/8> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/8> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/8> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/8> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/8> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/8> :label "Amoco Service Station, Moorooka".
 <http://qldarch.net/rdf/2012-12/resources/buildings/8> rdfs:label "Amoco Service Station, Moorooka".
@@ -579,7 +472,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/9> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/9> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/9> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/9> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/9> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/9> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/9> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/9> :label "Amoco Service Station, Salisbury".
 <http://qldarch.net/rdf/2012-12/resources/buildings/9> rdfs:label "Amoco Service Station, Salisbury".
@@ -587,7 +482,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/10> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/10> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/10> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/10> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/10> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/10> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/10> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/10> :label "Amoco Service Station, Stafford".
 <http://qldarch.net/rdf/2012-12/resources/buildings/10> rdfs:label "Amoco Service Station, Stafford".
@@ -595,7 +492,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/11> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/11> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/11> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/11> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/11> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/11> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/11> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/11> :label "Amoco Service Station, Unknown Location".
 <http://qldarch.net/rdf/2012-12/resources/buildings/11> rdfs:label "Amoco Service Station, Unknown Location".
@@ -603,7 +502,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/12> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/12> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/12> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/12> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/12> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/12> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/12> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/12> :label "Amoco Service Station, for James M. Samios, Beaudesert Rd, Acacia Ridge".
 <http://qldarch.net/rdf/2012-12/resources/buildings/12> rdfs:label "Amoco Service Station, for James M. Samios, Beaudesert Rd, Acacia Ridge".
@@ -611,7 +512,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/13> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/13> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/13> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/13> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/13> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/13> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/13> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/13> :label "Amoco, Standard Service Station Signs".
 <http://qldarch.net/rdf/2012-12/resources/buildings/13> rdfs:label "Amoco, Standard Service Station Signs".
@@ -619,7 +522,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/14> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/14> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/14> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/14> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/14> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/14> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/14> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/14> :label "Annerley Library".
 <http://qldarch.net/rdf/2012-12/resources/buildings/14> rdfs:label "Annerley Library".
@@ -627,7 +532,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/15> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/15> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/15> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/15> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/15> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/15> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/15> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/15> :label "Arcade at Gympie for A.H. Leitch & son".
 <http://qldarch.net/rdf/2012-12/resources/buildings/15> rdfs:label "Arcade at Gympie for A.H. Leitch & son".
@@ -635,7 +542,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/16> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/16> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/16> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/16> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/16> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/16> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/16> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/16> :label "Archbishop's Chapel, Hamilton".
 <http://qldarch.net/rdf/2012-12/resources/buildings/16> rdfs:label "Archbishop's Chapel, Hamilton".
@@ -643,7 +552,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/17> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/17> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/17> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/17> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/17> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/17> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/17> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/17> :label "B.C.H Southport Bowl".
 <http://qldarch.net/rdf/2012-12/resources/buildings/17> rdfs:label "B.C.H Southport Bowl".
@@ -651,7 +562,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/18> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/18> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/18> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/18> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/18> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/18> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/18> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/18> :label "Bell House, St Lucia".
 <http://qldarch.net/rdf/2012-12/resources/buildings/18> rdfs:label "Bell House, St Lucia".
@@ -659,7 +572,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/19> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/19> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/19> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/19> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/19> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/19> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/19> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/19> :label "Bishop House, Mermaid Beach".
 <http://qldarch.net/rdf/2012-12/resources/buildings/19> rdfs:label "Bishop House, Mermaid Beach".
@@ -667,7 +582,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/20> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/20> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/20> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/20> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/20> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/20> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/20> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/20> :label "Bligh House, Kenmore".
 <http://qldarch.net/rdf/2012-12/resources/buildings/20> rdfs:label "Bligh House, Kenmore".
@@ -675,7 +592,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/21> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/21> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/21> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/21> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/21> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/21> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/21> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/21> :label "Bretts and Co Offices, Newmarket Rd".
 <http://qldarch.net/rdf/2012-12/resources/buildings/21> rdfs:label "Bretts and Co Offices, Newmarket Rd".
@@ -683,7 +602,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/22> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/22> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/22> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/22> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/22> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/22> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/22> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/22> :label "Brisbane Home & Building Centre, Fortitude Valley".
 <http://qldarch.net/rdf/2012-12/resources/buildings/22> rdfs:label "Brisbane Home & Building Centre, Fortitude Valley".
@@ -691,7 +612,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/23> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/23> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/23> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/23> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/23> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/23> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/23> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/23> :label "Brisbane Milk Board".
 <http://qldarch.net/rdf/2012-12/resources/buildings/23> rdfs:label "Brisbane Milk Board".
@@ -699,7 +622,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/24> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/24> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/24> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/24> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/24> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/24> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/24> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/24> :label "Bryden House, Miami; Queensland".
 <http://qldarch.net/rdf/2012-12/resources/buildings/24> rdfs:label "Bryden House, Miami; Queensland".
@@ -707,7 +632,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/25> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/25> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/25> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/25> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/25> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/25> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/25> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/25> :label "Camden Apartments".
 <http://qldarch.net/rdf/2012-12/resources/buildings/25> rdfs:label "Camden Apartments".
@@ -715,7 +642,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/26> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/26> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/26> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/26> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/26> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/26> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/26> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/26> :label "Carapark Motels, Mermaid Beach".
 <http://qldarch.net/rdf/2012-12/resources/buildings/26> rdfs:label "Carapark Motels, Mermaid Beach".
@@ -723,7 +652,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/27> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/27> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/27> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/27> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/27> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/27> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/27> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/27> :label "Caravan Park and Facilities, for T.M. Burke Estates, Peregian".
 <http://qldarch.net/rdf/2012-12/resources/buildings/27> rdfs:label "Caravan Park and Facilities, for T.M. Burke Estates, Peregian".
@@ -731,7 +662,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/28> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/28> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/28> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/28> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/28> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/28> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/28> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/28> :label "Carramar Flats".
 <http://qldarch.net/rdf/2012-12/resources/buildings/28> rdfs:label "Carramar Flats".
@@ -739,7 +672,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/29> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/29> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/29> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/29> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/29> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/29> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/29> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/29> :label "Centenary Swimming Pools, Spring Hill".
 <http://qldarch.net/rdf/2012-12/resources/buildings/29> rdfs:label "Centenary Swimming Pools, Spring Hill".
@@ -747,7 +682,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/30> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/30> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/30> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/30> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/30> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/30> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/30> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/30> :label "Chermside Olympic Swimming Pool".
 <http://qldarch.net/rdf/2012-12/resources/buildings/30> rdfs:label "Chermside Olympic Swimming Pool".
@@ -755,7 +692,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/31> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/31> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/31> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/31> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/31> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/31> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/31> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/31> :label "Childcare Centre, Inala".
 <http://qldarch.net/rdf/2012-12/resources/buildings/31> rdfs:label "Childcare Centre, Inala".
@@ -763,7 +702,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/32> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/32> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/32> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/32> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/32> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/32> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/32> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/32> :label "Childcare Centre, Mitchelton".
 <http://qldarch.net/rdf/2012-12/resources/buildings/32> rdfs:label "Childcare Centre, Mitchelton".
@@ -771,7 +712,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/33> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/33> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/33> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/33> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/33> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/33> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/33> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/33> :label "Christ Church, St Lucia".
 <http://qldarch.net/rdf/2012-12/resources/buildings/33> rdfs:label "Christ Church, St Lucia".
@@ -779,7 +722,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/34> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/34> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/34> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/34> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/34> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/34> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/34> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/34> :label "Civic Centre, Gladstone".
 <http://qldarch.net/rdf/2012-12/resources/buildings/34> rdfs:label "Civic Centre, Gladstone".
@@ -787,7 +732,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/35> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/35> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/35> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/35> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/35> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/35> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/35> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/35> :label "Clegg Residence, Mt Cootha".
 <http://qldarch.net/rdf/2012-12/resources/buildings/35> rdfs:label "Clegg Residence, Mt Cootha".
@@ -795,7 +742,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/36> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/36> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/36> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/36> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/36> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/36> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/36> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/36> :label "Coast House, Surfers Paradise".
 <http://qldarch.net/rdf/2012-12/resources/buildings/36> rdfs:label "Coast House, Surfers Paradise".
@@ -803,7 +752,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/37> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/37> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/37> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/37> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/37> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/37> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/37> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/37> :label "Coco's Complex, Currumindi".
 <http://qldarch.net/rdf/2012-12/resources/buildings/37> rdfs:label "Coco's Complex, Currumindi".
@@ -811,7 +762,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/38> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/38> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/38> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/38> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/38> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/38> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/38> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/38> :label "Commerce Building (Chamberlain), University of Queensland, St Lucia".
 <http://qldarch.net/rdf/2012-12/resources/buildings/38> rdfs:label "Commerce Building (Chamberlain), University of Queensland, St Lucia".
@@ -819,7 +772,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/39> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/39> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/39> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/39> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/39> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/39> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/39> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/39> :label "Commonwealth Bank Building, Brisbane CBD".
 <http://qldarch.net/rdf/2012-12/resources/buildings/39> rdfs:label "Commonwealth Bank Building, Brisbane CBD".
@@ -827,7 +782,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/40> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/40> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/40> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/40> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/40> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/40> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/40> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/40> :label "Cooper House".
 <http://qldarch.net/rdf/2012-12/resources/buildings/40> rdfs:label "Cooper House".
@@ -835,7 +792,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/41> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/41> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/41> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/41> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/41> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/41> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/41> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/41> :label "Courtyard Houses, Bardon".
 <http://qldarch.net/rdf/2012-12/resources/buildings/41> rdfs:label "Courtyard Houses, Bardon".
@@ -843,7 +802,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/42> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/42> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/42> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/42> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/42> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/42> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/42> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/42> :label "Critchley House, Toowoomba".
 <http://qldarch.net/rdf/2012-12/resources/buildings/42> rdfs:label "Critchley House, Toowoomba".
@@ -851,7 +812,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/43> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/43> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/43> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/43> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/43> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/43> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/43> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/43> :label "Cromwell College, University of Queensland - St Lucia".
 <http://qldarch.net/rdf/2012-12/resources/buildings/43> rdfs:label "Cromwell College, University of Queensland - St Lucia".
@@ -859,7 +822,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/44> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/44> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/44> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/44> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/44> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/44> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/44> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/44> :label "Curzons; The Walk, Surfers Paradise".
 <http://qldarch.net/rdf/2012-12/resources/buildings/44> rdfs:label "Curzons; The Walk, Surfers Paradise".
@@ -867,7 +832,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/45> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/45> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/45> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/45> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/45> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/45> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/45> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/45> :label "Department Store, Arawa, Papua New Guinea".
 <http://qldarch.net/rdf/2012-12/resources/buildings/45> rdfs:label "Department Store, Arawa, Papua New Guinea".
@@ -875,7 +842,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/46> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/46> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/46> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/46> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/46> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/46> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/46> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/46> :label "Development Study Central Railway Station, Brisbane".
 <http://qldarch.net/rdf/2012-12/resources/buildings/46> rdfs:label "Development Study Central Railway Station, Brisbane".
@@ -883,7 +852,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/47> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/47> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/47> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/47> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/47> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/47> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/47> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/47> :label "Ellerslie, New Farm".
 <http://qldarch.net/rdf/2012-12/resources/buildings/47> rdfs:label "Ellerslie, New Farm".
@@ -891,7 +862,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/48> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/48> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/48> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/48> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/48> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/48> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/48> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/48> :label "Entrance to Albert Park".
 <http://qldarch.net/rdf/2012-12/resources/buildings/48> rdfs:label "Entrance to Albert Park".
@@ -899,7 +872,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/49> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/49> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/49> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/49> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/49> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/49> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/49> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/49> :label "Exhibition Bowl, Brisbane".
 <http://qldarch.net/rdf/2012-12/resources/buildings/49> rdfs:label "Exhibition Bowl, Brisbane".
@@ -907,7 +882,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/50> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/50> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/50> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/50> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/50> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/50> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/50> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/50> :label "Extensions to Premises Queensland Conference of Seventh-day Adventists".
 <http://qldarch.net/rdf/2012-12/resources/buildings/50> rdfs:label "Extensions to Premises Queensland Conference of Seventh-day Adventists".
@@ -915,7 +892,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/51> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/51> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/51> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/51> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/51> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/51> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/51> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/51> :label "Fire Station, Windsor".
 <http://qldarch.net/rdf/2012-12/resources/buildings/51> rdfs:label "Fire Station, Windsor".
@@ -923,7 +902,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/52> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/52> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/52> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/52> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/52> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/52> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/52> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/52> :label "First Year Science Building, University of Queensland, St Lucia".
 <http://qldarch.net/rdf/2012-12/resources/buildings/52> rdfs:label "First Year Science Building, University of Queensland, St Lucia".
@@ -931,7 +912,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/53> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/53> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/53> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/53> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/53> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/53> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/53> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/53> :label "Gardner House, Taringa".
 <http://qldarch.net/rdf/2012-12/resources/buildings/53> rdfs:label "Gardner House, Taringa".
@@ -939,7 +922,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/54> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/54> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/54> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/54> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/54> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/54> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/54> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/54> :label "General Post Office, Forecourt Development, Brisbane CBD".
 <http://qldarch.net/rdf/2012-12/resources/buildings/54> rdfs:label "General Post Office, Forecourt Development, Brisbane CBD".
@@ -947,7 +932,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/55> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/55> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/55> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/55> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/55> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/55> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/55> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/55> :label "Gladstone Town Council, Memorial Park".
 <http://qldarch.net/rdf/2012-12/resources/buildings/55> rdfs:label "Gladstone Town Council, Memorial Park".
@@ -955,7 +942,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/56> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/56> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/56> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/56> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/56> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/56> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/56> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/56> :label "Gow House, Indooroopilly".
 <http://qldarch.net/rdf/2012-12/resources/buildings/56> rdfs:label "Gow House, Indooroopilly".
@@ -963,7 +952,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/57> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/57> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/57> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/57> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/57> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/57> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/57> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/57> :label "Green House, Hamilton".
 <http://qldarch.net/rdf/2012-12/resources/buildings/57> rdfs:label "Green House, Hamilton".
@@ -971,7 +962,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/58> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/58> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/58> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/58> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/58> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/58> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/58> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/58> :label "Greenslopes Bowling Centre".
 <http://qldarch.net/rdf/2012-12/resources/buildings/58> rdfs:label "Greenslopes Bowling Centre".
@@ -979,7 +972,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/59> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/59> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/59> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/59> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/59> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/59> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/59> :label "Guagmungie, Peregian Beach".
 <http://qldarch.net/rdf/2012-12/resources/buildings/59> rdfs:label "Guagmungie, Peregian Beach".
@@ -987,7 +982,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/60> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/60> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/60> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/60> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/60> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/60> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/60> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/60> :label "Harvey Graham Beach House, Surfers Paradise".
 <http://qldarch.net/rdf/2012-12/resources/buildings/60> rdfs:label "Harvey Graham Beach House, Surfers Paradise".
@@ -995,7 +992,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/61> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/61> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/61> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/61> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/61> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/61> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/61> :label "Hayes House, St Lucia".
 <http://qldarch.net/rdf/2012-12/resources/buildings/61> rdfs:label "Hayes House, St Lucia".
@@ -1003,7 +1002,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/62> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/62> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/62> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/62> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/62> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/62> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/62> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/62> :label "Henderson Residence, Ascot".
 <http://qldarch.net/rdf/2012-12/resources/buildings/62> rdfs:label "Henderson Residence, Ascot".
@@ -1011,7 +1012,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/63> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/63> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/63> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/63> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/63> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/63> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/63> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/63> :label "Hill Residence, Clayfield".
 <http://qldarch.net/rdf/2012-12/resources/buildings/63> rdfs:label "Hill Residence, Clayfield".
@@ -1019,7 +1022,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/64> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/64> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/64> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/64> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/64> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/64> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/64> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/64> :label "Hooker-Rex Display House, Centenary Estates; Jindalee".
 <http://qldarch.net/rdf/2012-12/resources/buildings/64> rdfs:label "Hooker-Rex Display House, Centenary Estates; Jindalee".
@@ -1027,7 +1032,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/65> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/65> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/65> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/65> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/65> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/65> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/65> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/65> :label "House P.&J. Doherty, Everton park".
 <http://qldarch.net/rdf/2012-12/resources/buildings/65> rdfs:label "House P.&J. Doherty, Everton park".
@@ -1035,7 +1042,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/66> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/66> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/66> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/66> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/66> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/66> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/66> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/66> :label "House for V.L. & C.S. Matchett, Indooroopilly".
 <http://qldarch.net/rdf/2012-12/resources/buildings/66> rdfs:label "House for V.L. & C.S. Matchett, Indooroopilly".
@@ -1043,7 +1052,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/67> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/67> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/67> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/67> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/67> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/67> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/67> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/67> :label "Howard Smith Building, Brisbane CBD".
 <http://qldarch.net/rdf/2012-12/resources/buildings/67> rdfs:label "Howard Smith Building, Brisbane CBD".
@@ -1051,7 +1062,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/68> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/68> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/68> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/68> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/68> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/68> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/68> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/68> :label "Illowra St House, for A. Harkin, The Gap".
 <http://qldarch.net/rdf/2012-12/resources/buildings/68> rdfs:label "Illowra St House, for A. Harkin, The Gap".
@@ -1059,7 +1072,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/69> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/69> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/69> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/69> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/69> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/69> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/69> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/69> :label "Inala Sports Centre".
 <http://qldarch.net/rdf/2012-12/resources/buildings/69> rdfs:label "Inala Sports Centre".
@@ -1067,7 +1082,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/70> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/70> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/70> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/70> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/70> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/70> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/70> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/70> :label "J. Gould Residence, Aspley".
 <http://qldarch.net/rdf/2012-12/resources/buildings/70> rdfs:label "J. Gould Residence, Aspley".
@@ -1075,7 +1092,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/71> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/71> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/71> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/71> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/71> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/71> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/71> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/71> :label "Jacobi House, Indooroopilly".
 <http://qldarch.net/rdf/2012-12/resources/buildings/71> rdfs:label "Jacobi House, Indooroopilly".
@@ -1083,7 +1102,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/72> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/72> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/72> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/72> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/72> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/72> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/72> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/72> :label "Jacobsen House".
 <http://qldarch.net/rdf/2012-12/resources/buildings/72> rdfs:label "Jacobsen House".
@@ -1091,7 +1112,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/73> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/73> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/73> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/73> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/73> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/73> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/73> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/73> :label "James Cook University Library".
 <http://qldarch.net/rdf/2012-12/resources/buildings/73> rdfs:label "James Cook University Library".
@@ -1099,7 +1122,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/74> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/74> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/74> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/74> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/74> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/74> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/74> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/74> :label "James Hardie Office, Newstead".
 <http://qldarch.net/rdf/2012-12/resources/buildings/74> rdfs:label "James Hardie Office, Newstead".
@@ -1107,7 +1132,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/75> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/75> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/75> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/75> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/75> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/75> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/75> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/75> :label "Kahn House".
 <http://qldarch.net/rdf/2012-12/resources/buildings/75> rdfs:label "Kahn House".
@@ -1115,7 +1142,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/76> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/76> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/76> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/76> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/76> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/76> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/76> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/76> :label "Kenmore Residence, for David Hawkes".
 <http://qldarch.net/rdf/2012-12/resources/buildings/76> rdfs:label "Kenmore Residence, for David Hawkes".
@@ -1123,7 +1152,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/77> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/77> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/77> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/77> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/77> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/77> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/77> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/77> :label "Lennon Residence, Surfers Paradise".
 <http://qldarch.net/rdf/2012-12/resources/buildings/77> rdfs:label "Lennon Residence, Surfers Paradise".
@@ -1131,7 +1162,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/78> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/78> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/78> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/78> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/78> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/78> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/78> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/78> :label "Library and Science Block, Brisbane Boys College, Toowong".
 <http://qldarch.net/rdf/2012-12/resources/buildings/78> rdfs:label "Library and Science Block, Brisbane Boys College, Toowong".
@@ -1139,7 +1172,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/79> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/79> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/79> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/79> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/79> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/79> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/79> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/79> :label "MLC Building (former), Brisbane CBD".
 <http://qldarch.net/rdf/2012-12/resources/buildings/79> rdfs:label "MLC Building (former), Brisbane CBD".
@@ -1147,7 +1182,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/80> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/80> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/80> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/80> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/80> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/80> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/80> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/80> :label "Maroochy Shire Chambers, Nambour".
 <http://qldarch.net/rdf/2012-12/resources/buildings/80> rdfs:label "Maroochy Shire Chambers, Nambour".
@@ -1155,7 +1192,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/81> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/81> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/81> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/81> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/81> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/81> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/81> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/81> :label "Milton Residence, for W. Power".
 <http://qldarch.net/rdf/2012-12/resources/buildings/81> rdfs:label "Milton Residence, for W. Power".
@@ -1163,7 +1202,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/82> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/82> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/82> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/82> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/82> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/82> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/82> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/82> :label "Mt Gravatt Teachers College".
 <http://qldarch.net/rdf/2012-12/resources/buildings/82> rdfs:label "Mt Gravatt Teachers College".
@@ -1171,7 +1212,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/83> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/83> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/83> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/83> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/83> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/83> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/83> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/83> :label "Mutual Life and Citizens Assurance Company (M.L.C.) Building".
 <http://qldarch.net/rdf/2012-12/resources/buildings/83> rdfs:label "Mutual Life and Citizens Assurance Company (M.L.C.) Building".
@@ -1179,7 +1222,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/84> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/84> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/84> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/84> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/84> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/84> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/84> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/84> :label "New Courts of Law, Brisbane Phase 2, Supreme Court Building".
 <http://qldarch.net/rdf/2012-12/resources/buildings/84> rdfs:label "New Courts of Law, Brisbane Phase 2, Supreme Court Building".
@@ -1187,7 +1232,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/85> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/85> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/85> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/85> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/85> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/85> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/85> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/85> :label "New Courts of Law, Magistrates Court".
 <http://qldarch.net/rdf/2012-12/resources/buildings/85> rdfs:label "New Courts of Law, Magistrates Court".
@@ -1195,7 +1242,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/86> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/86> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/86> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/86> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/86> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/86> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/86> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/86> :label "New Courts of Law".
 <http://qldarch.net/rdf/2012-12/resources/buildings/86> rdfs:label "New Courts of Law".
@@ -1203,7 +1252,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/87> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/87> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/87> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/87> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/87> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/87> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/87> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/87> :label "O'Neill House, Ironside St, St Lucia".
 <http://qldarch.net/rdf/2012-12/resources/buildings/87> rdfs:label "O'Neill House, Ironside St, St Lucia".
@@ -1211,7 +1262,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/88> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/88> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> :label "PNG Banking Corporation Headquarters, Port Moresby".
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> rdfs:label "PNG Banking Corporation Headquarters, Port Moresby".
@@ -1219,7 +1272,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/89> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/89> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/89> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/89> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/89> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/89> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/89> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/89> :label "PNG Development Bank Headquarters".
 <http://qldarch.net/rdf/2012-12/resources/buildings/89> rdfs:label "PNG Development Bank Headquarters".
@@ -1227,7 +1282,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/90> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/90> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/90> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/90> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/90> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/90> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/90> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/90> :label "Parliament House Competition 1979, Canberra".
 <http://qldarch.net/rdf/2012-12/resources/buildings/90> rdfs:label "Parliament House Competition 1979, Canberra".
@@ -1235,7 +1292,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/91> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/91> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/91> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/91> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/91> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/91> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/91> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/91> :label "Pfitzenmaier House, Surfers Paradise".
 <http://qldarch.net/rdf/2012-12/resources/buildings/91> rdfs:label "Pfitzenmaier House, Surfers Paradise".
@@ -1243,7 +1302,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/92> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/92> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/92> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/92> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/92> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/92> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/92> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/92> :label "Pharmacy at Albert St City for R.G. Malouf".
 <http://qldarch.net/rdf/2012-12/resources/buildings/92> rdfs:label "Pharmacy at Albert St City for R.G. Malouf".
@@ -1251,7 +1312,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/93> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/93> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/93> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/93> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/93> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/93> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/93> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/93> :label "Picadilly Arcade, Brisbane CBD".
 <http://qldarch.net/rdf/2012-12/resources/buildings/93> rdfs:label "Picadilly Arcade, Brisbane CBD".
@@ -1259,7 +1322,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/94> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/94> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/94> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/94> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/94> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/94> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/94> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/94> :label "Pinnaroo Cemetery & Crematorium; Amenities".
 <http://qldarch.net/rdf/2012-12/resources/buildings/94> rdfs:label "Pinnaroo Cemetery & Crematorium; Amenities".
@@ -1267,7 +1332,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/95> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/95> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/95> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/95> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/95> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/95> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/95> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/95> :label "Plevna Downs - Elmes Residence, Augathella".
 <http://qldarch.net/rdf/2012-12/resources/buildings/95> rdfs:label "Plevna Downs - Elmes Residence, Augathella".
@@ -1275,7 +1342,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/96> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/96> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/96> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/96> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/96> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/96> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/96> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/96> :label "Police Citizens Youth Club Building, Inala".
 <http://qldarch.net/rdf/2012-12/resources/buildings/96> rdfs:label "Police Citizens Youth Club Building, Inala".
@@ -1283,7 +1352,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/97> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/97> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/97> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/97> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/97> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/97> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/97> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/97> :label "Prince Charles Hospital, Chermside".
 <http://qldarch.net/rdf/2012-12/resources/buildings/97> rdfs:label "Prince Charles Hospital, Chermside".
@@ -1291,7 +1362,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/98> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/98> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/98> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/98> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/98> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/98> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/98> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/98> :label "Proposed Development Catholic Church Property, The Gap".
 <http://qldarch.net/rdf/2012-12/resources/buildings/98> rdfs:label "Proposed Development Catholic Church Property, The Gap".
@@ -1299,7 +1372,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/99> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/99> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/99> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/99> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/99> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/99> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/99> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/99> :label "Proposed block of shops at Ascot for J.&K. Giorgas".
 <http://qldarch.net/rdf/2012-12/resources/buildings/99> rdfs:label "Proposed block of shops at Ascot for J.&K. Giorgas".
@@ -1307,7 +1382,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/100> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/100> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/100> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/100> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/100> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/100> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/100> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/100> :label "Queensland Agricultural College (University of Queensland), Gatton".
 <http://qldarch.net/rdf/2012-12/resources/buildings/100> rdfs:label "Queensland Agricultural College (University of Queensland), Gatton".
@@ -1315,7 +1392,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/101> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/101> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/101> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/101> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/101> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/101> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/101> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/101> :label "Queensland Agricultural College".
 <http://qldarch.net/rdf/2012-12/resources/buildings/101> rdfs:label "Queensland Agricultural College".
@@ -1323,7 +1402,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/102> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/102> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/102> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/102> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/102> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/102> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/102> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/102> :label "Ravenscraig II, Surfers Paradise".
 <http://qldarch.net/rdf/2012-12/resources/buildings/102> rdfs:label "Ravenscraig II, Surfers Paradise".
@@ -1331,7 +1412,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/103> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/103> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/103> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/103> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/103> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/103> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/103> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/103> :label "Ravenscraig, Aspley".
 <http://qldarch.net/rdf/2012-12/resources/buildings/103> rdfs:label "Ravenscraig, Aspley".
@@ -1339,7 +1422,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/104> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/104> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/104> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/104> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/104> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/104> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/104> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/104> :label "Residence at Beecroft for Mr.&Mrs. R.J. Bligh".
 <http://qldarch.net/rdf/2012-12/resources/buildings/104> rdfs:label "Residence at Beecroft for Mr.&Mrs. R.J. Bligh".
@@ -1347,7 +1432,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/105> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/105> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/105> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/105> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/105> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/105> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/105> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/105> :label "Residence, for Mr & Mrs A. Campbell, Mt Isa".
 <http://qldarch.net/rdf/2012-12/resources/buildings/105> rdfs:label "Residence, for Mr & Mrs A. Campbell, Mt Isa".
@@ -1355,7 +1442,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/106> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/106> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/106> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/106> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/106> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/106> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/106> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/106> :label "Retail Development, for Westfield, Everton Park".
 <http://qldarch.net/rdf/2012-12/resources/buildings/106> rdfs:label "Retail Development, for Westfield, Everton Park".
@@ -1363,7 +1452,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/107> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/107> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/107> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/107> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/107> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/107> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/107> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/107> :label "Retirement Village, Hervey Bay".
 <http://qldarch.net/rdf/2012-12/resources/buildings/107> rdfs:label "Retirement Village, Hervey Bay".
@@ -1371,7 +1462,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/108> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/108> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/108> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/108> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/108> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/108> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/108> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/108> :label "Roma St Redevelopment".
 <http://qldarch.net/rdf/2012-12/resources/buildings/108> rdfs:label "Roma St Redevelopment".
@@ -1379,7 +1472,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/109> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/109> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/109> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/109> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/109> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/109> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/109> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/109> :label "Rosecliff Gardens, Highgate Hill".
 <http://qldarch.net/rdf/2012-12/resources/buildings/109> rdfs:label "Rosecliff Gardens, Highgate Hill".
@@ -1387,7 +1482,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/110> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/110> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/110> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/110> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/110> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/110> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/110> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/110> :label "S.G.I.O Office Building, Brisbane CBD".
 <http://qldarch.net/rdf/2012-12/resources/buildings/110> rdfs:label "S.G.I.O Office Building, Brisbane CBD".
@@ -1395,7 +1492,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/111> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/111> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/111> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/111> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/111> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/111> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/111> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/111> :label "Sanitarium Offices, Moorooka".
 <http://qldarch.net/rdf/2012-12/resources/buildings/111> rdfs:label "Sanitarium Offices, Moorooka".
@@ -1403,7 +1502,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/112> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/112> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/112> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/112> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/112> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/112> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/112> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/112> :label "Shopping Centre, Runaway Bay".
 <http://qldarch.net/rdf/2012-12/resources/buildings/112> rdfs:label "Shopping Centre, Runaway Bay".
@@ -1411,7 +1512,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/113> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/113> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/113> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/113> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/113> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/113> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/113> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/113> :label "Shopping Centre, for Poulos Holdings Pty Ltd, Tarragindi".
 <http://qldarch.net/rdf/2012-12/resources/buildings/113> rdfs:label "Shopping Centre, for Poulos Holdings Pty Ltd, Tarragindi".
@@ -1419,7 +1522,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/114> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/114> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/114> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/114> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/114> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/114> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/114> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/114> :label "Skirving House".
 <http://qldarch.net/rdf/2012-12/resources/buildings/114> rdfs:label "Skirving House".
@@ -1427,7 +1532,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/115> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/115> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/115> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/115> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/115> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/115> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/115> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/115> :label "Split Level Cottage, for Ross McCowan, Bribie Island".
 <http://qldarch.net/rdf/2012-12/resources/buildings/115> rdfs:label "Split Level Cottage, for Ross McCowan, Bribie Island".
@@ -1435,7 +1542,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/116> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/116> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/116> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/116> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/116> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/116> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/116> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/116> :label "St Hilda's Girls School, Southport - Dormitory Extension".
 <http://qldarch.net/rdf/2012-12/resources/buildings/116> rdfs:label "St Hilda's Girls School, Southport - Dormitory Extension".
@@ -1443,7 +1552,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/117> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/117> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/117> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/117> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/117> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/117> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/117> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/117> :label "St Hilda's Girls School, Southport - Library".
 <http://qldarch.net/rdf/2012-12/resources/buildings/117> rdfs:label "St Hilda's Girls School, Southport - Library".
@@ -1451,7 +1562,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/118> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/118> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/118> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/118> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/118> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/118> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/118> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/118> :label "St Hilda's Girls School, Southport - Principal's Residence".
 <http://qldarch.net/rdf/2012-12/resources/buildings/118> rdfs:label "St Hilda's Girls School, Southport - Principal's Residence".
@@ -1459,7 +1572,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/119> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/119> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/119> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/119> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/119> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/119> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/119> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/119> :label "St Hilda's Girls School, Southport - Science Block".
 <http://qldarch.net/rdf/2012-12/resources/buildings/119> rdfs:label "St Hilda's Girls School, Southport - Science Block".
@@ -1467,7 +1582,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/120> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/120> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/120> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/120> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/120> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/120> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/120> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/120> :label "St Hilda's Girls School, Southport - Specialist Block".
 <http://qldarch.net/rdf/2012-12/resources/buildings/120> rdfs:label "St Hilda's Girls School, Southport - Specialist Block".
@@ -1475,7 +1592,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/121> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/121> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/121> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/121> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/121> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/121> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/121> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/121> :label "St Hilda's Girls School, Southport - TV Production Centre".
 <http://qldarch.net/rdf/2012-12/resources/buildings/121> rdfs:label "St Hilda's Girls School, Southport - TV Production Centre".
@@ -1483,7 +1602,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/122> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/122> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/122> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/122> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/122> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/122> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/122> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/122> :label "St Hilda's Girls School, Southport".
 <http://qldarch.net/rdf/2012-12/resources/buildings/122> rdfs:label "St Hilda's Girls School, Southport".
@@ -1491,7 +1612,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/123> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/123> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/123> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/123> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/123> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/123> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/123> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/123> :label "St Stephen's Cathedral Development, Brisbane CBD".
 <http://qldarch.net/rdf/2012-12/resources/buildings/123> rdfs:label "St Stephen's Cathedral Development, Brisbane CBD".
@@ -1499,7 +1622,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/124> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/124> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/124> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/124> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/124> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/124> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/124> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/124> :label "TAB Building, Albion".
 <http://qldarch.net/rdf/2012-12/resources/buildings/124> rdfs:label "TAB Building, Albion".
@@ -1507,7 +1632,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/125> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/125> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/125> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/125> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/125> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/125> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/125> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/125> :label "Tanderra, Samford Village".
 <http://qldarch.net/rdf/2012-12/resources/buildings/125> rdfs:label "Tanderra, Samford Village".
@@ -1515,7 +1642,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/126> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/126> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/126> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/126> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/126> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/126> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/126> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/126> :label "Toowong Library".
 <http://qldarch.net/rdf/2012-12/resources/buildings/126> rdfs:label "Toowong Library".
@@ -1523,7 +1652,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/127> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/127> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/127> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/127> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/127> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/127> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/127> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/127> :label "Toowong Pool".
 <http://qldarch.net/rdf/2012-12/resources/buildings/127> rdfs:label "Toowong Pool".
@@ -1531,7 +1662,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/128> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/128> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/128> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/128> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/128> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/128> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/128> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/128> :label "Topley House".
 <http://qldarch.net/rdf/2012-12/resources/buildings/128> rdfs:label "Topley House".
@@ -1539,7 +1672,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/129> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/129> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/129> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/129> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/129> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/129> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/129> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/129> :label "Trickett Gardens Holiday Inn, Surfers Paradise".
 <http://qldarch.net/rdf/2012-12/resources/buildings/129> rdfs:label "Trickett Gardens Holiday Inn, Surfers Paradise".
@@ -1547,7 +1682,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/130> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/130> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/130> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/130> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/130> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/130> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/130> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/130> :label "UQ - St Lucia; Commerce Building (Chamberlain)".
 <http://qldarch.net/rdf/2012-12/resources/buildings/130> rdfs:label "UQ - St Lucia; Commerce Building (Chamberlain)".
@@ -1555,7 +1692,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/131> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/131> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/131> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/131> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/131> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/131> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/131> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/131> :label "UQ - St Lucia; Hartley Teakle Building".
 <http://qldarch.net/rdf/2012-12/resources/buildings/131> rdfs:label "UQ - St Lucia; Hartley Teakle Building".
@@ -1563,7 +1702,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/132> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/132> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/132> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/132> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/132> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/132> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/132> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/132> :label "UQ - St Lucia; JD Storey Building".
 <http://qldarch.net/rdf/2012-12/resources/buildings/132> rdfs:label "UQ - St Lucia; JD Storey Building".
@@ -1571,7 +1712,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/133> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/133> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/133> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/133> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/133> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/133> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/133> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/133> :label "UQ - St Lucia; St John's College".
 <http://qldarch.net/rdf/2012-12/resources/buildings/133> rdfs:label "UQ - St Lucia; St John's College".
@@ -1579,7 +1722,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/134> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/134> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/134> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/134> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/134> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/134> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/134> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/134> :label "UQ - St Lucia; Staff Club".
 <http://qldarch.net/rdf/2012-12/resources/buildings/134> rdfs:label "UQ - St Lucia; Staff Club".
@@ -1587,7 +1732,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/135> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/135> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/135> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/135> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/135> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/135> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/135> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/135> :label "UQ - St Lucia; Union College".
 <http://qldarch.net/rdf/2012-12/resources/buildings/135> rdfs:label "UQ - St Lucia; Union College".
@@ -1595,7 +1742,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/136> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/136> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/136> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/136> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/136> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/136> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/136> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/136> :label "UQ - St Lucia; Women's College".
 <http://qldarch.net/rdf/2012-12/resources/buildings/136> rdfs:label "UQ - St Lucia; Women's College".
@@ -1603,7 +1752,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/137> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/137> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/137> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/137> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/137> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/137> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/137> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/137> :label "UQ - St Lucia".
 <http://qldarch.net/rdf/2012-12/resources/buildings/137> rdfs:label "UQ - St Lucia".
@@ -1611,7 +1762,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/138> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/138> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/138> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/138> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/138> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/138> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/138> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/138> :label "University of PNG, Port Moresby; Arts Law Building".
 <http://qldarch.net/rdf/2012-12/resources/buildings/138> rdfs:label "University of PNG, Port Moresby; Arts Law Building".
@@ -1619,7 +1772,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/139> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/139> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/139> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/139> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/139> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/139> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/139> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/139> :label "Wairuna Flats".
 <http://qldarch.net/rdf/2012-12/resources/buildings/139> rdfs:label "Wairuna Flats".
@@ -1627,7 +1782,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/140> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/140> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/140> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/140> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/140> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/140> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/140> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/140> :label "Watkins Place".
 <http://qldarch.net/rdf/2012-12/resources/buildings/140> rdfs:label "Watkins Place".
@@ -1635,7 +1792,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/141> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/141> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/141> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/141> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/141> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/141> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/141> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/141> :label "Weiner House, St Lucia".
 <http://qldarch.net/rdf/2012-12/resources/buildings/141> rdfs:label "Weiner House, St Lucia".
@@ -1643,7 +1802,9 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/142> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/142> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/142> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/142> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/142> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/142> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/142> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/142> :label "Wickham Terrace Carpark".
 <http://qldarch.net/rdf/2012-12/resources/buildings/142> rdfs:label "Wickham Terrace Carpark".
@@ -1651,16 +1812,84 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/143> a :StructureOrAgent.
 <http://qldarch.net/rdf/2012-12/resources/buildings/143> a geo:SpatialThing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/143> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/buildings/143> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/buildings/143> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/buildings/143> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/buildings/143> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/buildings/143> :label "Yeronga Park Swimming Pool, Brisbane City Council, Yeronga".
 <http://qldarch.net/rdf/2012-12/resources/buildings/143> rdfs:label "Yeronga Park Swimming Pool, Brisbane City Council, Yeronga".
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> a skos:Concept.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> a :Evincible.
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> :label "Commercial buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/1> rdfs:label "Commercial buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> a skos:Concept.
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> a :Evincible.
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> :label "Dwellings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/2> rdfs:label "Dwellings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> a skos:Concept.
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> a :Evincible.
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> :label "Educational facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/3> rdfs:label "Educational facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> a skos:Concept.
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> a :Evincible.
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> :label "Government buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/4> rdfs:label "Government buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> a skos:Concept.
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> a :Evincible.
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> :label "Health care facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/5> rdfs:label "Health care facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> a skos:Concept.
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> a :Evincible.
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> :label "Recreation and sports facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/6> rdfs:label "Recreation and sports facilities".
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> a skos:Concept.
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> a :Evincible.
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> :label "Religious buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/7> rdfs:label "Religious buildings".
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> a :BuildingTypology.
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> a skos:Concept.
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> a rdfs:Resource.
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> a :Entity.
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> a :Evincible.
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> :label "Transport infrastructure".
+<http://qldarch.net/rdf/2012-12/resources/typologies/8> rdfs:label "Transport infrastructure".
 <http://qldarch.net/rdf/2012-12/resources/people/1> a <http://xmlns.com/foaf/0.1/Person>.
 <http://qldarch.net/rdf/2012-12/resources/people/1> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/1> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/1> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/1> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/1> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/1> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/1> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/1> :label "Andrew Wilson".
 <http://qldarch.net/rdf/2012-12/resources/people/1> rdfs:label "Andrew Wilson".
 <http://qldarch.net/rdf/2012-12/resources/people/1> <http://xmlns.com/foaf/0.1/firstName> "Andrew".
@@ -1669,8 +1898,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/2> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/2> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/2> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/2> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/2> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/2> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/2> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/2> :label "Blair Wilson".
 <http://qldarch.net/rdf/2012-12/resources/people/2> rdfs:label "Blair Wilson".
 <http://qldarch.net/rdf/2012-12/resources/people/2> <http://xmlns.com/foaf/0.1/firstName> "Blair".
@@ -1679,8 +1910,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/3> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/3> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/3> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/3> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/3> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/3> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/3> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/3> :label "Deborah van der Plaat".
 <http://qldarch.net/rdf/2012-12/resources/people/3> rdfs:label "Deborah van der Plaat".
 <http://qldarch.net/rdf/2012-12/resources/people/3> <http://xmlns.com/foaf/0.1/firstName> "Deborah".
@@ -1689,8 +1922,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/4> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/4> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/4> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/4> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/4> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/4> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/4> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/4> :label "Ducan McPhee".
 <http://qldarch.net/rdf/2012-12/resources/people/4> rdfs:label "Ducan McPhee".
 <http://qldarch.net/rdf/2012-12/resources/people/4> <http://xmlns.com/foaf/0.1/firstName> "Ducan".
@@ -1699,8 +1934,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/5> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/5> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/5> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/5> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/5> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/5> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/5> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/5> :label "Graham Bligh".
 <http://qldarch.net/rdf/2012-12/resources/people/5> rdfs:label "Graham Bligh".
 <http://qldarch.net/rdf/2012-12/resources/people/5> <http://xmlns.com/foaf/0.1/firstName> "Graham".
@@ -1710,8 +1947,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/6> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/6> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/6> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/6> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/6> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/6> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/6> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/6> :label "Helen Mills".
 <http://qldarch.net/rdf/2012-12/resources/people/6> rdfs:label "Helen Mills".
 <http://qldarch.net/rdf/2012-12/resources/people/6> <http://xmlns.com/foaf/0.1/firstName> "Helen".
@@ -1720,8 +1959,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/7> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/7> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/7> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/7> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/7> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/7> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/7> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/7> :label "Ian Charlton".
 <http://qldarch.net/rdf/2012-12/resources/people/7> rdfs:label "Ian Charlton".
 <http://qldarch.net/rdf/2012-12/resources/people/7> <http://xmlns.com/foaf/0.1/firstName> "Ian".
@@ -1730,8 +1971,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/8> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/8> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/8> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/8> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/8> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/8> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/8> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/8> :label "James Birrell".
 <http://qldarch.net/rdf/2012-12/resources/people/8> rdfs:label "James Birrell".
 <http://qldarch.net/rdf/2012-12/resources/people/8> <http://xmlns.com/foaf/0.1/firstName> "James".
@@ -1740,8 +1983,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/9> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/9> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/9> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/9> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/9> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/9> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/9> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/9> :label "Janina Gosseye".
 <http://qldarch.net/rdf/2012-12/resources/people/9> rdfs:label "Janina Gosseye".
 <http://qldarch.net/rdf/2012-12/resources/people/9> <http://xmlns.com/foaf/0.1/firstName> "Janina".
@@ -1750,8 +1995,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/10> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/10> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/10> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/10> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/10> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/10> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/10> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/10> :label "John Macarthur".
 <http://qldarch.net/rdf/2012-12/resources/people/10> rdfs:label "John Macarthur".
 <http://qldarch.net/rdf/2012-12/resources/people/10> <http://xmlns.com/foaf/0.1/firstName> "John".
@@ -1760,8 +2007,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/11> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/11> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/11> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/11> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/11> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/11> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/11> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/11> :label "Jon Voller".
 <http://qldarch.net/rdf/2012-12/resources/people/11> rdfs:label "Jon Voller".
 <http://qldarch.net/rdf/2012-12/resources/people/11> <http://xmlns.com/foaf/0.1/firstName> "Jon".
@@ -1770,8 +2019,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/12> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/12> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/12> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/12> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/12> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/12> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/12> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/12> :label "Marina Viner".
 <http://qldarch.net/rdf/2012-12/resources/people/12> rdfs:label "Marina Viner".
 <http://qldarch.net/rdf/2012-12/resources/people/12> <http://xmlns.com/foaf/0.1/firstName> "Marina".
@@ -1780,8 +2031,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/13> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/people/13> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/people/13> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/people/13> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/people/13> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/people/13> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :label "Robert Riddel".
 <http://qldarch.net/rdf/2012-12/resources/people/13> rdfs:label "Robert Riddel".
 <http://qldarch.net/rdf/2012-12/resources/people/13> <http://xmlns.com/foaf/0.1/firstName> "Robert".
@@ -1790,8 +2043,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :label "Bligh Jessup Bretnall and Partners".
 <http://qldarch.net/rdf/2012-12/resources/firms/1> rdfs:label "Bligh Jessup Bretnall and Partners".
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :firmName "Bligh Jessup Bretnall and Partners".
@@ -1799,8 +2054,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/2> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/2> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/2> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/2> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/2> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/2> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/2> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/2> :label "Conrad & Gargett & Partners (1966-1970s)".
 <http://qldarch.net/rdf/2012-12/resources/firms/2> rdfs:label "Conrad & Gargett & Partners (1966-1970s)".
 <http://qldarch.net/rdf/2012-12/resources/firms/2> :firmName "Conrad & Gargett & Partners (1966-1970s)".
@@ -1808,8 +2065,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/3> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/3> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/3> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/3> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/3> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/3> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/3> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/3> :label "Conrad & Gargett (1945-1965)".
 <http://qldarch.net/rdf/2012-12/resources/firms/3> rdfs:label "Conrad & Gargett (1945-1965)".
 <http://qldarch.net/rdf/2012-12/resources/firms/3> :firmName "Conrad & Gargett (1945-1965)".
@@ -1817,8 +2076,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/4> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/4> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/4> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/4> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/4> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/4> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/4> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/4> :label "Conrad & Gargett".
 <http://qldarch.net/rdf/2012-12/resources/firms/4> rdfs:label "Conrad & Gargett".
 <http://qldarch.net/rdf/2012-12/resources/firms/4> :firmName "Conrad & Gargett".
@@ -1826,8 +2087,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/5> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/5> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> :label "Geoffrey Pie".
 <http://qldarch.net/rdf/2012-12/resources/firms/5> rdfs:label "Geoffrey Pie".
 <http://qldarch.net/rdf/2012-12/resources/firms/5> :firmName "Geoffrey Pie".
@@ -1835,8 +2098,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/6> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/6> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :label "Hayes & Scott".
 <http://qldarch.net/rdf/2012-12/resources/firms/6> rdfs:label "Hayes & Scott".
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :firmName "Hayes & Scott".
@@ -1844,8 +2109,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/7> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/7> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/7> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/7> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/7> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/7> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/7> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/7> :label "James Birrell & Partners".
 <http://qldarch.net/rdf/2012-12/resources/firms/7> rdfs:label "James Birrell & Partners".
 <http://qldarch.net/rdf/2012-12/resources/firms/7> :firmName "James Birrell & Partners".
@@ -1853,8 +2120,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/8> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/8> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/8> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/8> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/8> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/8> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/8> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/8> :label "James Birrell, BCC Architect".
 <http://qldarch.net/rdf/2012-12/resources/firms/8> rdfs:label "James Birrell, BCC Architect".
 <http://qldarch.net/rdf/2012-12/resources/firms/8> :firmName "James Birrell, BCC Architect".
@@ -1862,8 +2131,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/9> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/9> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/9> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/9> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/9> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/9> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/9> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/9> :label "James Birrell, UQ Architect".
 <http://qldarch.net/rdf/2012-12/resources/firms/9> rdfs:label "James Birrell, UQ Architect".
 <http://qldarch.net/rdf/2012-12/resources/firms/9> :firmName "James Birrell, UQ Architect".
@@ -1871,8 +2142,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/10> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/10> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/10> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/10> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/10> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/10> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/10> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/10> :label "James Birrell".
 <http://qldarch.net/rdf/2012-12/resources/firms/10> rdfs:label "James Birrell".
 <http://qldarch.net/rdf/2012-12/resources/firms/10> :firmName "James Birrell".
@@ -1880,8 +2153,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/11> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/11> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/11> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/11> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/11> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/11> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/11> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/11> :label "Jim Birrell, BCC Architect".
 <http://qldarch.net/rdf/2012-12/resources/firms/11> rdfs:label "Jim Birrell, BCC Architect".
 <http://qldarch.net/rdf/2012-12/resources/firms/11> :firmName "Jim Birrell, BCC Architect".
@@ -1889,8 +2164,10 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/12> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/12> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/12> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/12> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/12> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/12> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/12> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/12> :label "Mervyn Rylance".
 <http://qldarch.net/rdf/2012-12/resources/firms/12> rdfs:label "Mervyn Rylance".
 <http://qldarch.net/rdf/2012-12/resources/firms/12> :firmName "Mervyn Rylance".
@@ -1898,13 +2175,15 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/13> a <http://xmlns.com/foaf/0.1/Agent>.
 <http://qldarch.net/rdf/2012-12/resources/firms/13> a rdfs:Resource.
 <http://qldarch.net/rdf/2012-12/resources/firms/13> a :StructureOrAgent.
+<http://qldarch.net/rdf/2012-12/resources/firms/13> a :StructureOrAgentOrTopic.
 <http://qldarch.net/rdf/2012-12/resources/firms/13> a :Entity.
 <http://qldarch.net/rdf/2012-12/resources/firms/13> a :NonDigitalThing.
+<http://qldarch.net/rdf/2012-12/resources/firms/13> a :Evincible.
 <http://qldarch.net/rdf/2012-12/resources/firms/13> :label "R. Martin Wilson and son Architects".
 <http://qldarch.net/rdf/2012-12/resources/firms/13> rdfs:label "R. Martin Wilson and son Architects".
 <http://qldarch.net/rdf/2012-12/resources/firms/13> :firmName "R. Martin Wilson and son Architects".
 
-#ENDS 0.232 [sec] TC=2814 TP=8204 BC=0 BP=4813 PM=0 CM=0 FM=0 AM=0
+#ENDS 0.301 [sec] TC=3802 TP=17291 BC=0 BP=11352 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl omekaexport/latest.ttl resources/architects.ttl resources/buildingFirm.ttl resources/buildingLocation.ttl resources/entities.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/infer_latlong.n3
@@ -1916,6 +2195,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
+@prefix qaint: <http://qldarch.net/ns/rdf/2013-08/internal#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dcam: <http://purl.org/dc/dcam/>.
@@ -1923,6 +2203,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -2128,7 +2409,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/88> geo:long "147.14930714".
 <http://qldarch.net/rdf/2012-12/resources/buildings/2> geo:long "153.051127".
 
-#ENDS 32.044 [sec] TC=19565 TP=361469 BC=0 BP=96815 PM=0 CM=0 FM=0 AM=0
+#ENDS 38.351 [sec] TC=24587 TP=529078 BC=0 BP=145582 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl entities/buildings.ttl entities/firms.ttl entities/people.ttl entities/typologies.ttl omekaexport/latest.ttl resources/architects.ttl resources/buildingFirm.ttl resources/buildingLocation.ttl resources/entities.ttl resources/latlong.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 --query inference/preferredImage.n3
@@ -2140,6 +2421,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
+@prefix qaint: <http://qldarch.net/ns/rdf/2013-08/internal#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dcam: <http://purl.org/dc/dcam/>.
@@ -2147,6 +2429,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -2164,12 +2447,13 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/5> :preferredImage <http://qldarch.net/omeka/items/show/1791>.
 <http://qldarch.net/rdf/2012-12/resources/people/6> :preferredImage <http://qldarch.net/omeka/items/show/1793>.
 <http://qldarch.net/rdf/2012-12/resources/people/7> :preferredImage <http://qldarch.net/omeka/items/show/1794>.
+<http://qldarch.net/rdf/2012-12/resources/people/8> :preferredImage <http://qldarch.net/omeka/items/show/2705>.
 <http://qldarch.net/rdf/2012-12/resources/people/11> :preferredImage <http://qldarch.net/omeka/items/show/1795>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :preferredImage <http://qldarch.net/omeka/items/show/1800>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :preferredImage <http://qldarch.net/omeka/items/show/1878>.
 <http://qldarch.net/rdf/2012-12/resources/firms/6> :preferredImage <http://qldarch.net/omeka/items/show/177>.
 
-#ENDS 33.045 [sec] TC=19382 TP=357711 BC=0 BP=95496 PM=0 CM=0 FM=0 AM=0
+#ENDS 39.001 [sec] TC=24405 TP=525324 BC=0 BP=144264 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/architects.ttl resources/buildingFirm.ttl resources/buildingLocation.ttl resources/entities.ttl resources/latlong.ttl resources/preferredImages.ttl resources/typedbuildings.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 pseudoentities/buildings.n3 pseudoentities/drawingtypes.n3 pseudoentities/firms.n3 pseudoentities/people.n3 pseudoentities/typologies.n3 inference/preferredImage.n3 inference/relatedTo.n3 --query inference/relatedTo-resources-query.n3 content/associatedFirms.ttl content/buildingtopics.ttl content/cleanlatest.ttl content/hasTranscript.ttl content/peopledproperties.ttl content/relatedTo.ttl
@@ -2181,6 +2465,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
+@prefix qaint: <http://qldarch.net/ns/rdf/2013-08/internal#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dcam: <http://purl.org/dc/dcam/>.
@@ -2188,6 +2473,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -3205,11 +3491,30 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/buildings/143> :relatedTo <http://qldarch.net/omeka/items/show/1489>.
 <http://qldarch.net/rdf/2012-12/resources/buildings/143> :relatedTo <http://qldarch.net/omeka/items/show/1488>.
 <http://qldarch.net/rdf/2012-12/resources/people/1> :relatedTo <http://qldarch.net/omeka/items/show/8>.
+<http://qldarch.net/rdf/2012-12/resources/people/1> :relatedTo <http://qldarch.net/omeka/items/show/2638>.
 <http://qldarch.net/rdf/2012-12/resources/people/1> :relatedTo <http://qldarch.net/omeka/items/show/1763>.
 <http://qldarch.net/rdf/2012-12/resources/people/1> :relatedTo <http://qldarch.net/omeka/items/show/1766>.
+<http://qldarch.net/rdf/2012-12/resources/people/1> :relatedTo <http://qldarch.net/omeka/items/show/2659>.
+<http://qldarch.net/rdf/2012-12/resources/people/2> :relatedTo <http://qldarch.net/omeka/items/show/2637>.
+<http://qldarch.net/rdf/2012-12/resources/people/2> :relatedTo <http://qldarch.net/omeka/items/show/2638>.
 <http://qldarch.net/rdf/2012-12/resources/people/2> :relatedTo <http://qldarch.net/omeka/items/show/1766>.
 <http://qldarch.net/rdf/2012-12/resources/people/2> :relatedTo <http://qldarch.net/omeka/items/show/1787>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2643>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2644>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2647>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2637>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2638>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2660>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2666>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2663>.
 <http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/1766>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2650>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2670>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2677>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2678>.
+<http://qldarch.net/rdf/2012-12/resources/people/3> :relatedTo <http://qldarch.net/omeka/items/show/2679>.
+<http://qldarch.net/rdf/2012-12/resources/people/4> :relatedTo <http://qldarch.net/omeka/items/show/2647>.
+<http://qldarch.net/rdf/2012-12/resources/people/4> :relatedTo <http://qldarch.net/omeka/items/show/2646>.
 <http://qldarch.net/rdf/2012-12/resources/people/4> :relatedTo <http://qldarch.net/omeka/items/show/1773>.
 <http://qldarch.net/rdf/2012-12/resources/people/5> :relatedTo <http://qldarch.net/omeka/items/show/1771>.
 <http://qldarch.net/rdf/2012-12/resources/people/5> :relatedTo <http://qldarch.net/omeka/items/show/1791>.
@@ -3218,17 +3523,72 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/7> :relatedTo <http://qldarch.net/omeka/items/show/1763>.
 <http://qldarch.net/rdf/2012-12/resources/people/7> :relatedTo <http://qldarch.net/omeka/items/show/1794>.
 <http://qldarch.net/rdf/2012-12/resources/people/8> :relatedTo <http://qldarch.net/omeka/items/show/8>.
+<http://qldarch.net/rdf/2012-12/resources/people/8> :relatedTo <http://qldarch.net/omeka/items/show/2705>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2640>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2643>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2641>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2644>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2647>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2646>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2649>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2648>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2637>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2636>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2639>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2638>.
 <http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/1775>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2668>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2669>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2666>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2667>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2663>.
 <http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/1773>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2661>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2662>.
 <http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/1771>.
 <http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/1763>.
 <http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/1766>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2658>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2659>.
 <http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/1769>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2654>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2653>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2655>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2680>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2681>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2670>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2672>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2671>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2673>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2674>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2675>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2676>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2677>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2678>.
+<http://qldarch.net/rdf/2012-12/resources/people/9> :relatedTo <http://qldarch.net/omeka/items/show/2679>.
 <http://qldarch.net/rdf/2012-12/resources/people/10> :relatedTo <http://qldarch.net/omeka/items/show/8>.
+<http://qldarch.net/rdf/2012-12/resources/people/10> :relatedTo <http://qldarch.net/omeka/items/show/2643>.
+<http://qldarch.net/rdf/2012-12/resources/people/10> :relatedTo <http://qldarch.net/omeka/items/show/2644>.
+<http://qldarch.net/rdf/2012-12/resources/people/10> :relatedTo <http://qldarch.net/omeka/items/show/2646>.
+<http://qldarch.net/rdf/2012-12/resources/people/10> :relatedTo <http://qldarch.net/omeka/items/show/2660>.
 <http://qldarch.net/rdf/2012-12/resources/people/10> :relatedTo <http://qldarch.net/omeka/items/show/1773>.
 <http://qldarch.net/rdf/2012-12/resources/people/10> :relatedTo <http://qldarch.net/omeka/items/show/1771>.
+<http://qldarch.net/rdf/2012-12/resources/people/10> :relatedTo <http://qldarch.net/omeka/items/show/2654>.
+<http://qldarch.net/rdf/2012-12/resources/people/10> :relatedTo <http://qldarch.net/omeka/items/show/2650>.
+<http://qldarch.net/rdf/2012-12/resources/people/10> :relatedTo <http://qldarch.net/omeka/items/show/2680>.
+<http://qldarch.net/rdf/2012-12/resources/people/10> :relatedTo <http://qldarch.net/omeka/items/show/2678>.
 <http://qldarch.net/rdf/2012-12/resources/people/11> :relatedTo <http://qldarch.net/omeka/items/show/1775>.
 <http://qldarch.net/rdf/2012-12/resources/people/11> :relatedTo <http://qldarch.net/omeka/items/show/1795>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2739>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2743>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2744>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2745>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2746>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2747>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2748>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2740>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2741>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2742>.
 <http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/1772>.
 <http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/1774>.
 <http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/1770>.
@@ -3236,10 +3596,53 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/1764>.
 <http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/1765>.
 <http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/1767>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2719>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2717>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2718>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2724>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2723>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2726>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2725>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2720>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2721>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2729>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2727>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2728>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2738>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2737>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2736>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2735>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2734>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2733>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2732>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2730>.
+<http://qldarch.net/rdf/2012-12/resources/people/12> :relatedTo <http://qldarch.net/omeka/items/show/2731>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2649>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2648>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2636>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2639>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/1775>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2669>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2667>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2663>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2665>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2664>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2661>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2662>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/1771>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/1763>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/1769>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2653>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2655>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2680>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2681>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2672>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2671>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2673>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2674>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2675>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2676>.
+<http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/2679>.
 <http://qldarch.net/rdf/2012-12/resources/people/13> :relatedTo <http://qldarch.net/omeka/items/show/1800>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1650>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1700>.
@@ -3567,8 +3970,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/197>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/194>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/117>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/195>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1739>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/195>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/116>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1740>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/110>.
@@ -3689,8 +4092,8 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1842>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1607>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1572>.
-<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1606>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1719>.
+<http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1606>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1843>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1573>.
 <http://qldarch.net/rdf/2012-12/resources/firms/1> :relatedTo <http://qldarch.net/omeka/items/show/1683>.
@@ -3949,6 +4352,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> :relatedTo <http://qldarch.net/omeka/items/show/2115>.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> :relatedTo <http://qldarch.net/omeka/items/show/2114>.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> :relatedTo <http://qldarch.net/omeka/items/show/2116>.
+<http://qldarch.net/rdf/2012-12/resources/firms/5> :relatedTo <http://qldarch.net/omeka/items/show/2700>.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> :relatedTo <http://qldarch.net/omeka/items/show/2110>.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> :relatedTo <http://qldarch.net/omeka/items/show/2111>.
 <http://qldarch.net/rdf/2012-12/resources/firms/5> :relatedTo <http://qldarch.net/omeka/items/show/2109>.
@@ -4529,7 +4933,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/firms/13> :relatedTo <http://qldarch.net/rdf/2012-12/resources/buildings/17>.
 <http://qldarch.net/rdf/2012-12/resources/firms/13> :relatedTo <http://qldarch.net/rdf/2012-12/resources/buildings/49>.
 
-#ENDS 39.704 [sec] TC=26856 TP=493053 BC=0 BP=131546 PM=0 CM=0 FM=0 AM=0
+#ENDS 43.942 [sec] TC=26417 TP=722460 BC=0 BP=196004 PM=0 CM=0 FM=0 AM=0
 
 #Processed by Id: euler.yap 6094 2013-03-17 23:33:07Z josd
 #eye --yap --nope rules/owl-SymmetricProperty.n3 rules/owl-TransitiveProperty.n3 rules/rdfs-subClassOf.n3 rules/rdfs-subPropertyOf.n3 ../owl/inferred/ArchitectureOntologyInferred.ttl omekaexport/latest.ttl resources/architects.ttl resources/entities.ttl classification/architects.n3 classification/buildings.n3 classification/expand-entities-query.n3 classification/expand_hasTranscript.n3 classification/people.n3 classification/typologies.n3 static/typologyicons.ttl reconciled/buildingtopics.ttl reconciled/firms.ttl reconciled/peopledproperties.ttl reconciled/typedbuildings.ttl --query classification/typologies.n3
@@ -4541,6 +4945,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#>.
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#>.
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#>.
+@prefix qaint: <http://qldarch.net/ns/rdf/2013-08/internal#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dcam: <http://purl.org/dc/dcam/>.
@@ -4548,6 +4953,7 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
 @prefix str: <http://www.w3.org/2000/10/swap/string#>.
 @prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
 @prefix ns1: <http://eulersharp.sourceforge.net/2003/03swap/rdfs-rules#>.
@@ -4720,5 +5126,5 @@ qavocab:Plan skos:semanticRelation qavocab:LineDrawing.
 <http://qldarch.net/rdf/2012-12/resources/typologies/7> :indefiniteMapIcon "img/mapicons/religious_buildings_black_19x27.png".
 <http://qldarch.net/rdf/2012-12/resources/typologies/8> :indefiniteMapIcon "img/mapicons/transport_infrastructure_black_19x27.png".
 
-#ENDS 31.908 [sec] TC=19510 TP=269828 BC=0 BP=95807 PM=0 CM=0 FM=0 AM=0
+#ENDS 38.556 [sec] TC=24531 TP=389141 BC=0 BP=144573 PM=0 CM=0 FM=0 AM=0
 
