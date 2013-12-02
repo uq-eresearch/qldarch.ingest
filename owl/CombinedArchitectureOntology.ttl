@@ -1244,9 +1244,9 @@ crm:P67i_is_referred_to_by a owl:ObjectProperty ;
     :label "Collaborated With" ;
     :display true ;
     :editable true ;
-    rdfs:domain :Architect ;
-    rdfs:range foaf:Person ;
-    :entailsRelationship :InfluencedBy .
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    :entailsRelationship :CollaboratedWith .
 
 # NOTE: relatedTo does not entail a reified relationship, as then it would be evidence of itself.
 
