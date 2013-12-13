@@ -32,11 +32,21 @@
 
 owl:Class rdfs:subClassOf rdfs:Class .
 
-owl:ObjectProperty rdfs:subClassOf rdf:Property .
+:AttributeProperty rdfs:subClassOf rdf:Property ;
+    rdfs:comment "Used to indicate a property is considered as a Percian second" .
 
-owl:DatatypeProperty rdfs:subClassOf rdf:Property ;
+:RelationshipProperty rdfs:subClassOf rdf:Property ;
+    rdfs:comment "Used to indicate a property is considered as a Percian third" .
+
+owl:ObjectProperty rdfs:subClassOf :RelationshipProperty .
+
+owl:DatatypeProperty rdfs:subClassOf :AttributeProperty ;
     rdfs:domain rdfs:Resource ;
     rdfs:range rdfs:Literal .
+
+:VocabularyProperty rdfs:subClassOf owl:ObjectProperty, :AttributeProperty ;
+    rdfs:range skos:Concept ;
+    rdfs:comment "Used to indicate a property is an attribute property constrained to a controlled vocabulary" .
 
 :SummaryProperty rdfs:subClassOf rdf:Property ;
     rdfs:comment "This is used to identify which proprties should be included in a entity summary" .
@@ -101,6 +111,8 @@ qaint:usesPrefix a qaint:InternalDatatypeProperty ;
 
 :label a owl:DatatypeProperty ;
     a :SummaryProperty ;
+    :editable true ;
+    :display true ;
     :label "Preferred label" ;
     rdfs:subPropertyOf rdfs:label ;
     rdfs:comment "The preferred label for a thing" .
@@ -108,14 +120,14 @@ qaint:usesPrefix a qaint:InternalDatatypeProperty ;
 :plural a owl:DatatypeProperty ;
     a :SummaryProperty ;
     :display true ;
-    :editable true ;
+    :editable false ;
     rdfs:subPropertyOf :label ;
     rdfs:comment "The plural form of the preferred label for a thing" .
 
 :singular a owl:DatatypeProperty ;
     a :SummaryProperty ;
     :display true ;
-    :editable true ;
+    :editable false ;
 #    rdfs:subPropertyOf :label ;  # NOTE: This should be restored asap.
     rdfs:comment "The singular form of the preferred label for a thing" .
 
@@ -123,6 +135,7 @@ qaint:usesPrefix a qaint:InternalDatatypeProperty ;
     rdfs:comment "Used to indicate if a property should be displayed when displaying an instance" .
 
 :editable a owl:DatatypeProperty ;
+    rdfs:range xsd:boolean ;
     rdfs:comment "Used to indicate if a property should be editable directly via the interface" .
 
 :toplevel a owl:DatatypeProperty ;
@@ -138,6 +151,11 @@ qaint:usesPrefix a qaint:InternalDatatypeProperty ;
     rdfs:range rdf:Property ;
     rdfs:comment "Used to indicate that a property must be specified when creating an instance of this class" .
 
+:usesLexicon a owl:ObjectProperty ;
+    rdfs:domain owl:Class ;
+    rdfs:range skos:ConceptScheme ;
+    rdfs:comment "Indicates that the vocabulary's lexicon includes the identifed concept-scheme" .
+
 #
 # External Classes
 #
@@ -145,14 +163,16 @@ qaint:usesPrefix a qaint:InternalDatatypeProperty ;
 :Evincible a owl:Class ;
     :editable false ;
     :toplevel false ;
-    :label "Evincible Thing" ;
+    :singular "Evincible Thing" ;
+    :plural "Evincible Things" ;
     rdfs:comment "Top for Percian 'Firsts' and 'Thirds' related by this vocabularly" .
 
 :Entity a owl:Class ;
     rdfs:subClassOf :Evincible ;
     :editable false ;
     :toplevel false ;
-    :label "Entity" ;
+    :singular "Entity" ;
+    :plural "Entities" ;
     rdfs:comment "Top for Percian 'Firsts' related by this vocabularly" .
     
 :Relationship a owl:Class ;
@@ -164,7 +184,8 @@ qaint:usesPrefix a qaint:InternalDatatypeProperty ;
     rdfs:comment "Top for Percian 'Thirds' related by this vocabularly" .
 
 :NonDigitalThing a owl:Class ;
-    :label "Non-Digital Thing" ;
+    :singular "Non-Digital Thing" ;
+    :plural "Non-Digital Things" ;
     rdfs:subClassOf :Entity .
 
 :DigitalThing a owl:Class ;
@@ -172,23 +193,27 @@ qaint:usesPrefix a qaint:InternalDatatypeProperty ;
     rdfs:subClassOf :Entity .
 
 :DigitalObject a owl:Class ;
-    :label "Digital Object" ;
+    :singular "Digital Object" ;
+    :plural "Digital Objects" ;
     rdfs:subClassOf :DigitalThing ;
     rdfs:subClassOf frbr:Expression ;
     rdfs:comment "This is analagous to a digital expression of an FRBR work. For pragmatic reasons, and due to the fungability of digital forms, any transformation of a work from a non-digital to a digital manifestation is considered to create a new expression. This allows us to capture the concept of a digitized work that can be subsequently transcoded into multiple digital manifestations but remains conceptually a Representation of the same Digital Resource (Expression)" .
 
 :DigitalFile a owl:Class ;
-    :label "File" ;
+    :singular "File" ;
+    :plural "Files" ;
     rdfs:subClassOf :DigitalThing ;
     rdfs:subClassOf frbr:Manifestation ;
     rdfs:comment "This is analagous to a digital manifestation of an FRBR expression. The medium of a DigitalFile is 'bitstream' syntactically and lexigraphically encoded consistent with a RFC2046 mime-type" .
 
 :StructureOrAgentOrTopic a owl:Class ;
-    :label "Structure or Agent or Topic" ;
+    :singular "Structure, Agent or Topic" ;
+    :plural "Structures, Agents, and Topics" ;
     rdfs:subClassOf :NonDigitalThing .
 
 :StructureOrAgent a owl:Class ;
-    :label "Structure or Agent" ;
+    :singular "Structure or Agent" ;
+    :plural "Structures and Agents" ;
     rdfs:subClassOf :StructureOrAgentOrTopic .
 
 :Structure a owl:Class ;
@@ -204,8 +229,8 @@ qaint:usesPrefix a qaint:InternalDatatypeProperty ;
 
 :BuildingTypology a owl:Class ;
     rdfs:subClassOf :NonDigitalThing ;
-    rdfs:subClassOf skos:Concept ;
     :displayPrecedence 3 ;
+    :editable false ;
     :plural "Building Typologies" ;
     :singular "Building Typologie" ;
     :toplevel true .
@@ -218,7 +243,9 @@ foaf:Agent a owl:Class ;
     rdfs:isDefinedBy foaf:Agent .
 
 foaf:Person a owl:Class ;
-    :label "Person" ;
+    :singular "Person" ;
+    :plural "People" ;
+    :editable true ;
     :suppressEditable :label ;
     rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Person> ;
     rdfs:subClassOf foaf:Agent ;
@@ -227,6 +254,7 @@ foaf:Person a owl:Class ;
 :Architect a owl:Class ;
     rdfs:subClassOf foaf:Person ;
     :suppressEditable :label ;
+    :suppressEditable foaf:name ;
     :displayPrecedence 0 ;
     :plural "Architects" ;
     :singular "Architect" ;
@@ -262,62 +290,86 @@ foaf:Person a owl:Class ;
 :Article a owl:Class ;
     rdfs:subClassOf :DigitalObject ;
     :displayPrecedence 3 ;
-    :label "Articles" ;
+    :singular "Article" ;
+    :plural "Articles" ;
     :toplevel true .
 
 :Image a owl:Class ;
     rdfs:subClassOf :DigitalObject ;
-    :label "Images" .
+    :singular "Image" ;
+    :plural "Images" .
 
 :Photograph a owl:Class ;
     rdfs:subClassOf :Image ;
     :displayPrecedence 1 ;
-    :label "Photographs" ;
+    :singular "Photograph" ;
+    :plural "Photographs" ;
     :toplevel true .
 
 :Portrait a owl:Class ;
     rdfs:subClassOf :Photograph ;
     :displayPrecedence 1 ;
-    :label "Photographs" ;
+    :singular "Portrait" ;
+    :plural "Portraits" ;
     :toplevel false .
 
 :LineDrawing a owl:Class ;
     rdfs:subClassOf :Image ;
     :displayPrecedence 2 ;
-    :label "Line Drawings" ;
+    :singular "Line Drawing" ;
+    :plural "Line Drawings" ;
     :toplevel true .
 
 :Interview a owl:Class ;
     rdfs:subClassOf :DigitalObject ;
     :displayPrecedence 0 ;
-    :label "Interviews" ;
+    :singular "Interview" ;
+    :plural "Interviews" ;
     :toplevel true .
 
 :Transcript a owl:Class ;
     rdfs:subClassOf :DigitalObject ;
-    :label "Transcripts" ;
+    :singular "Transcript" ;
+    :plural "Transcripts" ;
     :toplevel false .
-
-:DrawingType a owl:Class ; 
-    :label "Drawing Type" ;
-    rdfs:subClassOf skos:Concept .
 
 :Topic a owl:Class ;
     rdfs:subClassOf :Entity ;
-    rdfs:subClassOf skos:Concept ;
-    :label "Topic" ;
+    :singular "Topic" ;
+    :plural "Topics" ;
     :editable true ;
-    :requiredToCreate :label ;
+    :requiredToCreate :topicHeading ;
     :toplevel false .
 
 geo:SpatialThing a owl:Class ;
-    :label "Spatial Thing" ;
+    :singular "Spatial Thing" ;
+    :plural "Spatial Things" ;
     :toplevel false ;
     rdfs:isDefinedBy geo:SpatialThing .
 
-:Gender a owl:Class ; 
-    :label "Gender" ;
-    rdfs:subClassOf skos:Concept .
+:Publication a owl:Class ;
+    rdfs:subClassOf :NonDigitalThing ;
+    :singular "Publication" ;
+    :plural "Publications" ;
+    :toplevel false ;
+    :editable true ;
+    :requiredToCreate :citation .
+
+:Event a owl:Class ;
+    rdfs:subClassOf :NonDigitalThing ;
+    :singular "Event" ;
+    :plural "Events" ;
+    :toplevel false ;
+    :editable true ;
+    :requiredToCreate :eventTitle .
+
+:Award a owl:Class ;
+    rdfs:subClassOf :NonDigitalThing ;
+    :singular "Award" ;
+    :plural "Awards" ;
+    :toplevel false ;
+    :editable true ;
+    :requiredToCreate :awardTitle .
 
 #
 # External Ontology Properties
@@ -384,6 +436,14 @@ foaf:gender a owl:ObjectProperty ;
     rdfs:domain foaf:Person ;
     rdfs:range :Gender .
 
+:profession a owl:VocabularyProperty ;
+    :label "Profession" ;
+    :display true ; 
+    :editable true ;
+    :displayPrecidence 70 ;
+    rdfs:domain foaf:Person ;
+    rdfs:range :Profession .
+
 :birthYear a owl:DatatypeProperty ;
     a :SummaryProperty ;
     :label "Born in Year" ;
@@ -392,12 +452,13 @@ foaf:gender a owl:ObjectProperty ;
     :displayPrecedence 50 ;
     rdfs:domain foaf:Person .
 
-:shortBio a owl:DatatypeProperty ;
-    :label "Short Biography" ;
-    :display false ;
+:traveledTo a :VocabularyProperty ;
+    :label "Traveled To" ;
+    :display true ;
     :editable true ;
-    :displayPrecedence 100 ;
-    rdfs:domain foaf:Agent .
+    :displayPrecidence 200 ;
+    rdfs:domain foaf:Person ;
+    rdfs:range :Locality .
 
 :tradingName a owl:DatatypeProperty ;
     a :SummaryProperty ;
@@ -428,6 +489,7 @@ foaf:gender a owl:ObjectProperty ;
     :displayPrecedence 20 ;
     rdfs:subPropertyOf dcterms:subject ;
     :entailsRelationship :RelatedToRelation ;
+    rdfs:range :Structure ;
     rdfs:domain :DigitalObject .
 
 :interviewer a owl:ObjectProperty ;
@@ -468,7 +530,6 @@ foaf:gender a owl:ObjectProperty ;
     :display true ;
     :editable false ;
     :displayPrecedence 50 ;
-#    rdfs:domain :DigitalObject ;
     rdfs:range xsd:string .
 
 :locatedAt a owl:DatatypeProperty ;
@@ -500,7 +561,7 @@ foaf:gender a owl:ObjectProperty ;
     rdfs:domain :FirmManifestation ;
     rdfs:range :Firm .
 
-:buildingTypology a owl:ObjectProperty ;
+:buildingTypology a :VocabularyProperty ;
     :label "Building Typology" ;
     :display true ;
     :editable false ;
@@ -515,14 +576,14 @@ foaf:gender a owl:ObjectProperty ;
     :displayPrecedence 150 ;
     rdfs:domain :Photograph .
 
-:drawingType a owl:ObjectProperty ;
+:drawingType a :VocabularyProperty ;
     a :SummaryProperty ;
     :label "Drawing Type" ;
     :display true ;
     :editable false ;
     :displayPrecedence 40 ;
     rdfs:domain :LineDrawing ;
-    rdfs:range skos:Concept .
+    rdfs:range :DrawingType.
 
 :associatedFirm a owl:ObjectProperty ;
     :label "Firm" ;
@@ -550,11 +611,41 @@ foaf:gender a owl:ObjectProperty ;
     rdfs:domain :DigitalObject ;
     rdfs:range :DigitalFile .
 
-frbr:embodiment a owl:ObjectProperty ; 
-    :label "Embodiment Of" ;
-    :display false ;
-    :editable false ;
-    rdfs:isDefinedBy frbr:embodiment .
+:citation a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :label ;
+    :label "Citation" ;
+    :display true ;
+    :editable true ;
+    :displayPrecedence 20 ;
+    rdfs:domain :Publication ;
+    rdfs:range xsd:string .
+
+:eventTitle a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :label ;
+    :label "Title" ;
+    :display true ;
+    :editable true ;
+    :displayPrecedence 20 ;
+    rdfs:domain :Event ;
+    rdfs:range xsd:string .
+
+:topicHeading a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :label ;
+    :label "Topic Heading" ;
+    :display true ;
+    :editable true ;
+    :displayPrecedence 20 ;
+    rdfs:domain :Topic ;
+    rdfs:range xsd:string .
+
+:awardTitle a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :label ;
+    :label "Title" ;
+    :display true ;
+    :editable true ;
+    :displayPrecedence 20 ;
+    rdfs:domain :Award ;
+    rdfs:range xsd:string .
 
 #
 # Integration of adopted Dublin Core properties
@@ -858,13 +949,11 @@ geo:long a owl:DatatypeProperty ;
 # Imports from other ontologies
 #
 
-crm:P106_is_composed_of a owl:ObjectProperty ;
-    rdfs:isDefinedBy <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs> ;
+frbr:embodiment a owl:ObjectProperty ; 
+    :label "Embodiment Of" ;
     :display false ;
-    :editable false .
-
-crm:P106i_forms_part_of a owl:ObjectProperty ;
-    rdfs:isDefinedBy <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs> .
+    :editable false ;
+    rdfs:isDefinedBy frbr:embodiment .
 
 frbr:part rdf:type owl:ObjectProperty ;
     rdfs:label "part"@en ;
@@ -891,6 +980,14 @@ dcterms:isPartOf a owl:ObjectProperty ;
     :display false ;
     :editable false ;
     rdfs:comment "Inferred from sub-properties only" .
+
+crm:P106_is_composed_of a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs> ;
+    :display false ;
+    :editable false .
+
+crm:P106i_forms_part_of a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs> .
 
 crm:P67_refers_to a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs> ;
@@ -971,6 +1068,7 @@ crm:P67i_is_referred_to_by a owl:ObjectProperty ;
 :RelatedToRelation a owl:Class ;
     rdfs:subClassOf :Relationship ;
     :label "Related To" ;
+    :editable false ;
     :impliesRelationship :relatedTo .
 
 :relProperty a owl:Class ;
@@ -1095,6 +1193,12 @@ crm:P67i_is_referred_to_by a owl:ObjectProperty ;
     rdfs:subClassOf :RelatedToRelation ;
     :impliesRelationship :workedWith .
 
+:StudiedWithRelation a owl:Class ;
+    :label "Studied With" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :studiedWith .
+
 :WorkedOnRelation a owl:Class ;
     :label "Worked On" ;
     rdfs:subClassOf :Relationship ; 
@@ -1130,6 +1234,18 @@ crm:P67i_is_referred_to_by a owl:ObjectProperty ;
     rdfs:subClassOf :Relationship ; 
     rdfs:subClassOf :RelatedToRelation ;
     :impliesRelationship :collaboratedWith .
+
+:MergedWith a owl:Class ;
+    :label "Merged With" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :mergedWith .
+
+:Authored a owl:Class ;
+    :label "Authored" ;
+    rdfs:subClassOf :Relationship ; 
+    rdfs:subClassOf :RelatedToRelation ;
+    :impliesRelationship :authored .
 
 #
 # Reified properties.
@@ -1191,6 +1307,14 @@ crm:P67i_is_referred_to_by a owl:ObjectProperty ;
     rdfs:range foaf:Person ;
     :entailsRelationship :WorkedWithRelation .
 
+:studiedWith a :relProperty ;
+    :label "Studied With" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    :entailsRelationship :StudiedWithRelation .
+
 :workedOn a :relProperty ;
     :label "Worked On" ;
     :display true ;
@@ -1247,6 +1371,22 @@ crm:P67i_is_referred_to_by a owl:ObjectProperty ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
     :entailsRelationship :CollaboratedWith .
+
+:mergedWith a :relProperty ;
+    :label "Merged With" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain :Firm ;
+    rdfs:range :Firm ;
+    :entailsRelationship :MergedWith .
+
+:authored a :relProperty ;
+    :label "Authored" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain foaf:Person ;
+    rdfs:range :Publication ;
+    :entailsRelationship :Authored .
 
 # NOTE: relatedTo does not entail a reified relationship, as then it would be evidence of itself.
 
@@ -1532,13 +1672,19 @@ qaat:indefiniteMapIcon a qaat:AuxDatatypeProperty ;
 ##
 
 #
-# Drawing Type vocabulary
+# Qldarch Vocabularies
 #
+
+:Gender a owl:Class ; 
+    rdfs:subClassOf skos:Concept ;
+    :usesLexicon qavocab:Genders ;
+    :editable false ;
+    :singular "Gender" ;
+    :plural "Genders" .
 
 qavocab:Genders a skos:ConceptScheme .
 
-qavocab:Male a skos:Concept ;
-    a qldarch:Gender ;
+qavocab:Male a qldarch:Gender ;
     skos:inScheme qavocab:Genders ;
     qldarch:label "Male" .
 
@@ -1547,47 +1693,68 @@ qavocab:Female a skos:Concept ;
     skos:inScheme qavocab:Genders ;
     qldarch:label "Female" .
 
+:DrawingType a owl:Class ; 
+    :usesLexicon qavocab:DrawingTypes ;
+    :editable false ;
+    :singular "Drawing Type" ;
+    :plural "Drawing Types" ;
+    rdfs:subClassOf skos:Concept .
+
 qavocab:DrawingTypes a skos:ConceptScheme ;
     skos:hasTopConcept qavocab:LineDrawing .
 
-qavocab:LineDrawing a skos:Concept ;
-    a qldarch:DrawingType ;
+qavocab:LineDrawing a :DrawingType ;
     skos:inScheme qavocab:DrawingTypes ;
     qldarch:label "Line Drawing" .
 
-qavocab:Perspective a skos:Concept ;
-    a qldarch:DrawingType ;
+qavocab:Perspective a :DrawingType ;
     skos:inScheme qavocab:DrawingTypes ;
     skos:broader qavocab:LineDrawing ;
-    skos:altLabel "Perspective" ;
-    qldarch:label "Perspective" .
+    :label "Perspective" .
 
-qavocab:Section a skos:Concept ;
-    a qldarch:DrawingType ;
+qavocab:Section a :DrawingType ;
     skos:inScheme qavocab:DrawingTypes ;
     skos:broader qavocab:LineDrawing ;
-    skos:altLabel "Section" ;
-    qldarch:label "Section" .
+    :label "Section" .
 
 qavocab:Sketch a skos:Concept ;
     a qldarch:DrawingType ;
     skos:inScheme qavocab:DrawingTypes ;
     skos:broader qavocab:LineDrawing ;
-    skos:altLabel "Sketch" ;
-    qldarch:label "Sketch" .
+    :label "Sketch" .
 
 qavocab:Elevation a skos:Concept ;
     a qldarch:DrawingType ;
     skos:inScheme qavocab:DrawingTypes ;
     skos:broader qavocab:LineDrawing ;
-    skos:altLabel "Elevation" ;
-    qldarch:label "Elevation" .
+    :label "Elevation" .
 
 qavocab:Plan a skos:Concept ;
     a qldarch:DrawingType ;
     skos:inScheme qavocab:DrawingTypes ;
     skos:broader qavocab:LineDrawing ;
-    skos:altLabel "Plan" ;
-    qldarch:label "Plan" .
+    :label "Plan" .
+
+:Profession a owl:Class ; 
+    rdfs:subClassOf skos:Concept ;
+    :usesLexicon qavocab:Professions ;
+    :editable true ;
+    :singular "Profession" ;
+    :plural "Professions" .
+
+qavocab:Professions a skos:ConceptScheme .
+
+qavocab:Academic a :Profession ;
+    skos:inScheme qavocab:Professions ;
+    :label "Academic" .
+
+:Locality a owl:Class ; 
+    rdfs:subClassOf skos:Concept ;
+    :usesLexicon qavocab:Localities ;
+    :editable true ;
+    :singular "Locality" ;
+    :plural "Localities" .
+
+qavocab:Localities a skos:ConceptScheme .
 
 # vim: set ai si sw=4 sts=4 ts=4 expandtab:
