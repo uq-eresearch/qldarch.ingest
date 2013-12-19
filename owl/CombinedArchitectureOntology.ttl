@@ -115,6 +115,7 @@ qaint:usesPrefix a qaint:InternalDatatypeProperty ;
     :display true ;
     :label "Preferred label" ;
     rdfs:subPropertyOf rdfs:label ;
+    rdfs:domain rdfs:Resource ;
     rdfs:comment "The preferred label for a thing" .
 
 :plural a owl:DatatypeProperty ;
@@ -247,6 +248,7 @@ foaf:Person a owl:Class ;
     :plural "People" ;
     :editable true ;
     :suppressEditable :label ;
+    :suppressEditable foaf:name ;
     rdfs:isDefinedBy <http://http://xmlns.com/foaf/spec/#term_Person> ;
     rdfs:subClassOf foaf:Agent ;
     rdfs:isDefinedBy foaf:Person .
@@ -267,6 +269,8 @@ foaf:Person a owl:Class ;
     rdfs:subClassOf foaf:Agent ;
     :displayPrecedence 1 ;
     :editable true ;
+    :suppressEditable :label ;
+    :suppressEditable foaf:name ;
     :plural "Firms" ;
     :singular "Firm" ;
     :toplevel true ;
@@ -280,6 +284,7 @@ foaf:Person a owl:Class ;
 
 :EducationalInstitution a owl:Class ;
     rdfs:subClassOf foaf:Agent ;
+    :suppressEditable :label ;
     :displayPrecedence 10 ;
     :editable true ;
     :plural "Educational Insitutions" ;
@@ -334,7 +339,8 @@ foaf:Person a owl:Class ;
     :toplevel false .
 
 :Topic a owl:Class ;
-    rdfs:subClassOf :Entity ;
+    rdfs:subClassOf :StructureOrAgentOrTopic ;
+    :suppressEditable :label ;
     :singular "Topic" ;
     :plural "Topics" ;
     :editable true ;
@@ -349,6 +355,8 @@ geo:SpatialThing a owl:Class ;
 
 :Publication a owl:Class ;
     rdfs:subClassOf :NonDigitalThing ;
+    :suppressEditable :label ;
+    :suppressEditable foaf:name ;
     :singular "Publication" ;
     :plural "Publications" ;
     :toplevel false ;
@@ -357,6 +365,8 @@ geo:SpatialThing a owl:Class ;
 
 :Event a owl:Class ;
     rdfs:subClassOf :NonDigitalThing ;
+    :suppressEditable :label ;
+    :suppressEditable foaf:name ;
     :singular "Event" ;
     :plural "Events" ;
     :toplevel false ;
@@ -365,6 +375,8 @@ geo:SpatialThing a owl:Class ;
 
 :Award a owl:Class ;
     rdfs:subClassOf :NonDigitalThing ;
+    :suppressEditable :label ;
+    :suppressEditable foaf:name ;
     :singular "Award" ;
     :plural "Awards" ;
     :toplevel false ;
