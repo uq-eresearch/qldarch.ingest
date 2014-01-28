@@ -8,15 +8,52 @@
 @prefix qldarch: <http://qldarch.net/ns/rdf/2012-06/terms#> .
 
 <1> a foaf:Person ; foaf:firstName "Andrew" ; foaf:lastName "Wilson" ; qldarch:label "Andrew Wilson" .
-<2> a foaf:Person ; foaf:firstName "Blair" ; foaf:lastName "Wilson" ; qldarch:label "Blair Wilson" .
-<3> a foaf:Person ; foaf:firstName "Deborah" ; foaf:lastName "van der Plaat" ; qldarch:label "Deborah van der Plaat" .
-<4> a foaf:Person ; foaf:firstName "Ducan" ; foaf:lastName "McPhee" ; qldarch:label "Ducan McPhee" .
-<5> a foaf:Person ; foaf:firstName "Graham" ; foaf:lastName "Bligh" ; qldarch:label "Graham Bligh" .
-<6> a foaf:Person ; foaf:firstName "Helen" ; foaf:lastName "Mills" ; qldarch:label "Helen Mills" .
-<7> a foaf:Person ; foaf:firstName "Ian" ; foaf:lastName "Charlton" ; qldarch:label "Ian Charlton" .
-<8> a foaf:Person ; foaf:firstName "James" ; foaf:lastName "Birrell" ; qldarch:label "James Birrell" .
-<9> a foaf:Person ; foaf:firstName "Janina" ; foaf:lastName "Gosseye" ; qldarch:label "Janina Gosseye" .
-<10> a foaf:Person ; foaf:firstName "John" ; foaf:lastName "Macarthur" ; qldarch:label "John Macarthur" .
-<11> a foaf:Person ; foaf:firstName "Jon" ; foaf:lastName "Voller" ; qldarch:label "Jon Voller" .
-<12> a foaf:Person ; foaf:firstName "Marina" ; foaf:lastName "Viner" ; qldarch:label "Marina Viner" .
-<13> a foaf:Person ; foaf:firstName "Robert" ; foaf:lastName "Riddel" ; qldarch:label "Robert Riddel" .
+<2> a foaf:Person ; foaf:firstName "Andrew" ; foaf:lastName "Steen" ; qldarch:label "Andrew Steen" .
+<3> a foaf:Person ; foaf:firstName "Barry" ; foaf:lastName "Walduck" ; qldarch:label "Barry Walduck" .
+<4> a foaf:Person ; foaf:firstName "Beth" ; foaf:lastName "Wilson" ; qldarch:label "Beth Wilson" .
+<5> a foaf:Person ; foaf:firstName "Blair" ; foaf:lastName "Wilson" ; qldarch:label "Blair Wilson" .
+<6> a foaf:Person ; foaf:firstName "Bob" ; foaf:lastName "Collin" ; qldarch:label "Bob Collin" .
+<7> a foaf:Person ; foaf:firstName "Brian" ; foaf:lastName "Laver" ; qldarch:label "Brian Laver" .
+<8> a foaf:Person ; foaf:firstName "Bruce" ; foaf:lastName "Paulsen" ; qldarch:label "Bruce Paulsen" .
+<9> a foaf:Person ; foaf:firstName "David" ; foaf:lastName "Mercer" ; qldarch:label "David Mercer" .
+<10> a foaf:Person ; foaf:firstName "Deborah" ; foaf:lastName "van der Plaat" ; qldarch:label "Deborah van der Plaat" .
+<11> a foaf:Person ; foaf:firstName "Don" ; foaf:lastName "Watson" ; qldarch:label "Don Watson" .
+<12> a foaf:Person ; foaf:firstName "Ducan" ; foaf:lastName "McPhee" ; qldarch:label "Ducan McPhee" .
+<13> a foaf:Person ; foaf:firstName "Elizabeth" ; foaf:lastName "Musgrave" ; qldarch:label "Elizabeth Musgrave" .
+<14> a foaf:Person ; foaf:firstName "Espie" ; foaf:lastName "Dods" ; qldarch:label "Espie Dods" .
+<15> a foaf:Person ; foaf:firstName "Fedor" ; foaf:lastName "Medek" ; qldarch:label "Fedor Medek" .
+<16> a foaf:Person ; foaf:firstName "Fiona" ; foaf:lastName "Gardiner" ; qldarch:label "Fiona Gardiner" .
+<17> a foaf:Person ; foaf:firstName "Geoffrey" ; foaf:lastName "Pie" ; qldarch:label "Geoffrey Pie" .
+<18> a foaf:Person ; foaf:firstName "Graeme" ; foaf:lastName "Thiedeke" ; qldarch:label "Graeme Thiedeke" .
+<19> a foaf:Person ; foaf:firstName "Graham" ; foaf:lastName "Bligh" ; qldarch:label "Graham Bligh" .
+<20> a foaf:Person ; foaf:firstName "Graham" ; foaf:lastName "de Gruchy" ; qldarch:label "Graham de Gruchy" .
+<21> a foaf:Person ; foaf:firstName "Haig" ; foaf:lastName "Beck" ; qldarch:label "Haig Beck" .
+<22> a foaf:Person ; foaf:firstName "Harold" ; foaf:lastName "Paulsen" ; qldarch:label "Harold Paulsen" .
+<23> a foaf:Person ; foaf:firstName "Helen" ; foaf:lastName "Mills" ; qldarch:label "Helen Mills" .
+<24> a foaf:Person ; foaf:firstName "Ian" ; foaf:lastName "Charlton" ; qldarch:label "Ian Charlton" .
+<25> a foaf:Person ; foaf:firstName "Ian" ; foaf:lastName "Sinnamon" ; qldarch:label "Ian Sinnamon" .
+<26> a foaf:Person ; foaf:firstName "Jackie" ; foaf:lastName "Cooper" ; qldarch:label "Jackie Cooper" .
+<27> a foaf:Person ; foaf:firstName "James" ; foaf:lastName "Birrell" ; qldarch:label "James Birrell" .
+<28> a foaf:Person ; foaf:firstName "Janina" ; foaf:lastName "Gosseye" ; qldarch:label "Janina Gosseye" .
+<29> a foaf:Person ; foaf:firstName "John" ; foaf:lastName "Macarthur" ; qldarch:label "John Macarthur" .
+<30> a foaf:Person ; foaf:firstName "John" ; foaf:lastName "Railton" ; qldarch:label "John Railton" .
+<31> a foaf:Person ; foaf:firstName "Jon" ; foaf:lastName "Voller" ; qldarch:label "Jon Voller" .
+<32> a foaf:Person ; foaf:firstName "Lindy" ; foaf:lastName "Wissler" ; qldarch:label "Lindy Wissler" .
+<33> a foaf:Person ; foaf:firstName "Lou" ; foaf:lastName "Hailey" ; qldarch:label "Lou Hailey" .
+<34> a foaf:Person ; foaf:firstName "Malcom" ; foaf:lastName "Cummings" ; qldarch:label "Malcom Cummings" .
+<35> a foaf:Person ; foaf:firstName "Margaret" ; foaf:lastName "Kerr" ; qldarch:label "Margaret Kerr" .
+<36> a foaf:Person ; foaf:firstName "Margie" ; foaf:lastName "Ward" ; qldarch:label "Margie Ward" .
+<37> a foaf:Person ; foaf:firstName "Marina" ; foaf:lastName "Viner" ; qldarch:label "Marina Viner" .
+<38> a foaf:Person ; foaf:firstName "Max" ; foaf:lastName "Bannah" ; qldarch:label "Max Bannah" .
+<39> a foaf:Person ; foaf:firstName "Neville" ; foaf:lastName "Twidale" ; qldarch:label "Neville Twidale" .
+<40> a foaf:Person ; foaf:firstName "Noel" ; foaf:lastName "Robinson" ; qldarch:label "Noel Robinson" .
+<41> a foaf:Person ; foaf:firstName "Paul" ; foaf:lastName "Memmot" ; qldarch:label "Paul Memmot" .
+<42> a foaf:Person ; foaf:firstName "Peter" ; foaf:lastName "Gargett" ; qldarch:label "Peter Gargett" .
+<43> a foaf:Person ; foaf:firstName "Peter" ; foaf:lastName "Heathwood" ; qldarch:label "Peter Heathwood" .
+<44> a foaf:Person ; foaf:firstName "Ralph" ; foaf:lastName "Tyrell" ; qldarch:label "Ralph Tyrell" .
+<45> a foaf:Person ; foaf:firstName "Rex" ; foaf:lastName "Addision" ; qldarch:label "Rex Addision" .
+<46> a foaf:Person ; foaf:firstName "Richard" ; foaf:lastName "Allom" ; qldarch:label "Richard Allom" .
+<47> a foaf:Person ; foaf:firstName "Richard" ; foaf:lastName "Stringer" ; qldarch:label "Richard Stringer" .
+<48> a foaf:Person ; foaf:firstName "Robert" ; foaf:lastName "Riddel" ; qldarch:label "Robert Riddel" .
+<49> a foaf:Person ; foaf:firstName "Roger" ; foaf:lastName "Heathwood" ; qldarch:label "Roger Heathwood" .
+<50> a foaf:Person ; foaf:firstName "Tom" ; foaf:lastName "McKerrell" ; qldarch:label "Tom McKerrell" .
