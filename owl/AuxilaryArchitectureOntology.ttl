@@ -4,8 +4,6 @@
 # Licensed Apache 2.0
 #
 
-@base <http://qldarch.net/ns/rdf/2012-06/terms#> .
-
 @prefix : <http://qldarch.net/ns/rdf/2012-06/terms#> .
 @prefix qaat: <http://qldarch.net/ns/omeka/2012-11/auxterms#> .
 @prefix qavocab: <http://qldarch.net/ns/skos/2013-02/vocab#> .
