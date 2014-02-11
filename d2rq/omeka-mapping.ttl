@@ -138,6 +138,16 @@ map:pseudoEntityTypes a d2rq:PropertyBridge;
     .
 
 # Individual classes of pseudoentity; one per controlled vocabularly
+map:people a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+    d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
+	d2rq:class qaat:Person;
+    d2rq:containsDuplicates "true";
+    d2rq:join "o_elements.id <= o_element_texts.element_id";
+    d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
+    d2rq:condition "o_elements.name='Person'";
+    d2rq:condition "o_simple_vocab_terms.terms != ''"
+    .
 map:creators a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
     d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
@@ -178,11 +188,6 @@ map:transcribers a d2rq:ClassMap;
     d2rq:condition "o_elements.name='Transcriber'";
     d2rq:condition "o_simple_vocab_terms.terms != ''"
     .
-map:submitters a d2rq:ClassMap;
-	d2rq:dataStorage map:database;
-    d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_entities.email|urlencode@@";
-    d2rq:class qaat:Person;
-    .
 map:subjects a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
     d2rq:uriPattern "http://qldarch.net/ns/omeka/2012-11/pseudoentity#@@o_elements.name|urlencode@@,@@o_element_texts.text|urlencode@@";
@@ -191,7 +196,7 @@ map:subjects a d2rq:ClassMap;
     d2rq:join "o_elements.id <= o_element_texts.element_id";
     d2rq:join "o_elements.id <= o_simple_vocab_terms.element_id";
     d2rq:condition "o_elements.name='Subject'";
-    d2rq:condition "o_simple_vocab_terms.terms != ''"
+    d2rq:condition "o_simple_vocab_terms.terms != ''";
     .
 map:drawingTypes a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
@@ -295,7 +300,15 @@ map:hasFileSize a d2rq:PropertyBridge;
     d2rq:datatype xsd:integer;
     d2rq:column "o_files.size";
     .
-
+map:depictedIn a d2rq:PropertyBridge;
+    d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:people;
+    d2rq:property qaat:depictedIn;
+    d2rq:refersToClassMap map:digitalObjects;
+    d2rq:join "o_elements.id <= o_element_texts.element_id";
+    d2rq:join "o_items.id <= o_element_texts.record_id";
+    d2rq:condition "o_elements.name='Person'"
+    .
 # Dublin Core Metadata
 map:title a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;
@@ -331,6 +344,14 @@ map:creator a d2rq:PropertyBridge;
     d2rq:join "o_element_sets.id <= o_elements.element_set_id";
     d2rq:condition "o_element_sets.name='Dublin Core'";
     d2rq:condition "o_elements.name='Creator'"
+    .
+map:email a d2rq:PropertyBridge;
+    d2rq:dataStorage map:database;
+    d2rq:belongsToClassMap map:creators;
+    d2rq:property qaat:email;
+    d2rq:datatype xsd:string;
+    d2rq:column "o_entities.email";
+    d2rq:condition "o_element_texts.text = CONCAT(o_entities.first_name, ' ', o_entities.last_name)";
     .
 map:dateCreated a d2rq:PropertyBridge;
 	d2rq:dataStorage map:database;

@@ -24,6 +24,12 @@
 } => { ?do dcterms:creator ?person } .
 
 { ?e qaat:reconciledTo ?person .
+  ?do a qldarch:DigitalObject .
+  ?e qaat:created ?do .
+  ?e qaat:email ?email .
+} => { ?do qldarch:contact ?email } .
+
+{ ?e qaat:reconciledTo ?person .
   ?do a qldarch:Interview .
   ?e qaat:interviewerIn ?do .
 } => { ?do qldarch:interviewer ?person } .
