@@ -1240,6 +1240,19 @@ owl:DatatypeProperty a rdfs:Resource.
 :depictsBuilding :displayPrecedence 20 .
 :depictsBuilding :entailsRelationship :RelatedToRelation.
 :depictsBuilding rdfs:label "Depicts".
+:depictedIn rdfs:domain :DigitalObject.
+:depictedIn rdfs:range :Structure.
+:depictedIn rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
+:depictedIn a owl:ObjectProperty.
+:depictedIn a rdfs:Resource.
+:depictedIn a rdf:Property.
+:depictedIn a :RelationshipProperty.
+:depictedIn :label "Depicts".
+:depictedIn :editable false .
+:depictedIn :display true .
+:depictedIn :displayPrecedence 20 .
+:depictedIn :entailsRelationship :RelatedToRelation.
+:depictedIn rdfs:label "Depicts".
 :interviewer rdfs:domain :Interview.
 :interviewer rdfs:range <http://xmlns.com/foaf/0.1/Person>.
 :interviewer rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
