@@ -703,6 +703,20 @@ dcterms:format a owl:DatatypeProperty ;
     rdfs:domain :DigitalFile ;
     rdfs:range xsd:boolean .
 
+:australian a owl:DatatypeProperty ;
+    :label "Australian" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain :StructureOrAgent ;
+    rdfs:range xsd:boolean .
+    
+:practicedInQueensland a owl:DatatypeProperty ;
+    :label "Practiced in Queensland" ;
+    :display true ;
+    :editable true ;
+    rdfs:domain :Architect ;
+    rdfs:range xsd:boolean .
+    
 #
 # Geographic Terms
 #

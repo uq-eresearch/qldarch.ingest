@@ -1682,6 +1682,26 @@ owl:DatatypeProperty a rdfs:Resource.
 :managedFile :editable false .
 :managedFile :display false .
 :managedFile rdfs:label "Managed File".
+:australian rdfs:domain :StructureOrAgent.
+:australian rdfs:range xsd:boolean.
+:australian a owl:DatatypeProperty.
+:australian a rdfs:Resource.
+:australian a rdf:Property.
+:australian a :AttributeProperty.
+:australian :label "Australian".
+:australian :editable true .
+:australian :display true .
+:australian rdfs:label "Australian".
+:practicedInQueensland rdfs:domain :Architect.
+:practicedInQueensland rdfs:range xsd:boolean.
+:practicedInQueensland a owl:DatatypeProperty.
+:practicedInQueensland a rdfs:Resource.
+:practicedInQueensland a rdf:Property.
+:practicedInQueensland a :AttributeProperty.
+:practicedInQueensland :label "Practiced in Queensland".
+:practicedInQueensland :editable true .
+:practicedInQueensland :display true .
+:practicedInQueensland rdfs:label "Practiced in Queensland".
 geo:lat rdfs:domain geo:SpatialThing.
 geo:lat a owl:DatatypeProperty.
 geo:lat a :SummaryProperty.
