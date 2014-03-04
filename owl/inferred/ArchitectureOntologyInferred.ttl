@@ -909,6 +909,19 @@ geo:SpatialThing rdfs:seeAlso geo:SpatialThing.
 :MergedWith :label "Merged With".
 :MergedWith rdfs:label "Merged With".
 :MergedWith :impliesRelationship :mergedWith.
+:Became rdfs:subClassOf :Relationship.
+:Became rdfs:subClassOf :RelatedToRelation.
+:Became rdfs:subClassOf rdfs:Resource.
+:Became rdfs:subClassOf :Became.
+:Became rdfs:subClassOf :Evincible.
+:Became a owl:Class.
+:Became a rdfs:Resource.
+:Became a :Relationship.
+:Became a rdfs:Class.
+:Became a :Evincible.
+:Became :label "Became".
+:Became rdfs:label "Became".
+:Became :impliesRelationship :became.
 :Authored rdfs:subClassOf :Relationship.
 :Authored rdfs:subClassOf :RelatedToRelation.
 :Authored rdfs:subClassOf rdfs:Resource.
@@ -1997,6 +2010,18 @@ geo:long rdfs:seeAlso geo:long.
 :collaboratedWith :display true .
 :collaboratedWith :entailsRelationship :CollaboratedWith.
 :collaboratedWith rdfs:label "Collaborated With".
+:became rdfs:domain :Firm.
+:became rdfs:range :Firm.
+:became a :relProperty.
+:became a rdfs:Resource.
+:became a owl:ObjectProperty.
+:became a rdf:Property.
+:became a :RelationshipProperty.
+:became :label "Became".
+:became :editable true .
+:became :display true .
+:became :entailsRelationship :Became.
+:became rdfs:label "Became".
 :mergedWith rdfs:domain :Firm.
 :mergedWith rdfs:range :Firm.
 :mergedWith a :relProperty.
