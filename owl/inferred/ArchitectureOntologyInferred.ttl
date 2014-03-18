@@ -2078,6 +2078,7 @@ geo:long rdfs:seeAlso geo:long.
 :relatedTo :editable false .
 :relatedTo :display false .
 :relatedTo rdfs:label "Related To".
+:startDate rdfs:domain :Firm.
 :startDate rdfs:domain :Relationship.
 :startDate rdfs:range xsd:date.
 :startDate a :relationshipDataProperty.
@@ -2089,6 +2090,7 @@ geo:long rdfs:seeAlso geo:long.
 :startDate :editable true .
 :startDate :display true .
 :startDate rdfs:label "Start Date".
+:endDate rdfs:domain :Firm.
 :endDate rdfs:domain :Relationship.
 :endDate rdfs:range xsd:date.
 :endDate a :relationshipDataProperty.
@@ -2462,6 +2464,40 @@ skos:narrowerTransitive a rdfs:Resource.
 <http://www.cidoc-crm.org/cidoc-crm/P106i_forms_part_of> rdfs:seeAlso <http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_official_release.rdfs>.
 skos:semanticRelation a rdf:Property.
 skos:semanticRelation a rdfs:Resource.
-
+:CompoundObject rdf:type rdfs:Resource.
+:CompoundObject rdf:type owl:Class.
+:CompoundObject rdf:type rdfs:Class.
+:CompoundObject :label "Compound Resources".
+:CompoundObject rdfs:label "Compound Resources".
+:CompoundObject rdfs:subClassOf rdfs:Resource.
+:CompoundObject rdfs:subClassOf :Evincible.
+:CompoundObject rdfs:subClassOf :CompoundObject.
+:CompoundObject :toplevel false.
+:CompoundObject :editable true.
+:CompoundObject :plural "Compound Resources".
+:CompoundObject :singular "Compound Resource".
+:CompoundObject rdfs:subClassOf :CompoundObject.
+:Timeline rdf:type rdfs:Resource.
+:Timeline rdf:type owl:Class.
+:Timeline rdf:type rdfs:Class.
+:Timeline :label "Timelines".
+:Timeline rdfs:label "Timelines".
+:Timeline rdfs:subClassOf rdfs:Resource.
+:Timeline rdfs:subClassOf :CompoundObject.
+:Timeline rdfs:subClassOf :Evincible.
+:Timeline rdfs:subClassOf :Timeline.
+:Timeline :toplevel false.
+:Timeline :editable true.
+:Timeline :plural "Timelines".
+:Timeline :singular "Timeline".
+:Timeline rdfs:subClassOf :Timeline.
+:jsonData rdf:type rdf:Property.
+:jsonData rdf:type owl:ObjectProperty.
+:jsonData :label "Became".
+:jsonData rdfs:label "JSON Data".
+:jsonData rdfs:domain :CompoundObject.
+:jsonData rdfs:range xsd:string.
+:jsonData :display true.
+:jsonData :editable true.
 #ENDS 0.469 [sec] TC=4457 TP=126496 BC=0 BP=24426 PM=0 CM=0 FM=0 AM=0
 
