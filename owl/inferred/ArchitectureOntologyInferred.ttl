@@ -303,6 +303,7 @@ qavocab:Section skos:semanticRelation qavocab:LineDrawing.
 <http://xmlns.com/foaf/0.1/Person> rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/Person>.
 <http://xmlns.com/foaf/0.1/Person> :suppressEditable :label.
 <http://xmlns.com/foaf/0.1/Person> :suppressEditable <http://xmlns.com/foaf/0.1/name>.
+<http://xmlns.com/foaf/0.1/Person> :suppressEditable :profession .
 <http://xmlns.com/foaf/0.1/Person> rdfs:label "People".
 <http://xmlns.com/foaf/0.1/Person> rdfs:seeAlso <http://http://xmlns.com/foaf/spec/#term_Person>.
 <http://xmlns.com/foaf/0.1/Person> rdfs:seeAlso <http://xmlns.com/foaf/0.1/Person>.
@@ -328,6 +329,7 @@ qavocab:Section skos:semanticRelation qavocab:LineDrawing.
 :Architect :requiredToCreate <http://xmlns.com/foaf/0.1/lastName>.
 :Architect :suppressEditable :label.
 :Architect :suppressEditable <http://xmlns.com/foaf/0.1/name>.
+:Architect :suppressEditable :profession .
 :Architect rdfs:label "Architects".
 :Firm rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
 :Firm rdfs:subClassOf rdfs:Resource.
@@ -1028,6 +1030,7 @@ rdf:type rdfs:label "Type".
 :label :label "Preferred label".
 :label :editable true .
 :label :display true .
+:label :displayPrecedence 100 .
 :label rdfs:label "Preferred label".
 :usesPrefix a rdf:Property.
 :usesPrefix a rdfs:Resource.
@@ -1148,6 +1151,7 @@ owl:DatatypeProperty a rdfs:Resource.
 <http://xmlns.com/foaf/0.1/name> :editable true .
 <http://xmlns.com/foaf/0.1/name> :display true .
 <http://xmlns.com/foaf/0.1/name> rdfs:label "Name".
+<http://xmlns.com/foaf/0.1/name> :displayPrecedence 7 .
 <http://xmlns.com/foaf/0.1/firstName> rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
 <http://xmlns.com/foaf/0.1/firstName> rdfs:range xsd:string.
 <http://xmlns.com/foaf/0.1/firstName> a owl:DatatypeProperty.
@@ -1194,6 +1198,7 @@ owl:DatatypeProperty a rdfs:Resource.
 :profession :display true .
 :profession :displayPrecidence 70 .
 :profession rdfs:label "Profession".
+:profession a owl:DatatypeProperty .
 :birthYear rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
 :birthYear a owl:DatatypeProperty.
 :birthYear a :SummaryProperty.
@@ -1240,6 +1245,7 @@ owl:DatatypeProperty a rdfs:Resource.
 :firmName :editable true .
 :firmName :display true .
 :firmName rdfs:label "Firm Name".
+:firmName :displayPrecedence 100 .
 :depictsBuilding rdfs:domain :DigitalObject.
 :depictsBuilding rdfs:range :Structure.
 :depictsBuilding rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
@@ -1692,6 +1698,7 @@ owl:DatatypeProperty a rdfs:Resource.
 :australian :editable true .
 :australian :display true .
 :australian rdfs:label "Australian".
+:australian :displayPrecedence 135 .
 :practicedInQueensland rdfs:domain :Architect.
 :practicedInQueensland rdfs:range xsd:boolean.
 :practicedInQueensland a owl:DatatypeProperty.
@@ -1702,6 +1709,7 @@ owl:DatatypeProperty a rdfs:Resource.
 :practicedInQueensland :editable true .
 :practicedInQueensland :display true .
 :practicedInQueensland rdfs:label "Practiced in Queensland".
+:practicedInQueensland :displayPrecedence 136 .
 geo:lat rdfs:domain geo:SpatialThing.
 geo:lat a owl:DatatypeProperty.
 geo:lat a :SummaryProperty.
@@ -2090,6 +2098,7 @@ geo:long rdfs:seeAlso geo:long.
 :startDate :editable true .
 :startDate :display true .
 :startDate rdfs:label "Start Date".
+:startDate :displayPrecedence 150 .
 :endDate rdfs:domain :Firm.
 :endDate rdfs:domain :Relationship.
 :endDate rdfs:range xsd:date.
@@ -2102,6 +2111,7 @@ geo:long rdfs:seeAlso geo:long.
 :endDate :editable true .
 :endDate :display true .
 :endDate rdfs:label "End Date".
+:endDate :displayPrecedence 160 .
 :textualNote rdfs:domain :Evincible.
 :textualNote rdfs:range xsd:string.
 :textualNote a :relationshipDataProperty.
@@ -2499,5 +2509,411 @@ skos:semanticRelation a rdfs:Resource.
 :jsonData rdfs:range xsd:string.
 :jsonData :display true.
 :jsonData :editable true.
+:GovernmentInstitution rdfs:subClassOf :Evincible.
+:GovernmentInstitution rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
+:GovernmentInstitution rdfs:subClassOf rdfs:Resource.
+:GovernmentInstitution rdfs:subClassOf :GovernmentInstitution.
+:GovernmentInstitution rdfs:subClassOf :StructureOrAgent.
+:GovernmentInstitution rdfs:subClassOf :StructureOrAgentOrTopic.
+:GovernmentInstitution rdfs:subClassOf :Entity.
+:GovernmentInstitution rdfs:subClassOf :NonDigitalThing.
+:GovernmentInstitution a owl:Class.
+:GovernmentInstitution a rdfs:Class.
+:GovernmentInstitution a rdfs:Resource.
+:GovernmentInstitution :requiredToCreate <http://xmlns.com/foaf/0.1/name>.
+:GovernmentInstitution :label "Government Insitutions".
+:GovernmentInstitution :editable true .
+:GovernmentInstitution :toplevel false .
+:GovernmentInstitution :singular "Government Institution".
+:GovernmentInstitution :plural "Government Insitutions".
+:GovernmentInstitution :displayPrecedence 10 .
+:GovernmentInstitution :suppressEditable :label.
+:GovernmentInstitution rdfs:label "Government Insitutions".
+:Academic rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person>.
+:Academic rdfs:subClassOf rdfs:Resource.
+:Academic rdfs:subClassOf :Academic.
+:Academic rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
+:Academic rdfs:subClassOf :StructureOrAgent.
+:Academic rdfs:subClassOf :NonDigitalThing.
+:Academic rdfs:subClassOf :StructureOrAgentOrTopic.
+:Academic rdfs:subClassOf :Entity.
+:Academic rdfs:subClassOf :Evincible.
+:Academic a owl:Class.
+:Academic a rdfs:Class.
+:Academic a rdfs:Resource.
+:Academic :label "Academics".
+:Academic :editable true .
+:Academic :toplevel false .
+:Academic :singular "Academic".
+:Academic :plural "Academics".
+:Academic :displayPrecedence 10 .
+:Academic :requiredToCreate <http://xmlns.com/foaf/0.1/firstName>.
+:Academic :requiredToCreate <http://xmlns.com/foaf/0.1/lastName>.
+:Academic :suppressEditable :label.
+:Academic :suppressEditable <http://xmlns.com/foaf/0.1/name>.
+:Academic :suppressEditable :profession .
+:Academic rdfs:label "Academics".
+:Professional rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person>.
+:Professional rdfs:subClassOf rdfs:Resource.
+:Professional rdfs:subClassOf :Professional.
+:Professional rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
+:Professional rdfs:subClassOf :StructureOrAgent.
+:Professional rdfs:subClassOf :NonDigitalThing.
+:Professional rdfs:subClassOf :StructureOrAgentOrTopic.
+:Professional rdfs:subClassOf :Entity.
+:Professional rdfs:subClassOf :Evincible.
+:Professional a owl:Class.
+:Professional a rdfs:Class.
+:Professional a rdfs:Resource.
+:Professional :label "Professionals".
+:Professional :editable true .
+:Professional :toplevel false .
+:Professional :singular "Professional".
+:Professional :plural "Professionals".
+:Professional :displayPrecedence 10 .
+:Professional :requiredToCreate <http://xmlns.com/foaf/0.1/firstName>.
+:Professional :requiredToCreate <http://xmlns.com/foaf/0.1/lastName>.
+:Professional :suppressEditable :label.
+:Professional :suppressEditable <http://xmlns.com/foaf/0.1/name>.
+:Professional rdfs:label "Professionals".
+:Place rdfs:subClassOf geo:SpatialThing.
+:Place rdfs:subClassOf rdfs:Resource.
+:Place rdfs:subClassOf :Place.
+:Place rdfs:subClassOf :NonDigitalThing.
+:Place rdfs:subClassOf :Evincible.
+:Place rdfs:subClassOf :Entity.
+:Place a owl:Class.
+:Place a rdfs:Class.
+:Place a rdfs:Resource.
+:Place :label "Places".
+:Place :editable true .
+:Place :toplevel false .
+:Place :singular "Place".
+:Place :plural "Places".
+:Place :displayPrecedence 10 .
+:Place :requiredToCreate :label.
+:Place rdfs:label "Places".
+:Organisation rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent>.
+:Organisation rdfs:subClassOf rdfs:Resource.
+:Organisation rdfs:subClassOf :Organisation.
+:Organisation rdfs:subClassOf :StructureOrAgent.
+:Organisation rdfs:subClassOf :StructureOrAgentOrTopic.
+:Organisation rdfs:subClassOf :Entity.
+:Organisation rdfs:subClassOf :NonDigitalThing.
+:Organisation rdfs:subClassOf :Evincible.
+:Organisation :requiredToCreate <http://xmlns.com/foaf/0.1/name>.
+:Organisation a owl:Class.
+:Organisation a rdfs:Class.
+:Organisation a rdfs:Resource.
+:Organisation :label "Organisations".
+:Organisation :editable true .
+:Organisation :toplevel false .
+:Organisation :singular "Organisation".
+:Organisation :plural "Organisations".
+:Organisation :displayPrecedence 10 .
+:Organisation :suppressEditable :label.
+:Organisation rdfs:label "Organisations".
+:TravelledToRelation rdfs:subClassOf :Relationship.
+:TravelledToRelation rdfs:subClassOf :RelatedToRelation.
+:TravelledToRelation rdfs:subClassOf rdfs:Resource.
+:TravelledToRelation rdfs:subClassOf :TravelledToRelation.
+:TravelledToRelation rdfs:subClassOf :Evincible.
+:TravelledToRelation a owl:Class.
+:TravelledToRelation a rdfs:Resource.
+:TravelledToRelation a :Relationship.
+:TravelledToRelation a rdfs:Class.
+:TravelledToRelation a :Evincible.
+:TravelledToRelation :label "Travelled To".
+:TravelledToRelation rdfs:label "Travelled To".
+:TravelledToRelation :impliesRelationship :travelledTo.
+:travelledTo rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:travelledTo rdfs:range :Place.
+:travelledTo a :relProperty.
+:travelledTo a rdfs:Resource.
+:travelledTo a owl:ObjectProperty.
+:travelledTo a rdf:Property.
+:travelledTo a :RelationshipProperty.
+:travelledTo :label "Travelled To".
+:travelledTo :editable true .
+:travelledTo :display true .
+:travelledTo :entailsRelationship :TravelledToRelation.
+:travelledTo rdfs:label "Travelled To".
+:KnewOfRelation rdfs:subClassOf :Relationship.
+:KnewOfRelation rdfs:subClassOf :RelatedToRelation.
+:KnewOfRelation rdfs:subClassOf rdfs:Resource.
+:KnewOfRelation rdfs:subClassOf :KnewOfRelation.
+:KnewOfRelation rdfs:subClassOf :Evincible.
+:KnewOfRelation a owl:Class.
+:KnewOfRelation a rdfs:Resource.
+:KnewOfRelation a :Relationship.
+:KnewOfRelation a rdfs:Class.
+:KnewOfRelation a :Evincible.
+:KnewOfRelation :label "Knew Of".
+:KnewOfRelation rdfs:label "Knew Of".
+:KnewOfRelation :impliesRelationship :knewOf.
+:knewOf rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:knewOf rdfs:range <http://xmlns.com/foaf/0.1/Person>.
+:knewOf a :relProperty.
+:knewOf a rdfs:Resource.
+:knewOf a owl:ObjectProperty.
+:knewOf a rdf:Property.
+:knewOf a :RelationshipProperty.
+:knewOf :label "Knew Of".
+:knewOf :editable true .
+:knewOf :display true .
+:knewOf :entailsRelationship :KnewOfRelation.
+:knewOf rdfs:label "Knew Of".
+:TaughtAtRelation rdfs:subClassOf :Relationship.
+:TaughtAtRelation rdfs:subClassOf :RelatedToRelation.
+:TaughtAtRelation rdfs:subClassOf rdfs:Resource.
+:TaughtAtRelation rdfs:subClassOf :TaughtAtRelation.
+:TaughtAtRelation rdfs:subClassOf :Evincible.
+:TaughtAtRelation a owl:Class.
+:TaughtAtRelation a rdfs:Resource.
+:TaughtAtRelation a :Relationship.
+:TaughtAtRelation a rdfs:Class.
+:TaughtAtRelation a :Evincible.
+:TaughtAtRelation :label "Taught At".
+:TaughtAtRelation rdfs:label "Taught At".
+:TaughtAtRelation :impliesRelationship :taughtAt.
+:taughtAt rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:taughtAt rdfs:range :EducationalInstitution.
+:taughtAt a :relProperty.
+:taughtAt a rdfs:Resource.
+:taughtAt a owl:ObjectProperty.
+:taughtAt a rdf:Property.
+:taughtAt a :RelationshipProperty.
+:taughtAt :label "Taught At".
+:taughtAt :editable true .
+:taughtAt :display true .
+:taughtAt :entailsRelationship :TaughtAtRelation.
+:taughtAt rdfs:label "Taught At".
+:FoundedRelation rdfs:subClassOf :Relationship.
+:FoundedRelation rdfs:subClassOf :RelatedToRelation.
+:FoundedRelation rdfs:subClassOf rdfs:Resource.
+:FoundedRelation rdfs:subClassOf :FoundedRelation.
+:FoundedRelation rdfs:subClassOf :Evincible.
+:FoundedRelation a owl:Class.
+:FoundedRelation a rdfs:Resource.
+:FoundedRelation a :Relationship.
+:FoundedRelation a rdfs:Class.
+:FoundedRelation a :Evincible.
+:FoundedRelation :label "Founded".
+:FoundedRelation rdfs:label "Founded".
+:FoundedRelation :impliesRelationship :founded.
+:founded rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:founded rdfs:range :Organisation.
+:founded a :relProperty.
+:founded a rdfs:Resource.
+:founded a owl:ObjectProperty.
+:founded a rdf:Property.
+:founded a :RelationshipProperty.
+:founded :label "Founded".
+:founded :editable true .
+:founded :display true .
+:founded :entailsRelationship :FoundedRelation.
+:founded rdfs:label "Founded".
+:AttendedRelation rdfs:subClassOf :Relationship.
+:AttendedRelation rdfs:subClassOf :RelatedToRelation.
+:AttendedRelation rdfs:subClassOf rdfs:Resource.
+:AttendedRelation rdfs:subClassOf :AttendedRelation.
+:AttendedRelation rdfs:subClassOf :Evincible.
+:AttendedRelation a owl:Class.
+:AttendedRelation a rdfs:Resource.
+:AttendedRelation a :Relationship.
+:AttendedRelation a rdfs:Class.
+:AttendedRelation a :Evincible.
+:AttendedRelation :label "Attended".
+:AttendedRelation rdfs:label "Attended".
+:AttendedRelation :impliesRelationship :attended.
+:attended rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:attended rdfs:range :Event.
+:attended a :relProperty.
+:attended a rdfs:Resource.
+:attended a owl:ObjectProperty.
+:attended a rdf:Property.
+:attended a :RelationshipProperty.
+:attended :label "Attended".
+:attended :editable true .
+:attended :display true .
+:attended :entailsRelationship :AttendedRelation.
+:attended rdfs:label "Attended".
+:ReadRelation rdfs:subClassOf :Relationship.
+:ReadRelation rdfs:subClassOf :RelatedToRelation.
+:ReadRelation rdfs:subClassOf rdfs:Resource.
+:ReadRelation rdfs:subClassOf :ReadRelation.
+:ReadRelation rdfs:subClassOf :Evincible.
+:ReadRelation a owl:Class.
+:ReadRelation a rdfs:Resource.
+:ReadRelation a :Relationship.
+:ReadRelation a rdfs:Class.
+:ReadRelation a :Evincible.
+:ReadRelation :label "Read".
+:ReadRelation rdfs:label "Read".
+:ReadRelation :impliesRelationship :read.
+:read rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:read rdfs:range :Publication.
+:read a :relProperty.
+:read a rdfs:Resource.
+:read a owl:ObjectProperty.
+:read a rdf:Property.
+:read a :RelationshipProperty.
+:read :label "Read".
+:read :editable true .
+:read :display true .
+:read :entailsRelationship :ReadRelation.
+:read rdfs:label "Read".
+:WroteForRelation rdfs:subClassOf :Relationship.
+:WroteForRelation rdfs:subClassOf :RelatedToRelation.
+:WroteForRelation rdfs:subClassOf rdfs:Resource.
+:WroteForRelation rdfs:subClassOf :WroteForRelation.
+:WroteForRelation rdfs:subClassOf :Evincible.
+:WroteForRelation a owl:Class.
+:WroteForRelation a rdfs:Resource.
+:WroteForRelation a :Relationship.
+:WroteForRelation a rdfs:Class.
+:WroteForRelation a :Evincible.
+:WroteForRelation :label "Worked For".
+:WroteForRelation rdfs:label "Worked For".
+:WroteForRelation :impliesRelationship :wroteFor.
+:wroteFor rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:wroteFor rdfs:range :Publication.
+:wroteFor a :relProperty.
+:wroteFor a rdfs:Resource.
+:wroteFor a owl:ObjectProperty.
+:wroteFor a rdf:Property.
+:wroteFor a :RelationshipProperty.
+:wroteFor :label "Wrote For".
+:wroteFor :editable true .
+:wroteFor :display true .
+:wroteFor :entailsRelationship :WroteForRelation.
+:wroteFor rdfs:label "Wrote For".
+:WasInfluenceByRelation rdfs:subClassOf :Relationship.
+:WasInfluenceByRelation rdfs:subClassOf :RelatedToRelation.
+:WasInfluenceByRelation rdfs:subClassOf rdfs:Resource.
+:WasInfluenceByRelation rdfs:subClassOf :WasInfluenceByRelation.
+:WasInfluenceByRelation rdfs:subClassOf :Evincible.
+:WasInfluenceByRelation a owl:Class.
+:WasInfluenceByRelation a rdfs:Resource.
+:WasInfluenceByRelation a :Relationship.
+:WasInfluenceByRelation a rdfs:Class.
+:WasInfluenceByRelation a :Evincible.
+:WasInfluenceByRelation :label "Was Influence By".
+:WasInfluenceByRelation rdfs:label "Was Influence By".
+:WasInfluenceByRelation :impliesRelationship :wasInfluenceBy.
+:wasInfluenceBy rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:wasInfluenceBy rdfs:domain :Event.
+:wasInfluenceBy rdfs:range <http://xmlns.com/foaf/0.1/Person>.
+:wasInfluenceBy rdfs:range :Publication.
+:wasInfluenceBy a :relProperty.
+:wasInfluenceBy a rdfs:Resource.
+:wasInfluenceBy a owl:ObjectProperty.
+:wasInfluenceBy a rdf:Property.
+:wasInfluenceBy a :RelationshipProperty.
+:wasInfluenceBy :label "Was Influence By".
+:wasInfluenceBy :editable true .
+:wasInfluenceBy :display true .
+:wasInfluenceBy :entailsRelationship :WasInfluenceByRelation.
+:wasInfluenceBy rdfs:label "Was Influence By".
+:WorkedOnRelation rdfs:subClassOf :Relationship.
+:WorkedOnRelation rdfs:subClassOf :RelatedToRelation.
+:WorkedOnRelation rdfs:subClassOf rdfs:Resource.
+:WorkedOnRelation rdfs:subClassOf :WorkedOnRelation.
+:WorkedOnRelation rdfs:subClassOf :Evincible.
+:WorkedOnRelation a owl:Class.
+:WorkedOnRelation a rdfs:Resource.
+:WorkedOnRelation a :Relationship.
+:WorkedOnRelation a rdfs:Class.
+:WorkedOnRelation a :Evincible.
+:WorkedOnRelation :label "Worked On".
+:WorkedOnRelation rdfs:label "Worked On".
+:WorkedOnRelation :impliesRelationship :workedOn.
+:workedOn rdfs:domain :Firm.
+:workedOn rdfs:range :Structure.
+:workedOn a :relProperty.
+:workedOn a rdfs:Resource.
+:workedOn a owl:ObjectProperty.
+:workedOn a rdf:Property.
+:workedOn a :RelationshipProperty.
+:workedOn :label "Worked On".
+:workedOn :editable true .
+:workedOn :display true .
+:workedOn :entailsRelationship :WorkedOnRelation.
+:workedOn rdfs:label "Worked On".
+:AwardedRelation rdfs:subClassOf :Relationship.
+:AwardedRelation rdfs:subClassOf :RelatedToRelation.
+:AwardedRelation rdfs:subClassOf rdfs:Resource.
+:AwardedRelation rdfs:subClassOf :AwardedRelation.
+:AwardedRelation rdfs:subClassOf :Evincible.
+:AwardedRelation a owl:Class.
+:AwardedRelation a rdfs:Resource.
+:AwardedRelation a :Relationship.
+:AwardedRelation a rdfs:Class.
+:AwardedRelation a :Evincible.
+:AwardedRelation :label "Awared".
+:AwardedRelation rdfs:label "Awared".
+:AwardedRelation :impliesRelationship :awarded.
+:awarded rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:awarded rdfs:range :Award.
+:awarded a :relProperty.
+:awarded a rdfs:Resource.
+:awarded a owl:ObjectProperty.
+:awarded a rdf:Property.
+:awarded a :RelationshipProperty.
+:awarded :label "Awarded".
+:awarded :editable true .
+:awarded :display true .
+:awarded :entailsRelationship :AwardedRelation.
+:awarded rdfs:label "Awarded".
+:VotedRelation rdfs:subClassOf :Relationship.
+:VotedRelation rdfs:subClassOf :RelatedToRelation.
+:VotedRelation rdfs:subClassOf rdfs:Resource.
+:VotedRelation rdfs:subClassOf :VotedRelation.
+:VotedRelation rdfs:subClassOf :Evincible.
+:VotedRelation a owl:Class.
+:VotedRelation a rdfs:Resource.
+:VotedRelation a :Relationship.
+:VotedRelation a rdfs:Class.
+:VotedRelation a :Evincible.
+:VotedRelation :label "Voted".
+:VotedRelation rdfs:label "Voted".
+:VotedRelation :impliesRelationship :voted.
+:voted rdfs:domain <http://xmlns.com/foaf/0.1/Person>.
+:voted rdfs:range :Award.
+:voted a :relProperty.
+:voted a rdfs:Resource.
+:voted a owl:ObjectProperty.
+:voted a rdf:Property.
+:voted a :RelationshipProperty.
+:voted :label "Voted".
+:voted :editable true .
+:voted :display true .
+:voted :entailsRelationship :VotedRelation.
+:voted rdfs:label "Voted".
+:WorkedOnRelation rdfs:subClassOf :Relationship.
+:WorkedOnRelation rdfs:subClassOf :RelatedToRelation.
+:WorkedOnRelation rdfs:subClassOf rdfs:Resource.
+:WorkedOnRelation rdfs:subClassOf :WorkedOnRelation.
+:WorkedOnRelation rdfs:subClassOf :Evincible.
+:WorkedOnRelation a owl:Class.
+:WorkedOnRelation a rdfs:Resource.
+:WorkedOnRelation a :Relationship.
+:WorkedOnRelation a rdfs:Class.
+:WorkedOnRelation a :Evincible.
+:WorkedOnRelation :label "WorkedOn".
+:WorkedOnRelation rdfs:label "WorkedOn".
+:WorkedOnRelation :impliesRelationship :workedOn.
+:workedOn rdfs:domain :Firm.
+:workedOn rdfs:range :Structure.
+:workedOn a :relProperty.
+:workedOn a rdfs:Resource.
+:workedOn a owl:ObjectProperty.
+:workedOn a rdf:Property.
+:workedOn a :RelationshipProperty.
+:workedOn :label "WorkedOn".
+:workedOn :editable true .
+:workedOn :display true .
+:workedOn :entailsRelationship :WorkedOnRelation.
+:workedOn rdfs:label "WorkedOn".
 #ENDS 0.469 [sec] TC=4457 TP=126496 BC=0 BP=24426 PM=0 CM=0 FM=0 AM=0
 
