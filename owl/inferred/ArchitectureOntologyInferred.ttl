@@ -2915,5 +2915,16 @@ skos:semanticRelation a rdfs:Resource.
 :workedOn :display true .
 :workedOn :entailsRelationship :WorkedOnRelation.
 :workedOn rdfs:label "WorkedOn".
+:demolished rdfs:domain :Structure.
+:demolished rdfs:range xsd:boolean.
+:demolished a owl:DatatypeProperty.
+:demolished a rdfs:Resource.
+:demolished a rdf:Property.
+:demolished a :AttributeProperty.
+:demolished :label "Demolished".
+:demolished :editable true .
+:demolished :display true .
+:demolished rdfs:label "Demolished".
+:demolished :displayPrecedence 136 .
 #ENDS 0.469 [sec] TC=4457 TP=126496 BC=0 BP=24426 PM=0 CM=0 FM=0 AM=0
 
