@@ -2926,5 +2926,31 @@ skos:semanticRelation a rdfs:Resource.
 :demolished :display true .
 :demolished rdfs:label "Demolished".
 :demolished :displayPrecedence 136 .
+:depictsArchitect rdfs:domain :DigitalObject.
+:depictsArchitect rdfs:range :Architect.
+:depictsArchitect rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
+:depictsArchitect a owl:ObjectProperty.
+:depictsArchitect a rdfs:Resource.
+:depictsArchitect a rdf:Property.
+:depictsArchitect a :RelationshipProperty.
+:depictsArchitect :label "Depicts".
+:depictsArchitect :editable false .
+:depictsArchitect :display true .
+:depictsArchitect :displayPrecedence 20 .
+:depictsArchitect :entailsRelationship :RelatedToRelation.
+:depictsArchitect rdfs:label "Depicts".
+:depictsFirm rdfs:domain :DigitalObject.
+:depictsFirm rdfs:range :Firm.
+:depictsFirm rdfs:subPropertyOf <http://purl.org/dc/terms/subject>.
+:depictsFirm a owl:ObjectProperty.
+:depictsFirm a rdfs:Resource.
+:depictsFirm a rdf:Property.
+:depictsFirm a :RelationshipProperty.
+:depictsFirm :label "Depicts".
+:depictsFirm :editable false .
+:depictsFirm :display true .
+:depictsFirm :displayPrecedence 20 .
+:depictsFirm :entailsRelationship :RelatedToRelation.
+:depictsFirm rdfs:label "Depicts".
 #ENDS 0.469 [sec] TC=4457 TP=126496 BC=0 BP=24426 PM=0 CM=0 FM=0 AM=0
 
