@@ -2952,5 +2952,28 @@ skos:semanticRelation a rdfs:Resource.
 :depictsFirm :displayPrecedence 20 .
 :depictsFirm :entailsRelationship :RelatedToRelation.
 :depictsFirm rdfs:label "Depicts".
+:completionDate rdfs:domain :Structure.
+:completionDate rdfs:range xsd:date.
+:completionDate a owl:DatatypeProperty.
+:completionDate a rdfs:Resource.
+:completionDate a rdf:Property.
+:completionDate a :AttributeProperty.
+:completionDate :label "Completion Date".
+:completionDate :editable true .
+:completionDate :display true .
+:completionDate rdfs:label "Completion Date".
+:completionDate :displayPrecedence 140 .
+:associatedArchitect rdfs:domain :Entity.
+:associatedArchitect rdfs:range :Architect.
+:associatedArchitect a owl:ObjectProperty.
+:associatedArchitect a rdfs:Resource.
+:associatedArchitect a rdf:Property.
+:associatedArchitect a :RelationshipProperty.
+:associatedArchitect :label "Architect".
+:associatedArchitect :editable false .
+:associatedArchitect :display true .
+:associatedArchitect :displayPrecedence 11 .
+:associatedArchitect :entailsRelationship :RelatedToRelation.
+:associatedArchitect rdfs:label "Architect".
 #ENDS 0.469 [sec] TC=4457 TP=126496 BC=0 BP=24426 PM=0 CM=0 FM=0 AM=0
 
