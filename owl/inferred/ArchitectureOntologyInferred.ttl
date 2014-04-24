@@ -2975,5 +2975,22 @@ skos:semanticRelation a rdfs:Resource.
 :associatedArchitect :displayPrecedence 11 .
 :associatedArchitect :entailsRelationship :RelatedToRelation.
 :associatedArchitect rdfs:label "Architect".
+:upVote	rdf:type	rdf:Property .
+:upVote	rdf:type	owl:ObjectProperty .
+:upVote	:label	"Up Votes" .
+:upVote	rdfs:label	"Up Votes" .
+:upVote	rdfs:domain	:CompoundObject .
+:upVote	rdfs:range	xsd:integer .
+:upVote	:display	false .
+:upVote	:editable	true .
+:tag	rdf:type	rdf:Property .
+:tag	rdf:type	owl:ObjectProperty .
+:tag	:label	"Tag" .
+:tag	rdfs:label	"Tag" .
+:tag	rdfs:domain	:CompoundObject .
+:tag	rdfs:range	:Entity .
+:tag	:display	false .
+:tag	:editable	true .
+rdf:type rdf:type :SummaryProperty
 #ENDS 0.469 [sec] TC=4457 TP=126496 BC=0 BP=24426 PM=0 CM=0 FM=0 AM=0
 
