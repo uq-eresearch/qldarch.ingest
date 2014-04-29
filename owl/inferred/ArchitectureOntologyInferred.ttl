@@ -2991,6 +2991,8 @@ skos:semanticRelation a rdfs:Resource.
 :tag	rdfs:range	:Entity .
 :tag	:display	false .
 :tag	:editable	true .
-rdf:type rdf:type :SummaryProperty
+rdf:type rdf:type :SummaryProperty .
+qldarch:awardTitle rdf:type :SummaryProperty .
+  qldarch:topicHeading rdf:type :SummaryProperty .
 #ENDS 0.469 [sec] TC=4457 TP=126496 BC=0 BP=24426 PM=0 CM=0 FM=0 AM=0
 
